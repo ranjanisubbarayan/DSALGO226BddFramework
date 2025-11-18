@@ -9,7 +9,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pages.homePage;
+import pageObjects.homePage;
 import utilities.baseTest;
 
 public class homeSteps {
