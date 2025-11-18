@@ -2,12 +2,13 @@ package utilities;
 
 import org.openqa.selenium.WebDriver;
 
-import pages.GraphPage;
-import pages.LoginPage;
-import pages.QueuePage;
-import pages.StackPage;
-import pages.homePage;
-import pages.registerPage;
+//import pageObjects.GraphPage;
+import pageObjects.LoginPage;
+//import pages.QueuePage;
+//import pages.StackPage;
+import pageObjects.homePage;
+import pageObjects.registerPage;
+import driver.DriverFactory;
 
 public class baseTest {
 	
@@ -15,9 +16,9 @@ public class baseTest {
 	private homePage homepage;
 	private registerPage registerpage;
 	private LoginPage loginPage;
-	private QueuePage queuePage;
-	private StackPage stackPage;
-	private GraphPage graphPage;
+	//private QueuePage queuePage;
+	//private StackPage stackPage;
+	//private GraphPage graphPage;
 	
 	 public WebDriver getDriver() {
 		 if(driver == null) {
@@ -39,26 +40,26 @@ public class baseTest {
 		}
 		return loginPage;
 	}
-	public QueuePage getQueuepage() {
-		if(queuePage == null) {
-			queuePage = new QueuePage(getDriver());
-		}
-		return queuePage;
-		
-	
-	}
-	
-	public GraphPage getGraphpage() {
-		if(graphPage == null) {
-			graphPage = new GraphPage();
-		}
-		return graphPage;
-	}
-	
-	public StackPage getStackPage() {
-		if(stackPage == null) {
-			stackPage = new StackPage();
-		}
-		return stackPage;
-	}
+//	public QueuePage getQueuepage() {
+//		if(queuePage == null) {
+//			queuePage = new QueuePage(getDriver());
+//		}
+//		return queuePage;
+//		
+//	
+//	}
+//	
+//	public GraphPage getGraphpage() {
+//		if(graphPage == null) {
+//			graphPage = new GraphPage();
+//		}
+//		return graphPage;
+//	}
+//	
+//	public StackPage getStackPage() {
+//		if(stackPage == null) {
+//			stackPage = new StackPage();
+//		}
+//		return stackPage;
+//	}
 }
