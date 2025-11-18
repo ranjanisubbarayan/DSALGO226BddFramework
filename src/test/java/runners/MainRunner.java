@@ -4,7 +4,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src/test/resources/features", 
-               tags = "@Graph and @ArrayList",
+               //tags = "@Graph and @ArrayList",
+				tags = "@smoke_Ll",
 				glue= {"stepDefinitions","base"}, 
 				monochrome=true, dryRun=false,
 
