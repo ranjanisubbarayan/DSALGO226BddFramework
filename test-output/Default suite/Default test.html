@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/11/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 18 10:21:18 EST 2025</td>
+<td>Started on:</td><td>Wed Nov 19 12:47:27 EST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>107 seconds (107993 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (344 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,7 +68,7 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,515 +76,103 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to Introduction page", "Navigation and interaction in dsAlgo Portal - Linked List Section"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;The user clicks the Get Started button&apos; and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
+<td title='runners.MainRunner.setUpClass()'><b>setUpClass</b><br>Test class: runners.MainRunner<br>Parameters: org.testng.TestRunner@732d0d24</td>
+<td><div><pre>java.lang.IllegalArgumentException: The plugin specification &apos;io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm&apos; has a problem:
 
-@When(&quot;The user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;The user should be directed to Linked List Page&quot;)
-public void the_user_should_be_directed_to_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;The user clicks Introduction link&quot;)
-public void the_user_clicks_introduction_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;The user should be redirected to Introduction page&quot;)
-public void the_user_should_be_redirected_to_introduction_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+Could not load plugin class &apos;io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm&apos;.
 
-	at ✽.The user clicks the Get Started button(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:13)
-</pre></div><a href='#' onClick='toggleBox("stack-trace911548055", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace911548055'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;The user clicks the Get Started button&apos; and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
+Plugin specifications should have the format of PLUGIN[:[PATH|[URI [OPTIONS]]]
 
-@When(&quot;The user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;The user should be directed to Linked List Page&quot;)
-public void the_user_should_be_directed_to_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;The user clicks Introduction link&quot;)
-public void the_user_clicks_introduction_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;The user should be redirected to Introduction page&quot;)
-public void the_user_should_be_redirected_to_introduction_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+Valid values for PLUGIN are: html, json, junit, message, pretty, progress, rerun, summary, teamcity, testng, timeline, unused, usage
 
-	at ✽.The user clicks the Get Started button(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:13)
+PLUGIN can also be a fully qualified class name, allowing registration of 3rd party plugins. The 3rd party plugin must implement io.cucumber.plugin.Plugin
+	at io.cucumber.core.options.PluginOption.createCouldNotLoadClass(PluginOption.java:167)
+	at io.cucumber.core.options.PluginOption.parsePluginName(PluginOption.java:145)
+	at io.cucumber.core.options.PluginOption.parse(PluginOption.java:100)
+	at io.cucumber.core.options.RuntimeOptionsBuilder.addPluginName(RuntimeOptionsBuilder.java:68)
+	at io.cucumber.core.options.CucumberOptionsAnnotationParser.addPlugins(CucumberOptionsAnnotationParser.java:85)
+	at io.cucumber.core.options.CucumberOptionsAnnotationParser.parse(CucumberOptionsAnnotationParser.java:39)
+	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:85)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.ClassNotFoundException: io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at io.cucumber.core.options.PluginOption.parsePluginName(PluginOption.java:139)
+	... 30 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace2003147568", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2003147568'><pre>java.lang.IllegalArgumentException: The plugin specification &apos;io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm&apos; has a problem:
+
+Could not load plugin class &apos;io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm&apos;.
+
+Plugin specifications should have the format of PLUGIN[:[PATH|[URI [OPTIONS]]]
+
+Valid values for PLUGIN are: html, json, junit, message, pretty, progress, rerun, summary, teamcity, testng, timeline, unused, usage
+
+PLUGIN can also be a fully qualified class name, allowing registration of 3rd party plugins. The 3rd party plugin must implement io.cucumber.plugin.Plugin
+	at io.cucumber.core.options.PluginOption.createCouldNotLoadClass(PluginOption.java:167)
+	at io.cucumber.core.options.PluginOption.parsePluginName(PluginOption.java:145)
+	at io.cucumber.core.options.PluginOption.parse(PluginOption.java:100)
+	at io.cucumber.core.options.RuntimeOptionsBuilder.addPluginName(RuntimeOptionsBuilder.java:68)
+	at io.cucumber.core.options.CucumberOptionsAnnotationParser.addPlugins(CucumberOptionsAnnotationParser.java:85)
+	at io.cucumber.core.options.CucumberOptionsAnnotationParser.parse(CucumberOptionsAnnotationParser.java:39)
+	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:85)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.ClassNotFoundException: io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at io.cucumber.core.options.PluginOption.parsePluginName(PluginOption.java:139)
+	... 30 more
 </pre></div></td>
-<td>3</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alert handling for invalid input on Graph Representations Try Editor", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td><div><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepDefinitions.GraphList.the_user_is_on_the_try_editor_page_for_graph_representations(GraphList.java:119)
-	at ✽.The user is on the Try Editor page for Graph Representations(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:42)
-</pre></div><a href='#' onClick='toggleBox("stack-trace419416684", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace419416684'><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepDefinitions.GraphList.the_user_is_on_the_try_editor_page_for_graph_representations(GraphList.java:119)
-	at ✽.The user is on the Try Editor page for Graph Representations(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:42)
-</pre></div></td>
-<td>3</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to "Practice Questions" Page for "Linked List" page", "Navigation and interaction in dsAlgo Portal - Linked List Section"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;The user is in the &quot;Linked List&quot; page after Sign in&apos; and 2 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;The user is in the {string} page after Sign in&quot;)
-public void the_user_is_in_the_page_after_sign_in(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;The user clicks {string} button&quot;)
-public void the_user_clicks_button(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;The user should be redirected to {string} page&quot;)
-public void the_user_should_be_redirected_to_page(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.The user is in the &quot;Linked List&quot; page after Sign in(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:48)
-</pre></div><a href='#' onClick='toggleBox("stack-trace182698304", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace182698304'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;The user is in the &quot;Linked List&quot; page after Sign in&apos; and 2 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;The user is in the {string} page after Sign in&quot;)
-public void the_user_is_in_the_page_after_sign_in(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;The user clicks {string} button&quot;)
-public void the_user_clicks_button(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;The user should be redirected to {string} page&quot;)
-public void the_user_should_be_redirected_to_page(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.The user is in the &quot;Linked List&quot; page after Sign in(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:48)
-</pre></div></td>
-<td>3</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alert handling for invalid input on Graph Representations Try Editor", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td><div><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepDefinitions.GraphList.the_user_is_on_the_try_editor_page_for_graph_representations(GraphList.java:119)
-	at ✽.The user is on the Try Editor page for Graph Representations(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:42)
-</pre></div><a href='#' onClick='toggleBox("stack-trace893281161", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace893281161'><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepDefinitions.GraphList.the_user_is_on_the_try_editor_page_for_graph_representations(GraphList.java:119)
-	at ✽.The user is on the Try Editor page for Graph Representations(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:42)
-</pre></div></td>
-<td>4</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify error message for Empty & invalid python code for Arrays in Python page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td><div><pre>org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=142.0.7444.60)
-Build info: version: &apos;4.37.0&apos;, revision: &apos;3c1da1e342&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4c54a80368ab98630ff7c79e8b35b0a5, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57725}, goog:processID: 37848, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57725/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4c54a80368ab98630ff7c79e8b35b0a5
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1197)
-	at stepDefinitions.ArrayList.the_user_should_see_an_error_message_in_alert_window(ArrayList.java:69)
-	at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:35)
-</pre></div><a href='#' onClick='toggleBox("stack-trace669501311", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace669501311'><pre>org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=142.0.7444.60)
-Build info: version: &apos;4.37.0&apos;, revision: &apos;3c1da1e342&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4c54a80368ab98630ff7c79e8b35b0a5, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.60, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57725}, goog:processID: 37848, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57725/devtoo..., se:cdpVersion: 142.0.7444.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4c54a80368ab98630ff7c79e8b35b0a5
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1197)
-	at stepDefinitions.ArrayList.the_user_should_see_an_error_message_in_alert_window(ArrayList.java:69)
-	at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:35)
-</pre></div></td>
-<td>7</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alert handling for invalid input on Graph Topic Try Editor", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td><div><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepDefinitions.GraphList.the_user_is_on_the_try_editor_page_for_graph_topic(GraphList.java:70)
-	at ✽.The user is on the Try Editor page for Graph Topic(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:23)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1215795615", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1215795615'><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepDefinitions.GraphList.the_user_is_on_the_try_editor_page_for_graph_topic(GraphList.java:70)
-	at ✽.The user is on the Try Editor page for Graph Topic(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:23)
-</pre></div></td>
-<td>7</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to Linked List Page", "Navigation and interaction in dsAlgo Portal - Linked List Section"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;The user clicks the Get Started button&apos; and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@When(&quot;The user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;The user should be directed to Linked List Page&quot;)
-public void the_user_should_be_directed_to_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.The user clicks the Get Started button(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:8)
-</pre></div><a href='#' onClick='toggleBox("stack-trace127252077", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace127252077'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;The user clicks the Get Started button&apos; and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@When(&quot;The user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;The user should be directed to Linked List Page&quot;)
-public void the_user_should_be_directed_to_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.The user clicks the Get Started button(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:8)
-</pre></div></td>
-<td>4</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to Try here page for Introduction page", "Navigation and interaction in dsAlgo Portal - Linked List Section"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the user is on the Home page after signing in&apos; and 5 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;the user is on the Home page after signing in&quot;)
-public void the_user_is_on_the_home_page_after_signing_in() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be navigated to the Linked List page&quot;)
-public void the_user_should_be_navigated_to_the_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Introduction link&quot;)
-public void the_user_clicks_the_introduction_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Try Here button on the Introduction page&quot;)
-public void the_user_clicks_the_try_here_button_on_the_introduction_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be redirected to a page containing a Try Editor with a Run button to test code&quot;)
-public void the_user_should_be_redirected_to_a_page_containing_a_try_editor_with_a_run_button_to_test_code() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.the user is on the Home page after signing in(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:19)
-</pre></div><a href='#' onClick='toggleBox("stack-trace684426930", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace684426930'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the user is on the Home page after signing in&apos; and 5 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;the user is on the Home page after signing in&quot;)
-public void the_user_is_on_the_home_page_after_signing_in() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be navigated to the Linked List page&quot;)
-public void the_user_should_be_navigated_to_the_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Introduction link&quot;)
-public void the_user_clicks_the_introduction_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Try Here button on the Introduction page&quot;)
-public void the_user_clicks_the_try_here_button_on_the_introduction_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be redirected to a page containing a Try Editor with a Run button to test code&quot;)
-public void the_user_should_be_redirected_to_a_page_containing_a_try_editor_with_a_run_button_to_test_code() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.the user is on the Home page after signing in(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:19)
-</pre></div></td>
-<td>4</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Scenario Outline: Verify error message for Empty & invalid code in tryEditor page", "Navigation and interaction in dsAlgo Portal - Linked List Section"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the user is on the Home page after signing in&apos; and 5 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;the user is on the Home page after signing in&quot;)
-public void the_user_is_on_the_home_page_after_signing_in() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be navigated to the Linked List page&quot;)
-public void the_user_should_be_navigated_to_the_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Introduction link&quot;)
-public void the_user_clicks_the_introduction_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Try Here button on the Introduction page&quot;)
-public void the_user_clicks_the_try_here_button_on_the_introduction_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be redirected to a page containing a Try Editor with a Run button to test code&quot;)
-public void the_user_should_be_redirected_to_a_page_containing_a_try_editor_with_a_run_button_to_test_code() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.the user is on the Home page after signing in(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:27)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2044082767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2044082767'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the user is on the Home page after signing in&apos; and 5 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;the user is on the Home page after signing in&quot;)
-public void the_user_is_on_the_home_page_after_signing_in() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be navigated to the Linked List page&quot;)
-public void the_user_should_be_navigated_to_the_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Introduction link&quot;)
-public void the_user_clicks_the_introduction_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Try Here button on the Introduction page&quot;)
-public void the_user_clicks_the_try_here_button_on_the_introduction_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be redirected to a page containing a Try Editor with a Run button to test code&quot;)
-public void the_user_should_be_redirected_to_a_page_containing_a_try_editor_with_a_run_button_to_test_code() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.the user is on the Home page after signing in(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:27)
-</pre></div></td>
-<td>4</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alert handling for invalid input on Graph Topic Try Editor", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td><div><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepDefinitions.GraphList.the_user_is_on_the_try_editor_page_for_graph_topic(GraphList.java:70)
-	at ✽.The user is on the Try Editor page for Graph Topic(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:23)
-</pre></div><a href='#' onClick='toggleBox("stack-trace876945112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace876945112'><pre>io.cucumber.java.PendingException: TODO: implement me
-	at stepDefinitions.GraphList.the_user_is_on_the_try_editor_page_for_graph_topic(GraphList.java:70)
-	at ✽.The user is on the Try Editor page for Graph Topic(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:23)
-</pre></div></td>
-<td>7</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to see output for valid Linked List code for "Introduction" page", "Navigation and interaction in dsAlgo Portal - Linked List Section"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the user is on the Home page after signing in&apos; and 5 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;the user is on the Home page after signing in&quot;)
-public void the_user_is_on_the_home_page_after_signing_in() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be navigated to the Linked List page&quot;)
-public void the_user_should_be_navigated_to_the_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Introduction link&quot;)
-public void the_user_clicks_the_introduction_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Try Here button on the Introduction page&quot;)
-public void the_user_clicks_the_try_here_button_on_the_introduction_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be redirected to a page containing a Try Editor with a Run button to test code&quot;)
-public void the_user_should_be_redirected_to_a_page_containing_a_try_editor_with_a_run_button_to_test_code() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.the user is on the Home page after signing in(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:37)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1290606579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1290606579'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the user is on the Home page after signing in&apos; and 5 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;the user is on the Home page after signing in&quot;)
-public void the_user_is_on_the_home_page_after_signing_in() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Get Started button&quot;)
-public void the_user_clicks_the_get_started_button() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be navigated to the Linked List page&quot;)
-public void the_user_should_be_navigated_to_the_linked_list_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Introduction link&quot;)
-public void the_user_clicks_the_introduction_link() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;the user clicks the Try Here button on the Introduction page&quot;)
-public void the_user_clicks_the_try_here_button_on_the_introduction_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;the user should be redirected to a page containing a Try Editor with a Run button to test code&quot;)
-public void the_user_should_be_redirected_to_a_page_containing_a_try_editor_with_a_run_button_to_test_code() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.the user is on the Home page after signing in(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/LinkedList.feature:37)
-</pre></div></td>
-<td>3</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to Array page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td></td>
-<td>9</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to Arrays in Python page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td></td>
-<td>7</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Launch Graph Representations page", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td></td>
-<td>8</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td></td>
-<td>7</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to try Editor page for Arrays in Python", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td></td>
-<td>7</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Open Graph main page from Home", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td></td>
-<td>5</td>
-<td>runners.MainRunner@4135c3b</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify error message for Empty & invalid python code for Arrays in Python page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td></td>
-<td>6</td>
-<td>runners.MainRunner@4135c3b</td></tr>
+<td>0</td>
+<td>runners.MainRunner@2a8448fa</td></tr>
 </table><p>
 </body>
 </html>
