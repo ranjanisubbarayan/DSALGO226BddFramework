@@ -6,7 +6,7 @@
       <class name="runners.MainRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="16 17 3 7 8 10 11 12 13 14 15"/>
+          <include name="runScenario" invocation-numbers="1"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- runners.MainRunner -->
