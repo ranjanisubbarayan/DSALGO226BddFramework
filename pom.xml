@@ -63,5 +63,10 @@
     <version>2.19.0</version>
 </dependency>
 
-	</dependencies>
+	<dependency>
+		<groupId>ds_algo_cucumber</groupId>
+		<artifactId>ds_algo_cucumber</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+</dependencies>
 </project>
