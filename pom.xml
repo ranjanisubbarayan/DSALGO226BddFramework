@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -6,6 +7,24 @@
 	<artifactId>DSALGO226BddFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>DSALGO226BddFramework</groupId>
+  <artifactId>DSALGO226BddFramework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <cucumber.version>8.13.0</cucumber.version>
+        <testng.version>7.11.0</testng.version>
+        <allure.version>2.21.0</allure.version>
+        <selenium.version>4.37.0</selenium.version>
+    </properties>
+    
+<dependencies>
+>>>>>>> Ranjani
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -21,17 +40,29 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>7.30.0</version>
-		</dependency>
+	
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
 			<version>7.30.0</version>
 		</dependency>
+
+    <!-- Cucumber Java -->
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>7.30.0</version>
+    </dependency>
+
+   
+
+  <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
 
 		<!--
 		https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
@@ -67,6 +98,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
@@ -74,6 +106,9 @@
 			<version>2.21.0</version>
 		</dependency>
 >>>>>>> 075c9da82f1de7f8c39f46862de4730b8f655947
+=======
+
+>>>>>>> Ranjani
 
 
 		<dependency>
@@ -82,6 +117,29 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+<<<<<<< HEAD
+=======
+	
+	<build>
+    <plugins>
+        <plugin>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-maven</artifactId>
+    <version>2.11.2</version>
+</plugin>
+  <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0-M8</version>
+            <configuration>
+                <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+>>>>>>> Ranjani
 
 
 	<build>
