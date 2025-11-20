@@ -18,6 +18,12 @@
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.32</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.37.0</version>
