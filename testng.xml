@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<<<<<<< HEAD
 
+<suite name="Suite" parallel="tests" thread-count="5">
 
-<suite name="Suite" parallel="methods" thread-count="4">
-    <test name="Cucumber">
+    <!-- First test -->
+    <test name="Cucumber" parallel="methods" thread-count="4">
         <classes>
             <class name="runners.MainRunner"/>
         </classes>
     </test>
+
+    <!-- Second test with Allure listener -->
+    <test name="Test">
+        <listeners>
+            <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        </listeners>
+        <classes>
+            <class name="runners.MainRunner"/>
+        </classes>
+    </test>
+
 </suite>
-=======
-<suite parallel="tests" name="Suite">
-
-<!-- Attach Allure listener -->
-<listeners>
-<listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-</listeners>
-
-  <test thread-count="5" name="Test">
-    <classes>
-      <!--<class name="base.Hooks"/>-->
-      <class name="runners.MainRunner"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
-
-
-
-
->>>>>>> Ranjani
