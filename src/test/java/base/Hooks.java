@@ -32,11 +32,19 @@ public class Hooks {
         test = extent.createTest(scenario.getName());
     }
 
-    @After
+//    @After
+//    
+//    public void tearDown() {
+//	
+//}
     
-    public void tearDown() {
-	cleanupDriver();
-}
+    @After
+    public static void tearDown() {
+    	cleanupDriver();
+        Report.getInstance().flush();  // <-- Required
+        System.out.println("Extent Report generated.");
+    }
+
 //    public void tearDown(Scenario scenario) {
 //        if (scenario.isFailed()) {
 //            // Capture screenshot

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>DSALGO226BddFramework</groupId>
-	<artifactId>DSALGO226BddFramework</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<dependencies>
-=======
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>DSALGO226BddFramework</groupId>
@@ -24,7 +14,6 @@
     </properties>
     
 <dependencies>
->>>>>>> Ranjani
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
@@ -71,54 +60,40 @@
 			<artifactId>cucumber-picocontainer</artifactId>
 			<version>7.30.0</version>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>5.2.5</version>
-		</dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.2.5</version>
+</dependency>
 
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>5.2.5</version>
-		</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.2.5</version>
+</dependency>
 
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.19.0</version>
-		</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.19.0</version>
+</dependency>
 
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.19.0</version>
-		</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.19.0</version>
+</dependency>
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-testng</artifactId>
-			<version>2.21.0</version>
-		</dependency>
->>>>>>> 075c9da82f1de7f8c39f46862de4730b8f655947
-=======
-
->>>>>>> Ranjani
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.21.0</version>
+</dependency>
 
 
-		<dependency>
-			<groupId>ds_algo_cucumber</groupId>
-			<artifactId>ds_algo_cucumber</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+
 	</dependencies>
-<<<<<<< HEAD
-=======
 	
 	<build>
     <plugins>
@@ -139,36 +114,13 @@
         </plugin>
     </plugins>
 </build>
->>>>>>> Ranjani
 
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>io.qameta.allure</groupId>
-				<artifactId>allure-maven</artifactId>
-				<version>2.11.2</version>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M8</version>
-				<configuration>
-					<testFailureIgnore>false</testFailureIgnore>
-					<includes>
-						<include>**/*TestRunner*.java</include>
-					</includes>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-	<repositories>
-		<repository>
-			<id>central</id>
-			<url>https://repo.maven.apache.org/maven2</url>
-		</repository>
-	</repositories>
+<repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+</repositories>
 
 
 </project>
