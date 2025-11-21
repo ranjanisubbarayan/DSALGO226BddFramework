@@ -15,7 +15,7 @@
 
     <test name="Test">
         <classes>
-            <class name="runners.MainRunner2"/> <!-- different runner -->
+            <class name="runners.MainRunner"/> <!-- different runner -->
         </classes>
     </test>
 
