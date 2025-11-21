@@ -23,16 +23,16 @@ import utilities.ExtentTestNGListener;
 
 			//	plugin= {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm","html:target/ranani.html", "json:target/cucumber.json"})
                 
+		//plugin = { "pretty", "html:target/cucmber", "json:target/cucumber.json" })
 
+// plugin = { "pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm","html:target/ranani.html","json:target/cucumber.json" })
 
 public class MainRunner extends AbstractTestNGCucumberTests {
 
-	
-	  @Override
-	  
-	  @DataProvider(parallel=true) public Object[][] scenarios(){ return
-	  super.scenarios(); }
-	 
-
+	@Override
+	@DataProvider(parallel = true)
+	public Object[][] scenarios() {
+		return super.scenarios();
+	}
 
 }
