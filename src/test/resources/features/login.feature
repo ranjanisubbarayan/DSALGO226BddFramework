@@ -1,3 +1,4 @@
+@login
 Feature: Login to DS Algo Portal
 
   Scenario Outline: Valid login with multiple credentials
