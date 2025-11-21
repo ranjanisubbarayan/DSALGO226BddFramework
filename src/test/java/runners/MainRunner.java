@@ -10,8 +10,9 @@ import utilities.ExtentTestNGListener;
 
 @Listeners(ExtentTestNGListener.class)
 @CucumberOptions(features = "src/test/resources/features", 
-               tags = "@Graph or @ArrayList or @smoke_L1",
+              tags = "@home or @register or @login or @Graph or @ArrayList or @smoke_L1",
 				//tags = "@smoke_Ll",
+                 //tags= "@Graph",
 				glue= {"stepDefinitions","base"}, 
 				monochrome=true, dryRun=false,
 						plugin= {"pretty", "html:target/ranjani.html", "json:target/cucumber.json"})
