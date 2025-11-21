@@ -12,7 +12,7 @@ import utilities.ExtentTestNGListener;
 @CucumberOptions(features = "src/test/resources/features", 
               tags = "@home or @register or @login or @Graph or @ArrayList or @smoke_L1",
 				//tags = "@smoke_Ll",
-                 //tags= "@Graph",
+               //  tags= "@Graph",
 				glue= {"stepDefinitions","base"}, 
 				monochrome=true, dryRun=false,
 						plugin= {"pretty", "html:target/ranjani.html", "json:target/cucumber.json"})
@@ -23,16 +23,16 @@ import utilities.ExtentTestNGListener;
 
 			//	plugin= {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm","html:target/ranani.html", "json:target/cucumber.json"})
                 
+		//plugin = { "pretty", "html:target/cucmber", "json:target/cucumber.json" })
 
+// plugin = { "pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm","html:target/ranani.html","json:target/cucumber.json" })
 
 public class MainRunner extends AbstractTestNGCucumberTests {
 
-	
-	  @Override
-	  
-	  @DataProvider(parallel=true) public Object[][] scenarios(){ return
-	  super.scenarios(); }
-	 
-
+	@Override
+	@DataProvider(parallel = true)
+	public Object[][] scenarios() {
+		return super.scenarios();
+	}
 
 }

@@ -3,21 +3,21 @@
 
 <suite name="Suite" parallel="tests" thread-count="5">
 
-    <!-- First test -->
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
     <test name="Cucumber" parallel="methods" thread-count="4">
         <classes>
             <class name="runners.MainRunner"/>
         </classes>
     </test>
 
-    <!-- Second test with Allure listener -->
     <test name="Test">
-        <listeners>
-            <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-        </listeners>
         <classes>
-            <class name="runners.MainRunner"/>
+            <class name="runners.MainRunner2"/> <!-- different runner -->
         </classes>
     </test>
 
 </suite>
+
