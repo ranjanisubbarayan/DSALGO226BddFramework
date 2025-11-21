@@ -1,4 +1,4 @@
-
+@home
 Feature: DS_AGLO_APP Home Page Verification   
 As a user
   I want to verify the home page elements and content
