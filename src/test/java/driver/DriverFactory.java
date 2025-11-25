@@ -48,7 +48,7 @@ public class DriverFactory {
 
 			Properties properties = new Properties();
 			FileInputStream fis = new FileInputStream(
-					System.getProperty("user.dir") + "/src/main/java/properties/config.properties");
+					System.getProperty("user.dir") + "/src/test/resources/properties/config.properties");
 			properties.load(fis);
 			browserType = properties.getProperty("browser").toLowerCase().trim();
 		} catch (IOException ex) {
