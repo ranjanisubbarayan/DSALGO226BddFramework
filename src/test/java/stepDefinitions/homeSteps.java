@@ -10,11 +10,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.homePage;
+//import pages.homePage;
 import utilities.baseTest;
 
 public class homeSteps {
 	
 	WebDriver driver;
+	//homePage homepage;
 	homePage homepage;
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	

@@ -1,21 +1,21 @@
 package base;
 
-import static driver.DriverFactory.getDriver;
-import static driver.DriverFactory.cleanupDriver;
-
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import utilities.DriverFactory;
+import utilities.Report;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import driver.DriverFactory;
-import utilities.Report;
-
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+//import static driver.DriverFactory.cleanupDriver;
 import java.io.ByteArrayInputStream;
 
 public class Hooks {
@@ -24,12 +24,15 @@ public class Hooks {
     public static ExtentTest test;
     private WebDriver driver;
 
-    @Before
-    
+    @Before    
     public void setUp(Scenario scenario) {
-    	getDriver();
-        driver = DriverFactory.getDriver();
-        test = extent.createTest(scenario.getName());
+//    	 DriverFactory.getInstance().getDriver();
+//
+//    	    test = extent.createTest(scenario.getName());
+    	    DriverFactory.getDriver();
+
+            // ✔ Create test node in Extent report
+            Report.getInstance().createTest(scenario.getName());
     }
 
 //    @After
@@ -40,9 +43,10 @@ public class Hooks {
     
     @After
     public static void tearDown() {
-    	cleanupDriver();
+    	//DriverFactory.getInstance().quitDriver();;
+    	//cleanupDriver();
         Report.getInstance().flush();  // <-- Required
-        System.out.println("Extent Report generated.");
+        //System.out.println("Extent Report generated.");
     }
 
 //    public void tearDown(Scenario scenario) {
