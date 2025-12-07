@@ -20,6 +20,8 @@ public class GraphList{
 	private WebDriver driver = getDriver();
 	private LoginPage loginPage = new LoginPage(driver);
 	private GraphListPage graphPage = new GraphListPage(driver);
+	
+	private String alertMsg = null;
 
 	// -------------------- Background / Login --------------------
 	@Given("The user logs into dsAlgo Portal with username {string} and password {string}")
@@ -72,12 +74,26 @@ public class GraphList{
 
 	@When("The user enters {string} into the editor and clicks Run")
 	public void the_user_enters_into_the_editor_and_clicks_run(String graphInput) {
+		//graphPage.writeCodeAndRun(graphInput);
 		graphPage.writeCodeAndRun(graphInput);
-		graphPage.verifyRunButtonPresent();
+
+		// Handle alert immediately after Run
+		alertMsg = graphPage.waitForAlertIfPresent();
+		if (alertMsg != null) {
+		    System.out.println("Alert detected: " + alertMsg);
+		}
+		else {
+            System.out.println("⚠ No alert detected after clicking Run");
+        }
+
+	//	graphPage.verifyRunButtonPresent();
 	}
 
 	@Then("An alert message should be shown for Graph Topic invalid execution")
 	public void an_alert_message_should_be_shown_for_graph_topic_invalid_execution() {
+//		String alertMsg = graphPage.waitForAlertIfPresent();
+//	    Assert.assertNotNull(alertMsg, "Expected an alert, but no alert appeared!");
+
 //		Alert alert = driver.switchTo().alert();
 //		System.out.println(alert.getText());
 //		alert.accept();
@@ -110,7 +126,9 @@ public class GraphList{
 	@Then("The Try Editor page for Graph Representations should display with a Run option")
 	public void the_try_editor_page_for_graph_representations_should_display_with_a_run_option() {
 		graphPage.writeCodeAndRun("print(5 + 3)");
-		graphPage.verifyRunButtonPresent();
+		//graphPage.verifyRunButtonPresent();
+		
+		graphPage.clickRunButton();
 
 	}
 

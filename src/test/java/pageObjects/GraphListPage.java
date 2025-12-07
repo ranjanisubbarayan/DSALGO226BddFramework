@@ -8,6 +8,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import java.time.Duration;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 
 public class GraphListPage {
 	
@@ -83,6 +87,10 @@ public class GraphListPage {
 	public void clickTryHere() {
 		btnTryEditor.click();
 	}
+	
+	public void clickRunButton() {
+		btnRun.click();
+	}
 
 	public void verifyRunButtonPresent() {
 		Assert.assertEquals(btnRun.getText(), "Run");
@@ -110,6 +118,17 @@ public class GraphListPage {
 		String text = a.getText();
 		a.accept();
 		return text;
+	}
+	public String waitForAlertIfPresent() {
+	    try {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+	        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	        String text = alert.getText();
+	        alert.accept();
+	        return text;
+	    } catch (Exception e) {
+	        return null; // No alert appeared
+	    }
 	}
 
 	

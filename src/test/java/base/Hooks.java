@@ -45,20 +45,7 @@ public class Hooks {
         System.out.println("Extent Report generated.");
     }
 
-//    public void tearDown(Scenario scenario) {
-//        if (scenario.isFailed()) {
-//            // Capture screenshot
-//            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//            test.addScreenCaptureFromPath(saveScreenshot(screenshot), "Failed Screenshot");
-//            test.log(Status.FAIL, "Scenario failed");
-//        } else {
-//            test.log(Status.PASS, "Scenario passed");
-//        }
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//        extent.flush();
-//    }
+
 
     private String saveScreenshot(byte[] screenshot) {
         // Save screenshot to a file and return path
@@ -74,7 +61,20 @@ public class Hooks {
     }
 }
 
-
+//public void tearDown(Scenario scenario) {
+//if (scenario.isFailed()) {
+//  // Capture screenshot
+//  byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//  test.addScreenCaptureFromPath(saveScreenshot(screenshot), "Failed Screenshot");
+//  test.log(Status.FAIL, "Scenario failed");
+//} else {
+//  test.log(Status.PASS, "Scenario passed");
+//}
+//if (driver != null) {
+//  driver.quit();
+//}
+//extent.flush();
+//}
 
 //package base;
 //

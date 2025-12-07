@@ -1,2 +1,5 @@
+# Ignore build/output folders
 target/
 test-output/
+*.class
+*.json
