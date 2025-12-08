@@ -17,5 +17,5 @@ Feature: Navigation and interaction in dsAlgo Portal - Linked List Section
     Then The user should be directed to Linked List Page
     When the user clicks the Introduction link
     And the user clicks the Try Here button on the Introduction page
-    And The user write valid Linked List code in Editor and clicks the Run Button
-    Then The user should see output in the console
+    And The user write valid Linked List code in Editor and clicks the Run Button in LikedList Page
+    Then The user should see output in the console for LinkedList Page

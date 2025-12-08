@@ -4,21 +4,23 @@ Feature: Navigation and interaction in dsAlgo Portal - Graph Section
   Background:
     Given The user logs into dsAlgo Portal with username "TestNinja" and password "C5Mha6FkdSAVEN@"
     And The user should be on the Home Dashboard
- @gr1
+
+  @gr1
   Scenario: Open Graph main page from Home
     When The user selects the Get Started option under the Graph section
     Then The Graph main page should appear
-    Then  The user chooses the Graph Topic link
+    Then The user chooses the Graph Topic link
     Then The Graph Topic information page should load
-    Then  The user selects the Try Editor button on Graph Topic page
+    Then The user selects the Try Editor button on Graph Topic page
     Then The Try Editor page for Graph Topic should display with a Run option
-@gr2
+
+  @gr2
   Scenario Outline: Validate alert handling for invalid input on Graph Topic Try Editor
     When The user selects the Get Started option under the Graph section
     Then The Graph main page should appear
-    Then  The user chooses the Graph Topic link
+    Then The user chooses the Graph Topic link
     Then The Graph Topic information page should load
-    Then  The user selects the Try Editor button on Graph Topic page
+    Then The user selects the Try Editor button on Graph Topic page
     Then The Try Editor page for Graph Topic should display with a Run option
     When The user is on the Try Editor page for Graph Topic
     And The user enters "<graphInput>" into the editor and clicks Run
@@ -29,8 +31,6 @@ Feature: Navigation and interaction in dsAlgo Portal - Graph Section
       |            |
       | hi         |
 
-
-
   Scenario: Launch Graph Representations page
     When The user selects the Get Started option under the Graph section
     Then The user chooses the Graph Representations link
@@ -39,7 +39,7 @@ Feature: Navigation and interaction in dsAlgo Portal - Graph Section
     Then The Try Editor page for Graph Representations should display with a Run option
 
   Scenario Outline: Validate alert handling for invalid input on Graph Representations Try Editor
-       When The user selects the Get Started option under the Graph section
+    When The user selects the Get Started option under the Graph section
     Then The user chooses the Graph Representations link
     Then The Graph Representations information page should load
     Then The user selects the Try Editor button on Graph Representations page
@@ -53,4 +53,11 @@ Feature: Navigation and interaction in dsAlgo Portal - Graph Section
       |               |
       | hi            |
 
-
+ @GraphExcelData
+  Scenario Outline: Validate Excel handling for valid input on Graph Representations Try Editor
+    When The user selects the Get Started option under the Graph section
+    Then The user chooses the Graph Representations link
+    Then The Graph Representations information page should load
+    Then The user selects the Try Editor button on Graph Representations page
+	And The user write valid Linked List code in Editor and clicks the Run Button in Graph Page
+    Then The user should see output in the console for Graph Page

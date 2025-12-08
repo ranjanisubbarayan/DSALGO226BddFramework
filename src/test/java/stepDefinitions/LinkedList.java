@@ -5,6 +5,7 @@ import static driver.DriverFactory.getDriver;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -37,12 +38,15 @@ public class LinkedList {
 		linkedlistPage.clickTryHere();
 	}
 
-	@Then("The user write valid Linked List code in Editor and clicks the Run Button")
+	@Then("The user write valid Linked List code in Editor and clicks the Run Button in LikedList Page")
 	public void the_user_write_valid_linked_list_code_in_editor_and_clicks_the_run_button() throws IOException {
 		DataDriven d=new utilities.DataDriven();
 		ArrayList data=d.getData("LinkedList");
 	    linkedlistPage.writeAndRunLinkedListCode((String) data.get(1));
-	    
 	}
-
+	
+	@Then("The user should see output in the console for LinkedList Page")
+	public void the_user_should_see_output_in_the_console() {
+		System.out.println(driver.findElement(By.xpath("//pre[@id='output']")).getText());
+	}
 }

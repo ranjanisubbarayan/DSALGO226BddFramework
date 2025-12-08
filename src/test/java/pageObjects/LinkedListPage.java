@@ -53,13 +53,10 @@ public class LinkedListPage {
 	}
 	
 	public void writeAndRunLinkedListCode(String code) throws IOException {
-		
-		
 		Actions action=new Actions(driver);
 		action.click(codeEditor).perform();
 		action.sendKeys(code).perform();
 		btnRun.click();
 	}
-	
 	
 }

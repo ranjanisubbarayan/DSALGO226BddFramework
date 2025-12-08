@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -41,11 +43,11 @@ public class ArrayListPage {
 	WebElement verifyArraysInPython;
 	
 	@FindBy (xpath="//pre[@role='presentation']")
-	WebElement writeCode;
+	WebElement codeEditor;
 	
 	public void writeCodeAndRun(String code) {
 		Actions actions = new Actions(driver);
-		actions.click(writeCode).perform();
+		actions.click(codeEditor).perform();
 		actions.sendKeys(code).perform();
 		btnRun.click();
 	}
@@ -72,4 +74,11 @@ public class ArrayListPage {
 	public void verifyArraysInPythonText() {
 		Assert.assertEquals(verifyArraysInPython.getText(), "Arrays in Python");
 	}
+	public void writeAndRunLinkedListCode(String code) throws IOException {
+		Actions action=new Actions(driver);
+		action.click(codeEditor).perform();
+		action.sendKeys(code).perform();
+		btnRun.click();
+	}
+	
 }
