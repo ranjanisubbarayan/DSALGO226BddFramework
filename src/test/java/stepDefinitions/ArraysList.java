@@ -1,21 +1,23 @@
 package stepDefinitions;
 
+import static driver.DriverFactory.getDriver;
+
+import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.ArrayListPage;
 import pageObjects.LoginPage;
+import utilities.DataDriven;
 
-import static driver.DriverFactory.getDriver;
-
-public class ArrayList {
+public class ArraysList {
 
 	private WebDriver driver = getDriver();
 	LoginPage loginpage = new LoginPage(driver);
@@ -81,8 +83,15 @@ public class ArrayList {
 	public void the_user_writes_valid_code_in_editor_and_clicks_the_run_button() {
 		arraylistpage.writeCodeAndRun("print(5 + 3)");
 	}
+	@Then("The user writes valid code in Editor and clicks the Run Button in ArrayList Page")
+	public void the_user_writes_valid_code_in_editor_and_clicks_the_run_button_in_array_list_page() throws IOException {
+		DataDriven d=new utilities.DataDriven();
+		//ArrayList data=d.getData("ArrayList");
+		ArrayList<String> data=d.getData("ArrayList");
+	    arraylistpage.writeAndRunLinkedListCode((String) data.get(1));
+	}
 
-	@Then("The user should see output in the console")
+	@Then("The user should see output in the console for ArrayList Page")
 	public void the_user_should_see_output_in_the_console() {
 		System.out.println(driver.findElement(By.xpath("//pre[@id='output']")).getText());
 	}

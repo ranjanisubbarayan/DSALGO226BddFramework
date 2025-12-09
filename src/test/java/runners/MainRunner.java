@@ -15,6 +15,7 @@ import utilities.ExtentTestNGListener;
 				//tags = "@smoke_Ll",
                //  tags= "@Graph",
                // tags = "@home",
+					tags="@GraphExcelData",
 				glue= {"stepDefinitions","base"}, 
 				monochrome=true, dryRun=false,
 						plugin= {"pretty", "html:target/ranjani.html", "json:target/cucumber.json"})
