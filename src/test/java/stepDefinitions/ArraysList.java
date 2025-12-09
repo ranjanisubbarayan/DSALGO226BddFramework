@@ -16,8 +16,11 @@ import io.cucumber.java.en.When;
 import pageObjects.ArrayListPage;
 import pageObjects.LoginPage;
 import utilities.DataDriven;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 public class ArraysList {
+	
+	private static final Logger logger = LogManager.getLogger(ArraysList.class);
 
 	private WebDriver driver = getDriver();
 	LoginPage loginpage = new LoginPage(driver);
@@ -27,8 +30,9 @@ public class ArraysList {
 	public void the_user_sign_in_to_ds_algo_portal_entering_firstname_vara_password_varam(String firstname,
 			String password) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		loginpage.goTo();
-		loginpage.loginApplication(firstname, password);
+		loginpage.openLoginPage();
+		loginpage.login(firstname, password);
+		logger.info("successfully logged into the dsalgo application");
 	}
 
 	@Given("The user is in the Home page after Sign in")
@@ -39,6 +43,8 @@ public class ArraysList {
 	@When("The user clicks the Get Started button in Array Panel")
 	public void the_user_clicks_the_button_in_array_panel() {
 		arraylistpage.getstartedArray();
+		
+		logger.info("successfully logged into the array module");
 	}
 
 	@Then("The user should be directed to Array Page")
@@ -69,7 +75,7 @@ public class ArraysList {
 	@Then("The user should see an error message in alert window")
 	public void the_user_should_see_an_error_message_in_alert_window() {
 		Alert alert = driver.switchTo().alert();
-		System.out.println(alert.getText());
+		logger.info("Alert Message" + (alert.getText()));
 		alert.accept();
 	}
 
@@ -93,7 +99,7 @@ public class ArraysList {
 
 	@Then("The user should see output in the console for ArrayList Page")
 	public void the_user_should_see_output_in_the_console() {
-		System.out.println(driver.findElement(By.xpath("//pre[@id='output']")).getText());
+		logger.info("The user should see output in the console for ArrayList Page"+(driver.findElement(By.xpath("//pre[@id='output']")).getText()));
 	}
 
 }

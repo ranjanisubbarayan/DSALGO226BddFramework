@@ -3,6 +3,9 @@ import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
@@ -19,6 +22,8 @@ import utilities.ExcelSheetHandling;
 
 
 public class StackSteps { 
+	
+	private static final Logger logger = LogManager.getLogger(StackSteps.class);
 	private WebDriver driver = DriverFactory.getInstance().getDriver(); 
 	private LoginPage loginpage = new LoginPage(driver); 
 	private StackPage stackpage = new StackPage(driver);
@@ -32,6 +37,8 @@ public class StackSteps {
 		loginpage.enterUsername(username);
 		loginpage.enterPassword(password); 
 		loginpage.clickLoginButton(); 
+		
+		logger.info("successfully logged into the dsalgo application");
 		} 
 	
 	@Given("The user is in Home page after Sign in")
@@ -184,7 +191,7 @@ public class StackSteps {
 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		    	String output = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("output"))).getText();
 		        //driver.findElement(loginBtn).click();
-				System.out.println(output);
+				logger.info("The user should able to see output in the console"+(output));
 			}
 			
 			@Then("The user should able to see an error message in alert window")
@@ -204,7 +211,7 @@ public class StackSteps {
 				   				    
 				} catch (TimeoutException e) {
 				    
-				    System.out.println("No native alert appeared.");
+				    logger.info("No native alert appeared.");
 				   
 				}
 				
@@ -223,7 +230,7 @@ public class StackSteps {
 				        throw new RuntimeException("Excel returned EMPTY/NULL data for sheet 'phythonTryEditor' and testId: " + testId);
 				    }
 
-				    System.out.println("Loaded Excel row: " + stackphyTryEditData);
+				    logger.info("Loaded Excel row: " + stackphyTryEditData);
 			}
 			
 			@When("I enter the phythonTryEditor details from excel")
@@ -248,7 +255,7 @@ public class StackSteps {
 			public void i_should_see_output() {
 				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		    	String output = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("output"))).getText();
-		       	System.out.println(output);
+		       	logger.info("I should see output"+(output));
 			}
 
 }
