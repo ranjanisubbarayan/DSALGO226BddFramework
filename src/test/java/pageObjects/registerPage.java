@@ -16,7 +16,7 @@ public class registerPage {
 	
 	private WebDriver driver;
 	//registerPage registerpage;
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	By register_link = By.xpath("//div[@id='navbarCollapse']/div[2]/ul/a[2]");
 	By register_username = By.id("id_username");
 	By register_password = By.id("id_password1");
@@ -24,7 +24,7 @@ public class registerPage {
 	By register_button = By.xpath("//input[@type='submit']");
 	By registerpage_displayed = By.xpath("/html/body/div[2]/div/div[2]/form/span[3]");
 	By printErrormsg = By.xpath("//div[@class='alert alert-primary']");
-	By registeredsuccess = By.xpath("/html/body/div[2]/text()");
+	By registeredsuccess = By.xpath("//div[@class='alert alert-primary' or @role='alert']");
 	private String generatedUsername;
 	
 	public registerPage(WebDriver driver) {
@@ -129,7 +129,7 @@ public class registerPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(register_username));
 
-	    // Use JavaScript to get the HTML5 validation message
+	    
 	    JavascriptExecutor js = (JavascriptExecutor) driver;
 	    String message = (String) js.executeScript("return arguments[0].validationMessage;", usernameField);
 	    
@@ -168,9 +168,28 @@ public class registerPage {
 		    }
 		 
 		 
-		 public void print_successfullyRegistered() {
-				String printsuccess =driver.findElement(registeredsuccess).getText();
-				System.out.println("Registered Succesfully :  " + printsuccess );
+		 public String print_successfullyRegistered() {
+
+			    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+			    
+			    WebElement alert = wait.until(driver -> {
+			        try {
+			            WebElement e1 = driver.findElement(By.xpath("//div[contains(@class,'alert') and contains(@class,'alert-primary')]"));
+			            if (e1.isDisplayed()) return e1;
+			        } catch (Exception ignored) {}
+
+			        try {
+			            WebElement e2 = driver.findElement(By.xpath("//div[@role='alert']"));
+			            if (e2.isDisplayed()) return e2;
+			        } catch (Exception ignored) {}
+
+			        return null; 
+			    });
+
+			    String message = alert.getText();
+			    System.out.println("Success message: " + message);
+			    return message;
 			}
 
 }

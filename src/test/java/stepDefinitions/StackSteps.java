@@ -14,6 +14,7 @@ import org.testng.Assert;
 import io.cucumber.java.en.*;
 import pageObjects.LoginPage;
 import pageObjects.StackPage;
+import utilities.ConfigReader;
 import utilities.DriverFactory;
 import utilities.ExcelSheetHandling;
 
@@ -28,22 +29,25 @@ public class StackSteps {
 	
 	@Given("The user signs in to DS Algo Portal for stack module with username {string} and password {string}") 
 	public void the_user_signs_in_to_ds_algo_portal_for_stack_module_with_username_and_password(String username, String password) { 
-		loginpage.openLoginPage(); 
-		loginpage.enterUsername(username);
-		loginpage.enterPassword(password); 
+		driver.get(ConfigReader.getProperty("loginUrl"));
+		loginpage.enterUsername(ConfigReader.getProperty("username"));
+		loginpage.enterPassword(ConfigReader.getProperty("password")); 
 		loginpage.clickLoginButton(); 
 		} 
 	
 	@Given("The user is in Home page after Sign in")
 	public void the_user_is_in_home_page_after_sign_in() {
-	    driver.get("https://dsportalapp.herokuapp.com/home");
-	}
+		String homeUrl = ConfigReader.getProperty("homeUrl");
+		driver.get(homeUrl);
+	    }
 
 	@Given("The user is in the Stack page after Sign in")
 	public void the_user_is_in_the_stack_page_after_sign_in() {
 		stackpage.clickstack_Getstarted_btn();
-	    driver.get("https://dsportalapp.herokuapp.com/stack/");
-	}
+		String stackUrl = ConfigReader.getProperty("stackUrl");
+		driver.get(stackUrl);
+		
+	   }
 	
 	@When("The user clicks the Getting Started button in Stack Panel OR The user select Stack item from the drop down menu") 
 	public void the_user_clicks_getting_started_button_or_stack_dropdown() {
@@ -181,7 +185,7 @@ public class StackSteps {
 			
 			@Then("The user should able to see output in the console") 
 			public void the_user_should_able_to_see_output_in_the_console() {
-				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		    	String output = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("output"))).getText();
 		        //driver.findElement(loginBtn).click();
 				System.out.println(output);

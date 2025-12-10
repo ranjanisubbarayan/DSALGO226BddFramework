@@ -16,54 +16,47 @@ public class DriverFactory {
     public static DriverFactory getInstance() {
         return instance;
     }
-
-    // ---------- FIXED MAIN DRIVER CREATION ----------
     public static WebDriver getDriver() {
-
-        // FIX: ThreadLocal itself is never null → check driver.get()
         if (driver.get() == null) {
-
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--disable-save-password-bubble");
-            options.addArguments("--disable-autofill-keyboard-accessory-view");
-            options.addArguments("--disable-features=AutofillServerCommunication,AutofillProfileCleanup");
-            options.addArguments("--disable-features=PasswordGeneration,PasswordManagerOnboarding");
-            options.addArguments("--start-maximized");
-            options.addArguments("--disable-notifications");
-            options.addArguments("--disable-infobars");
-            options.addArguments("--disable-extensions");
-            options.addArguments("--incognito");
-
-            driver.set(new ChromeDriver(options));
+            driver.set(initDriver("chrome")); 
         }
-
         return driver.get();
     }
 
-    // Optional: Cross-browser initializer
-    public WebDriver initDriver(String browser) {
-
-        if (browser.equalsIgnoreCase("chrome")) {
-            driver.set(new ChromeDriver());
-            System.out.println("run test on chrome Driver");
-
-        } else if (browser.equalsIgnoreCase("firefox")) {
-            driver.set(new FirefoxDriver());
-            System.out.println("run test on Firefox Driver");
-
-        } else if (browser.equalsIgnoreCase("edge")) {
-            driver.set(new EdgeDriver());
-            System.out.println("run test on edge Driver");
-
-        } else {
-            throw new RuntimeException("Invalid browser name: " + browser);
+    private static WebDriver initDriver(String browser) {
+        WebDriver localDriver;
+        switch(browser.toLowerCase()) {
+            case "chrome":
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments(
+                    "--disable-save-password-bubble",
+                    "--disable-autofill-keyboard-accessory-view",
+                    "--disable-features=AutofillServerCommunication,AutofillProfileCleanup",
+                    "--disable-features=PasswordGeneration,PasswordManagerOnboarding",
+                    "--start-maximized",
+                    "--disable-notifications",
+                    "--disable-infobars",
+                    "--disable-extensions",
+                    "--incognito"
+                );
+                localDriver = new ChromeDriver(options);
+                break;
+            case "firefox":
+                localDriver = new FirefoxDriver();
+                break;
+            case "edge":
+                localDriver = new EdgeDriver();
+                break;
+            default:
+                throw new RuntimeException("Invalid browser: " + browser);
         }
-
-        driver.get().manage().window().maximize();
-        return driver.get();
+        localDriver.manage().window().maximize();
+        return localDriver;
     }
 
-    // ---------- QUIT DRIVER ----------
+
+
+    
     public void quitDriver() {
 
         if (driver.get() != null) {

@@ -4,15 +4,20 @@ import io.cucumber.java.en.*;
 import pageObjects.LoginPage;
 import utilities.DriverFactory;
 import utilities.ExcelSheetHandling;
+import utilities.LoggerLoad;
+import utilities.ScreenshotUtils;
 
 import java.nio.file.Paths;
 import java.util.Map;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 
 public class LoginSteps {
+	     
+	private static final Logger logger = LoggerLoad.getLogger(LoginSteps.class);
 
     WebDriver driver;
     LoginPage loginpage;
@@ -27,11 +32,13 @@ public class LoginSteps {
     @Given("user is on the Login page")
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
+    	logger.info("Navigating to the Login Page");
         loginpage.openLoginPage();
     }
 
     @When("the user clicks the {string} link on the Home page")
     public void the_user_clicks_the_link_on_the_home_page(String linkText) {
+    	logger.info("Clicking Login button");
         loginpage.clickSignInLink();
     }
 
@@ -98,4 +105,10 @@ public class LoginSteps {
     public void i_should_see_the_expected_result() {
         
     }
+    @Then("I capture screenshot {string}")
+    public void i_capture_screenshot(String screenshotName) {
+    	logger.info("Capturing screenshot: " + screenshotName);
+        ScreenshotUtils.takeScreenshot(DriverFactory.getDriver(), screenshotName);
+    }
+
 }

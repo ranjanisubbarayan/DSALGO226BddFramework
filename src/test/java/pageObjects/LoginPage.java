@@ -1,6 +1,8 @@
 package pageObjects;
 
 import java.time.Duration;
+
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 //import org.openqa.selenium.StaleElementReferenceException;
@@ -10,8 +12,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.ConfigReader;
+import utilities.LoggerLoad;
+
 public class LoginPage {
 
+	private static final Logger logger = LoggerLoad.getLogger(LoginPage.class);
     private WebDriver driver;
     private WebDriverWait wait;
 
@@ -29,16 +35,19 @@ public class LoginPage {
     By alertMsg = By.xpath("//div[contains(@class,'alert-primary')]");
     private By loggedInIndicator = By.xpath("//div[contains(text(),'You are logged in')]");
 	
-    // Open login page
+   
     public void openLoginPage() {
-        driver.get("https://dsportalapp.herokuapp.com/login");
+    	logger.info("Open Login Page");
+        driver.get(ConfigReader.getProperty("loginUrl"));
     }
 
     public void clickSignInLink() {
+    	
         driver.findElement(signInLink).click();
     }
 
     public void clickLoginButton() {
+    	logger.info("User enter Login Button");
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     	wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
     	wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
@@ -49,13 +58,15 @@ public class LoginPage {
     }
 
     public void enterUsername(String username) {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    	logger.info("Entering username: " + username);
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     	wait.until(ExpectedConditions.presenceOfElementLocated(loginUsername));
     	wait.until(ExpectedConditions.elementToBeClickable(loginUsername));
         driver.findElement(loginUsername).sendKeys(username);
     }
 
     public void enterPassword(String password) {
+    	logger.info("Entering username: " + password);
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     	wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
     	wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
@@ -88,7 +99,15 @@ public class LoginPage {
     }
 
     public boolean isHomePageDisplayed() {
-        return driver.getCurrentUrl().contains("/home");
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='NumpyNinja']"))); 
+            
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+       
     }
 
     public String getUsernameValidationMessage() {

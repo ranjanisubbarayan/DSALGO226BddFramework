@@ -17,7 +17,7 @@ public class StackPage {
 	public StackPage(WebDriver driver)
 	{
 		this.driver = driver; 
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
 		PageFactory.initElements(driver, this); 
 		} 
 	
@@ -174,7 +174,7 @@ public class StackPage {
 
 				public void verifyRunButton() {
 				   
-				    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+				    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 				    try {
 				        WebElement runBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				            By.xpath("//button[contains(text(),'Run')]")
@@ -190,7 +190,8 @@ public class StackPage {
 				    }
 				}
 
-				public void enterCodeInEditor(String code) {WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+				public void enterCodeInEditor(String code) {
+					WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 			    try {
 			       

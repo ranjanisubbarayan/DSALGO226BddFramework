@@ -33,74 +33,62 @@ As a user
    
    Scenario: when clicking the "Get Started "button for "Data structures - Induction", Its displayed Error message 
    Given The user is on Home page	
-   When "Data Structures - Induction" 
-   And user click the Get Started button of Data Structure - Induction
+   When user click the Get Started button of Data Structure - Induction 
    Then The user should able to see an Warning message "You are not logged in"
 
    Scenario: when clicking the "Get Started" button for "Arrays", Its displayed Error message 
    Given The user is on Home page	
-   When  "Array" 
-   And click the Get Started button	of Array
+   When click the Get Started button of Array
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario:when selecting "Linked List" in thedropdown menu, its displayed Error message 
    Given The user is on Home page	
-   When  "Linked List"	
-   And user  select Linked List in the dropdown button	
+   When user  select Linked List in the dropdown button	
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario: when selecting  "Stack" in the dropdown menu, its displayed Error mesaage 
    Given The user is on Home page	
-   When "Stack"	
-   And user select  Stack in the dropdown button	
+   When user select  Stack in the dropdown button 	
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario:when selecting  "Queue" in the dropdown menu, its displayed Error message 
    Given The user is on Home page	
-   When "Queue"	
-   And user select Queue in the dropdown button	
+   When user select Queue in the dropdown button
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario:when selecting  Tree in the dropdown menu, its displayed Error message
    Given 	The user is on Home page	
-   When "Tree"
-   And 	user select Tree in the dropdown button	
+   When user select Tree in the dropdown button	
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario:when selecting  "Graph" in the dropdown menu, its displyed Error message 
    Given The user is on Home page	
-   When "Graph"	
-   And user select Graph in the dropdown button	
+   When user select Graph in the dropdown button
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario:when clicking  the "Get Started" button for "Linked List", its displayed Error message  
    Given 	The user is on Home page	 
-   When "Linked List" 	
-   And user click the Get Started button of Linked List
+   When user click the Get Started button of Linked List 	
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario:when clicking the "Get Started" button for "Stack", its displayed Error message	 
    Given The user is on Home page	
-   When "Stack"	
-   And user click the Get Started button of Stack	
+   When user click the Get Started button of Stack	
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario:when clicking the "Get Started" button for "Queue" , its displayed Error message 
    Given 	The user is on Home page	
-   When "Queue"
-   And 	user click the Get Started button of Queue
+   When user click the Get Started button of Queue
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario:when clicking the "Get Started" button for "Tree", its displayed Error message 
    Given The user is on Home page	
-   When "Tree"	
-   And user click the Get Started button of Tree	
+   When user click the Get Started button of Tree
    Then The user should able to see an Warning message "You are not logged in"
    
    Scenario:when clicking  the "Get Started" button for "Graph", its displayed Error message  
    Given The user is on Home page	
-   When "Graph"	
-   And user click the Get Started button of Graph
+   When user click the Get Started button of Graph
    Then The user should able to see an Warning message "You are not logged in"
 
    

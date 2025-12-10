@@ -3,13 +3,17 @@ package base;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utilities.DriverFactory;
+import utilities.LoggerLoad;
 import utilities.Report;
+import utilities.ScreenshotUtils;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -19,50 +23,64 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.ByteArrayInputStream;
 
 public class Hooks {
+	private static final Logger logger = LoggerLoad.getLogger(Hooks.class);
 
     private static ExtentReports extent = Report.getInstance();
     public static ExtentTest test;
     private WebDriver driver;
 
-    @Before    
-    public void setUp(Scenario scenario) {
-//    	 DriverFactory.getInstance().getDriver();
-//
-//    	    test = extent.createTest(scenario.getName());
-    	    DriverFactory.getDriver();
-
-            // ✔ Create test node in Extent report
-            Report.getInstance().createTest(scenario.getName());
-    }
-
-//    @After
-//    
-//    public void tearDown() {
-//	
-//}
     
-    @After
-    public static void tearDown() {
-    	//DriverFactory.getInstance().quitDriver();;
-    	//cleanupDriver();
-        Report.getInstance().flush();  // <-- Required
-        //System.out.println("Extent Report generated.");
+    @Before(order = 0)
+    public void startReport() {
+        if (extent == null) {
+            ExtentSparkReporter reporter = new ExtentSparkReporter("test-output/ExtentReport.html");
+            extent = new ExtentReports();
+            extent.attachReporter(reporter);
+        }
     }
+    
+    @Before(order = 1) 
+    public void setUp(Scenario scenario) {
+    	 driver = DriverFactory.getDriver();
+   	    test = extent.createTest(scenario.getName());
+        test.info("Starting scenario: " + scenario.getName());
+        	logger.info("Starting scenario: " + scenario.getName());
+        	// DriverFactory.getInstance().getDriver();
+        	
+                       
+    }
+   
+    @After(order = 1)
+    public void tearDown(Scenario scenario) {
+    	
+    	logger.info("Ending scenario: " + scenario.getName());
+    	if (scenario.isFailed()) {
+            test.fail("Scenario failed: " + scenario.getName());
+        } else {
+            test.pass("Scenario passed");
+        }
 
-//    public void tearDown(Scenario scenario) {
-//        if (scenario.isFailed()) {
-//            // Capture screenshot
-//            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//            test.addScreenCaptureFromPath(saveScreenshot(screenshot), "Failed Screenshot");
-//            test.log(Status.FAIL, "Scenario failed");
-//        } else {
-//            test.log(Status.PASS, "Scenario passed");
-//        }
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//        extent.flush();
-//    }
+        if (scenario.isFailed()) {
+
+            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", "Failed Screenshot");
+
+            String screenshotPath = ScreenshotUtils.takeScreenshot(driver, scenario.getName());
+
+            test.fail("Scenario Failed. Screenshot Attached:")
+                .addScreenCaptureFromPath(screenshotPath);
+        }
+        else {
+            test.pass("Scenario Passed");
+        }
+      //  DriverFactory.getInstance().quitDriver();
+
+        if (driver != null) {
+           // driver.quit();
+        }
+
+        extent.flush();
+    }
 
     private String saveScreenshot(byte[] screenshot) {
         // Save screenshot to a file and return path
@@ -76,25 +94,9 @@ public class Hooks {
             return null;
         }
     }
+    @After(order = 0)
+    public void flushReport() {
+        extent.flush();
+    }
 }
 
-
-
-//package base;
-//
-//import io.cucumber.java.After;
-//import io.cucumber.java.Before;
-//import static driver.DriverFactory.getDriver;
-//import static driver.DriverFactory.cleanupDriver;
-//
-//public class Hooks {
-//	
-//	@Before
-//	public void setup() {
-//		getDriver();
-//	}
-//	@After
-//	public void tearDown() {
-//		cleanupDriver();
-//	}
-//}
