@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.ConfigReader;
+
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -15,7 +17,6 @@ import java.time.Duration;
 public class registerPage {
 	
 	private WebDriver driver;
-	//registerPage registerpage;
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	By register_link = By.xpath("//div[@id='navbarCollapse']/div[2]/ul/a[2]");
 	By register_username = By.id("id_username");
@@ -24,7 +25,8 @@ public class registerPage {
 	By register_button = By.xpath("//input[@type='submit']");
 	By registerpage_displayed = By.xpath("/html/body/div[2]/div/div[2]/form/span[3]");
 	By printErrormsg = By.xpath("//div[@class='alert alert-primary']");
-	By registeredsuccess = By.xpath("//div[@class='alert alert-primary' or @role='alert']");
+	By registeredsuccess = By.xpath("//div[@class='alert alert-primary']");
+	
 	private String generatedUsername;
 	
 	public registerPage(WebDriver driver) {
@@ -32,7 +34,7 @@ public class registerPage {
 	}
 	
 	public void open_DSALGO_registerPage() {
-		driver.get("https://dsportalapp.herokuapp.com/register");
+		driver.get(ConfigReader.getProperty("registerUrl"));
 	}
 	
 	public void click_register_link() {
@@ -113,16 +115,13 @@ public class registerPage {
 	
 	public void enter_registerUsername(String username) {
 		driver.findElement(register_username).sendKeys(username);
-		//driver.findElement(register_username).clear();
 		
 	}
 	public void enter_regPassword(String password) {
 		driver.findElement(register_password).sendKeys(password);
-		//driver.findElement(register_password).clear();
 	}
 	public void enter_regPwdconfirm(String passwordconfirm) {
 		driver.findElement(register_confirm_password).sendKeys(passwordconfirm);
-		//driver.findElement(register_confirm_password).clear();
 	}
 	
 	public String getValidationMessage() {
@@ -142,7 +141,6 @@ public class registerPage {
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		    WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(register_password));
 
-		    // Use JavaScript to get the HTML5 validation message
 		    JavascriptExecutor js = (JavascriptExecutor) driver;
 		    String message = (String) js.executeScript("return arguments[0].validationMessage;", passwordField);
 		    
@@ -165,29 +163,12 @@ public class registerPage {
 		}
 		 public String getGeneratedUsername() {
 		        return generatedUsername;
-		    }
-		 
+		    }		 
 		 
 		 public String print_successfullyRegistered() {
 
-			    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-			    
-			    WebElement alert = wait.until(driver -> {
-			        try {
-			            WebElement e1 = driver.findElement(By.xpath("//div[contains(@class,'alert') and contains(@class,'alert-primary')]"));
-			            if (e1.isDisplayed()) return e1;
-			        } catch (Exception ignored) {}
-
-			        try {
-			            WebElement e2 = driver.findElement(By.xpath("//div[@role='alert']"));
-			            if (e2.isDisplayed()) return e2;
-			        } catch (Exception ignored) {}
-
-			        return null; 
-			    });
-
-			    String message = alert.getText();
+			 WebElement successmsg =driver.findElement(registeredsuccess);
+			    String message = successmsg.getText();		   
 			    System.out.println("Success message: " + message);
 			    return message;
 			}

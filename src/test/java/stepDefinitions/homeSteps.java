@@ -1,20 +1,12 @@
 package stepDefinitions;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageObjects.LoginPage;
 import pageObjects.homePage;
 import utilities.ConfigReader;
 import utilities.DriverFactory;
-//import pages.homePage;
-import utilities.baseTest;
 
 public class homeSteps {
 	
@@ -130,11 +122,6 @@ public class homeSteps {
 	    homepage.clicklinkdlist_Getstarted_btn();
 	}
 	@When("click the Get Started button	of Array")
-//	public void click_the_get_started_button_of_array() {
-//		homepage.clickarray_Getstarted_btn();
-//	    
-//	}
-
 	@When("click the Get Started button of Array")
 	public void click_the_get_started_button_of_array() {
 	    homepage.clickarray_Getstarted_btn();

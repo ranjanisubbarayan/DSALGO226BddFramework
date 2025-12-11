@@ -1,19 +1,14 @@
 package stepDefinitions;
 
-import java.time.Duration;
 import java.util.List;
 import java.util.Map;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageObjects.homePage;
 import pageObjects.registerPage;
 import utilities.DriverFactory;
-//import driver.DriverFactory;
+
 
 public class registerSteps {
 	
