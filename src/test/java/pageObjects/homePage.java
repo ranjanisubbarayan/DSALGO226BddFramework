@@ -4,13 +4,19 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class homePage {
-	
 	private WebDriver driver;
-	homePage homepage;
+	private WebDriverWait wait; 
+	
+	public homePage(WebDriver driver)
+	{
+		this.driver = driver; 
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
+		PageFactory.initElements(driver, this); 
+		} 
 	
 	By printerrormsg = By.xpath("//div[@class='alert alert-primary']");
 	By dsalgo_button = By.xpath("//button[text()='Get Started']");
@@ -35,10 +41,7 @@ public class homePage {
 	By signinLink = By.xpath(" //div[@id='navbarCollapse']/div[2]/ul/a[3]");
 	By errormsg = By.xpath("/html/body/div[2]");
 	
-	public homePage(WebDriver driver) {
-	     this.driver = driver;
-	    
-	}
+	
 	public void openDSAlgoPortal() {
 		
 		driver.get("https://dsportalapp.herokuapp.com/");
@@ -68,43 +71,43 @@ public class homePage {
 	public void clickdropdown_menu() {
 		
 		driver.findElement(datastrct_dropdown).click();
-		
+		driver.findElement(array_dropdown).click();
 			
 	}
 	public void click_array_dropdown() {
-		
+		driver.findElement(datastrct_dropdown).click();
 		driver.findElement(array_dropdown).click();
 		
 	}
 	
 	public void click_linkedlist_dropdown() {
 		
-	
+		driver.findElement(datastrct_dropdown).click();
 		driver.findElement(linkedlist_dropdown).click();
 	}
 	
 	public void click_stack_dropdown() {
 		
-		
+		driver.findElement(datastrct_dropdown).click();
 		driver.findElement(stack_dropdown).click();
 	}
 	
 	public void click_queue_dropdown() {
-	
+		driver.findElement(datastrct_dropdown).click();
 		driver.findElement(queue_dropdown).click();
 		
 	}
 	
 	public void click_tree_dropdown() {
 		
-		
+		driver.findElement(datastrct_dropdown).click();
 		driver.findElement(tree_dropdown).click();
 		
 	}
 	 
 	public void click_graph_dropdown() {
 		
-		
+		driver.findElement(datastrct_dropdown).click();
 		driver.findElement(graph_dropdown).click();
 		
 	}

@@ -1,3 +1,4 @@
+@Queue
 Feature: Queue Module Tests
 
   Background:
@@ -12,29 +13,41 @@ Feature: Queue Module Tests
     Then The user should see "<expectedResult>" in Queuepage
 
     Examples:
-      | page                          | action                             | code                  | expectedResult                                   |
-      | Home                          | Getting Started                    |                       | Queue Data Structure Page                        |
-      | Queue                         | Implementation of Queue in Python  |                       | Implementation of Queue in Python page          |
-      | Implementation of Queue in Python | Try Here                        |                       | tryEditor page with Run button                  |
-      | tryEditor                     | Run without code                   |                       | error message alert                              |
-      | tryEditor                     | Run with invalid code              | print("invalid")      | error message alert                              |
-      | tryEditor                     | Run with valid code                | print("Hello World")  | console output                                   |
-      | Queue                         | Practice Questions                 |                       | Practice page                                    |
-      | Queue                         | Implementation using collections.deque |                       | Implementation using collections.deque page    |
+      | page                          | action                                | code                  | expectedResult                                   |
+      | Home                          | Getting Started                       |                       | Queue Data Structure Page                        |
+      | Queue                         | Implementation of Queue in Python     |                       | Implementation of Queue in Python page          |
+      | Implementation of Queue in Python | Try Here                          |                       | tryEditor page with Run button                  |
+      | tryEditor                     | Run without code                      |                       | error message alert                              |
+      | tryEditor                     | Run with invalid code                 | print (invalid)         | error message alert                              |
+      | tryEditor                     | Run with valid code                   | print ('Hello World')   | console output                                   |
+      | Queue                         | Practice Questions                    |                       | Practice page                                    |
+      | Queue                         | Implementation using collections.deque|                       | Implementation using collections.deque page    |
       | Implementation using collections.deque | Try Here                     |                       | tryEditor page with Run button                  |
-      | tryEditor                     | Run without code                   |                       | error message alert                              |
-      | tryEditor                     | Run with invalid code              | print("invalid")      | error message alert                              |
-      | tryEditor                     | Run with valid code                | print("Hello World")  | console output                                   |
-      | Queue                         | Practice Questions                 |                       | Practice page                                    |
-      | Queue                         | Implementation using array         |                       | Implementation using array page                 |
-      | Implementation using array    | Try Here                           |                       | tryEditor page with Run button                  |
-      | tryEditor                     | Run without code                   |                       | error message alert                              |
-      | tryEditor                     | Run with invalid code              | print("invalid")      | error message alert                              |
-      | tryEditor                     | Run with valid code                | print("Hello World")  | console output                                   |
-      | Queue                         | Practice Questions                 |                       | Practice page                                    |
-      | Queue                         | Queue Operations                   |                       | Queue Operations page                            |
-      | Queue Operations              | Try Here                           |                       | tryEditor page with Run button                  |
-      | tryEditor                     | Run without code                   |                       | error message alert                              |
-      | tryEditor                     | Run with invalid code              | print("invalid")      | error message alert                              |
-      | tryEditor                     | Run with valid code                | print("Hello World")  | console output                                   |
-      | Queue                         | Practice Questions                 |                       | Practice page                                    |
+      | tryEditor                     | Run without code                      |                       | error message alert                              |
+      | tryEditor                     | Run with invalid code                 | print (invalid)        | error message alert                              |
+      | tryEditor                     | Run with valid code                   | print ('Hello World')   | console output                                   |
+      | Queue                         | Practice Questions                    |                       | Practice page                                    |
+      | Queue                         | Implementation using array            |                       | Implementation using array page                 |
+      | Implementation using array    | Try Here                              |                       | tryEditor page with Run button                  |
+      | tryEditor                     | Run without code                      |                       | error message alert                              |
+      | tryEditor                     | Run with invalid code                 | print (invalid)         | error message alert                              |
+      | tryEditor                     | Run with valid code                   | print ('Hello World')   | console output                                   |
+      | Queue                         | Practice Questions                    |                       | Practice page                                    |
+      | Queue                         | Queue Operations                      |                       | Queue Operations page                            |
+      | Queue Operations              | Try Here                              |                       | tryEditor page with Run button                  |
+      | tryEditor                     | Run without code                      |                       | error message alert                              |
+      | tryEditor                     | Run with invalid code                 | print (invalid)         | error message alert                              |
+      | tryEditor                     | Run with valid code                   | print ('Hello World')   | console output                                   |
+      | Queue                         | Practice Questions                    |                       | Practice page                                    |
+
+  Scenario Outline: Queue module tryEditor test data using Excel data
+    Given I read queue TryEditor test data for "<testId>"
+    When I enter the pythonTryEditor details from excel
+    Then I should see Queue output
+
+Examples:
+    | testId |
+    | TC001  |
+    | TC002  |
+
+      

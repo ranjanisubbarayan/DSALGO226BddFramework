@@ -27,9 +27,11 @@ Feature: Login to DS Algo Portal
     Given I read login test data for "<testId>"
     When I enter the login details from excel
     Then I should see the ExpectedResult
-    
+    Then I capture screenshot "LoginPage"
   Examples:
     | testId |
     | L1     |
     | L2     | 
+    
+
     
