@@ -1,6 +1,6 @@
 package pageObjects; 
 import java.time.Duration;
-import java.util.List;
+
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -24,7 +24,7 @@ public class StackPage {
 	By verifyHomepage = By.xpath("//div[contains(text(),'You are logged in')]"); 
 	By verifyStackPageHeader = By.xpath("//h4[text()='Stack']"); 
 	By btnStackGetStarted = By.xpath("//a[contains(text(),'Get Started') and contains(@href,'stack')]"); 
-	//private By linkOperationInStack = By.xpath("//a[text()='Operations in Stack']"); 
+	
 	By linkOperationInStack = By.xpath("//a[text()='Operations in Stack']");
 	By stackGetStartedBtn = By.xpath("//a[contains(text(),'Get Started') and contains(@href,'stack')]"); 
 	By linkImplementStack = By.xpath("//a[text()='Implementation']"); 

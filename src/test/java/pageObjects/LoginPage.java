@@ -3,7 +3,7 @@ package pageObjects;
 import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-//import org.openqa.selenium.StaleElementReferenceException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -15,10 +15,10 @@ public class LoginPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // Constructor
+ 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Initialize wait here
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
         PageFactory.initElements(driver, this); 
     }
 
@@ -29,7 +29,7 @@ public class LoginPage {
     By alertMsg = By.xpath("//div[contains(@class,'alert-primary')]");
     private By loggedInIndicator = By.xpath("//div[contains(text(),'You are logged in')]");
 	
-    // Open login page
+  
     public void openLoginPage() {
         driver.get("https://dsportalapp.herokuapp.com/login");
     }

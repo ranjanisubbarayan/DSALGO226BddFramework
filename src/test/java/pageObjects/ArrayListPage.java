@@ -2,7 +2,7 @@ package pageObjects;
 
 import java.io.IOException;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -19,7 +19,6 @@ public class ArrayListPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	//WebElement Home_page = driver.findElement(By.xpath("//div[contains(text(),'You are logged in')]"));
 	
 	@FindBy (xpath="//div[contains(text(),'You are logged in')]")
 	WebElement VerifyHomepage;

@@ -37,14 +37,12 @@ public class GraphListPage {
 
 
 
-	//@FindBy(xpath = "//a[normalize-space()='Graph']")
 
 	@FindBy(xpath = "//div//a[@href='graph']")
-	//@FindBy(xpath = "//a[normalize-space()='Graph']")
+	
 
 	WebElement lnkGraphTopic;
 
-	//@FindBy(xpath = "//div//a[@href='graph-representations']")
 	@FindBy(xpath = "//a[normalize-space()='Graph Representations']")
 	WebElement lnkGraphRepresentations;
 
@@ -129,14 +127,13 @@ public class GraphListPage {
 	        alert.accept();
 	        return text;
 	    } catch (Exception e) {
-	        return null; // No alert appeared
+	        return null; 
 	    }
 	}
 
 	
 	public String getConsoleOutput() {
-		// Common pattern: output appears in a pre/div after Run; update if needed
-		// Try a conservative locator used in dsportal tryEditor pages:
+		
 		WebElement output = driver.findElement(By.id("output"));
 		return output.getText().trim();
 	}

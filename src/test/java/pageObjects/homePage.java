@@ -50,15 +50,13 @@ public class homePage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(dsalgo_button)).click();
 
-		
-		//driver.findElement(dsalgo_button).click();
+	
 	}
 	
 	public void isdisplayedPageTitle() {
 		
 		driver.findElement(homepageTitle).isDisplayed();
-		//String visible = driver.findElement(homepageTitle).getText();
-	//	System.out.println("PageTitle:  "+visible);
+		
 	}
 	
 	public void isdisplayedReg_Sign_link() {
@@ -70,43 +68,43 @@ public class homePage {
 	public void clickdropdown_menu() {
 		
 		driver.findElement(datastrct_dropdown).click();
-		//driver.findElement(array_dropdown).click();
+		
 			
 	}
 	public void click_array_dropdown() {
-		//driver.findElement(datastrct_dropdown).click();
+		
 		driver.findElement(array_dropdown).click();
 		
 	}
 	
 	public void click_linkedlist_dropdown() {
 		
-		//driver.findElement(datastrct_dropdown).click();
+	
 		driver.findElement(linkedlist_dropdown).click();
 	}
 	
 	public void click_stack_dropdown() {
 		
-		//driver.findElement(datastrct_dropdown).click();
+		
 		driver.findElement(stack_dropdown).click();
 	}
 	
 	public void click_queue_dropdown() {
-		//driver.findElement(datastrct_dropdown).click();
+	
 		driver.findElement(queue_dropdown).click();
 		
 	}
 	
 	public void click_tree_dropdown() {
 		
-		//driver.findElement(datastrct_dropdown).click();
+		
 		driver.findElement(tree_dropdown).click();
 		
 	}
 	 
 	public void click_graph_dropdown() {
 		
-		//driver.findElement(datastrct_dropdown).click();
+		
 		driver.findElement(graph_dropdown).click();
 		
 	}

@@ -15,7 +15,7 @@ import java.time.Duration;
 public class registerPage {
 	
 	private WebDriver driver;
-	//registerPage registerpage;
+	
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	By register_link = By.xpath("//div[@id='navbarCollapse']/div[2]/ul/a[2]");
 	By register_username = By.id("id_username");
@@ -113,23 +113,23 @@ public class registerPage {
 	
 	public void enter_registerUsername(String username) {
 		driver.findElement(register_username).sendKeys(username);
-		//driver.findElement(register_username).clear();
+	
 		
 	}
 	public void enter_regPassword(String password) {
 		driver.findElement(register_password).sendKeys(password);
-		//driver.findElement(register_password).clear();
+	
 	}
 	public void enter_regPwdconfirm(String passwordconfirm) {
 		driver.findElement(register_confirm_password).sendKeys(passwordconfirm);
-		//driver.findElement(register_confirm_password).clear();
+		
 	}
 	
 	public String getValidationMessage() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(register_username));
 
-	    // Use JavaScript to get the HTML5 validation message
+	  
 	    JavascriptExecutor js = (JavascriptExecutor) driver;
 	    String message = (String) js.executeScript("return arguments[0].validationMessage;", usernameField);
 	    
@@ -142,7 +142,7 @@ public class registerPage {
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		    WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(register_password));
 
-		    // Use JavaScript to get the HTML5 validation message
+		   
 		    JavascriptExecutor js = (JavascriptExecutor) driver;
 		    String message = (String) js.executeScript("return arguments[0].validationMessage;", passwordField);
 		    
