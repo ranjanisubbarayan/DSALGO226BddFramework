@@ -50,15 +50,16 @@ public class homePage {
 	
 	
 	public void clickGetStartedbutton() {
-		
-		driver.findElement(dsalgo_button).click();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(dsalgo_button)).click();
+
+	
 	}
 	
 	public void isdisplayedPageTitle() {
 		
 		driver.findElement(homepageTitle).isDisplayed();
-		//String visible = driver.findElement(homepageTitle).getText();
-	//	System.out.println("PageTitle:  "+visible);
+		
 	}
 	
 	public void isdisplayedReg_Sign_link() {

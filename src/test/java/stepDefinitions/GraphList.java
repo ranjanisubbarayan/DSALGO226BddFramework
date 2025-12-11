@@ -1,6 +1,11 @@
 package stepDefinitions;
 
+import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,11 +16,15 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 
 import pageObjects.LoginPage;
+import utilities.DataDriven;
 import pageObjects.GraphListPage;
 
 import static driver.DriverFactory.getDriver;
 
 public class GraphList{
+	
+	private static final Logger logger = LogManager.getLogger(GraphList.class);
+
 
 	private WebDriver driver = getDriver();
 	private LoginPage loginPage = new LoginPage(driver);
@@ -27,8 +36,10 @@ public class GraphList{
 	@Given("The user logs into dsAlgo Portal with username {string} and password {string}")
 	public void the_user_logs_into_ds_algo_portal_with_username_and_password(String username, String password) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		loginPage.goTo();
-		loginPage.loginApplication(username, password);
+		loginPage.openLoginPage();
+		loginPage.login(username, password);
+		
+		logger.info("successfully logged into the dsalgo application");
 	}
 
 	@Given("The user should be on the Home Dashboard")
@@ -142,6 +153,17 @@ public class GraphList{
 
 		
 
+	}
+	@Then("The user write valid Linked List code in Editor and clicks the Run Button in Graph Page")
+	public void the_user_write_valid_linked_list_code_in_editor_and_clicks_the_run_button() throws IOException {
+		DataDriven d=new utilities.DataDriven();
+		ArrayList<String> data=d.getData("Graph");
+		graphPage.writeAndRunLinkedListCode((String) data.get(1));
+	}
+	
+	@Then("The user should see output in the console for Graph Page")
+	public void the_user_should_see_output_in_the_console() {
+		logger.info("The user should see output in the console for Graph Page"+(driver.findElement(By.xpath("//pre[@id='output']")).getText()));
 	}
 
 }

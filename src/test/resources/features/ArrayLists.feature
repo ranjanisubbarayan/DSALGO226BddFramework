@@ -46,5 +46,7 @@ Feature: Navigation and interaction in dsAlgo Portal - Array Section
     And The user clicks Arrays in Python link
     And The user clicks Try Here button in Arrays in Python page
     And The user should be redirected to a page having a try Editor with a Run button to test
-    And The user writes valid code in Editor and clicks the Run Button
-    Then The user should see output in the console
+    And The user writes valid code in Editor and clicks the Run Button in ArrayList Page
+    Then The user should see output in the console for ArrayList Page
+    
+    

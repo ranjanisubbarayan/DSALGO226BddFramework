@@ -1,6 +1,8 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
+import java.io.IOException;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -17,7 +19,6 @@ public class ArrayListPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	//WebElement Home_page = driver.findElement(By.xpath("//div[contains(text(),'You are logged in')]"));
 	
 	@FindBy (xpath="//div[contains(text(),'You are logged in')]")
 	WebElement VerifyHomepage;
@@ -41,11 +42,11 @@ public class ArrayListPage {
 	WebElement verifyArraysInPython;
 	
 	@FindBy (xpath="//pre[@role='presentation']")
-	WebElement writeCode;
+	WebElement codeEditor;
 	
 	public void writeCodeAndRun(String code) {
 		Actions actions = new Actions(driver);
-		actions.click(writeCode).perform();
+		actions.click(codeEditor).perform();
 		actions.sendKeys(code).perform();
 		btnRun.click();
 	}
@@ -72,4 +73,11 @@ public class ArrayListPage {
 	public void verifyArraysInPythonText() {
 		Assert.assertEquals(verifyArraysInPython.getText(), "Arrays in Python");
 	}
+	public void writeAndRunLinkedListCode(String code) throws IOException {
+		Actions action=new Actions(driver);
+		action.click(codeEditor).perform();
+		action.sendKeys(code).perform();
+		btnRun.click();
+	}
+	
 }

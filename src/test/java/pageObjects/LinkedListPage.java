@@ -1,7 +1,7 @@
 package pageObjects;
 
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import utilities.DataDriven;
+
 
 public class LinkedListPage {
 	private WebDriver driver;
@@ -53,13 +53,10 @@ public class LinkedListPage {
 	}
 	
 	public void writeAndRunLinkedListCode(String code) throws IOException {
-		
-		
 		Actions action=new Actions(driver);
 		action.click(codeEditor).perform();
 		action.sendKeys(code).perform();
 		btnRun.click();
 	}
-	
 	
 }

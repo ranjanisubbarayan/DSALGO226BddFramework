@@ -1,6 +1,6 @@
 package base;
 
-import com.aventstack.extentreports.ExtentReports;
+
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -25,9 +25,9 @@ import java.io.ByteArrayInputStream;
 public class Hooks {
 	private static final Logger logger = LoggerLoad.getLogger(Hooks.class);
 
-    private static ExtentReports extent = Report.getInstance();
+ //   private static ExtentReports extent = Report.getInstance();
     public static ExtentTest test;
-    private WebDriver driver;
+ 
 
     
     @Before(order = 0)

@@ -10,6 +10,8 @@ import utilities.DriverFactory;
 
 
 public class StackSteps { 
+	
+	private static final Logger logger = LogManager.getLogger(StackSteps.class);
 	private WebDriver driver = DriverFactory.getInstance().getDriver(); 
 	private LoginPage loginpage = new LoginPage(driver); 
 	private StackPage stackpage = new StackPage(driver);
@@ -23,6 +25,8 @@ public class StackSteps {
 		loginpage.enterUsername(ConfigReader.getProperty("username"));
 		loginpage.enterPassword(ConfigReader.getProperty("password")); 
 		loginpage.clickLoginButton(); 
+		
+		logger.info("successfully logged into the dsalgo application");
 		} 
 	
 	@Given("The user is in Home page after Sign in")
