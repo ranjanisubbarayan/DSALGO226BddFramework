@@ -2,14 +2,14 @@ package utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
+import java.io.InputStream;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -18,13 +18,17 @@ public class ExcelSheetHandling {
 	private String path;
     private Workbook workbook;
     
-	public ExcelSheetHandling(String path) {
-        this.path = path;
+
+    public ExcelSheetHandling(String path) {
+    	this.path = path;
         try (InputStream is = new FileInputStream(path)) {
             workbook = new XSSFWorkbook(is);
         } catch (Exception e) {
             throw new RuntimeException("Failed to open Excel file: " + path, e);
         }
+    }
+    public String getPath() {
+        return path;
     }
 
     public List<Map<String, String>> getSheetData(String sheetName) {

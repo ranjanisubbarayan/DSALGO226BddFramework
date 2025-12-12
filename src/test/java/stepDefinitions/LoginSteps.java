@@ -2,7 +2,7 @@ package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import pageObjects.LoginPage;
-import utilities.DriverFactory;
+import driver.DriverFactory;
 import utilities.ExcelSheetHandling;
 
 import java.nio.file.Paths;
@@ -20,7 +20,7 @@ public class LoginSteps {
     private Map<String, String> loginData;
 
     public LoginSteps() {
-        driver = DriverFactory.getInstance().getDriver();
+        driver = DriverFactory.getDriver();
         loginpage = new LoginPage(driver);
     }
 

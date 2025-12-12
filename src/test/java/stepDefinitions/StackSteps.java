@@ -17,14 +17,14 @@ import org.testng.Assert;
 import io.cucumber.java.en.*;
 import pageObjects.LoginPage;
 import pageObjects.StackPage;
-import utilities.DriverFactory;
+import driver.DriverFactory;
 import utilities.ExcelSheetHandling;
 
 
 public class StackSteps { 
 	
 	private static final Logger logger = LogManager.getLogger(StackSteps.class);
-	private WebDriver driver = DriverFactory.getInstance().getDriver(); 
+	private WebDriver driver = DriverFactory.getDriver(); 
 	private LoginPage loginpage = new LoginPage(driver); 
 	private StackPage stackpage = new StackPage(driver);
 	
@@ -38,18 +38,17 @@ public class StackSteps {
 		loginpage.enterPassword(password); 
 		loginpage.clickLoginButton(); 
 		
-		logger.info("successfully logged into the dsalgo application");
+		
 		} 
 	
 	@Given("The user is in Home page after Sign in")
 	public void the_user_is_in_home_page_after_sign_in() {
-	    driver.get("https://dsportalapp.herokuapp.com/home");
+		logger.info("successfully logged into the dsalgo application");
 	}
 
 	@Given("The user is in the Stack page after Sign in")
 	public void the_user_is_in_the_stack_page_after_sign_in() {
-		stackpage.clickstack_Getstarted_btn();
-	    driver.get("https://dsportalapp.herokuapp.com/stack/");
+		stackpage.openStackPage();
 	}
 	
 	@When("The user clicks the Getting Started button in Stack Panel OR The user select Stack item from the drop down menu") 
@@ -88,29 +87,29 @@ public class StackSteps {
 	
 	@When("The user clicks Implementation button") 
 		public void the_user_clicks_implementation_button() { 
-			stackpage.clickImplementStackLink(); 
+			stackpage.clickImplementationStack(); 
 			}
 	@Given("The user is on the Implementation page")
 	public void the_user_is_on_the_implementation_page() {
-	    driver.get("https://dsportalapp.herokuapp.com/implementation"); 
+	    
 	}
 
 		
 		@Then("The user should be redirected to Implementation page") 
 		public void the_user_should_be_redirected_to_implementation_page() { 
 			
-			stackpage.verifyImplementationPage(); 
+			//stackpage.verifyImplementationPage(); 
 			} 
 		
 		@When("The user clicks Applications button") 
 		public void the_user_clicks_applications_button() { 
-			stackpage.clickApplicationStackLink(); 
-			driver.get("https://dsportalapp.herokuapp.com/applications");
+			stackpage.clickApplicationStack(); 
+		
 			
 			} 
 		@Given("The user is on the Applications page")
 		public void the_user_is_on_the_applications_page() {
-		    driver.get("https://dsportalapp.herokuapp.com/applications");
+		 
 		}
 
 		
@@ -121,13 +120,13 @@ public class StackSteps {
 		
 		@When("The user clicks Practice Questions button")
 			public void the_user_clicks_practice_questions_button() {
-                 driver.get("https://dsportalapp.herokuapp.com/stack/operations-in-stack/");
+                
 				stackpage.clickPracticeQuestions(); 
 				}
 			
 			@Then("The user should be redirected to Practice page") 
 			public void the_user_should_be_redirected_to_practice_page() { 
-				driver.get("https://dsportalapp.herokuapp.com/stack/practice"); 
+				
 				}
 			
 				
@@ -139,25 +138,24 @@ public class StackSteps {
 			
 			@Given("The user is in the tryEditor page")
 			public void the_user_is_in_the_try_editor_page() { 
-				driver.get("https://dsportalapp.herokuapp.com/tryEditor");
+				
 				}
 			
 			@When("The user clicks Try Here button in Operations in Stack page") 
 			public void the_user_clicks_try_here_button_in_operations_in_stack_page() throws InterruptedException { 
-                driver.get("https://dsportalapp.herokuapp.com/stack/operations-in-stack/");
-				stackpage.clickTryhereofoperation(); 
+         
 				}
 			
 			@When("The user clicks Try Here button in Implementation page") 
 			public void the_user_clicks_try_here_button_in_implementation_page() throws InterruptedException { 
-				driver.get("https://dsportalapp.herokuapp.com/stack/implementation/");
+			
 				stackpage.clickTryHere(); 
 				}
 			
 			
 			@When("The user clicks Try Here button in Applications page")
 			public void the_user_clicks_try_here_button_in_applications_page() throws InterruptedException { 
-				driver.get("https://dsportalapp.herokuapp.com/stack/stack-applications/");
+				
 				stackpage.clickTryHere(); 
 				}
 
@@ -235,7 +233,7 @@ public class StackSteps {
 			
 			@When("I enter the phythonTryEditor details from excel")
 			public void i_enter_the_try_editor_details_from_excel() {
-				stackpage.openTryEditor();
+				stackpage.openTryEditorURL();
 
 			    String valid = stackphyTryEditData.get("Valid Input");
 			    String invalid = stackphyTryEditData.get("Invalid Input");

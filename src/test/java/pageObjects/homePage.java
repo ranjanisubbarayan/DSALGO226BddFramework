@@ -1,153 +1,162 @@
 package pageObjects;
 
 import java.time.Duration;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class homePage {
-	
-	private WebDriver driver;
-	homePage homepage;
-	
-	By printerrormsg = By.xpath("//div[@class='alert alert-primary']");
-	By dsalgo_button = By.xpath("//button[text()='Get Started']");
-	By datastrct_dropdown =By.xpath("//div[@id='navbarCollapse']/div[1]/div/a"); 
-	By array_dropdown = By.xpath("//div[@id='navbarCollapse']/div[1]/div/div/a[1]");
-	By linkedlist_dropdown = By.xpath("//div[@id='navbarCollapse']/div[1]/div/div/a[2]");	
-	By stack_dropdown = By.xpath("//div[@id='navbarCollapse']/div[1]/div/div/a[3]");
-	By queue_dropdown = By.xpath("//div[@id='navbarCollapse']/div[1]/div/div/a[4]");
-	By tree_dropdown = By.xpath("//div[@id='navbarCollapse']/div[1]/div/div/a[5]");
-	By graph_dropdown = By.xpath("//div[@id='navbarCollapse']/div[1]/div/div/a[6]");
-	
-	By ds_getstartbtn = By.xpath("(//div[@class='card h-100']/div/a)[1]");
-	By ar_getstartbtn = By.xpath("(//div[@class='card h-100']/div/a)[2]");
-	By ll_getstartbtn = By.xpath("(//div[@class='card h-100']/div/a)[3]");
-	By stack_getstartbtn = By.xpath("(//div[@class='card h-100']/div/a)[4]");
-	By queue_getstartbtn = By.xpath("(//div[@class='card h-100']/div/a)[5]");
-	By tree_getstartbtn = By.xpath("(//div[@class='card h-100']/div/a)[6]");
-	By graph_getstartbtn = By.xpath("(//div[@class='card h-100']/div/a)[7]");
-	
-	By homepageTitle = By.xpath("//div[@class='bs-example']/nav/a");
-	By regLink = By.xpath(" //div[@id='navbarCollapse']/div[2]/ul/a[2]");
-	By signinLink = By.xpath(" //div[@id='navbarCollapse']/div[2]/ul/a[3]");
-	By errormsg = By.xpath("/html/body/div[2]");
-	
-	public homePage(WebDriver driver) {
-	     this.driver = driver;
-	    
-	}
-	public void openDSAlgoPortal() {
-		
-		driver.get("https://dsportalapp.herokuapp.com/");
-	}	
-	
-	
-	
-	public void clickGetStartedbutton() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(dsalgo_button)).click();
 
-	
-	}
-	
-	public void isdisplayedPageTitle() {
-		
-		driver.findElement(homepageTitle).isDisplayed();
-		
-	}
-	
-	public void isdisplayedReg_Sign_link() {
-		
-		 driver.findElement(regLink).isDisplayed();
-		driver.findElement(signinLink);
-	}
-	
-	public void clickdropdown_menu() {
-		
-		driver.findElement(datastrct_dropdown).click();
-		
-			
-	}
-	public void click_array_dropdown() {
-		
-		driver.findElement(array_dropdown).click();
-		
-	}
-	
-	public void click_linkedlist_dropdown() {
-		
-	
-		driver.findElement(linkedlist_dropdown).click();
-	}
-	
-	public void click_stack_dropdown() {
-		
-		
-		driver.findElement(stack_dropdown).click();
-	}
-	
-	public void click_queue_dropdown() {
-	
-		driver.findElement(queue_dropdown).click();
-		
-	}
-	
-	public void click_tree_dropdown() {
-		
-		
-		driver.findElement(tree_dropdown).click();
-		
-	}
-	 
-	public void click_graph_dropdown() {
-		
-		
-		driver.findElement(graph_dropdown).click();
-		
-	}
-	
-	public void clickdatastrut_GetStarted_btn() {
-		
-		driver.findElement(ds_getstartbtn).click();	
-	}
-	
-	public void clickarray_Getstarted_btn() {
-		driver.findElement(ar_getstartbtn).click();
-	}
-	
-	public void clicklinkdlist_Getstarted_btn() {
-		driver.findElement(ll_getstartbtn).click();
-	}
-    public void clickstack_Getstarted_btn() {		
-		
-		driver.findElement(stack_getstartbtn).click();
+    private WebDriver driver;
 
-	}
-    public void clickqueue_Getstarted_btn() {
-    	driver.findElement(queue_getstartbtn).click();
-		
-	}
-    public void clicktree_Getstarted_btn() {
-    	driver.findElement(tree_getstartbtn).click();
-	}
-    public void clickgraph_Getstarted_btn() {
-    	driver.findElement(graph_getstartbtn).click();
-		
-	}
+    public homePage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+  
+
+    @FindBy(xpath = "//div[@class='alert alert-primary']")
+    WebElement printerrormsg;
+
+    @FindBy(xpath = "//button[text()='Get Started']")
+    WebElement dsalgo_button;
+
+    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/a")
+    WebElement datastrct_dropdown;
+
+    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[1]")
+    WebElement array_dropdown;
+
+    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[2]")
+    WebElement linkedlist_dropdown;
+
+    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[3]")
+    WebElement stack_dropdown;
+
+    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[4]")
+    WebElement queue_dropdown;
+
+    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[5]")
+    WebElement tree_dropdown;
+
+    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[6]")
+    WebElement graph_dropdown;
+
+    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[1]")
+    WebElement ds_getstartbtn;
+
+    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[2]")
+    WebElement ar_getstartbtn;
+
+    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[3]")
+    WebElement ll_getstartbtn;
+
+    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[4]")
+    WebElement stack_getstartbtn;
+
+    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[5]")
+    WebElement queue_getstartbtn;
+
+    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[6]")
+    WebElement tree_getstartbtn;
+
+    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[7]")
+    WebElement graph_getstartbtn;
+
+    @FindBy(xpath = "//div[@class='bs-example']/nav/a")
+    WebElement homepageTitle;
+
+    @FindBy(xpath = "//div[@id='navbarCollapse']/div[2]/ul/a[2]")
+    WebElement regLink;
+
+    @FindBy(xpath = "//div[@id='navbarCollapse']/div[2]/ul/a[3]")
+    WebElement signinLink;
+
+    @FindBy(xpath = "/html/body/div[2]")
+    WebElement errormsg;
+
     
-	
-	public void showError_msg() {
-		
-		String printerror = driver.findElement(errormsg).getText();
-		System.out.println("Error Message  :  "+printerror);
-		
-	}
 
-	
+    public void openDSAlgoPortal() {
+        driver.get("https://dsportalapp.herokuapp.com/");
+    }
 
+    public void clickGetStartedbutton() {
+        new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(dsalgo_button))
+                .click();
+    }
 
+    public boolean isPageTitleDisplayed() {
+        return homepageTitle.isDisplayed();
+    }
+
+    public boolean isRegAndSignInDisplayed() {
+        return regLink.isDisplayed() && signinLink.isDisplayed();
+    }
+
+    public void clickDropdownMenu() {
+        datastrct_dropdown.click();
+    }
+
+    public void clickArrayDropdown() {
+        array_dropdown.click();
+    }
+
+    public void clickLinkedListDropdown() {
+        linkedlist_dropdown.click();
+    }
+
+    public void clickStackDropdown() {
+        stack_dropdown.click();
+    }
+
+    public void clickQueueDropdown() {
+        queue_dropdown.click();
+    }
+
+    public void clickTreeDropdown() {
+        tree_dropdown.click();
+    }
+
+    public void clickGraphDropdown() {
+        graph_dropdown.click();
+    }
+
+    public void clickDataStructureGetStarted() {
+        ds_getstartbtn.click();
+    }
+
+    public void clickArrayGetStarted() {
+        ar_getstartbtn.click();
+    }
+
+    public void clickLinkedListGetStarted() {
+        ll_getstartbtn.click();
+    }
+
+    public void clickStackGetStarted() {
+        stack_getstartbtn.click();
+    }
+
+    public void clickQueueGetStarted() {
+        queue_getstartbtn.click();
+    }
+
+    public void clickTreeGetStarted() {
+        tree_getstartbtn.click();
+    }
+
+    public void clickGraphGetStarted() {
+        graph_getstartbtn.click();
+    }
+
+    public void showErrorMsg() {
+        System.out.println("Error Message: " + errormsg.getText());
+    }
 
 }

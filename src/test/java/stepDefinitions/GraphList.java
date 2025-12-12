@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Alert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -32,7 +32,7 @@ public class GraphList{
 	
 	private String alertMsg = null;
 
-	// -------------------- Background / Login --------------------
+	
 	@Given("The user logs into dsAlgo Portal with username {string} and password {string}")
 	public void the_user_logs_into_ds_algo_portal_with_username_and_password(String username, String password) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -75,20 +75,20 @@ public class GraphList{
 	@Then("The Try Editor page for Graph Topic should display with a Run option")
 	public void the_try_editor_page_for_graph_topic_should_display_with_a_run_option() {
 		
-		
+		logger.info("The Try Editor page for Graph Topic should display with a Run option");
 	}
 
 	@When("The user is on the Try Editor page for Graph Topic")
 	public void the_user_is_on_the_try_editor_page_for_graph_topic() {
-		
+		logger.info("The user is on the Try Editor page for Graph Topic");
 	}
 
 	@When("The user enters {string} into the editor and clicks Run")
 	public void the_user_enters_into_the_editor_and_clicks_run(String graphInput) {
-		//graphPage.writeCodeAndRun(graphInput);
+		
 		graphPage.writeCodeAndRun(graphInput);
 
-		// Handle alert immediately after Run
+		
 		alertMsg = graphPage.waitForAlertIfPresent();
 		if (alertMsg != null) {
 		    System.out.println("Alert detected: " + alertMsg);
@@ -97,17 +97,12 @@ public class GraphList{
             System.out.println("⚠ No alert detected after clicking Run");
         }
 
-	//	graphPage.verifyRunButtonPresent();
+
 	}
 
 	@Then("An alert message should be shown for Graph Topic invalid execution")
 	public void an_alert_message_should_be_shown_for_graph_topic_invalid_execution() {
-//		String alertMsg = graphPage.waitForAlertIfPresent();
-//	    Assert.assertNotNull(alertMsg, "Expected an alert, but no alert appeared!");
-
-//		Alert alert = driver.switchTo().alert();
-//		System.out.println(alert.getText());
-//		alert.accept();
+		logger.info("An alert message should be shown for Graph Topic invalid execution");
 	}
 
 	@Then("The user chooses the Graph Representations link")
@@ -115,7 +110,7 @@ public class GraphList{
 
 		
 		graphPage.getstartedGraph();
-		//graphPage.verifyGraphLandingPage();
+	
 	   graphPage.clickGraphRepresentations();
 
 	}
@@ -137,21 +132,20 @@ public class GraphList{
 	@Then("The Try Editor page for Graph Representations should display with a Run option")
 	public void the_try_editor_page_for_graph_representations_should_display_with_a_run_option() {
 		graphPage.writeCodeAndRun("print(5 + 3)");
-		//graphPage.verifyRunButtonPresent();
-		
+	
 		graphPage.clickRunButton();
 
 	}
 
 	@When("The user is on the Try Editor page for Graph Representations")
 	public void the_user_is_on_the_try_editor_page_for_graph_representations() {
-	    
+		logger.info("The user is on the Try Editor page for Graph Representations");
 	}
 
 	@Then("An alert message should be shown for Graph Representations invalid execution")
 	public void an_alert_message_should_be_shown_for_graph_representations_invalid_execution() {
 
-		
+		logger.info("An alert message should be shown for Graph Representations invalid execution");
 
 	}
 	@Then("The user write valid Linked List code in Editor and clicks the Run Button in Graph Page")

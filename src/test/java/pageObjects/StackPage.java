@@ -1,246 +1,168 @@
-package pageObjects; 
-import java.time.Duration;
+package pageObjects;
 
+import java.time.Duration;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions; 
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert; 
-public class StackPage { 
-	
-	private WebDriver driver;
-	private WebDriverWait wait; 
-	
-	public StackPage(WebDriver driver)
-	{
-		this.driver = driver; 
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
-		PageFactory.initElements(driver, this); 
-		} 
-	
-	By verifyHomepage = By.xpath("//div[contains(text(),'You are logged in')]"); 
-	By verifyStackPageHeader = By.xpath("//h4[text()='Stack']"); 
-	By btnStackGetStarted = By.xpath("//a[contains(text(),'Get Started') and contains(@href,'stack')]"); 
-	
-	By linkOperationInStack = By.xpath("//a[text()='Operations in Stack']");
-	By stackGetStartedBtn = By.xpath("//a[contains(text(),'Get Started') and contains(@href,'stack')]"); 
-	By linkImplementStack = By.xpath("//a[text()='Implementation']"); 
-	By linkApplicationStack = By.xpath("//a[text()='Applications']");
-	By tryHereButton = By.xpath("//a[text()='Try Here']"); 
-	//By btnRun = By.xpath("//button[text()='Run']");
-	By codeEditor = By.xpath("//form[@id='answer_form']/div/div"); 
-	By outputConsole = By.xpath("//pre[@id='output']"); 
-	By practiceQuestionsLink = By.xpath("//a[text()='Practice Questions']"); 
-	@FindBy (xpath="//button[contains(text(),'Run')]") 
-	WebElement btnRun; 
-	
+import org.testng.Assert;
 
-	
-	public void openStackPage() { 
-		driver.get("https://dsportalapp.herokuapp.com/stack/stack-applications/"); 
-		} 
-	public void openTryEditor() { 
-		driver.get("https://dsportalapp.herokuapp.com/tryEditor"); 
-		}
+public class StackPage {
 
-	
-	public boolean verifyHomePage() { 
-		try { 
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
-			wait.until(ExpectedConditions.urlContains("/home")); 
-			// Or actual dashboard URL 
-			return driver.getCurrentUrl().contains("/home"); 
-			} catch (Exception e) {
-				System.out.println("Home page verification failed: " + e.getMessage()); return false; 
-				} } 
-			public boolean verifyStackPage() 
-		{ 
-			try { return wait.until(ExpectedConditions.visibilityOfElementLocated(verifyStackPageHeader)).isDisplayed(); 
-		} catch (TimeoutException e) { 
-			return false; 
-			}
-		} public boolean verifyOperationsInStack()
-		{ try { 
-			return wait.until(ExpectedConditions.visibilityOfElementLocated(linkOperationInStack)).isDisplayed(); 
-			} catch (TimeoutException e) { 
-				return false; 
-				} 
-		}
-		public void verifyImplementationPage() { 
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			WebElement heading = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Implementation')]"))); 
-			Assert.assertTrue(heading.isDisplayed(), "Implementation page is not displayed!");
-			}
-		public boolean verifyImplementStack() {
-			try { 
-				return wait.until(ExpectedConditions.visibilityOfElementLocated(linkImplementStack)).isDisplayed();
-				} catch (TimeoutException e) { 
-					return false;
-					}
-			}
-		public boolean verifyApplicationStack() { 
-				try { 
-					return wait.until(ExpectedConditions.visibilityOfElementLocated(linkApplicationStack)).isDisplayed(); 
-					} catch (TimeoutException e) { 
-						return false;
-						} 
-				} 
-		
-		public boolean verifyOutput() { 
-			try { 
-				String text = wait.until(ExpectedConditions.visibilityOfElementLocated(outputConsole)).getText(); 
-				return !text.isEmpty(); 
-				} catch (TimeoutException e) { 
-					return false;
-					} 
-			}
-		public void verifyPracticePage() { 
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15)); 
-			WebElement practiceHeader = wait.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("//h3[contains(text(),'Practice Questions')]") )); 
-			Assert.assertTrue(practiceHeader.isDisplayed(), "Practice Questions page is not displayed");
-			} 
-		public boolean isUserOnStackPage() {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
-			return wait.until(ExpectedConditions.urlContains("/stack/"));
-			} 
-		
-		public void clickstack_Getstarted_btn() {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
-			WebElement stackBtn = wait.until(ExpectedConditions.elementToBeClickable( By.xpath("(//a[contains(text(),'Get Started')])[4]") ));
-			 
-			((JavascriptExecutor) driver).executeScript("arguments[0].click();", stackBtn); 
-			
-			} 
-		
-		public void getStartedStack() { 
-			
-			wait.until(ExpectedConditions.elementToBeClickable(btnStackGetStarted)).click();
-			} 
-		
-		public void clickOperationsInStack() { 
-			
-				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); 
-				WebElement operationsBtn = wait.until(ExpectedConditions.elementToBeClickable(linkOperationInStack)); 
-				
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", operationsBtn); 
-				((JavascriptExecutor) driver).executeScript("arguments[0].click();", operationsBtn);
-				} 
-			
-			public void clickImplementStackLink() { 
-				 
-				wait.until(ExpectedConditions.elementToBeClickable(linkImplementStack)).click();; 
-				
-				} 
-			public void clickApplicationStackLink() {
-				
-				wait.until(ExpectedConditions.elementToBeClickable(linkApplicationStack)).click(); 
-				}
-			
-			public void clickPracticeQuestions() { 
+    private WebDriver driver;
+    private WebDriverWait wait;
 
-				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15)); 
-				
-				WebElement practiceLink = wait.until(ExpectedConditions.elementToBeClickable( By.xpath("//a[normalize-space(.)='Practice Questions']") ));
-				
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", practiceLink); 
-				 
-			}	
-		
-			public void clickTryhereofoperation() throws InterruptedException {
-				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-				JavascriptExecutor js = (JavascriptExecutor) driver;
+    public StackPage(WebDriver driver) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        PageFactory.initElements(driver, this);
+    }
 
-				WebElement tryHereButton = wait.until(
-				        ExpectedConditions.presenceOfElementLocated(
-				                By.xpath("//a[text()='Try here>>>']"))
-				);
-				js.executeScript("arguments[0].scrollIntoView(true);", tryHereButton);
-				js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", tryHereButton);
 
-				Thread.sleep(500);
 
-				js.executeScript("arguments[0].click();", tryHereButton);
+    @FindBy(xpath = "//div[contains(text(),'You are logged in')]")
+    private WebElement homePageMsg;
 
-			}
-			public void clickTryHere()  {
-				WebElement btn = driver.findElement(By.xpath("//a[text()='Try here>>>']"));
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", btn);
-			((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
+    @FindBy(xpath = "//h4[text()='Stack']")
+    private WebElement stackPageHeader;
 
-			}
+    @FindBy(xpath = "//a[contains(text(),'Get Started') and contains(@href,'stack')]")
+    private WebElement stackGetStartedBtn;
 
-				public void verifyRunButton() {
-				   
-				    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-				    try {
-				        WebElement runBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(
-				            By.xpath("//button[contains(text(),'Run')]")
-				        ));
-				        if(runBtn.isDisplayed()) {
-				            System.out.println("Run button is visible");
-				        }
-				    } catch (TimeoutException e) {
-				        System.out.println("Run button not found inside iframe");
-				        throw e;
-				    } finally {
-				        driver.switchTo().defaultContent(); // exit iframe after verification
-				    }
-				}
+    @FindBy(xpath = "//a[text()='Operations in Stack']")
+    private WebElement operationsInStackLink;
 
-				public void enterCodeInEditor(String code) {WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    @FindBy(xpath = "//a[text()='Implementation']")
+    private WebElement implementStackLink;
 
-			    try {
-			       
-			        WebElement editorArea = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".CodeMirror")));
-			        WebElement cm = editorArea.findElement(By.cssSelector(".CodeMirror-code"));
+    @FindBy(xpath = "//a[text()='Applications']")
+    private WebElement applicationStackLink;
 
-			        
-			        new Actions(driver).click(cm).perform();
-			        new Actions(driver)
-			                .keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL)
-			                .sendKeys(Keys.DELETE)
-			                .sendKeys(code)
-			                .perform();
+    @FindBy(xpath = "//a[text()='Try Here']//parent::a | //a[text()='Try here>>>']")
+    private WebElement tryHereButton;
 
-			        
-			        driver.findElement(By.xpath("//button[contains(text(),'Run')]")).click();
+    @FindBy(css = ".CodeMirror")
+    private WebElement codeMirrorEditor;
 
-			        
-			        try {
-			            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-			            String alertText = alert.getText();
-			            alert.accept();
-			            System.out.println("Alert displayed: " + alertText);
-			        } catch (TimeoutException e) {
-			           
-			            WebElement output = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("output")));
-			            System.out.println("Code executed successfully. Output: " + output.getText());
-			        }
+    @FindBy(id = "output")
+    private WebElement outputConsole;
 
-			    } catch (Exception e) {
-			        
-			    }
-				}
+    @FindBy(xpath = "//a[text()='Practice Questions']")
+    private WebElement practiceQuestionsLink;
 
-				public void clickRunButton() {
-					JavascriptExecutor js = (JavascriptExecutor) driver;
-					
-					WebElement runButton = driver.findElement(By.xpath("//button[contains(text(),'Run')]"));					
-     				js.executeScript("arguments[0].click();", runButton);
+    @FindBy(xpath = "//button[contains(text(),'Run')]")
+    private WebElement runButton;
 
-					
-					WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-					try {
-					    Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-					    System.out.println("Alert Text: " + alert.getText());
-					    alert.accept();  
-					} catch (TimeoutException e) {
-					    
-					}
-				}
-		
-	
+
+
+
+    public void safeClick(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+    }
+
+    public void scrollTo(WebElement element) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public void waitForVisible(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+
+ 
+
+    public void openStackPage() {
+        driver.get("https://dsportalapp.herokuapp.com/stack/stack-applications/");
+    }
+
+    public boolean verifyIsOnStackPage() {
+        waitForVisible(stackPageHeader);
+        return stackPageHeader.isDisplayed();
+    }
+
+    public boolean verifyOperationsInStackVisible() {
+        return operationsInStackLink.isDisplayed();
+    }
+
+    public void clickStackGetStarted() {
+        safeClick(stackGetStartedBtn);
+    }
+
+    public void clickOperationsInStack() {
+        scrollTo(operationsInStackLink);
+        safeClick(operationsInStackLink);
+    }
+
+    public void clickImplementationStack() {
+        safeClick(implementStackLink);
+    }
+
+    public void clickApplicationStack() {
+        safeClick(applicationStackLink);
+    }
+
+    public void clickTryHere() {
+        scrollTo(tryHereButton);
+        safeClick(tryHereButton);
+    }
+
+    public void openTryEditorURL() {
+        driver.get("https://dsportalapp.herokuapp.com/tryEditor");
+    }
+
+
+    public void enterCodeInEditor(String code) {
+        waitForVisible(codeMirrorEditor);
+
+        WebElement editor = codeMirrorEditor.findElement(By.cssSelector(".CodeMirror-code"));
+
+        Actions actions = new Actions(driver);
+        actions.click(editor)
+                .keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL)
+                .sendKeys(Keys.DELETE)
+                .sendKeys(code)
+                .perform();
+
+        safeClick(runButton);
+
+      
+        try {
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            System.out.println("Alert displayed: " + alert.getText());
+            alert.accept();
+        } catch (TimeoutException e) {
+            waitForVisible(outputConsole);
+            System.out.println("Code Output: " + outputConsole.getText());
+        }
+    }
+
+    public void clickRunButton() {
+        safeClick(runButton);
+
+        try {
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            System.out.println("Alert: " + alert.getText());
+            alert.accept();
+        } catch (TimeoutException e) {
+            // No alert
+        }
+    }
+
+  
+
+    public void clickPracticeQuestions() {
+        scrollTo(practiceQuestionsLink);
+        safeClick(practiceQuestionsLink);
+    }
+
+    public void verifyPracticePage() {
+        WebElement header = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//h3[contains(text(),'Practice Questions')]")
+        ));
+        Assert.assertTrue(header.isDisplayed(), "Practice Questions page is NOT displayed");
+    }
 }

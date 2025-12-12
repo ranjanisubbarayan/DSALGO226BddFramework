@@ -49,8 +49,8 @@ public class LinkedList {
 	@Then("The user write valid Linked List code in Editor and clicks the Run Button in LikedList Page")
 	public void the_user_write_valid_linked_list_code_in_editor_and_clicks_the_run_button() throws IOException {
 		DataDriven d=new utilities.DataDriven();
-		ArrayList data=d.getData("LinkedList");
-	    linkedlistPage.writeAndRunLinkedListCode((String) data.get(1));
+		ArrayList<String> data=d.getData("LinkedList");
+	    linkedlistPage.writeAndRunLinkedListCode( data.get(1));
 	}
 	
 	@Then("The user should see output in the console for LinkedList Page")

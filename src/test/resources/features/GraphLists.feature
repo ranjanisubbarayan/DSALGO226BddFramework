@@ -54,7 +54,7 @@ Feature: Navigation and interaction in dsAlgo Portal - Graph Section
       | hi            |
 
  @GraphExcelData
-  Scenario Outline: Validate Excel handling for valid input on Graph Representations Try Editor
+  Scenario: Validate Excel handling for valid input on Graph Representations Try Editor
     When The user selects the Get Started option under the Graph section
     Then The user chooses the Graph Representations link
     Then The Graph Representations information page should load
