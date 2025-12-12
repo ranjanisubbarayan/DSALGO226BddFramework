@@ -2,10 +2,11 @@ package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import pageObjects.LoginPage;
-import utilities.DriverFactory;
+//import utilities.DriverFactory;
 import utilities.ExcelSheetHandling;
 import utilities.LoggerLoad;
-import utilities.ScreenshotUtils;
+//import utilities.ScreenshotUtils;
+import utilities.ScreenshotUtil;
 
 import java.nio.file.Paths;
 import java.util.Map;
@@ -13,6 +14,8 @@ import java.util.Map;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+
+import driver.DriverFactory;
 
 
 public class LoginSteps {
@@ -37,7 +40,7 @@ public class LoginSteps {
 
     @When("the user clicks the {string} link on the Home page")
     public void the_user_clicks_the_link_on_the_home_page(String linkText) {
-    	logger.info("Clicking Login button");
+    //	logger.info("Clicking Login button");
             }
 
     @And("the user clicks the login button")
@@ -59,7 +62,7 @@ public class LoginSteps {
     @Then("{string} should be displayed")
     public void message_should_be_displayed(String expectedMessage) {
 
-        loginpage.errorMessage(expectedMessage);
+        loginpage.errorMessage1(expectedMessage);
     }
 
     @Given("I read login test data for {string}")
@@ -74,14 +77,14 @@ public class LoginSteps {
     }
 
     @Then("I should see the ExpectedResult")
-    public void i_should_see_the_expected_result(String expectedMessage) {
-    	loginpage.errorMessage(expectedMessage);
+    public void i_should_see_the_expected_result() {
+    	loginpage.errorMessage();
         
     }
     @Then("I capture screenshot {string}")
     public void i_capture_screenshot(String screenshotName) {
     	logger.info("Capturing screenshot: " + screenshotName);
-        ScreenshotUtils.takeScreenshot(DriverFactory.getDriver(), screenshotName);
+        ScreenshotUtil.takeScreenshot(DriverFactory.getDriver(), screenshotName);
     }
 
 }
