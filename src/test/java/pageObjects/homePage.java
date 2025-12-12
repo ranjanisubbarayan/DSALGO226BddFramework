@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class homePage {
@@ -140,6 +141,12 @@ public class homePage {
     	driver.findElement(graph_getstartbtn).click();
 		
 	}
+    public void click_SignIn_link_HomePage() {
+    	driver.findElement(signinLink).click();
+    }
+    public void click_Register_link_Homepage() {
+    	driver.findElement(regLink).click();
+    }
     
 	
 	public void showError_msg() {

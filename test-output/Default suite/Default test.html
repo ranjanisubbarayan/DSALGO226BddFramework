@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>37/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>27/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 08 20:36:01 EST 2025</td>
+<td>Started on:</td><td>Fri Dec 12 12:19:24 EST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>62 seconds (62306 ms)</td>
+<tr><td>Total time:</td><td>790 seconds (790553 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,133 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify error message for Empty & invalid python code for Arrays in Python page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td><div><pre>org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=142.0.7444.176)
-Build info: version: &apos;4.37.0&apos;, revision: &apos;3c1da1e342&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bdae026c6b8661e8f6838d276ad3e141, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55973}, goog:processID: 5536, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55973/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bdae026c6b8661e8f6838d276ad3e141
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1197)
-	at stepDefinitions.ArraysList.the_user_should_see_an_error_message_in_alert_window(ArraysList.java:77)
-	at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:35)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1486277532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1486277532'><pre>org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=142.0.7444.176)
-Build info: version: &apos;4.37.0&apos;, revision: &apos;3c1da1e342&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bdae026c6b8661e8f6838d276ad3e141, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55973}, goog:processID: 5536, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55973/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bdae026c6b8661e8f6838d276ad3e141
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1197)
-	at stepDefinitions.ArraysList.the_user_should_see_an_error_message_in_alert_window(ArraysList.java:77)
-	at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:35)
-</pre></div></td>
-<td>2</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigates to the Home page after successful registration with valid inputs", "DS_ALGO_APP Register Page Verification"</td>
-<td><div><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: The result of the xpath expression &quot;/html/body/div[2]/text()&quot; is: [object Text]. It should be an element.
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
-Build info: version: &apos;4.37.0&apos;, revision: &apos;3c1da1e342&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bdae026c6b8661e8f6838d276ad3e141, findElement {using=xpath, value=/html/body/div[2]/text()}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55973}, goog:processID: 5536, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55973/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bdae026c6b8661e8f6838d276ad3e141
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at pageObjects.registerPage.print_successfullyRegistered(registerPage.java:172)
-	at stepDefinitions.registerSteps.the_user_goes_to_ds_algo_home_page_with_the_message(registerSteps.java:358)
-	at ✽.The user goes to DS Algo Home page with the message &quot;New Account Created. You are logged in as &lt;ID&gt;&quot;(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Register.feature:64)
-</pre></div><a href='#' onClick='toggleBox("stack-trace525313125", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace525313125'><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: The result of the xpath expression &quot;/html/body/div[2]/text()&quot; is: [object Text]. It should be an element.
-  (Session info: chrome=142.0.7444.176)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
-Build info: version: &apos;4.37.0&apos;, revision: &apos;3c1da1e342&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bdae026c6b8661e8f6838d276ad3e141, findElement {using=xpath, value=/html/body/div[2]/text()}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55973}, goog:processID: 5536, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55973/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bdae026c6b8661e8f6838d276ad3e141
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at pageObjects.registerPage.print_successfullyRegistered(registerPage.java:172)
-	at stepDefinitions.registerSteps.the_user_goes_to_ds_algo_home_page_with_the_message(registerSteps.java:358)
-	at ✽.The user goes to DS Algo Home page with the message &quot;New Account Created. You are logged in as &lt;ID&gt;&quot;(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Register.feature:64)
-</pre></div></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -203,190 +76,140 @@ Session ID: bdae026c6b8661e8f6838d276ad3e141
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alert handling for invalid input on Graph Representations Try Editor", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>3</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>42</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Error message is displayed for Invalid Username", "DS_ALGO_APP Register Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>32</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started" button for "Arrays", Its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>42</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify error message for Empty & invalid python code for Arrays in Python page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>2</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>12</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Error message are displayed when Username field is empty", "DS_ALGO_APP Register Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>32</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting  "Queue" in the dropdown menu, its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>32</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting  "Graph" in the dropdown menu, its displyed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>12</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Error message is displayed for Invalid Password", "DS_ALGO_APP Register Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>12</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alert handling for invalid input on Graph Topic Try Editor", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>5</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>11</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>3</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>32</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started" button for "Stack", its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>32</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting  Tree in the dropdown menu, its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>42</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User views the Data Structures Dropdown Options", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>12</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Error messages are displayed when the Password Confirmation field is empty", "DS_ALGO_APP Register Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Queue module tryEditor test data using Excel data", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>16</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting "Data Structure" dropdown menu , its displayed the Error Message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>32</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking  the "Get Started" button for "Linked List", its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>43</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigates to the Register page", "DS_ALGO_APP Register Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Queue module tryEditor test data using Excel data", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>17</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to Arrays in Python page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>2</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>43</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Error messages are displayed when all fields are empty  during Registration", "DS_ALGO_APP Register Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>12</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Excel handling for valid input on Graph Representations Try Editor", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>2</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>35</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting "Array" dropdown menu , its displayed the Error Message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>32</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started" button for "Queue" , its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>32</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking  the "Get Started" button for "Graph", its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>42</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alert handling for invalid input on Graph Representations Try Editor", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>6</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>43</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started "button for "Data structures - Induction", Its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>42</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User opens the DS Algo Portal", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>1</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>12</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Open Graph main page from Home", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Queue module navigation and tryEditor actions", "Queue Module Tests"</td>
 <td></td>
-<td>2</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Launch Graph Representations page", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td></td>
-<td>3</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Error message is displayed when Password and Password confirmation did not match", "DS_ALGO_APP Register Page Verification"</td>
-<td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate alert handling for invalid input on Graph Topic Try Editor", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td></td>
-<td>2</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to Array page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td></td>
-<td>6</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Error messages are displayed when the Password field is empty", "DS_ALGO_APP Register Page Verification"</td>
-<td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started" button for "Tree", its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting "Linked List" in thedropdown menu, its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Accesses the Home page", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting  "Stack" in the dropdown menu, its displayed Error mesaage", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>0</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to navigate to try Editor page for Arrays in Python", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td></td>
-<td>2</td>
-<td>runners.MainRunner@4e0ae11f</td></tr>
+<td>32</td>
+<td>runners.MainRunner@3f1d2e23</td></tr>
 </table><p>
 </body>
 </html>
