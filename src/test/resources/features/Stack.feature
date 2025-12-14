@@ -1,11 +1,8 @@
 @Stack 
 Feature: Stack Module Tests 
 
-Background: 
-Given The user signs in to DS Algo Portal for stack module with username "TestNinja" and password "C5Mha6FkdSAVEN@" 
- 
-
 Scenario: Verify that user is able to navigate to Stack data structure page 
+Given The user signs in to DS Algo Portal for stack module with username "TestNinja" and password "C5Mha6FkdSAVEN@" 
 Given The user is in Home page after Sign in 
 When The user clicks the Getting Started button in Stack Panel OR The user select Stack item from the drop down menu 
 Then The user be directed to Stack Data Structure Page 

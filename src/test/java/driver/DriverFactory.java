@@ -27,6 +27,17 @@ public class DriverFactory {
 		switch (getBrowserType()) {
 		case "chrome": {
 			ChromeOptions chromeoptions = new ChromeOptions();
+			chromeoptions.addArguments(
+                    "--disable-save-password-bubble",
+                    "--disable-autofill-keyboard-accessory-view",
+                    "--disable-features=AutofillServerCommunication,AutofillProfileCleanup",
+                    "--disable-features=PasswordGeneration,PasswordManagerOnboarding",
+                    "--start-maximized",
+                    "--disable-notifications",
+                    "--disable-infobars",
+                    "--disable-extensions",
+                    "--incognito"
+                );
 			chromeoptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 			driver = new ChromeDriver(chromeoptions);
 			break;

@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.ConfigReader;
+
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -48,14 +50,14 @@ public class registerPage {
     @FindBy(xpath = "//div[@class='alert alert-primary']")
     WebElement printErrormsg;
 
-    @FindBy(xpath = "/html/body/div[2]/text()")
+    @FindBy(xpath = "//div[contains(text(),'New Account Created')]")
     WebElement registeredsuccess;
 
 
   
 
     public void open_DSALGO_registerPage() {
-        driver.get("https://dsportalapp.herokuapp.com/register");
+        driver.get(ConfigReader.getProperty("registerUrl"));
     }
 
     public void click_register_link() {
@@ -110,15 +112,21 @@ public class registerPage {
     }
 
     public void enter_registerUsername(String username) {
+    	 //register_username.clear();
         wait.until(ExpectedConditions.visibilityOf(register_username)).sendKeys(username);
+       
     }
 
     public void enter_regPassword(String password) {
+    	//register_password.clear();
         wait.until(ExpectedConditions.visibilityOf(register_password)).sendKeys(password);
+        
     }
 
     public void enter_regPwdConfirm(String confirmPassword) {
+    	// register_confirm_password.clear();
         wait.until(ExpectedConditions.visibilityOf(register_confirm_password)).sendKeys(confirmPassword);
+       
     }
 
     public String getValidationMessage() {
