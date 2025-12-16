@@ -3,3 +3,6 @@ target/
 test-output/
 *.class
 *.json
+/screenshots/
+/test-output/
+*.png
