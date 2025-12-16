@@ -12,20 +12,24 @@ import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LinkedListPage;
-import pageObjects.LoginPage;
 import utilities.DataDriven;
 
 public class LinkedList {
 	
 	private static final Logger logger = LogManager.getLogger(GraphList.class);
 	
-	private WebDriver driver = getDriver();
-	LoginPage loginpage = new LoginPage(driver);
-	LinkedListPage linkedlistPage=new LinkedListPage(driver);
+	private WebDriver driver;
 	
-	
-	
+	private LinkedListPage linkedlistPage;
 
+	public LinkedList() {
+	  
+	    this.driver = getDriver();
+	 
+	    this.linkedlistPage = new LinkedListPage(driver);
+	}
+
+	
 	@When("The user clicks the Get Started button")
 	public void the_user_clicks_the_get_started_button() {
 		linkedlistPage.getstartedLinkedList();

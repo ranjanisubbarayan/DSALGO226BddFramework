@@ -1,14 +1,12 @@
 package stepDefinitions;
 
-import java.time.Duration;
+
 import java.util.List;
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,10 +15,17 @@ import driver.DriverFactory;
 
 public class registerSteps {
 	private static final Logger logger = LogManager.getLogger(registerSteps.class);
-	WebDriver driver;
-	registerPage registerpage = new  registerPage(DriverFactory.getDriver());
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	private WebDriver driver;
+	private registerPage registerpage;
 	
+
+	public registerSteps() {
+	
+	    this.driver = DriverFactory.getDriver();
+	    this.registerpage = new registerPage(driver);
+
+	}
+
 	@Given("The user is on the user Registration page")
 	public void the_user_is_on_the_user_registration_page() {
 		WebDriver driver = DriverFactory.getDriver(); // initialize driver

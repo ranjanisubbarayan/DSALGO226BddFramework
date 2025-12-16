@@ -22,10 +22,15 @@ public class ArraysList {
 	
 	private static final Logger logger = LogManager.getLogger(ArraysList.class);
 
-	private WebDriver driver = getDriver();
-	LoginPage loginpage = new LoginPage(driver);
-	ArrayListPage arraylistpage = new ArrayListPage(driver);
+	private WebDriver driver;
+	private LoginPage loginpage;
+	private ArrayListPage arraylistpage;
 
+	public ArraysList() {
+	    this.driver = getDriver(); 
+	    this.loginpage = new LoginPage(driver);
+	    this.arraylistpage = new ArrayListPage(driver);
+	}
 	@Given("The user sign in to dsAlgo Portal entering firstname {word} & password {word}")
 	public void the_user_sign_in_to_ds_algo_portal_entering_firstname_vara_password_varam(String firstname,
 			String password) {

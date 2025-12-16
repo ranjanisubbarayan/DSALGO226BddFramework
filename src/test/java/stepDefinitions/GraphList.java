@@ -26,9 +26,16 @@ public class GraphList{
 	private static final Logger logger = LogManager.getLogger(GraphList.class);
 
 
-	private WebDriver driver = getDriver();
-	private LoginPage loginPage = new LoginPage(driver);
-	private GraphListPage graphPage = new GraphListPage(driver);
+	private WebDriver driver;
+	private LoginPage loginPage;
+	private GraphListPage graphPage;
+
+	public GraphList() {
+	   
+	    this.driver = getDriver();
+	    this.loginPage = new LoginPage(driver);
+	    this.graphPage = new GraphListPage(driver);
+	}
 	
 	private String alertMsg = null;
 

@@ -14,9 +14,17 @@ import utilities.ConfigReader;
 public class StackSteps { 
 	
 	private static final Logger logger = LogManager.getLogger(StackSteps.class);
-	private WebDriver driver = DriverFactory.getDriver(); 
-	private LoginPage loginpage = new LoginPage(driver); 
-	private StackPage stackpage = new StackPage(driver);
+	private WebDriver driver;
+	private LoginPage loginpage;
+	private StackPage stackpage;
+
+	public StackSteps() {
+	    
+	    this.driver = DriverFactory.getDriver();
+	    this.loginpage = new LoginPage(driver);
+	    this.stackpage = new StackPage(driver);
+	}
+
 	
 
 	@Given("The user signs in to DS Algo Portal for stack module with username {string} and password {string}") 
