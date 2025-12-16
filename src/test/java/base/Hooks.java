@@ -15,7 +15,7 @@ import utilities.Report;
 
 public class Hooks {
 
- //   private static ExtentReports extent = Report.getInstance();
+
     public static ExtentTest test;
  
 
