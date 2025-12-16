@@ -4,7 +4,7 @@ As a user
   I want to verify the home page elements and content
   So that I can ensure the application home page is displayed correctly
   
-  
+ 
    Scenario: User opens the DS Algo Portal	
    Given  The user has to open browser	
    When  the user enter the correct DS Algo Portal URL		
