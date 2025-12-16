@@ -196,6 +196,7 @@ public class registerSteps {
 		    String password = data.get(0).get("Password");
 		    String confirmPassword = data.get(0).get("Password confirmation");
 
+		    //registerpage.enter_registerUsername(newusername);
 		    registerpage.enter_regPassword(password);
 		    registerpage.enter_regPwdConfirm(confirmPassword);
 		    registerpage.clickRegisterButton();

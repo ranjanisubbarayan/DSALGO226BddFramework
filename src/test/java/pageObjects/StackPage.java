@@ -1,6 +1,8 @@
 package pageObjects;
 
 import java.time.Duration;
+import java.util.Map;
+import java.nio.file.Paths;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -10,10 +12,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import utilities.ConfigReader;
+import utilities.ExcelSheetHandling;
+
 public class StackPage {
 
     private WebDriver driver;
     private WebDriverWait wait;
+    private Map<String, String> stackphyTryEditData;
 
     public StackPage(WebDriver driver) {
         this.driver = driver;
@@ -21,148 +27,195 @@ public class StackPage {
         PageFactory.initElements(driver, this);
     }
 
+  
 
-
-    @FindBy(xpath = "//div[contains(text(),'You are logged in')]")
-    private WebElement homePageMsg;
+    @FindBy(xpath = "//div[@class='alert alert-primary']")
+    WebElement verifyHomepage;
 
     @FindBy(xpath = "//h4[text()='Stack']")
-    private WebElement stackPageHeader;
+    WebElement verifyStackPageHeader;
 
-    @FindBy(xpath = "//a[contains(text(),'Get Started') and contains(@href,'stack')]")
-    private WebElement stackGetStartedBtn;
+    @FindBy(xpath = "//p[text()='Operations in Stack']")
+    WebElement verifyOpertioninStack;
+
+    @FindBy(xpath = "//p[text()='Implementation']")
+    WebElement verifyImplementinStack;
+
+    @FindBy(xpath = "//p[text()='Applications']")
+    WebElement verifyApplicationStack;
+
+    @FindBy(xpath = "//button[text()='Run']")
+    WebElement run;
+
+    @FindBy(xpath = "(//a[contains(text(),'Get Started')])[4]")
+    WebElement btnStackGetStarted;
 
     @FindBy(xpath = "//a[text()='Operations in Stack']")
-    private WebElement operationsInStackLink;
+    WebElement linkOperationInStack;
 
     @FindBy(xpath = "//a[text()='Implementation']")
-    private WebElement implementStackLink;
+    WebElement linkImplementStack;
 
     @FindBy(xpath = "//a[text()='Applications']")
-    private WebElement applicationStackLink;
+    WebElement linkApplicationStack;
 
-    @FindBy(xpath = "//a[text()='Try Here']//parent::a | //a[text()='Try here>>>']")
-    private WebElement tryHereButton;
+    @FindBy(xpath = "//a[text()='Try here>>>']")
+    WebElement tryHereButton;
 
-    @FindBy(css = ".CodeMirror")
-    private WebElement codeMirrorEditor;
+    @FindBy(xpath = "//div[@class='CodeMirror-scroll']")
+    WebElement codeEditor;
 
     @FindBy(id = "output")
-    private WebElement outputConsole;
+    WebElement outputConsole;
 
     @FindBy(xpath = "//a[text()='Practice Questions']")
-    private WebElement practiceQuestionsLink;
-
-    @FindBy(xpath = "//button[contains(text(),'Run')]")
-    private WebElement runButton;
-
-
-
-
-    public void safeClick(WebElement element) {
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-    }
-
-    public void scrollTo(WebElement element) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-    }
-
-    public void waitForVisible(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element));
-    }
-
+    WebElement practiceQuestionsLink;
 
  
 
     public void openStackPage() {
-        driver.get("https://dsportalapp.herokuapp.com/stack/stack-applications/");
+        driver.get(ConfigReader.getProperty("stackUrl"));
     }
 
-    public boolean verifyIsOnStackPage() {
-        waitForVisible(stackPageHeader);
-        return stackPageHeader.isDisplayed();
+    public void redirectedOperationinStackPage() {
+        driver.get("https://dsportalapp.herokuapp.com/stack/operations-in-stack/");
     }
 
-    public boolean verifyOperationsInStackVisible() {
-        return operationsInStackLink.isDisplayed();
+    public void practicePage() {
+        driver.get("https://dsportalapp.herokuapp.com/stack/practice");
     }
 
-    public void clickStackGetStarted() {
-        safeClick(stackGetStartedBtn);
+    public void verifyHomePage() {
+        Assert.assertTrue(verifyHomepage.isDisplayed(), "You are logged in");
     }
 
-    public void clickOperationsInStack() {
-        scrollTo(operationsInStackLink);
-        safeClick(operationsInStackLink);
+    public void verifyStackPage() {
+        Assert.assertTrue(verifyStackPageHeader.isDisplayed(), "Stack");
     }
 
-    public void clickImplementationStack() {
-        safeClick(implementStackLink);
+    public void verifyOperationInStack() {
+        Assert.assertTrue(verifyOpertioninStack.isDisplayed(), "Operations in Stack");
     }
 
-    public void clickApplicationStack() {
-        safeClick(applicationStackLink);
+    public void verifyImplementInStack() {
+        Assert.assertTrue(verifyImplementinStack.isDisplayed(), "Implementation");
     }
 
-    public void clickTryHere() {
-        scrollTo(tryHereButton);
-        safeClick(tryHereButton);
+    public void verifyApplicationInStack() {
+        Assert.assertTrue(verifyApplicationStack.isDisplayed(), "Applications");
     }
 
-    public void openTryEditorURL() {
+    public void verifyTryEditorPage() {
+        Assert.assertTrue(run.isDisplayed(), "Run");
+    }
+
+    public void openTryEditorPage() {
         driver.get("https://dsportalapp.herokuapp.com/tryEditor");
     }
 
+    public void clickstack_Getstarted_btn() {
+        wait.until(ExpectedConditions.elementToBeClickable(btnStackGetStarted));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btnStackGetStarted);
+    }
 
-    public void enterCodeInEditor(String code) {
-        waitForVisible(codeMirrorEditor);
+    public void clickOperationsInStack() {
+        linkOperationInStack.click();
+    }
 
-        WebElement editor = codeMirrorEditor.findElement(By.cssSelector(".CodeMirror-code"));
+    public void clickImplementStackLink() {
+        wait.until(ExpectedConditions.elementToBeClickable(linkImplementStack)).click();
+    }
 
-        Actions actions = new Actions(driver);
-        actions.click(editor)
-                .keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL)
-                .sendKeys(Keys.DELETE)
-                .sendKeys(code)
-                .perform();
+    public void clickApplicationStackLink() {
+        wait.until(ExpectedConditions.elementToBeClickable(linkApplicationStack)).click();
+    }
 
-        safeClick(runButton);
+    public void clickPracticeQuestions() {
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].scrollIntoView(true);", practiceQuestionsLink);
+        practiceQuestionsLink.click();
+    }
 
-      
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            System.out.println("Alert displayed: " + alert.getText());
-            alert.accept();
-        } catch (TimeoutException e) {
-            waitForVisible(outputConsole);
-            System.out.println("Code Output: " + outputConsole.getText());
-        }
+    public void clickTryhereofoperation() throws InterruptedException {
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].scrollIntoView(true);", tryHereButton);
+        Thread.sleep(500);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", tryHereButton);
+    }
+
+    public void clickTryHere() {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", tryHereButton);
     }
 
     public void clickRunButton() {
-        safeClick(runButton);
+        run.click();
+    }
+
+    public void enterCodeInEditor(String code) {
 
         try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            System.out.println("Alert: " + alert.getText());
-            alert.accept();
-        } catch (TimeoutException e) {
-            // No alert
+            wait.until(ExpectedConditions.visibilityOf(codeEditor));
+            WebElement cm = codeEditor.findElement(By.cssSelector(".CodeMirror-code"));
+
+            Actions actions = new Actions(driver);
+            actions.click(cm)
+                   .keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL)
+                   .sendKeys(Keys.DELETE)
+                   .sendKeys(code)
+                   .perform();
+
+            run.click();
+
+            try {
+                Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+                System.out.println("Alert displayed: " + alert.getText());
+                alert.accept();
+            } catch (TimeoutException e) {
+                System.out.println("Output: " + outputConsole.getText());
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-  
-
-    public void clickPracticeQuestions() {
-        scrollTo(practiceQuestionsLink);
-        safeClick(practiceQuestionsLink);
+    public void errorMessageinAlertWindow() {
+        try {
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            System.out.println("Alert Message: " + alert.getText());
+            alert.accept();
+        } catch (TimeoutException e) {
+            System.out.println("No native alert appeared.");
+        }
     }
 
-    public void verifyPracticePage() {
-        WebElement header = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//h3[contains(text(),'Practice Questions')]")
-        ));
-        Assert.assertTrue(header.isDisplayed(), "Practice Questions page is NOT displayed");
+    public void readDataFromExcel(String testId) {
+        String path = Paths.get("src/test/resources/ExcelSheet/DsAlgoTestData.xlsx").toString();
+        ExcelSheetHandling excel = new ExcelSheetHandling(path);
+
+        stackphyTryEditData = excel.getRowData("phythonTryEditor", testId);
+
+        if (stackphyTryEditData == null || stackphyTryEditData.isEmpty()) {
+            throw new RuntimeException("Excel returned EMPTY/NULL data for testId: " + testId);
+        }
+    }
+
+    public void getDataFromExcel() {
+        openTryEditorPage();
+
+        String valid = stackphyTryEditData.get("Valid Input");
+        String invalid = stackphyTryEditData.get("Invalid Input");
+
+        if (valid != null && !valid.isEmpty()) {
+            enterCodeInEditor(valid);
+        } else if (invalid != null && !invalid.isEmpty()) {
+            enterCodeInEditor(invalid);
+        } else {
+            throw new RuntimeException("Both Valid Input and Invalid Input are empty");
+        }
+    }
+
+    public void seeOutput() {
+        System.out.println(outputConsole.getText());
     }
 }

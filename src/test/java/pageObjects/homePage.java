@@ -1,6 +1,7 @@
 package pageObjects;
 
 import java.time.Duration;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,18 +9,23 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.ConfigReader;
+
+
 public class homePage {
 
     private WebDriver driver;
 
+    private WebDriverWait wait;
     public homePage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
 
   
 
-    @FindBy(xpath = "//div[@class='alert alert-primary']")
+    @FindBy(xpath = "//div[contains(text(),'You are not logged in')]")
     WebElement printerrormsg;
 
     @FindBy(xpath = "//button[text()='Get Started']")
@@ -28,7 +34,7 @@ public class homePage {
     @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/a")
     WebElement datastrct_dropdown;
 
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[1]")
+    @FindBy(xpath = "//a[@href='/array']")
     WebElement array_dropdown;
 
     @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[2]")
@@ -76,13 +82,8 @@ public class homePage {
     @FindBy(xpath = "//div[@id='navbarCollapse']/div[2]/ul/a[3]")
     WebElement signinLink;
 
-    @FindBy(xpath = "/html/body/div[2]")
-    WebElement errormsg;
-
-    
-
     public void openDSAlgoPortal() {
-        driver.get("https://dsportalapp.herokuapp.com/");
+        driver.get(ConfigReader.getProperty("baseUrl"));
     }
 
     public void clickGetStartedbutton() {
@@ -99,31 +100,55 @@ public class homePage {
         return regLink.isDisplayed() && signinLink.isDisplayed();
     }
 
+    private void safeClick(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        ((org.openqa.selenium.JavascriptExecutor) driver)
+                .executeScript("arguments[0].scrollIntoView(true);", element);
+        element.click();
+    }
+
     public void clickDropdownMenu() {
         datastrct_dropdown.click();
     }
 
     public void clickArrayDropdown() {
-        array_dropdown.click();
+    	
+    	//wait.until(ExpectedConditions.presenceOfElementLocated(array_dropdown)); // ensures DOM is ready
+        wait.until(ExpectedConditions.visibilityOf(array_dropdown));
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(array_dropdown)).click();
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", array_dropdown);
+        }
+    	 safeClick(datastrct_dropdown);
+    	    safeClick(array_dropdown);
+       
     }
 
     public void clickLinkedListDropdown() {
+    	datastrct_dropdown.click();
         linkedlist_dropdown.click();
+        
     }
 
     public void clickStackDropdown() {
+    	datastrct_dropdown.click();
         stack_dropdown.click();
     }
 
     public void clickQueueDropdown() {
+    	datastrct_dropdown.click();
         queue_dropdown.click();
     }
 
     public void clickTreeDropdown() {
+    	datastrct_dropdown.click();
         tree_dropdown.click();
     }
 
     public void clickGraphDropdown() {
+        datastrct_dropdown.click();
         graph_dropdown.click();
     }
 
@@ -155,8 +180,14 @@ public class homePage {
         graph_getstartbtn.click();
     }
 
-    public void showErrorMsg() {
-        System.out.println("Error Message: " + errormsg.getText());
-    }
+public void showError_msg() {
+		
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	WebElement errorMsg = wait.until(ExpectedConditions.visibilityOf(printerrormsg));
+	String text = errorMsg.getText();
+	System.out.println(text);
+
+	}
+
 
 }

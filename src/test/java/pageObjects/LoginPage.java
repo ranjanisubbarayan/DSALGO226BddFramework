@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.ConfigReader;
+
 public class LoginPage {
 
     private WebDriver driver;
@@ -46,7 +48,7 @@ public class LoginPage {
 
    
     public void openLoginPage() {
-        driver.get("https://dsportalapp.herokuapp.com/login");
+        driver.get(ConfigReader.getProperty("loginUrl"));
     }
 
     public void clickSignInLink() {
