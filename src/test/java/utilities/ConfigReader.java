@@ -5,18 +5,33 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-	private static Properties prop = new Properties();
+
+    private static final Properties prop = new Properties();
 
     static {
-        try (FileInputStream fis = new FileInputStream("src/test/resources/properties/config.properties")) {
+        try (FileInputStream fis = new FileInputStream(
+                System.getProperty("user.dir") +
+                "/src/test/resources/properties/config.properties")) {
+
             prop.load(fis);
+
         } catch (IOException e) {
-            e.printStackTrace();
-            throw new RuntimeException("Failed to load config.properties. Check file path.");
+            throw new RuntimeException(
+                    "Failed to load config.properties from src/test/resources/properties", e);
         }
     }
 
+ 
     public static String getProperty(String key) {
+        String systemValue = System.getProperty(key);
+        if (systemValue != null && !systemValue.isBlank()) {
+            return systemValue;
+        }
         return prop.getProperty(key);
+    }
+
+ 
+    public static String getBrowser() {
+        return getProperty("browser").toLowerCase().trim();
     }
 }

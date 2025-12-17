@@ -7,17 +7,18 @@
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
 
-    <test name="Cucumber" parallel="methods" thread-count="4">
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="runners.MainRunner"/>
         </classes>
     </test>
 
-    <test name="Test">
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="runners.MainRunner"/> <!-- different runner -->
+            <class name="runners.MainRunner"/>
         </classes>
     </test>
 
 </suite>
-
