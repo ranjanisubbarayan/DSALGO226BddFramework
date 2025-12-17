@@ -1,5 +1,4 @@
-
-@smoke @Login
+@Login
 Feature: Login to DS Algo Portal
 
   Scenario: Navigate to Login page

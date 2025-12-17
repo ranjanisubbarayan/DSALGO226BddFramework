@@ -45,7 +45,7 @@ public class Hooks {
         }
 
       
-        cleanupDriver();
+        //cleanupDriver();
 
       
         Report.getInstance().flush();
