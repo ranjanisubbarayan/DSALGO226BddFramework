@@ -1,114 +1,146 @@
 package pageObjects;
 
+import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.Map;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.testng.Assert;
 import utilities.ConfigReader;
+import utilities.ExcelSheetHandling;
 
 public class LoginPage {
-
+	
     private WebDriver driver;
-    private WebDriverWait wait;
+    WebDriverWait wait;
+    private Map<String, String> loginData;
 
-  
+   
     public LoginPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        PageFactory.initElements(driver, this);
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10)); 
+        PageFactory.initElements(driver, this); 
     }
 
-    
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[2]/ul/a[3]")
-    WebElement signInLink;
-
-    @FindBy(id = "id_username")
-    WebElement loginUsername;
-
-    @FindBy(id = "id_password")
-    WebElement loginPassword;
-
-    @FindBy(xpath = "//input[@value='Login']")
-    WebElement loginBtn;
-
-    @FindBy(xpath = "//div[contains(@class,'alert-primary')]")
-    WebElement alertMsg;
-
-    @FindBy(xpath = "//div[contains(text(),'You are logged in')]")
-    WebElement loggedInIndicator;
-
-    @FindBy(xpath = "//a[text()='Sign out']")
-    WebElement signOutLink;
-
-
+    By loginUsername = By.id("id_username");
+    By loginPassword = By.id("id_password");
+    By loginBtn = By.xpath("//input[@value='Login']");
+    By alertMsg = By.xpath("//div[contains(@class,'alert-primary')]");
+    By loggedIn = By.xpath("//div[contains(text(),'You are logged in')]");
+    By ishomePageDisplayed = By.xpath("//a[text()='NumpyNinja']");
+	
    
     public void openLoginPage() {
         driver.get(ConfigReader.getProperty("loginUrl"));
     }
 
-    public void clickSignInLink() {
-        wait.until(ExpectedConditions.elementToBeClickable(signInLink)).click();
-    }
-
+   
     public void clickLoginButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    	wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
+    	wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
+        driver.findElement(loginBtn).click();
     }
+    
 
     public void enterUsername(String username) {
-        wait.until(ExpectedConditions.visibilityOf(loginUsername)).sendKeys(username);
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+    	wait.until(ExpectedConditions.presenceOfElementLocated(loginUsername));
+    	wait.until(ExpectedConditions.elementToBeClickable(loginUsername));
+        driver.findElement(loginUsername).sendKeys(username);
     }
 
     public void enterPassword(String password) {
-        wait.until(ExpectedConditions.visibilityOf(loginPassword)).sendKeys(password);
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    	wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
+    	wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
+        driver.findElement(loginPassword).sendKeys(password);
     }
-
-    public boolean isUserLoggedIn() {
-        try {
-            return loggedInIndicator.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public boolean isLoggedIn() {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(signOutLink));
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
+    
+       
     public String getAlertMessage() {
         try {
-            return alertMsg.getText();
+        	return driver.findElement(alertMsg).getText();
+            
         } catch (Exception e) {
             return "";
         }
     }
 
     public boolean isHomePageDisplayed() {
-        return driver.getCurrentUrl().contains("/home");
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(ishomePageDisplayed)); 
+            
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+       
     }
+    public void errorMessage(String expectedMessage) {
+    	switch (expectedMessage) {
+
+        case "Home page displayed":
+            Assert.assertTrue(isHomePageDisplayed(),
+                    "Home page should be displayed but was NOT!");
+            break;
+
+        case "Please fill out this field":
+            
+            String usernameFieldMsg = getUsernameValidationMessage();
+            String passwordFieldMsg = getPasswordValidationMessage();
+
+            Assert.assertTrue(!usernameFieldMsg.isEmpty() || !passwordFieldMsg.isEmpty(),
+                    "validation message!");
+            break;
+
+        default:
+            
+            String alertMsg = getAlertMessage();
+            Assert.assertTrue(alertMsg.contains("Invalid"),
+                    "Expected invalid login message, but got: " + alertMsg);
+            break;
+    }
+    }
+    
+    
 
     public String getUsernameValidationMessage() {
-        return (String) ((JavascriptExecutor) driver)
-                .executeScript("return arguments[0].validationMessage;", loginUsername);
+        WebElement username = driver.findElement(loginUsername);
+        return (String)((JavascriptExecutor)driver).executeScript(
+                "return arguments[0].validationMessage;", username);
     }
 
     public String getPasswordValidationMessage() {
-        return (String) ((JavascriptExecutor) driver)
-                .executeScript("return arguments[0].validationMessage;", loginPassword);
+        WebElement password = driver.findElement(loginPassword);
+        return (String)((JavascriptExecutor)driver).executeScript(
+                "return arguments[0].validationMessage;", password);
     }
-
+   
+    
     public void login(String user, String pass) {
         enterUsername(user);
         enterPassword(pass);
         clickLoginButton();
     }
+    
+    public void loginUsingTestData(String testId) {
+
+    	String path = Paths.get("src/test/resources/ExcelSheet/DsAlgoTestData.xlsx").toString();
+        ExcelSheetHandling excel = new ExcelSheetHandling(path);
+        loginData = excel.getRowData("Login", testId);
+    }
+
+    public void getDataFromExcel() {
+    	enterUsername(loginData.get("username"));
+    	enterPassword(loginData.get("password"));
+        clickLoginButton();
+    }
+    
 }
