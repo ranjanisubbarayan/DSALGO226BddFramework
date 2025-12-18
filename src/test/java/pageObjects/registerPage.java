@@ -153,7 +153,7 @@ public class registerPage {
 
     public static String return_generateNewUsername() {
         String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date(0));
-        return "username" + timestamp +"aeiou";
+        return "user_name" + UUID.randomUUID().toString().substring(0, 8);
     }
 
     public String getGeneratedUsername() {
