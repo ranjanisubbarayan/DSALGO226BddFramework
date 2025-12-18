@@ -14,7 +14,7 @@ import utilities.ConfigReader;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-
+import java.util.UUID;
 public class registerPage {
 
     private WebDriver driver;
