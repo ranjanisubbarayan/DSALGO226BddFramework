@@ -1,13 +1,16 @@
 package pageObjects;
 
 import java.io.IOException;
+import java.time.Duration;
 
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class ArrayListPage {
@@ -79,5 +82,15 @@ public class ArrayListPage {
 		action.sendKeys(code).perform();
 		btnRun.click();
 	}
-	
+	public String waitForAlertIfPresent() {
+	    try {
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+	        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	        String text = alert.getText();
+	        alert.accept();
+	        return text;
+	    } catch (Exception e) {
+	        return null; 
+	    }
+	}
 }
