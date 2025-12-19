@@ -22,11 +22,7 @@ public class ConfigReader {
     }
 
  
-    public static String getProperty(String key) {
-        String systemValue = System.getProperty(key);
-        if (systemValue != null && !systemValue.isBlank()) {
-            return systemValue;
-        }
+    public static String getProperty(String key) {        
         return prop.getProperty(key);
     }
 

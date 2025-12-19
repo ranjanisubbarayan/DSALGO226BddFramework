@@ -1,3 +1,4 @@
+
 package base;
 
 import io.cucumber.java.After;
@@ -7,8 +8,12 @@ import io.cucumber.java.Scenario;
 import static driver.DriverFactory.getDriver;
 import static driver.DriverFactory.cleanupDriver;
 
+import utilities.ConfigReader;
 import utilities.Report;
 import com.aventstack.extentreports.MediaEntityBuilder;
+
+import driver.DriverFactory;
+
 import com.aventstack.extentreports.ExtentTest;
 
 public class Hooks {
@@ -18,9 +23,14 @@ public class Hooks {
     @Before
     public void setUp(Scenario scenario) {
 
+    	String browser = System.getProperty("browser"); 
+        if (browser == null) {
+            browser = ConfigReader.getProperty("browser");
+        }
+        DriverFactory.setBrowser(browser);
         getDriver();
-
-       
+        getDriver().get(ConfigReader.getProperty("baseUrl"));
+               
         test = Report.getInstance().createTest(scenario.getName());
     }
 
