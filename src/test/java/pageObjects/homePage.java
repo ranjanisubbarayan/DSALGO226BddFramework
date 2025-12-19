@@ -1,15 +1,12 @@
 package pageObjects;
 
 import java.time.Duration;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import utilities.ConfigReader;
 
 
 public class homePage {
@@ -21,9 +18,7 @@ public class homePage {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
-    }
-
-  
+    }  
 
     @FindBy(xpath = "//div[contains(text(),'You are not logged in')]")
     WebElement printerrormsg;
@@ -31,67 +26,58 @@ public class homePage {
     @FindBy(xpath = "//button[text()='Get Started']")
     WebElement dsalgo_button;
 
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/a")
+    @FindBy(xpath = "//a[text()='Data Structures']")
     WebElement datastrct_dropdown;
 
-    @FindBy(xpath = "//a[@href='/array']")
+    @FindBy(xpath = "//a[text()='Arrays']")
     WebElement array_dropdown;
 
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[2]")
+    @FindBy(xpath = "//a[text()='Linked List']")
     WebElement linkedlist_dropdown;
 
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[3]")
+    @FindBy(xpath = "//a[text()='Stack']")
     WebElement stack_dropdown;
 
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[4]")
+    @FindBy(xpath = "//a[text()='Queue']")
     WebElement queue_dropdown;
 
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[5]")
+    @FindBy(xpath = "//a[text()='Tree']")
     WebElement tree_dropdown;
 
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[1]/div/div/a[6]")
+    @FindBy(xpath = "//a[text()='Graph']")
     WebElement graph_dropdown;
 
-    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[1]")
+    @FindBy(xpath = "//a[@href='data-structures-introduction']")
     WebElement ds_getstartbtn;
 
-    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[2]")
+    @FindBy(xpath = "//a[@href='array']")
     WebElement ar_getstartbtn;
 
-    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[3]")
+    @FindBy(xpath = "//a[@href='linked-list']")
     WebElement ll_getstartbtn;
 
-    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[4]")
+    @FindBy(xpath = "//a[@href='stack']")
     WebElement stack_getstartbtn;
 
-    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[5]")
+    @FindBy(xpath = "//a[@href='queue']")
     WebElement queue_getstartbtn;
 
-    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[6]")
+    @FindBy(xpath = "//a[@href='tree']")
     WebElement tree_getstartbtn;
 
-    @FindBy(xpath = "(//div[@class='card h-100']/div/a)[7]")
+    @FindBy(xpath = "//a[@href='graph']")
     WebElement graph_getstartbtn;
 
-    @FindBy(xpath = "//div[@class='bs-example']/nav/a")
+    @FindBy(xpath = "//a[@href='/home']")
     WebElement homepageTitle;
 
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[2]/ul/a[2]")
+    @FindBy(xpath = "//a[@href='/register']")
     WebElement regLink;
 
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[2]/ul/a[3]")
+    @FindBy(xpath = "//a[@href='/login']")
     WebElement signinLink;
 
-    public void openDSAlgoPortal() {
-        driver.get(ConfigReader.getProperty("baseUrl"));
-    }
-
-    public void clickGetStartedbutton() {
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.elementToBeClickable(dsalgo_button))
-                .click();
-    }
-
+   
     public boolean isPageTitleDisplayed() {
         return homepageTitle.isDisplayed();
     }
@@ -113,16 +99,9 @@ public class homePage {
     }
 
     public void clickArrayDropdown() {
-    	
-    	//wait.until(ExpectedConditions.presenceOfElementLocated(array_dropdown)); // ensures DOM is ready
+        safeClick(datastrct_dropdown);
         wait.until(ExpectedConditions.visibilityOf(array_dropdown));
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(array_dropdown)).click();
-        } catch (Exception e) {
-            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", array_dropdown);
-        }
-    	 safeClick(datastrct_dropdown);
-    	    safeClick(array_dropdown);
+        safeClick(array_dropdown);
        
     }
 
@@ -182,8 +161,7 @@ public class homePage {
 
 public void showError_msg() {
 		
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-	WebElement errorMsg = wait.until(ExpectedConditions.visibilityOf(printerrormsg));
+	 WebElement errorMsg = wait.until(ExpectedConditions.visibilityOf(printerrormsg));
 	String text = errorMsg.getText();
 	System.out.println(text);
 

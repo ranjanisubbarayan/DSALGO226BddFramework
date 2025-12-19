@@ -1,11 +1,13 @@
 package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObjects.LaunchPage;
 import pageObjects.homePage;
-import utilities.ConfigReader;
 import driver.DriverFactory;
 
 
@@ -14,26 +16,25 @@ public class homeSteps {
 	
 	WebDriver driver;
 	
-	homePage homepage;
-	
+	private static homePage homepage;
+	LaunchPage launchPage;
+
 	
 	public homeSteps() {
 		
 		this.driver = DriverFactory.getDriver(); 
-	    this.homepage = new homePage(driver);
-		
+		this.launchPage = new LaunchPage(driver);
+	    	
 	}
 	
 	@Given("The user has to open browser")
 	public void the_user_has_to_open_browser() {
-		driver.get(ConfigReader.getProperty("baseUrl"));
-		    
+		
 	}
 
 	@When("the user enter the correct DS Algo Portal URL")
 	public void the_user_enter_the_correct_ds_algo_portal_url() {
 		
-		homepage.openDSAlgoPortal();
 	    
 	}
 
@@ -45,25 +46,28 @@ public class homeSteps {
 
 	@Given("The user is on the DS Algo Portal")
 	public void the_user_is_on_the_ds_algo_portal() {
-		homepage.clickGetStartedbutton();
-	    
+		launchPage = new LaunchPage(driver);
+		homepage = launchPage.clickGetStarted();
 	}
 
 	@When("Landing on the page")
 	public void landing_on_the_page() {
 		
-	      homepage.isPageTitleDisplayed();		
+	      Assert.assertTrue(homepage.isPageTitleDisplayed(),"Home page title is not displayed");
 	}
 	
 	@Then("The user shouble able to navigated to the Home page, which displays the Register and Sign in links")
 	public void the_user_shouble_able_to_navigated_to_the_home_page_which_displays_the_register_and_sign_in_links() {
-				homepage.isRegAndSignInDisplayed();
-				System.out.println("isDisplayed register and sign in link");
+
+		Assert.assertTrue(homepage.isRegAndSignInDisplayed(), "Register and Sign in links not displayed");
+		   
 	}
 
 	@Given("The user is on Home page")
 	public void the_user_is_on_home_page() {
-	    homepage.isPageTitleDisplayed();
+		launchPage = new LaunchPage(driver);
+		homepage = launchPage.clickGetStarted();
+	   
 	}
 
 	@When("User click the dropdown button")
@@ -74,8 +78,7 @@ public class homeSteps {
 	
 	@Then("The user should able to see six options  Array Linked List Stack Queue Tree Graph in dropdown menu")
 	public void the_user_should_able_to_see_six_options_array_linked_list_stack_queue_tree_graph_in_dropdown_menu() {
-		//homepage = new homePage(driver);
-		   homepage.clickDropdownMenu();
+		homepage.clickDropdownMenu();
 	}
 			
 	@When("user click the dropdown")

@@ -4,27 +4,32 @@ import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import utilities.ConfigReader;
 
 public class DriverFactory {
 
     private static ThreadLocal<WebDriver> webDriver = new ThreadLocal<>();
 
+    private static ThreadLocal<String> browserName = new ThreadLocal<>();
+
+    public static void setBrowser(String browser) {
+        browserName.set(browser);
+    }
     public static WebDriver getDriver() {
         if (webDriver.get() == null) {
-            webDriver.set(createDriver());
+            webDriver.set(createDriver(browserName.get()));
         }
         return webDriver.get();
     }
 
-    private static WebDriver createDriver() {
-        WebDriver driver;
-        String browser = ConfigReader.getProperty("browser").toLowerCase().trim();
-
-        switch (browser) {
+    private static WebDriver createDriver(String browser) {
+     
+        System.out.println(" Browser from config: " + browser);
+        switch (browser.toLowerCase()) {
 
         case "chrome":
             ChromeOptions chromeOptions = new ChromeOptions();
@@ -39,25 +44,24 @@ public class DriverFactory {
                     "--disable-extensions",
                     "--incognito"
             );
-            chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-            driver = new ChromeDriver(chromeOptions);
-            break;
 
-        case "firefox":
-            FirefoxOptions firefoxOptions = new FirefoxOptions();
-            firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-            driver = new FirefoxDriver(firefoxOptions);
-            break;
+            return new ChromeDriver(chromeOptions);
+
+        case "firefox": 
+        	webDriver.set(new FirefoxDriver());
+        	FirefoxOptions firefoxOptions = new FirefoxOptions();
+        	firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);            
+            return new FirefoxDriver(firefoxOptions);
+
+        case "edge":
+        	webDriver.set(new EdgeDriver());
+            EdgeOptions edgeOptions = new EdgeOptions();
+            edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+            return new EdgeDriver(edgeOptions);
 
         default:
-            throw new IllegalArgumentException(
-                    "Browser not supported: " + browser + 
-                    " (check config.properties)"
-            );
-        }
-
-        driver.manage().window().maximize();
-        return driver;
+            throw new IllegalArgumentException("Unsupported browser: " + browser);
+    }
     }
 
     public static void cleanupDriver() {

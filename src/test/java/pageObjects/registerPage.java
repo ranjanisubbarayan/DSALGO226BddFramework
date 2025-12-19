@@ -11,9 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.ConfigReader;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.UUID;
 
 public class registerPage {
 
@@ -112,19 +111,16 @@ public class registerPage {
     }
 
     public void enter_registerUsername(String username) {
-    	 //register_username.clear();
         wait.until(ExpectedConditions.visibilityOf(register_username)).sendKeys(username);
        
     }
 
     public void enter_regPassword(String password) {
-    	//register_password.clear();
         wait.until(ExpectedConditions.visibilityOf(register_password)).sendKeys(password);
         
     }
 
     public void enter_regPwdConfirm(String confirmPassword) {
-    	// register_confirm_password.clear();
         wait.until(ExpectedConditions.visibilityOf(register_confirm_password)).sendKeys(confirmPassword);
        
     }
@@ -152,8 +148,8 @@ public class registerPage {
     }
 
     public static String return_generateNewUsername() {
-        String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date(0));
-        return "username" + timestamp +"aeiou";
+    	
+        return "user_name" + UUID.randomUUID().toString().substring(0, 8);
     }
 
     public String getGeneratedUsername() {
