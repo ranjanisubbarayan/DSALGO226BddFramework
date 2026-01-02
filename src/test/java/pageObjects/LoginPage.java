@@ -35,9 +35,9 @@ public class LoginPage {
     By ishomePageDisplayed = By.xpath("//a[text()='NumpyNinja']");
 	
    
-    public void openLoginPage() {
-        driver.get(ConfigReader.getProperty("loginUrl"));
-    }
+//    public void openLoginPage() {
+//        driver.get(ConfigReader.getProperty("loginUrl"));
+//    }
 
    
     public void clickLoginButton() {

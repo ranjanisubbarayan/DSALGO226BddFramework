@@ -4,9 +4,9 @@ package base;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.WebDriver;
 
-import static driver.DriverFactory.getDriver;
-import static driver.DriverFactory.cleanupDriver;
+
 
 import utilities.ConfigReader;
 import utilities.Report;
@@ -28,8 +28,8 @@ public class Hooks {
             browser = ConfigReader.getProperty("browser");
         }
         DriverFactory.setBrowser(browser);
-        getDriver();
-        getDriver().get(ConfigReader.getProperty("baseUrl"));
+        WebDriver driver = DriverFactory.getDriver();
+        driver.get(ConfigReader.getProperty("baseUrl"));
                
         test = Report.getInstance().createTest(scenario.getName());
     }
@@ -40,7 +40,7 @@ public class Hooks {
         if (scenario.isFailed()) {
             try {
              
-                byte[] screenshot = ((org.openqa.selenium.TakesScreenshot) getDriver())
+                byte[] screenshot = ((org.openqa.selenium.TakesScreenshot) DriverFactory.getDriver())
                         .getScreenshotAs(org.openqa.selenium.OutputType.BYTES);
 
               
@@ -55,7 +55,7 @@ public class Hooks {
         }
 
       
-        //cleanupDriver();
+        DriverFactory.cleanupDriver();
 
       
         Report.getInstance().flush();
