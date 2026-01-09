@@ -9,11 +9,9 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-
 public class DriverFactory {
-
+	
     private static ThreadLocal<WebDriver> webDriver = new ThreadLocal<>();
-
     private static ThreadLocal<String> browserName = new ThreadLocal<>();
 
     public static void setBrowser(String browser) {
@@ -28,7 +26,7 @@ public class DriverFactory {
 
     private static WebDriver createDriver(String browser) {
      
-        System.out.println(" Browser from config: " + browser);
+        System.out.println(" Browser : " + browser);
         switch (browser.toLowerCase()) {
 
         case "chrome":
@@ -44,17 +42,16 @@ public class DriverFactory {
                     "--disable-extensions",
                     "--incognito"
             );
-
             return new ChromeDriver(chromeOptions);
 
         case "firefox": 
-        	webDriver.set(new FirefoxDriver());
+        	//webDriver.set(new FirefoxDriver());
         	FirefoxOptions firefoxOptions = new FirefoxOptions();
         	firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);            
             return new FirefoxDriver(firefoxOptions);
 
         case "edge":
-        	webDriver.set(new EdgeDriver());
+        	//webDriver.set(new EdgeDriver());
             EdgeOptions edgeOptions = new EdgeOptions();
             edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             return new EdgeDriver(edgeOptions);

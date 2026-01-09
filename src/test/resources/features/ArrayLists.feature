@@ -35,9 +35,9 @@ Feature: Navigation and interaction in dsAlgo Portal - Array Section
     Then The user should see an error message in alert window
 
     Examples:
-      | code |
-      |      |
-      | hi   |
+      | code  |
+      |       |
+      | hi    |
 
   Scenario: Verify user is able to see output for valid python code for Arrays in Python page
     Given The user is in the Home page after Sign in

@@ -20,7 +20,7 @@ Feature: Login to DS Algo Portal
       | TestNinja  |                   | Please fill out this field             |
       | Testuser   | C5Mha6FkdSAVEN@   | Invalid Username and Password          |
       | TestNinja  | wrongpassword     | Invalid Username and Password          |
-      | TestNinja  | C5Mha6FkdSAVEN@   | Home page displayed                    |
+      | TestNinja  | C5Mha6FkdSAV      | Home page displayed                    |
 
     Scenario Outline: Login test using Excel data
     Given I read login test data for "<testId>"

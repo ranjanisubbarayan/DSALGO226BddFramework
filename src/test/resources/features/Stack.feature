@@ -1,19 +1,20 @@
 @Stack 
 Feature: Stack Module Tests 
 
+Background:
+  Given The user is logged into DS Algo Portal
+  
 Scenario: Verify that user is able to navigate to Stack data structure page 
-Given The user signs in to DS Algo Portal for stack module with username "TestNinja" and password "C5Mha6FkdSAVEN@" 
-Given The user is in Home page after Sign in 
 When The user clicks the Getting Started button in Stack Panel OR The user select Stack item from the drop down menu 
 Then The user be directed to Stack Data Structure Page 
 
-Scenario: Verify that user is able to navigate to Operations in Stack page 
-Given The user is in the Stack page after Sign in 
-When The user clicks Operations in Stack button 
-Then The user should be redirected to Operations in Stack page 
+Scenario: Navigate to Operations in Stack
+When The user clicks the Getting Started button in Stack Panel
+When The user clicks Operations in Stack button
+Then The user should be redirected to Operations in Stack page
 
 Scenario: Verify that user is able to navigate to "try Editor" page for "Operations in Stack" page 
-Given The user is on the Operations in Stack page 
+Given  user navigates to Operations in Stack page 
 When The user clicks Try Here button in Operations in Stack page 
 Then The user should be redirected to a page having an try Editor with a Run button to test 
 
@@ -38,10 +39,13 @@ When The user write the valid "code" in Editor and click the Run Button
 | print(40+60)   |
 Then The user should able to see output in the console 
 
- Scenario: Verify that user is able to navigate to "Practice Questions" Page for "Operations in Stack" page 
- Given The user is in the Stack page after Sign in
- When The user clicks Practice Questions button 
- Then The user should be redirected to Practice page 
+Scenario: Verify that user is able to navigate to "Practice Questions" Page for "Implementation" page
+Given The user is logged into DS Algo Portal
+Given The user is on the Implementation page
+When The user clicks Practice Questions button
+Then The user should be redirected to Practice page
+
+
  
  Scenario: Verify that user is able to navigate to "Implementation" page 
  Given The user is in the Stack page after Sign in 

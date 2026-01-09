@@ -2,7 +2,6 @@ package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,38 +9,25 @@ import pageObjects.LaunchPage;
 import pageObjects.homePage;
 import driver.DriverFactory;
 
-
-
-public class homeSteps {
-	
+public class homeSteps {	
 	WebDriver driver;
-	
 	private static homePage homepage;
 	LaunchPage launchPage;
-
 	
-	public homeSteps() {
-		
+	public homeSteps() {		
 		this.driver = DriverFactory.getDriver(); 
-		this.launchPage = new LaunchPage(driver);
-	    	
+		this.launchPage = new LaunchPage(driver);	    	
 	}
 	
 	@Given("The user has to open browser")
-	public void the_user_has_to_open_browser() {
-		
+	public void the_user_has_to_open_browser() {		
 	}
-
 	@When("the user enter the correct DS Algo Portal URL")
-	public void the_user_enter_the_correct_ds_algo_portal_url() {
-		
+	public void the_user_enter_the_correct_ds_algo_portal_url() {	
 	    
 	}
-
 	@Then("The user able to land on the DS Algo portal with Get Started button")
-	public void the_user_able_to_land_on_the_ds_algo_portal_with_get_started_button() {
-		
-	   
+	public void the_user_able_to_land_on_the_ds_algo_portal_with_get_started_button() {		   
 	}
 
 	@Given("The user is on the DS Algo Portal")
@@ -51,29 +37,24 @@ public class homeSteps {
 	}
 
 	@When("Landing on the page")
-	public void landing_on_the_page() {
-		
+	public void landing_on_the_page() {		
 	      Assert.assertTrue(homepage.isPageTitleDisplayed(),"Home page title is not displayed");
 	}
 	
 	@Then("The user shouble able to navigated to the Home page, which displays the Register and Sign in links")
 	public void the_user_shouble_able_to_navigated_to_the_home_page_which_displays_the_register_and_sign_in_links() {
-
-		Assert.assertTrue(homepage.isRegAndSignInDisplayed(), "Register and Sign in links not displayed");
-		   
+		Assert.assertTrue(homepage.isRegAndSignInDisplayed(), "Register and Sign in links not displayed");		   
 	}
 
 	@Given("The user is on Home page")
 	public void the_user_is_on_home_page() {
 		launchPage = new LaunchPage(driver);
-		homepage = launchPage.clickGetStarted();
-	   
+		homepage = launchPage.clickGetStarted();	   
 	}
 
 	@When("User click the dropdown button")
 	public void user_click_the_dropdown_button() {
-		homepage.clickDropdownMenu();
-	   
+		homepage.clickDropdownMenu();	   
 	}
 	
 	@Then("The user should able to see six options  Array Linked List Stack Queue Tree Graph in dropdown menu")
@@ -86,24 +67,20 @@ public class homeSteps {
 	    homepage.clickDropdownMenu();
 	}
 
-
 	@Then("The user should able to see an Warning message {string}")
 	public void the_user_should_able_to_see_an_warning_message(String string) {
 	    homepage.showError_msg();
 	}
 
 	@When("the user selects Arrays from the dropdown")
-	public void the_user_selects_arrays_from_the_dropdown() {
-	
-		homepage.clickArrayDropdown();
-	    
+	public void the_user_selects_arrays_from_the_dropdown() {	
+		homepage.clickArrayDropdown();	    
 	}
 
 	@When("user click the Get Started button of Data Structure - Induction")
 	public void user_click_the_get_started_button_of_data_structure_induction() {
 	    homepage.clickDataStructureGetStarted();
 	}
-
 	
 	@When("user  select Linked List in the dropdown button")
 	public void user_select_linked_list_in_the_dropdown_button() {

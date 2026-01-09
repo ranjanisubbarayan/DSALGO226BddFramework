@@ -8,9 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import utilities.ConfigReader;
-
 import java.time.Duration;
 import java.util.UUID;
 
@@ -19,16 +16,14 @@ public class registerPage {
     private WebDriver driver;
     private WebDriverWait wait;
     private String generatedUsername;
-
   
     public registerPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
-
   
-    @FindBy(xpath = "//div[@id='navbarCollapse']/div[2]/ul/a[2]")
+    @FindBy(xpath = "//a[@href='/register']")
     WebElement register_link;
 
     @FindBy(id = "id_username")
@@ -40,33 +35,31 @@ public class registerPage {
     @FindBy(id = "id_password2")
     WebElement register_confirm_password;
 
-    @FindBy(xpath = "//input[@type='submit']")
+    @FindBy(xpath = "//input[@value='Register']")
     WebElement register_button;
 
-    @FindBy(xpath = "/html/body/div[2]/div/div[2]/form/span[3]")
+    @FindBy(xpath = "//input[@value='Register']")
     WebElement registerpage_displayed;
 
-    @FindBy(xpath = "//div[@class='alert alert-primary']")
+    @FindBy(xpath = "//div[@role='alert']")
     WebElement printErrormsg;
 
-    @FindBy(xpath = "//div[contains(text(),'New Account Created')]")
+    @FindBy(xpath = "//div[@role='alert']")
     WebElement registeredsuccess;
 
-
-  
-
-    public void open_DSALGO_registerPage() {
-        driver.get(ConfigReader.getProperty("registerUrl"));
-    }
+   @FindBy(xpath = "//a[@href='/logout']")
+   WebElement signout;
+   
+   @FindBy(xpath = "//a[@href='/login']")
+   WebElement signin;
 
     public void click_register_link() {
         wait.until(ExpectedConditions.elementToBeClickable(register_link)).click();
     }
 
     public boolean isRegisterPageDisplayed() {
-        return registerpage_displayed.isDisplayed();
+        return register_button.isDisplayed();
     }
-
     
     public void safeClick(WebElement element) {
         for (int i = 0; i < 3; i++) {
@@ -139,7 +132,6 @@ public class registerPage {
         System.out.println("Validation message: " + message);
         return message;
     }
-
     
     public void generate_newUsername() {
         generatedUsername = return_generateNewUsername();
@@ -147,8 +139,7 @@ public class registerPage {
         System.out.println("Generated Username: " + generatedUsername);
     }
 
-    public static String return_generateNewUsername() {
-    	
+    public static String return_generateNewUsername() {    	
         return "user_name" + UUID.randomUUID().toString().substring(0, 8);
     }
 
@@ -158,5 +149,10 @@ public class registerPage {
 
     public void print_successfullyRegistered() {
         System.out.println("Registered Successfully: " + registeredsuccess.getText());
+    }
+    
+    public LoginPage clickSigninLink() {
+        signin.click();
+        return new LoginPage(driver); 
     }
 }
