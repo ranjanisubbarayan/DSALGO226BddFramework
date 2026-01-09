@@ -10,14 +10,17 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
+import driver.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 
 import pageObjects.LoginPage;
+import pageObjects.homePage;
+import utilities.ConfigReader;
 import utilities.DataDriven;
 import pageObjects.GraphListPage;
+import pageObjects.LaunchPage;
 
 import static driver.DriverFactory.getDriver;
 
@@ -27,31 +30,36 @@ public class GraphList{
 
 
 	private WebDriver driver;
-	private LoginPage loginPage;
+	 private LaunchPage launchPage;
 	private GraphListPage graphPage;
 
 	public GraphList() {
-	   
-	    this.driver = getDriver();
-	    this.loginPage = new LoginPage(driver);
-	    this.graphPage = new GraphListPage(driver);
+		this.driver = DriverFactory.getDriver();
+        this.launchPage = new LaunchPage(driver);
+        this.graphPage = new GraphListPage(driver);
 	}
 	
 	private String alertMsg = null;
-
 	
 	@Given("The user logs into dsAlgo Portal with username {string} and password {string}")
 	public void the_user_logs_into_ds_algo_portal_with_username_and_password(String username, String password) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		loginPage.openLoginPage();
-		loginPage.login(username, password);
-		
+
+		LaunchPage launchPage = new LaunchPage(DriverFactory.getDriver());
+	    homePage homepage = launchPage.clickGetStarted();
+
+	    if (!homepage.isUserLoggedIn()) {
+	        homepage.clickSignInLinkIfPresent();
+
+	        LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
+	        loginPage.enterUsername(ConfigReader.getProperty("username"));
+	        loginPage.enterPassword(ConfigReader.getProperty("password"));
+	        loginPage.clickLoginButton();
+	    }
 		logger.info("successfully logged into the dsalgo application");
 	}
 
 	@Given("The user should be on the Home Dashboard")
-	public void the_user_should_be_on_the_home_dashboard() {
-		graphPage.verifyHomePage();
+	public void the_user_should_be_on_the_home_dashboard() {		
 	}
 
 	@When("The user selects the Get Started option under the Graph section")

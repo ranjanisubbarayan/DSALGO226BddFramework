@@ -3,16 +3,19 @@ package stepDefinitions;
 import static driver.DriverFactory.getDriver;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.ArrayList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import driver.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.ArrayListPage;
+import pageObjects.LaunchPage;
 import pageObjects.LoginPage;
+import pageObjects.homePage;
+import utilities.ConfigReader;
 import utilities.DataDriven;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,40 +24,46 @@ public class ArraysList {
 	private static final Logger logger = LogManager.getLogger(ArraysList.class);
 
 	private WebDriver driver;
-	private LoginPage loginpage;
+	private LaunchPage launchPage;
 	private ArrayListPage arraylistpage;
-
 	private String alertMsg = null;
 	
 	public ArraysList() {
 	    this.driver = getDriver(); 
-	    this.loginpage = new LoginPage(driver);
+	    this.launchPage = new LaunchPage(driver);
 	    this.arraylistpage = new ArrayListPage(driver);
 	}
 	@Given("The user sign in to dsAlgo Portal entering firstname {word} & password {word}")
-	public void the_user_sign_in_to_ds_algo_portal_entering_firstname_vara_password_varam(String firstname,
-			String password) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		loginpage.openLoginPage();
-		loginpage.login(firstname, password);
+	public void the_user_sign_in_to_ds_algo_portal_entering_firstname_vara_password_varam(String firstname,String password) {
+		LaunchPage launchPage = new LaunchPage(DriverFactory.getDriver());
+	    homePage homepage = launchPage.clickGetStarted();
+
+	    if (!homepage.isUserLoggedIn()) {
+	        homepage.clickSignInLinkIfPresent();
+
+	        LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
+	        loginPage.enterUsername(ConfigReader.getProperty("username"));
+	        loginPage.enterPassword(ConfigReader.getProperty("password"));
+	        loginPage.clickLoginButton();
+	    }
 		logger.info("successfully logged into the dsalgo application");
 	}
 
 	@Given("The user is in the Home page after Sign in")
-	public void the_user_is_in_the_home_page_after_sign_in() {
-		arraylistpage.verifyHomePage();
+	public void the_user_is_in_the_home_page_after_sign_in() {		
+		
 	}
 
 	@When("The user clicks the Get Started button in Array Panel")
 	public void the_user_clicks_the_button_in_array_panel() {
-		arraylistpage.getstartedArray();
-		
+		arraylistpage.getstartedArray();		
 		logger.info("successfully logged into the array module");
 	}
 
 	@Then("The user should be directed to Array Page")
 	public void the_user_should_be_directed_to_Array_page() {
 		arraylistpage.verifyArrayPage();
+		arraylistpage.clickArraysInPython();
 	}
 
 	@When("The user clicks Arrays in Python link")

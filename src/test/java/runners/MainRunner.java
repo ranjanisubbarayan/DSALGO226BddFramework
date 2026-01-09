@@ -10,13 +10,13 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import utilities.ExtentTestNGListener;
 
-
 @Listeners(ExtentTestNGListener.class)
 
 @CucumberOptions(features = "src/test/resources/features", 
-                     tags = "@home or @register or @Login or @Graph or @Stack or @ArrayList",
-				glue= {"stepDefinitions","base"}, 
-				monochrome=true, dryRun=false,
+                        tags = "@home or @register or @Login or @Graph or @Stack or @ArrayList",
+                       // tags = "@ArrayList or @register",
+                        glue= {"stepDefinitions","base"}, 
+				        monochrome=true, dryRun=false,
 						plugin= {"pretty", "html:target/ranjani.html", "json:target/cucumber.json"})
 			
 public class MainRunner extends AbstractTestNGCucumberTests {
@@ -24,15 +24,12 @@ public class MainRunner extends AbstractTestNGCucumberTests {
     @Parameters("browser")
     @BeforeClass(alwaysRun = true)
     public void setBrowser(@Optional String browser) {
-
     
         if (browser != null && !browser.isBlank()) {
             System.setProperty("browser", browser);
-        }
-       
+        }       
     }
-	
-	
+    
 	@Override
 	@DataProvider(parallel = false)
 	public Object[][] scenarios() {

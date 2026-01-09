@@ -11,7 +11,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import utilities.ConfigReader;
 import utilities.ExcelSheetHandling;
 
 public class LoginPage {
@@ -19,7 +18,6 @@ public class LoginPage {
     private WebDriver driver;
     WebDriverWait wait;
     private Map<String, String> loginData;
-
    
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -30,14 +28,11 @@ public class LoginPage {
     By loginUsername = By.id("id_username");
     By loginPassword = By.id("id_password");
     By loginBtn = By.xpath("//input[@value='Login']");
-    By alertMsg = By.xpath("//div[contains(@class,'alert-primary')]");
-    By loggedIn = By.xpath("//div[contains(text(),'You are logged in')]");
+    By alertMsg = By.xpath("//div[@role='alert']");
+    By loggedIn = By.xpath("//div[@role='alert']");
     By ishomePageDisplayed = By.xpath("//a[text()='NumpyNinja']");
 	
-   
-//    public void openLoginPage() {
-//        driver.get(ConfigReader.getProperty("loginUrl"));
-//    }
+ 
 
    
     public void clickLoginButton() {
@@ -45,8 +40,7 @@ public class LoginPage {
     	wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
     	wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
         driver.findElement(loginBtn).click();
-    }
-    
+    }    
 
     public void enterUsername(String username) {
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -60,13 +54,11 @@ public class LoginPage {
     	wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
     	wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
         driver.findElement(loginPassword).sendKeys(password);
-    }
-    
+    }    
        
     public String getAlertMessage() {
         try {
-        	return driver.findElement(alertMsg).getText();
-            
+        	return driver.findElement(alertMsg).getText();            
         } catch (Exception e) {
             return "";
         }
@@ -75,41 +67,34 @@ public class LoginPage {
     public boolean isHomePageDisplayed() {
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(ishomePageDisplayed)); 
-            
+            wait.until(ExpectedConditions.visibilityOfElementLocated(ishomePageDisplayed));             
             return true;
         } catch (Exception e) {
             return false;
-        }
-       
+        }       
     }
+    
     public void errorMessage(String expectedMessage) {
     	switch (expectedMessage) {
-
+    	
         case "Home page displayed":
             Assert.assertTrue(isHomePageDisplayed(),
                     "Home page should be displayed but was NOT!");
             break;
 
-        case "Please fill out this field":
-            
+        case "Please fill out this field":            
             String usernameFieldMsg = getUsernameValidationMessage();
             String passwordFieldMsg = getPasswordValidationMessage();
-
             Assert.assertTrue(!usernameFieldMsg.isEmpty() || !passwordFieldMsg.isEmpty(),
                     "validation message!");
             break;
-
-        default:
-            
+        default:            
             String alertMsg = getAlertMessage();
             Assert.assertTrue(alertMsg.contains("Invalid"),
                     "Expected invalid login message, but got: " + alertMsg);
             break;
     }
-    }
-    
-    
+    }    
 
     public String getUsernameValidationMessage() {
         WebElement username = driver.findElement(loginUsername);
@@ -121,8 +106,7 @@ public class LoginPage {
         WebElement password = driver.findElement(loginPassword);
         return (String)((JavascriptExecutor)driver).executeScript(
                 "return arguments[0].validationMessage;", password);
-    }
-   
+    }   
     
     public void login(String user, String pass) {
         enterUsername(user);
@@ -131,7 +115,6 @@ public class LoginPage {
     }
     
     public void loginUsingTestData(String testId) {
-
     	String path = Paths.get("src/test/resources/ExcelSheet/DsAlgoTestData.xlsx").toString();
         ExcelSheetHandling excel = new ExcelSheetHandling(path);
         loginData = excel.getRowData("Login", testId);

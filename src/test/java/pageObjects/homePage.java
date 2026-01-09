@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,11 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
 
 public class homePage {
 
     private WebDriver driver;
-
     private WebDriverWait wait;
     public homePage(WebDriver driver) {
         this.driver = driver;
@@ -76,8 +77,10 @@ public class homePage {
 
     @FindBy(xpath = "//a[@href='/login']")
     WebElement signinLink;
-
    
+    @FindBy(xpath = "//a[@href='/logout']")
+    WebElement signout;
+    
     public boolean isPageTitleDisplayed() {
         return homepageTitle.isDisplayed();
     }
@@ -101,14 +104,12 @@ public class homePage {
     public void clickArrayDropdown() {
         safeClick(datastrct_dropdown);
         wait.until(ExpectedConditions.visibilityOf(array_dropdown));
-        safeClick(array_dropdown);
-       
+        safeClick(array_dropdown);       
     }
 
     public void clickLinkedListDropdown() {
     	datastrct_dropdown.click();
-        linkedlist_dropdown.click();
-        
+        linkedlist_dropdown.click();        
     }
 
     public void clickStackDropdown() {
@@ -159,13 +160,52 @@ public class homePage {
         graph_getstartbtn.click();
     }
 
-public void showError_msg() {
-		
+    public void showError_msg() {		
 	 WebElement errorMsg = wait.until(ExpectedConditions.visibilityOf(printerrormsg));
-	String text = errorMsg.getText();
-	System.out.println(text);
-
+	 String text = errorMsg.getText();
+	 System.out.println(text);
 	}
+    
+    public registerPage clickRegisterLink() {
+        //regLink.click();
+    	List<WebElement> regLinks =
+                driver.findElements(By.xpath("//a[@href='/register']"));
 
+        if (!regLinks.isEmpty()) {
+            regLinks.get(0).click();
+        }
+        return new registerPage(driver); 
+    }
+    public LoginPage ClickSignOut() {
+    	List<WebElement> signInLinks =
+                driver.findElements(By.xpath("//a[@href='/logout']"));
 
+        if (!signInLinks.isEmpty()) {
+            signInLinks.get(0).click();
+        }
+        return new LoginPage(driver);
+    	
+    }
+
+    public LoginPage clickSignInLink() {
+    	List<WebElement> signInLinks =
+                driver.findElements(By.xpath("//a[@href='/login']"));
+
+        if (!signInLinks.isEmpty()) {
+            signInLinks.get(0).click();
+        }
+        return new LoginPage(driver);
+    }
+    
+    public boolean isUserLoggedIn() {
+        return driver.findElements(By.xpath("//a[text()='Sign out']")).size() > 0;
+    }
+
+    public void clickSignInLinkIfPresent() {
+        List<WebElement> signInLinks =
+                driver.findElements(By.xpath("//a[@href='/login']"));        
+        if (!signInLinks.isEmpty()) {
+            signInLinks.get(0).click();
+        }
+    }
 }

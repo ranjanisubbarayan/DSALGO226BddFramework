@@ -1,43 +1,48 @@
 package stepDefinitions;
 
-
 import java.util.List;
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObjects.LaunchPage;
+import pageObjects.LoginPage;
+import pageObjects.homePage;
 import pageObjects.registerPage;
 import driver.DriverFactory;
 
 public class registerSteps {
-	private static final Logger logger = LogManager.getLogger(registerSteps.class);
-	private WebDriver driver;
-	private registerPage registerpage;
 	
+	    private static final Logger logger = LogManager.getLogger(registerSteps.class);
+	    private WebDriver driver;
+	    private registerPage registerpage;
+	    private LaunchPage launchPage;
+        private homePage homepage;
+        private LoginPage loginpage;
+	    
+	    public registerSteps() {
+	        this.driver = DriverFactory.getDriver();
+	        this.launchPage = new LaunchPage(driver);
+	        this.registerpage = new registerPage(driver);
+	    }
 
-	public registerSteps() {
-	
-	    this.driver = DriverFactory.getDriver();
-	    this.registerpage = new registerPage(driver);
-
-	}
-
+	@Given("The user is on the user Registeration page")
 	@Given("The user is on the user Registration page")
 	public void the_user_is_on_the_user_registration_page() {
-		WebDriver driver = DriverFactory.getDriver(); // initialize driver
-	    registerpage = new registerPage(driver); 
-	   registerpage.open_DSALGO_registerPage();
+		 homepage = launchPage.clickGetStarted(); 
+		 loginpage = homepage.ClickSignOut();  
+		 registerpage = homepage.clickRegisterLink(); 
+        Assert.assertTrue(registerpage.isRegisterPageDisplayed(), "Register page is not displayed");    
 	}
 
 	@When("The user clicks the Register link on the Home page")
-	public void the_user_clicks_the_register_link_on_the_home_page() {
-		
-		registerpage.click_register_link();
-	    
+	public void the_user_clicks_the_register_link_on_the_home_page() {	    
 	}
 
 	@Then("The user navigates to the Register page")
@@ -68,7 +73,6 @@ public class registerSteps {
 	public void the_userclicks_the_register_button_after_entering_password_and_password_confirmation_with_the_username_field_is_empty(io.cucumber.datatable.DataTable dataTable) {
 	    
 		List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
-
 	    String password = data.get(0).get("Password");
 	    String confirmPassword = data.get(0).get("Password confirmation");
 
@@ -76,8 +80,6 @@ public class registerSteps {
 	    registerpage.enter_regPwdConfirm(confirmPassword);
 	    registerpage.clickRegisterButton();
 	}
-
-
 
 	@Then("The Error message {string}, Shows under the Username box")
 	public void the_error_message_shows_under_the_username_box(String string) {
@@ -91,7 +93,6 @@ public class registerSteps {
 		registerpage.enter_registerUsername(username);
 		 registerpage.clickRegisterButton();
 	}
-
 
 	@Then("The error message {string}, Shows under the Password box")
 	public void the_error_message_shows_under_the_password_box(String string) {
@@ -108,7 +109,6 @@ public class registerSteps {
 	    registerpage.enter_regPassword(password);
 	    registerpage.clickRegisterButton();
 	}
-
 
 	@Then("The error message {string}, Shows under the Password confirmation box")
 	public void the_error_message_shows_under_the_password_confirmation_box(String string) {
@@ -130,17 +130,13 @@ public class registerSteps {
 		    registerpage.clickRegisterButton();
 	}
 
-
 	@Then("No {string} shows when entered invalid Username field")
 	public void no_shows_when_entered_invalid_username_field(String expectedMessage) {
 		 
 		    String actualMessage = registerpage.getValidationMessage();
 		    System.out.println("Expected message: " + expectedMessage);
-	        System.out.println("Actual message:   " + actualMessage);
-		    
+	        System.out.println("Actual message:   " + actualMessage);		    
 	}
-
-
 	
 	@When("The user clicks the Register button after entering username with entering a Password and password confirmation consisting only of numeric data")
 	public void the_user_clicks_the_register_button_after_entering_username_with_entering_a_password_and_password_confirmation_consisting_only_of_numeric_data(io.cucumber.datatable.DataTable dataTable) {
@@ -155,16 +151,11 @@ public class registerSteps {
 	    registerpage.enter_regPwdConfirm(confirmPassword);
 	    registerpage.clickRegisterButton();
 	}
-
-
 	
 	@Then("No error message shows when entered invalid Password field")
-	public void no_error_message_shows_when_entered_invalid_password_field() {
-	
-	    String actualMessage = registerpage.getPasswordValidationMessage();
-	  
+	public void no_error_message_shows_when_entered_invalid_password_field() {	
+	    String actualMessage = registerpage.getPasswordValidationMessage();	  
         System.out.println("Actual message:   " + actualMessage);
-
 	}
 	
 	@When("The user clicks the Register button after entering a {string} with mismatched password in the {string} and {string} fields")
@@ -175,33 +166,22 @@ public class registerSteps {
 	    registerpage.clickRegisterButton();
 	}
 
-
-
 	@Then("The user sees the warning message {string}")
-	public void the_user_sees_the_warning_message(String string) {
-	   
-		String actualMessage = registerpage.getPasswordValidationMessage();
-		 
+	public void the_user_sees_the_warning_message(String string) {	   
+		String actualMessage = registerpage.getPasswordValidationMessage();		 
 	        System.out.println("Actual message:   " + actualMessage);
-	}
-
-	@Given("The user is on the user Registeration page")
-	public void the_user_is_on_the_user_registeration_page() {
-	    
 	}
 	
 	@When("The user clicks the Register button after entering valid Username ,Password and Password confirmation in their respective fields")
 	public void the_user_clicks_the_register_button_after_entering_valid_username_password_and_password_confirmation_in_their_respective_fields(io.cucumber.datatable.DataTable dataTable) {
 
-		 registerpage.generate_newUsername();
+		    registerpage.generate_newUsername();
 		    String newusername = registerpage.getGeneratedUsername();
-
 		 
 		    List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
 		    String password = data.get(0).get("Password");
 		    String confirmPassword = data.get(0).get("Password confirmation");
-
-		    //registerpage.enter_registerUsername(newusername);
+		    
 		    registerpage.enter_regPassword(password);
 		    registerpage.enter_regPwdConfirm(confirmPassword);
 		    registerpage.clickRegisterButton();
@@ -210,14 +190,9 @@ public class registerSteps {
 		    System.out.println("Password               : " + password);
 		    System.out.println("Password Confirmation  : " + confirmPassword);
 		}
-	
-
 
 	@Then("The user goes to DS Algo Home page with the message {string}")
 	public void the_user_goes_to_ds_algo_home_page_with_the_message(String string) {
 	    registerpage.print_successfullyRegistered();
 	}
-
-
-
 }
