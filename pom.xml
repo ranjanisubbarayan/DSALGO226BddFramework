@@ -23,10 +23,17 @@
     <version>1.18.32</version>
     <scope>provided</scope>
 </dependency>
+
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.8.0</version>
+</dependency>
+
 <dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.37.0</version>
+			<version>4.19.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
