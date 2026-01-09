@@ -4,10 +4,10 @@ package base;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-
-import static driver.DriverFactory.getDriver;
 import org.openqa.selenium.WebDriver;
-import static driver.DriverFactory.cleanupDriver;
+
+
+
 import utilities.ConfigReader;
 import utilities.Report;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -24,9 +24,9 @@ public class Hooks {
         if (browser == null) browser = ConfigReader.getProperty("browser");
 
         DriverFactory.setBrowser(browser);
-        WebDriver driver = getDriver();
-
+        WebDriver driver = DriverFactory.getDriver();
         driver.get(ConfigReader.getProperty("baseUrl"));
+               
         test = Report.getInstance().createTest(scenario.getName());
     }
 
@@ -35,7 +35,7 @@ public class Hooks {
         if (scenario.isFailed()) {
             try {
              
-                byte[] screenshot = ((org.openqa.selenium.TakesScreenshot) getDriver())
+                byte[] screenshot = ((org.openqa.selenium.TakesScreenshot) DriverFactory.getDriver())
                         .getScreenshotAs(org.openqa.selenium.OutputType.BYTES);
               
                 test.fail("Scenario Failed",
@@ -45,8 +45,12 @@ public class Hooks {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }      
-        //cleanupDriver();      
+        }
+
+      
+        DriverFactory.cleanupDriver();
+
+      
         Report.getInstance().flush();
     }
 }

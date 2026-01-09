@@ -710,3 +710,178 @@
 [INFO ] 2025-12-17 13:39:55.890 [main] LoggerLoad - Starting test: runScenario
 [INFO ] 2025-12-17 13:39:57.177 [main] LoggerLoad - Test Passed: runScenario
 [INFO ] 2025-12-17 13:39:57.477 [main] LoggerLoad - ===== Test Execution Finished =====
+[INFO ] 2026-01-02 13:33:23.798 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:41.899 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:41.905 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:43.238 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:43.241 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:43.877 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:43.879 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:44.320 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:44.322 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:45.691 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:45.692 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:46.583 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:46.585 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:47.345 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:47.348 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:48.428 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:48.431 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:49.279 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:49.280 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:50.215 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:50.216 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:51.103 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:51.104 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:52.017 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:52.018 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:52.847 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:52.852 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:53.698 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:53.701 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:54.550 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:54.552 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:55.564 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:55.566 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:56.542 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:56.544 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:33:58.434 [main] ArraysList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:33:59.137 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-02 13:33:59.288 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:33:59.290 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:01.054 [main] ArraysList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:01.611 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-02 13:34:03.183 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:03.186 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:05.202 [main] ArraysList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:05.664 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-02 13:34:07.527 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:07.528 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:08.864 [main] ArraysList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:09.574 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-02 13:34:14.348 [main] ArraysList - An alert message should be shown for Graph Topic invalid execution
+[INFO ] 2026-01-02 13:34:14.415 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:14.417 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:15.794 [main] ArraysList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:16.509 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-02 13:34:18.738 [main] ArraysList - An alert message should be shown for Graph Topic invalid execution
+[INFO ] 2026-01-02 13:34:18.763 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:18.764 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:20.635 [main] ArraysList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:21.177 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-02 13:34:24.586 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-02 13:34:24.631 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:24.632 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:26.571 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:28.729 [main] GraphList - The Try Editor page for Graph Topic should display with a Run option
+[INFO ] 2026-01-02 13:34:28.785 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:28.787 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:30.378 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:31.904 [main] GraphList - The Try Editor page for Graph Topic should display with a Run option
+[INFO ] 2026-01-02 13:34:31.905 [main] GraphList - The user is on the Try Editor page for Graph Topic
+[INFO ] 2026-01-02 13:34:35.407 [main] GraphList - An alert message should be shown for Graph Topic invalid execution
+[INFO ] 2026-01-02 13:34:35.464 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:35.465 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:36.877 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:38.540 [main] GraphList - The Try Editor page for Graph Topic should display with a Run option
+[INFO ] 2026-01-02 13:34:38.541 [main] GraphList - The user is on the Try Editor page for Graph Topic
+[INFO ] 2026-01-02 13:34:39.157 [main] GraphList - An alert message should be shown for Graph Topic invalid execution
+[INFO ] 2026-01-02 13:34:39.196 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:39.197 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:40.848 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:43.865 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:43.866 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:45.153 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:47.705 [main] GraphList - The user is on the Try Editor page for Graph Representations
+[INFO ] 2026-01-02 13:34:51.075 [main] GraphList - An alert message should be shown for Graph Representations invalid execution
+[INFO ] 2026-01-02 13:34:51.139 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:51.141 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:53.426 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:34:55.985 [main] GraphList - The user is on the Try Editor page for Graph Representations
+[INFO ] 2026-01-02 13:34:56.530 [main] GraphList - An alert message should be shown for Graph Representations invalid execution
+[INFO ] 2026-01-02 13:34:56.573 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:34:56.574 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:34:58.442 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:35:01.342 [main] GraphList - The user should see output in the console for Graph Page7
+[INFO ] 2026-01-02 13:35:01.364 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:01.365 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:02.346 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:02.346 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:03.053 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:03.054 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:04.112 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:04.113 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:05.020 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:05.021 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:06.294 [main] registerSteps - Errormessafe for the password confirmation box
+[INFO ] 2026-01-02 13:35:06.317 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:06.318 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:07.982 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:07.982 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:09.209 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:09.210 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:10.615 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:10.616 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:35:16.215 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:35:16.469 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:18.414 [main] StackSteps - successfully logged into the dsalgo application
+[INFO ] 2026-01-02 13:35:19.632 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:19.633 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:21.385 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:21.388 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:22.682 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:22.683 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:35:28.215 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:35:28.456 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:35:34.053 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:35:34.261 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:35:39.725 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:35:39.934 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:41.313 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:41.315 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:35:42.602 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:35:42.603 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:35:48.063 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:35:48.298 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:35:53.882 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:35:54.101 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:35:59.543 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:35:59.740 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:36:05.273 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:36:05.464 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:36:06.767 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:36:06.769 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:36:08.176 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:36:08.178 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:36:13.677 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:36:13.904 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:36:19.461 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:36:19.670 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:36:25.106 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:36:25.337 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-02 13:36:30.911 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-02 13:36:31.133 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:36:32.518 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:36:32.519 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:36:44.117 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:36:44.118 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:36:56.075 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:36:56.076 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:36:57.030 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:36:57.031 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:36:58.148 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:36:58.149 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:36:59.424 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:36:59.427 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:37:01.036 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:37:01.037 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:37:03.286 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:37:03.287 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:37:04.799 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:37:04.800 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:37:06.351 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:37:06.352 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:37:07.719 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:37:07.722 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-02 13:37:09.431 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-02 13:37:09.965 [main] LoggerLoad - ===== Test Execution Finished =====

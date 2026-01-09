@@ -31,7 +31,10 @@ public class LoginPage {
     By alertMsg = By.xpath("//div[@role='alert']");
     By loggedIn = By.xpath("//div[@role='alert']");
     By ishomePageDisplayed = By.xpath("//a[text()='NumpyNinja']");
-	   
+	
+ 
+
+   
     public void clickLoginButton() {
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     	wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
