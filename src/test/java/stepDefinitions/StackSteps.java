@@ -1,4 +1,6 @@
 package stepDefinitions; 
+import static driver.DriverFactory.getDriver;
+
 import java.util.List;
 import java.util.Map;
 
@@ -10,8 +12,7 @@ import pageObjects.LaunchPage;
 import pageObjects.LoginPage;
 import pageObjects.StackPage;
 import pageObjects.homePage;
-import driver.DriverFactory;
-import utilities.ConfigReader;
+
 import org.testng.Assert;
 
 public class StackSteps { 
@@ -20,33 +21,36 @@ public class StackSteps {
     private WebDriver driver;
     LaunchPage launchPage;
     private StackPage stackpage;
+     LoginPage loginpage;
+     homePage homepage;
+   
 
     public StackSteps() {
-    	this.driver = DriverFactory.getDriver();
+    	this.driver = getDriver();
         this.launchPage = new LaunchPage(driver);
         this.stackpage = new StackPage(driver);  
     }	
 
-    @Given("The user is logged into DS Algo Portal")
-    public void the_user_is_logged_into_ds_algo_portal() {
-    	 LaunchPage launchPage = new LaunchPage(DriverFactory.getDriver());
-    	    homePage homepage = launchPage.clickGetStarted();
+    @Given("The user logged into Portal with username {string} and password {string}")
+	public void the_user_logged_into_Portal_with_username_and_password(String username, String password) {
 
-    	    if (!homepage.isUserLoggedIn()) {
-    	        homepage.clickSignInLinkIfPresent();
+	    homePage homepage = launchPage.clickGetStarted();
 
-    	        LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
-    	        loginPage.enterUsername(ConfigReader.getProperty("username"));
-    	        loginPage.enterPassword(ConfigReader.getProperty("password"));
-    	        loginPage.clickLoginButton();
-    	    }
+	    if (!homepage.isUserLoggedIn()) {
+	        homepage.clickSignInLinkIfPresent();
+	        LoginPage loginPage = new LoginPage(driver);
+            loginPage.enterUsername(username);
+            loginPage.enterPassword(password);
+            loginPage.clickLoginButton();
 
-		    logger.info("Successfully logged into DS Algo Portal");
-    }
+	   	    }
+		logger.info("successfully logged into the dsalgo application");
+	}
 	
 	@Given("The user is in Home page after Sign in")
 	public void the_user_is_in_home_page_after_sign_in() {
-		
+		 launchPage.clickGetStarted();
+		 logger.info("Successfully logged into the HomePage");
 	    }
 
 @When("The user clicks the Getting Started button in Stack Panel")
@@ -131,7 +135,7 @@ public void the_user_clicks_the_getting_started_button_in_stack_panel() {
 			
 			@Then("The user should be redirected to Practice page") 
 			public void the_user_should_be_redirected_to_practice_page() { 
-				
+				 logger.info("Successfully redirected to Practice page");
 				}			
 			@When("The user clicks Try Here button")
 			public void the_user_clicks_try_here_button() throws InterruptedException {

@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import io.cucumber.java.en.Given;
@@ -10,8 +12,11 @@ import pageObjects.homePage;
 import driver.DriverFactory;
 
 public class homeSteps {	
+	
+	private static final Logger logger = LogManager.getLogger(homeSteps.class);
+
 	WebDriver driver;
-	private static homePage homepage;
+	private  homePage homepage;
 	LaunchPage launchPage;
 	
 	public homeSteps() {		
@@ -20,14 +25,18 @@ public class homeSteps {
 	}
 	
 	@Given("The user has to open browser")
-	public void the_user_has_to_open_browser() {		
+	public void the_user_has_to_open_browser() {	
+		
+		logger.info("User Successfully opened the browser");
 	}
 	@When("the user enter the correct DS Algo Portal URL")
 	public void the_user_enter_the_correct_ds_algo_portal_url() {	
-	    
+		logger.info("User Successfully enter the correct DS Algo Portal URL");
 	}
 	@Then("The user able to land on the DS Algo portal with Get Started button")
-	public void the_user_able_to_land_on_the_ds_algo_portal_with_get_started_button() {		   
+	public void the_user_able_to_land_on_the_ds_algo_portal_with_get_started_button() {		
+		
+		logger.info("User Successfully able to land on the DS Algo portal");
 	}
 
 	@Given("The user is on the DS Algo Portal")

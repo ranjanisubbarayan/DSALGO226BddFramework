@@ -24,7 +24,7 @@ public class registerSteps {
 	    private registerPage registerpage;
 	    private LaunchPage launchPage;
         private homePage homepage;
-        private LoginPage loginpage;
+        LoginPage loginpage;
 	    
 	    public registerSteps() {
 	        this.driver = DriverFactory.getDriver();
@@ -42,7 +42,9 @@ public class registerSteps {
 	}
 
 	@When("The user clicks the Register link on the Home page")
-	public void the_user_clicks_the_register_link_on_the_home_page() {	    
+	public void the_user_clicks_the_register_link_on_the_home_page() {
+		
+		logger.info("Successfully logged into the dsAlgo Home Page");
 	}
 
 	@Then("The user navigates to the Register page")

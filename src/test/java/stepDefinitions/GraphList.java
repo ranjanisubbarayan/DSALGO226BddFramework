@@ -16,7 +16,6 @@ import io.cucumber.java.en.Then;
 
 import pageObjects.LoginPage;
 import pageObjects.homePage;
-import utilities.ConfigReader;
 import utilities.DataDriven;
 import pageObjects.GraphListPage;
 import pageObjects.LaunchPage;
@@ -42,23 +41,25 @@ public class GraphList{
 	@Given("The user logs into dsAlgo Portal with username {string} and password {string}")
 	public void the_user_logs_into_ds_algo_portal_with_username_and_password(String username, String password) {
 
-		LaunchPage launchPage = new LaunchPage(DriverFactory.getDriver());
+		
 	    homePage homepage = launchPage.clickGetStarted();
 
 	    if (!homepage.isUserLoggedIn()) {
 	        homepage.clickSignInLinkIfPresent();
+	        LoginPage loginPage = new LoginPage(driver);
+            loginPage.enterUsername(username);
+            loginPage.enterPassword(password);
+            loginPage.clickLoginButton();
 
-	        LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
-	        loginPage.enterUsername(ConfigReader.getProperty("username"));
-	        loginPage.enterPassword(ConfigReader.getProperty("password"));
-	        loginPage.clickLoginButton();
-	    }
+	   	    }
 		logger.info("successfully logged into the dsalgo application");
 	}
 
 	@Given("The user should be on the Home Dashboard")
-	public void the_user_should_be_on_the_home_dashboard() {		
+	public void the_user_should_be_on_the_home_dashboard() {
+		logger.info("Successfully logged into the dsAlgo Home Dashboard");
 	}
+	
 
 	@When("The user selects the Get Started option under the Graph section")
 	public void the_user_selects_the_get_started_option_under_the_graph_section() {

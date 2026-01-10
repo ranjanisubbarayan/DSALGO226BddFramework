@@ -26,6 +26,7 @@ public class Hooks {
         DriverFactory.setBrowser(browser);
         WebDriver driver = DriverFactory.getDriver();
         driver.get(ConfigReader.getProperty("baseUrl"));
+        
                
         test = Report.getInstance().createTest(scenario.getName());
     }

@@ -39,7 +39,6 @@ public class GraphListPage {
 
 
 
-
 	@FindBy(xpath = "//div//a[@href='graph']")
 	
 
@@ -121,7 +120,7 @@ public class GraphListPage {
 	}
 	public String waitForAlertIfPresent() {
 	    try {
-	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+	       
 	        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 	        String text = alert.getText();
 	        alert.accept();

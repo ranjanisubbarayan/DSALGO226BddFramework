@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import driver.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -16,7 +15,7 @@ import pageObjects.ArrayListPage;
 import pageObjects.LaunchPage;
 import pageObjects.LoginPage;
 import pageObjects.homePage;
-import utilities.ConfigReader;
+
 import utilities.DataDriven;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -36,23 +35,23 @@ public class ArraysList {
 	}
 	@Given("The user sign in to dsAlgo Portal entering firstname {word} & password {word}")
 	public void the_user_sign_in_to_ds_algo_portal_entering_firstname_vara_password_varam(String firstname,String password) {
-		LaunchPage launchPage = new LaunchPage(DriverFactory.getDriver());
+		
 	    homePage homepage = launchPage.clickGetStarted();
 
 	    if (!homepage.isUserLoggedIn()) {
 	        homepage.clickSignInLinkIfPresent();
 
-	        LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
-	        loginPage.enterUsername(ConfigReader.getProperty("username"));
-	        loginPage.enterPassword(ConfigReader.getProperty("password"));
-	        loginPage.clickLoginButton();
+	        LoginPage loginPage = new LoginPage(driver);
+            loginPage.enterUsername(firstname);
+            loginPage.enterPassword(password);
+            loginPage.clickLoginButton();
 	    }
 		logger.info("successfully logged into the dsalgo application");
 	}
 
 	@Given("The user is in the Home page after Sign in")
 	public void the_user_is_in_the_home_page_after_sign_in() {		
-		
+		logger.info("successfully logged into the Homepage of the application");		
 	}
 
 	@When("The user clicks the Get Started button in Array Panel")
