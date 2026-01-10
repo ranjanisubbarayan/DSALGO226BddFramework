@@ -11,14 +11,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 
 public class ArrayListPage {
 	
 	WebDriver driver;
+    WebDriverWait wait;
+    Actions actions;
 
 	public ArrayListPage(WebDriver driver) {
 		this.driver=driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        this.actions = new Actions(driver);
 		PageFactory.initElements(driver, this);
 	}
 
@@ -53,14 +57,15 @@ public class ArrayListPage {
 		actions.sendKeys(code).perform();
 		btnRun.click();
 	}
+	  public String getHomePageText() {
+	        return VerifyHomepage.getText();
+	    }
 
+	    public String getArrayPageText() {
+	        return verifyArrayspage.getText();
+	    }
 	
-	public void verifyHomePage() {
-		Assert.assertEquals(VerifyHomepage.getText(), "You are logged in");
-	}
-	public void verifyArrayPage() {
-		Assert.assertEquals(verifyArrayspage.getText(), "Array");
-	}
+
 	public void getstartedArray() {
 		btnArrayGetstarted.click();
 	}
@@ -70,12 +75,15 @@ public class ArrayListPage {
 	public void clickTryHere() {
 		btnTryEditor.click();
 	}
-	public void verifyRunButton() {
-		Assert.assertEquals(btnRun.getText(), "Run");
-	}
-	public void verifyArraysInPythonText() {
-		Assert.assertEquals(verifyArraysInPython.getText(), "Arrays in Python");
-	}
+
+	public boolean isRunButtonDisplayed() {
+        return btnRun.isDisplayed();
+    }
+
+   
+	   public String getArraysInPythonText() {
+	        return verifyArraysInPython.getText();
+	    }
 	public void writeAndRunLinkedListCode(String code) throws IOException {
 		Actions action=new Actions(driver);
 		action.click(codeEditor).perform();

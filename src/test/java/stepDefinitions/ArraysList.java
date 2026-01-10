@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import driver.DriverFactory;
 import io.cucumber.java.en.Given;
@@ -24,7 +25,7 @@ public class ArraysList {
 	private static final Logger logger = LogManager.getLogger(ArraysList.class);
 
 	private WebDriver driver;
-	private LaunchPage launchPage;
+	LaunchPage launchPage;
 	private ArrayListPage arraylistpage;
 	private String alertMsg = null;
 	
@@ -62,7 +63,11 @@ public class ArraysList {
 
 	@Then("The user should be directed to Array Page")
 	public void the_user_should_be_directed_to_Array_page() {
-		arraylistpage.verifyArrayPage();
+		Assert.assertEquals(
+                arraylistpage.getArrayPageText(),
+                "Array",
+                "User is not on Array Page"
+        );
 		arraylistpage.clickArraysInPython();
 	}
 
@@ -73,7 +78,10 @@ public class ArraysList {
 
 	@Then("The user should be redirected to Arrays in Python page")
 	public void the_user_should_be_redirected_to_arrays_in_python_page() {
-		arraylistpage.verifyArraysInPythonText();
+		 Assert.assertEquals(
+	                arraylistpage.getArraysInPythonText(),
+	                "Arrays in Python"
+	        );
 	}
 
 	@When("The user clicks Try Here button in Arrays in Python page")
@@ -83,7 +91,10 @@ public class ArraysList {
 
 	@Then("The user should be redirected to a page having a try Editor with a Run button to test")
 	public void the_user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test() {
-		arraylistpage.verifyRunButton();
+		Assert.assertTrue(
+                arraylistpage.isRunButtonDisplayed(),
+                "Run button is not displayed"
+        );
 	}
 
 	@Then("The user should see an error message in alert window")

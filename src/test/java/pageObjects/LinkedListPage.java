@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+
 
 
 
@@ -42,9 +42,9 @@ public class LinkedListPage {
 	public void getstartedLinkedList() {
 		btnLinkedListGetstarted.click();
 	}
-	public void verifyLinkedListPage() {
-		Assert.assertEquals(verifyLinkedListPage.getText(), "Linked List");
-	}
+	  public String getLinkedListPageText() {
+	        return verifyLinkedListPage.getText();
+	    }
 	public void clickIntroductionLink() {
 		linkIntroduction.click();
 	}

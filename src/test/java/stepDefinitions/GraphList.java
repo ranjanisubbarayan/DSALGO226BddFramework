@@ -1,9 +1,8 @@
 package stepDefinitions;
 
 import java.io.IOException;
-import java.time.Duration;
 import java.util.ArrayList;
-
+import org.testng.Assert;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,7 +21,6 @@ import utilities.DataDriven;
 import pageObjects.GraphListPage;
 import pageObjects.LaunchPage;
 
-import static driver.DriverFactory.getDriver;
 
 public class GraphList{
 	
@@ -30,7 +28,7 @@ public class GraphList{
 
 
 	private WebDriver driver;
-	 private LaunchPage launchPage;
+	LaunchPage launchPage;
 	private GraphListPage graphPage;
 
 	public GraphList() {
@@ -69,7 +67,11 @@ public class GraphList{
 
 	@Then("The Graph main page should appear")
 	public void the_graph_main_page_should_appear() {
-		graphPage.verifyGraphLandingPage();
+	     Assert.assertEquals(
+	                graphPage.getGraphLandingPageText(),
+	                "Graph",
+	                "Graph landing page is not displayed"
+	        );
 	}
 
 	@Then("The user chooses the Graph Topic link")
@@ -79,7 +81,10 @@ public class GraphList{
 
 	@Then("The Graph Topic information page should load")
 	public void the_graph_topic_information_page_should_load() {
-		graphPage.verifyGraphTopicText();
+		  Assert.assertTrue(
+	                graphPage.isGraphTopicTextDisplayed(),
+	                "Graph Topic page text not visible"
+	        );
 	}
 
 	@Then("The user selects the Try Editor button on Graph Topic page")
@@ -133,7 +138,10 @@ public class GraphList{
 	@Then("The Graph Representations information page should load")
 	public void the_graph_representations_information_page_should_load() {
 
-	    graphPage.verifyGraphRepresentationsText();
+		   Assert.assertTrue(
+	                graphPage.isGraphRepresentationsTextDisplayed(),
+	                "Graph Representations page text not visible"
+	        );
 
 	}
 

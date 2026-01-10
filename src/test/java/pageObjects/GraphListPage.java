@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+
 
 import java.io.IOException;
 import java.time.Duration;
@@ -18,9 +18,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class GraphListPage {
 	
 	WebDriver driver;
+	   WebDriverWait wait;
 
 	public GraphListPage(WebDriver driver) {
 		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		PageFactory.initElements(driver, this);
 	}
 
@@ -64,17 +66,16 @@ public class GraphListPage {
 	WebElement writeCode;
 
 
-	public void verifyHomePage() {
-		Assert.assertEquals(verifyHomepage.getText(), "You are logged in");
-	}
-
+	public String getHomePageText() {
+        return verifyHomepage.getText();
+    }
 	public void getstartedGraph() {
 		btnGraphGetstarted.click();
 	}
 
-	public void verifyGraphLandingPage() {
-		Assert.assertEquals(verifyGraphPage.getText(), "Graph");
-	}
+    public String getGraphLandingPageText() {
+        return verifyGraphPage.getText();
+    }
 
 	public void clickGraphTopic() {
 		lnkGraphTopic.click();
@@ -92,18 +93,17 @@ public class GraphListPage {
 		btnRun.click();
 	}
 
-	public void verifyRunButtonPresent() {
-		Assert.assertEquals(btnRun.getText(), "Run");
-	}
+	  public boolean isRunButtonDisplayed() {
+	        return btnRun.isDisplayed();
+	    }
 
-	public void verifyGraphTopicText() {
-		Assert.assertTrue(verifyGraphTopicText.isDisplayed(), "Graph topic text is not visible");
-	}
+	    public boolean isGraphTopicTextDisplayed() {
+	        return verifyGraphTopicText.isDisplayed();
+	    }
 
-	public void verifyGraphRepresentationsText() {
-		Assert.assertTrue(verifyGraphRepresentationsText.isDisplayed(), "Graph Representations text is not visible");
-	}
-
+	    public boolean isGraphRepresentationsTextDisplayed() {
+	        return verifyGraphRepresentationsText.isDisplayed();
+	    }
 	
 	public void writeCodeAndRun(String code) {
 		Actions actions = new Actions(driver);

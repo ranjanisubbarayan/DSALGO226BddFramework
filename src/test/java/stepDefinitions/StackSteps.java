@@ -12,12 +12,13 @@ import pageObjects.StackPage;
 import pageObjects.homePage;
 import driver.DriverFactory;
 import utilities.ConfigReader;
+import org.testng.Assert;
 
 public class StackSteps { 
 	
 	private static final Logger logger = LogManager.getLogger(StackSteps.class);
     private WebDriver driver;
-    private LaunchPage launchPage;
+    LaunchPage launchPage;
     private StackPage stackpage;
 
     public StackSteps() {
@@ -61,16 +62,16 @@ public void the_user_clicks_the_getting_started_button_in_stack_panel() {
 	@Given("The user is in the Stack page after Sign in")
 	public void the_user_is_in_the_stack_page_after_sign_in() {
 		stackpage.clickStackGetStarted(); 
-	    stackpage.verifyStackPage();
+		Assert.assertTrue(stackpage.isStackPageDisplayed(), "Stack page is displayed!");
 			   }
 	@Then("The user be directed to Stack Data Structure Page") 
 	public void the_user_be_directed_to_stack_data_structure_page() { 	
-		stackpage.verifyStackPage();		
+		Assert.assertTrue(stackpage.isStackPageDisplayed(), "Stack page is displayed!");		
 		} 
 	
 	@When("The user clicks Operations in Stack button") 
 	public void the_user_clicks_operations_in_stack_button() { 
-		stackpage.verifyStackPage();
+		Assert.assertTrue(stackpage.isStackPageDisplayed(), "Stack page is displayed!");
 		stackpage.clickOperationsInStack();
 		} 
 	
@@ -78,12 +79,12 @@ public void the_user_clicks_the_getting_started_button_in_stack_panel() {
 	public void user_navigates_to_operations_in_stack_page() {
 		stackpage.clickStackGetStarted();
 	    stackpage.clickOperationsInStack();
-	    stackpage.verifyOperationInStack();
+	    Assert.assertTrue(stackpage.isOperationInStackDisplayed(), "Operations in Stack section  displayed!");
 	}
 
 	@Then("The user should be redirected to a page having an try Editor with a Run button to test")
 	public void the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test() throws InterruptedException {	  
-		stackpage.verifyTryEditorPage();
+		Assert.assertTrue(stackpage.isTryEditorDisplayed(), "Try Editor is displayed!");
 	}
 	
 	@Then("The user should be redirected to Operations in Stack page") 
@@ -100,18 +101,18 @@ public void the_user_clicks_the_getting_started_button_in_stack_panel() {
 	public void the_user_is_on_the_implementation_page() {
 	    stackpage.clickStackGetStarted();
 	    stackpage.clickImplementStackLink();
-	    stackpage.verifyImplementInStack();
+	    Assert.assertTrue(stackpage.isImplementInStackDisplayed(), "Implementation page is  displayed!");
 	}
 
 	@Given("The user is on the Applications page")
 	public void the_user_is_on_the_applications_page() {
 	    stackpage.clickStackGetStarted();       
 	    stackpage.clickApplicationStackLink();
-	    stackpage.verifyApplicationInStack();
+	    Assert.assertTrue(stackpage.isApplicationInStackDisplayed(), "Applications page is  displayed!");
 	}		
 		@Then("The user should be redirected to Implementation page") 
 		public void the_user_should_be_redirected_to_implementation_page() { 			
-			stackpage.verifyImplementInStack();
+			Assert.assertTrue(stackpage.isImplementInStackDisplayed(), "Implementation page is displayed!");
 			} 
 		
 		@When("The user clicks Applications button") 
@@ -142,8 +143,10 @@ public void the_user_clicks_the_getting_started_button_in_stack_panel() {
 				stackpage.clickStackGetStarted();
 			    stackpage.clickOperationsInStack();
 			    stackpage.clickTryhereofoperation();
-			    stackpage.verifyTryEditorPage();
-				}
+			    Assert.assertTrue(stackpage.isTryEditorDisplayed(), "Try Editor page not displayed!");
+		    }
+
+
 			
 			@When("The user clicks Try Here button in Operations in Stack page") 
 			public void the_user_clicks_try_here_button_in_operations_in_stack_page() throws InterruptedException { 
@@ -152,13 +155,13 @@ public void the_user_clicks_the_getting_started_button_in_stack_panel() {
 			
 			@When("The user clicks Try Here button in Implementation page") 
 			public void the_user_clicks_try_here_button_in_implementation_page() throws InterruptedException { 
-				stackpage.verifyImplementInStack();
+				  Assert.assertTrue(stackpage.isApplicationInStackDisplayed(), "Applications page is not displayed!");
 				stackpage.clickTryHere(); 
 				}			
 			
 			@When("The user clicks Try Here button in Applications page")
 			public void the_user_clicks_try_here_button_in_applications_page() throws InterruptedException { 
-				stackpage.verifyApplicationInStack();
+				  Assert.assertTrue(stackpage.isApplicationInStackDisplayed(), "Applications page is not displayed!");
 				stackpage.clickTryHere(); 
 				}
 
@@ -202,7 +205,7 @@ public void the_user_clicks_the_getting_started_button_in_stack_panel() {
 				stackpage.clickStackGetStarted();
 			    stackpage.clickOperationsInStack();
 			    stackpage.clickTryhereofoperation();
-			    stackpage.verifyTryEditorPage();
+			    Assert.assertTrue(stackpage.isTryEditorDisplayed(), "Try Editor page not displayed!");
 				stackpage.getDataFromExcel();
 			}
 

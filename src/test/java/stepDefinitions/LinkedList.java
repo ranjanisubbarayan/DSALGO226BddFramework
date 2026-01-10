@@ -4,7 +4,7 @@ import static driver.DriverFactory.getDriver;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
+import org.testng.Assert;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -38,7 +38,11 @@ public class LinkedList {
 	}
 	@Then("The user should be directed to Linked List Page")
 	public void the_user_should_be_directed_to_linked_list_page() {
-		linkedlistPage.verifyLinkedListPage();
+		Assert.assertEquals(
+                linkedlistPage.getLinkedListPageText(),
+                "Linked List",
+                "User is not on Linked List page"
+        );
 	}
 	
 	@When("the user clicks the Introduction link")
