@@ -5,6 +5,8 @@ import pageObjects.LoginPage;
 import pageObjects.homePage;
 import utilities.ScreenshotUtil;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
 import driver.DriverFactory;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -22,6 +24,7 @@ public class LoginSteps {
     	this.driver = DriverFactory.getDriver();
         this.launchPage = new LaunchPage(driver);
     }
+    
 
     @Given("user is on the Login page")
     @Given("user is on the login page")
@@ -52,8 +55,26 @@ public class LoginSteps {
 
     @Then("{string} should be displayed")
     public void message_should_be_displayed(String expectedMessage) {
-        loginpage.errorMessage(expectedMessage);
-    }
+    	  switch (expectedMessage) {
+          case "Home page displayed":
+              Assert.assertTrue(loginpage.isHomePageDisplayed(), "Home page should be displayed but was NOT!");
+              break;
+
+          case "Please fill out this field":
+              String usernameMsg = loginpage.getUsernameValidationMessage();
+              String passwordMsg = loginpage.getPasswordValidationMessage();
+              Assert.assertTrue(!usernameMsg.isEmpty() || !passwordMsg.isEmpty(), 
+                                "Expected browser validation message but found none.");
+              break;
+
+          default:
+          String alert = loginpage.getAlertMessage();
+          Assert.assertTrue(alert.contains("Invalid"), 
+                            "Expected invalid login message, but got: " + alert);
+          break;
+  }
+}
+   
 
     @Given("I read login test data for {string}")
     public void i_read_login_test_data_for(String testId) {

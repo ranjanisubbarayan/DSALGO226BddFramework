@@ -7,10 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import utilities.ExcelSheetHandling;
 
 public class LoginPage {
@@ -25,87 +25,74 @@ public class LoginPage {
         PageFactory.initElements(driver, this); 
     }
 
-    By loginUsername = By.id("id_username");
-    By loginPassword = By.id("id_password");
-    By loginBtn = By.xpath("//input[@value='Login']");
-    By alertMsg = By.xpath("//div[@role='alert']");
+    @FindBy(id = "id_username")
+     WebElement loginUsername;
+
+    @FindBy(id = "id_password")
+     WebElement loginPassword;
+
+    @FindBy(xpath = "//input[@value='Login']")
+     WebElement loginBtn;
+
+    @FindBy(xpath = "//div[@role='alert']")
+     WebElement alertMsg;
     By loggedIn = By.xpath("//div[@role='alert']");
-    By ishomePageDisplayed = By.xpath("//a[text()='NumpyNinja']");
+
+    @FindBy(xpath = "//a[text()='NumpyNinja']")
+     WebElement homePageLink;
+
 	
  
 
    
     public void clickLoginButton() {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-    	wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
-    	wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
-        driver.findElement(loginBtn).click();
+    	  wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
+          	loginBtn.click();
     }    
 
     public void enterUsername(String username) {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-    	wait.until(ExpectedConditions.presenceOfElementLocated(loginUsername));
-    	wait.until(ExpectedConditions.elementToBeClickable(loginUsername));
-        driver.findElement(loginUsername).sendKeys(username);
+    	 wait.until(ExpectedConditions.visibilityOf(loginUsername));
+         loginUsername.clear();
+         loginUsername.sendKeys(username);
+       
     }
 
     public void enterPassword(String password) {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-    	wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
-    	wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
-        driver.findElement(loginPassword).sendKeys(password);
+    	
+      wait.until(ExpectedConditions.visibilityOf(loginPassword));
+      loginPassword.clear();
+        loginPassword.sendKeys(password);
     }    
        
     public String getAlertMessage() {
         try {
-        	return driver.findElement(alertMsg).getText();            
+        	   return alertMsg.getText();         
         } catch (Exception e) {
             return "";
         }
     }
 
     public boolean isHomePageDisplayed() {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    	
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(ishomePageDisplayed));             
+            wait.until(ExpectedConditions.visibilityOf(homePageLink));             
             return true;
         } catch (Exception e) {
             return false;
         }       
     }
     
-    public void errorMessage(String expectedMessage) {
-    	switch (expectedMessage) {
-    	
-        case "Home page displayed":
-            Assert.assertTrue(isHomePageDisplayed(),
-                    "Home page should be displayed but was NOT!");
-            break;
-
-        case "Please fill out this field":            
-            String usernameFieldMsg = getUsernameValidationMessage();
-            String passwordFieldMsg = getPasswordValidationMessage();
-            Assert.assertTrue(!usernameFieldMsg.isEmpty() || !passwordFieldMsg.isEmpty(),
-                    "validation message!");
-            break;
-        default:            
-            String alertMsg = getAlertMessage();
-            Assert.assertTrue(alertMsg.contains("Invalid"),
-                    "Expected invalid login message, but got: " + alertMsg);
-            break;
-    }
-    }    
-
+    
     public String getUsernameValidationMessage() {
-        WebElement username = driver.findElement(loginUsername);
+        
         return (String)((JavascriptExecutor)driver).executeScript(
-                "return arguments[0].validationMessage;", username);
+                "return arguments[0].validationMessage;", loginUsername);
     }
 
     public String getPasswordValidationMessage() {
-        WebElement password = driver.findElement(loginPassword);
+       
         return (String)((JavascriptExecutor)driver).executeScript(
-                "return arguments[0].validationMessage;", password);
+                "return arguments[0].validationMessage;", loginPassword);
     }   
     
     public void login(String user, String pass) {
