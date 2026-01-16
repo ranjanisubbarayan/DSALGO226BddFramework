@@ -34,14 +34,7 @@ public class LaunchPage {
         }
         return new homePage(driver);
     }
-    public boolean isPageLoaded() {
-        try {
-            wait.until(ExpectedConditions.visibilityOf(getStartedButton));
-            return getStartedButton.isDisplayed();
-        } catch (TimeoutException e) {
-            return false;
-        }
-    }
+    
  
 
 }

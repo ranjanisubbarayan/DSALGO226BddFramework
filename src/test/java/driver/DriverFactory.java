@@ -45,13 +45,13 @@ public class DriverFactory {
             return new ChromeDriver(chromeOptions);
 
         case "firefox": 
-        	//webDriver.set(new FirefoxDriver());
+        	
         	FirefoxOptions firefoxOptions = new FirefoxOptions();
         	firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);            
             return new FirefoxDriver(firefoxOptions);
 
         case "edge":
-        	//webDriver.set(new EdgeDriver());
+        
             EdgeOptions edgeOptions = new EdgeOptions();
             edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             return new EdgeDriver(edgeOptions);
