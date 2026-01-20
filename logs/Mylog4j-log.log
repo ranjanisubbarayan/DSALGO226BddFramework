@@ -2100,3 +2100,92 @@
 [INFO ] 2026-01-10 13:14:58.523 [main] LoggerLoad - Starting test: runScenario
 [INFO ] 2026-01-10 13:15:03.290 [main] LoggerLoad - Test Passed: runScenario
 [INFO ] 2026-01-10 13:15:03.598 [main] LoggerLoad - ===== Test Execution Finished =====
+[INFO ] 2026-01-20 16:22:26.141 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-20 16:22:35.013 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-20 16:22:36.868 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-20 16:22:38.000 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-20 16:22:40.160 [main] LoggerLoad - ===== Test Execution Finished =====
+[INFO ] 2026-01-20 16:26:32.349 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:26:36.200 [main] homeSteps - User Successfully opened the browser
+[INFO ] 2026-01-20 16:26:36.215 [main] homeSteps - User Successfully enter the correct DS Algo Portal URL
+[INFO ] 2026-01-20 16:26:36.220 [main] homeSteps - User Successfully able to land on the DS Algo portal
+[INFO ] 2026-01-20 16:26:37.194 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:26:37.196 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:26:40.026 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:26:40.027 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:26:43.174 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:26:43.175 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:26:46.661 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:26:46.663 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:26:50.326 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:26:50.327 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:26:53.380 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:26:53.380 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:26:56.901 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:26:56.903 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:00.277 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:00.277 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:03.548 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:03.549 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:06.771 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:06.772 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:10.071 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:10.072 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:14.049 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:14.051 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:17.134 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:17.135 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:20.491 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:20.493 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:23.639 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:23.640 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:27.411 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:27.412 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:27:30.730 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:27:30.731 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-20 16:27:33.433 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-20 16:27:35.071 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-20 16:27:36.212 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-20 16:27:38.450 [main] LoggerLoad - ===== Test Execution Finished =====
+[INFO ] 2026-01-20 16:35:26.629 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:30.077 [main] homeSteps - User Successfully opened the browser
+[INFO ] 2026-01-20 16:35:30.088 [main] homeSteps - User Successfully enter the correct DS Algo Portal URL
+[INFO ] 2026-01-20 16:35:30.091 [main] homeSteps - User Successfully able to land on the DS Algo portal
+[INFO ] 2026-01-20 16:35:31.166 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:31.168 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:34.245 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:34.246 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:37.299 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:37.300 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:39.910 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:39.911 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:43.731 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:43.732 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:46.873 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:46.874 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:50.010 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:50.011 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:53.262 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:53.262 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:56.730 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:56.734 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:35:59.975 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:35:59.976 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:36:03.425 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:36:03.426 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:36:06.523 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:36:06.524 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:36:09.875 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:36:09.876 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:36:13.161 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:36:13.162 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:36:16.278 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:36:16.279 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:36:19.249 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:36:19.250 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-20 16:36:22.597 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-20 16:36:22.598 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-20 16:36:25.239 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-20 16:36:27.069 [main] LoggerLoad - Starting test: runScenario
+[ERROR] 2026-01-20 16:36:28.071 [main] LoggerLoad - Test Failed: runScenario
+[INFO ] 2026-01-20 16:36:30.102 [main] LoggerLoad - ===== Test Execution Finished =====

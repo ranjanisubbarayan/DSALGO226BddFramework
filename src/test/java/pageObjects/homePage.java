@@ -80,6 +80,18 @@ public class homePage {
    
     @FindBy(xpath = "//a[@href='/logout']")
     WebElement signout;
+   
+    public boolean isGetStartedButtonDisplayed() {
+        return dsalgo_button.isDisplayed();
+    }
+
+    public boolean isdatastrucureDisplayed() {
+        return datastrct_dropdown.isDisplayed();
+    }
+
+    public boolean isRegisterLinkDisplayed() {
+        return regLink.isDisplayed();
+    }
     
     public boolean isPageTitleDisplayed() {
         return homepageTitle.isDisplayed();

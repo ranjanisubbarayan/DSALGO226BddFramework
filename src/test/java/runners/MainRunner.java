@@ -13,8 +13,8 @@ import utilities.ExtentTestNGListener;
 @Listeners(ExtentTestNGListener.class)
 
 @CucumberOptions(features = "src/test/resources/features", 
-                        tags = "@home or @register or @Login or @Graph or @Stack or @ArrayList",
-                       //tags = "@Stack",
+                      //  tags = "@home or @register or @Login or @Graph or @Stack or @ArrayList",
+                       tags = "@home or @nonfunctional",
                         glue= {"stepDefinitions","base"}, 
 				        monochrome=true, dryRun=false,
 						plugin= {"pretty", "html:target/ranjani.html", "json:target/cucumber.json"})
