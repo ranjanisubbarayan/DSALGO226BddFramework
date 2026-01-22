@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>17/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>21/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 20 16:35:24 EST 2026</td>
+<td>Started on:</td><td>Thu Jan 22 18:05:51 EST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>65 seconds (65159 ms)</td>
+<tr><td>Total time:</td><td>105 seconds (105134 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,105 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify elements are visible on Home page", "Home Page Non-Functional Scenario"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Data Structures&apos;]&quot;}
-  (Session info: chrome=143.0.7499.193)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [83ce67397aa1f2fedb58d87786da565b, findElement {value=//a[text()=&apos;Data Structures&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52792}, goog:processID: 18544, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52792/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 83ce67397aa1f2fedb58d87786da565b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy46.isDisplayed(Unknown Source)
-	at pageObjects.homePage.isdatastrucureDisplayed(homePage.java:89)
-	at stepDefinitions.NFHomeSteps.the_sign_in_link_should_be_visible(NFHomeSteps.java:42)
-	at ✽.The Sign in link should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/NFHome.feature:13)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1869873220", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1869873220'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text()=&apos;Data Structures&apos;]&quot;}
-  (Session info: chrome=143.0.7499.193)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [83ce67397aa1f2fedb58d87786da565b, findElement {value=//a[text()=&apos;Data Structures&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52792}, goog:processID: 18544, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52792/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 83ce67397aa1f2fedb58d87786da565b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy46.isDisplayed(Unknown Source)
-	at pageObjects.homePage.isdatastrucureDisplayed(homePage.java:89)
-	at stepDefinitions.NFHomeSteps.the_sign_in_link_should_be_visible(NFHomeSteps.java:42)
-	at ✽.The Sign in link should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/NFHome.feature:13)
-</pre></div></td>
-<td>0</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Home page loads within acceptable time", "Home Page Non-Functional Scenario"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [Home page load time exceeded limit]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:644)
-	at stepDefinitions.NFHomeSteps.the_home_page_should_load_within_seconds(NFHomeSteps.java:31)
-	at ✽.The Home page should load within &quot;5&quot; seconds(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/NFHome.feature:7)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1814368830", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1814368830'><pre>java.lang.AssertionError: expected [true] but found [Home page load time exceeded limit]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:644)
-	at stepDefinitions.NFHomeSteps.the_home_page_should_load_within_seconds(NFHomeSteps.java:31)
-	at ✽.The Home page should load within &quot;5&quot; seconds(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/NFHome.feature:7)
-</pre></div></td>
-<td>2</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -175,90 +76,110 @@ Session ID: 83ce67397aa1f2fedb58d87786da565b
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Accesses the Home page", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting a module from the dropdown displays warning message", "DS_AGLO_APP Home Page Verification"</td>
 <td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started" button for "Tree", its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>2</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started" button for "Arrays", Its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting  Tree in the dropdown menu, its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started" button for "Queue" , its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting  "Stack" in the dropdown menu, its displayed Error mesaage", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>4</td>
+<td>runners.MainRunner@6950ed69</td></tr>
 <tr>
 <td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User opens the DS Algo Portal", "DS_AGLO_APP Home Page Verification"</td>
 <td></td>
-<td>5</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>7</td>
+<td>runners.MainRunner@6950ed69</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting "Data Structure" dropdown menu , its displayed the Error Message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify home page usability", "DSAlgo Home Page Non Functional Testing"</td>
+<td></td>
+<td>3</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify home page reliability on refresh", "DSAlgo Home Page Non Functional Testing"</td>
+<td></td>
+<td>3</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking the Get Started button for a module displays warning", "DS_AGLO_APP Home Page Verification"</td>
+<td></td>
+<td>5</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking the Get Started button for a module displays warning", "DS_AGLO_APP Home Page Verification"</td>
+<td></td>
+<td>5</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Accesses the Home page", "DS_AGLO_APP Home Page Verification"</td>
+<td></td>
+<td>3</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking the Get Started button for a module displays warning", "DS_AGLO_APP Home Page Verification"</td>
+<td></td>
+<td>5</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting a module from the dropdown displays warning message", "DS_AGLO_APP Home Page Verification"</td>
+<td></td>
+<td>4</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify home page load performance", "DSAlgo Home Page Non Functional Testing"</td>
 <td></td>
 <td>2</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>runners.MainRunner@6950ed69</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started "button for "Data structures - Induction", Its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting a module from the dropdown displays warning message", "DS_AGLO_APP Home Page Verification"</td>
+<td></td>
+<td>4</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify keyboard accessibility", "DSAlgo Home Page Non Functional Testing"</td>
 <td></td>
 <td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>runners.MainRunner@6950ed69</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking  the "Get Started" button for "Graph", its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting a module from the dropdown displays warning message", "DS_AGLO_APP Home Page Verification"</td>
+<td></td>
+<td>6</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User views the Data Structures dropdown options", "DS_AGLO_APP Home Page Verification"</td>
 <td></td>
 <td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>runners.MainRunner@6950ed69</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking  the "Get Started" button for "Linked List", its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking the Get Started button for a module displays warning", "DS_AGLO_APP Home Page Verification"</td>
+<td></td>
+<td>4</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting a module from the dropdown displays warning message", "DS_AGLO_APP Home Page Verification"</td>
+<td></td>
+<td>4</td>
+<td>runners.MainRunner@6950ed69</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify home page security", "DSAlgo Home Page Non Functional Testing"</td>
 <td></td>
 <td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>runners.MainRunner@6950ed69</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when clicking the "Get Started" button for "Stack", its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Selecting a module from the dropdown displays warning message", "DS_AGLO_APP Home Page Verification"</td>
 <td></td>
 <td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>runners.MainRunner@6950ed69</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User views the Data Structures Dropdown Options", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking the Get Started button for a module displays warning", "DS_AGLO_APP Home Page Verification"</td>
 <td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>5</td>
+<td>runners.MainRunner@6950ed69</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting "Array" dropdown menu , its displayed the Error Message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking the Get Started button for a module displays warning", "DS_AGLO_APP Home Page Verification"</td>
 <td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>7</td>
+<td>runners.MainRunner@6950ed69</td></tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting  "Graph" in the dropdown menu, its displyed Error message", "DS_AGLO_APP Home Page Verification"</td>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Clicking the Get Started button for a module displays warning", "DS_AGLO_APP Home Page Verification"</td>
 <td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting "Linked List" in thedropdown menu, its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when selecting  "Queue" in the dropdown menu, its displayed Error message", "DS_AGLO_APP Home Page Verification"</td>
-<td></td>
-<td>3</td>
-<td>runners.MainRunner@a1f72f5</td></tr>
+<td>4</td>
+<td>runners.MainRunner@6950ed69</td></tr>
 </table><p>
 </body>
 </html>

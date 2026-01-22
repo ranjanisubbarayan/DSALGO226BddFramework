@@ -5,11 +5,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
-
-
-
 import utilities.ConfigReader;
-import utilities.Report;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import driver.DriverFactory;
 import com.aventstack.extentreports.ExtentTest;
@@ -20,16 +16,11 @@ public class Hooks {
 
     @Before
     public void setUp(Scenario scenario) {
-    	String browser = System.getProperty("browser");
-        if (browser == null) browser = ConfigReader.getProperty("browser");
 
-        DriverFactory.setBrowser(browser);
         WebDriver driver = DriverFactory.getDriver();
         driver.get(ConfigReader.getProperty("baseUrl"));
         
-               
-        test = Report.getInstance().createTest(scenario.getName());
-    }
+      }
 
     @After
     public void tearDown(Scenario scenario) {       
@@ -52,6 +43,6 @@ public class Hooks {
         DriverFactory.cleanupDriver();
 
       
-        Report.getInstance().flush();
+        
     }
 }

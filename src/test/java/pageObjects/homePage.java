@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,27 +22,49 @@ public class homePage {
         PageFactory.initElements(driver, this);
     }
     
-    private By registerLink = By.xpath("//a[@href='/register']");
-    private By loginLink = By.xpath("//a[@href='/login']");
-    private By logoutLink = By.xpath("//a[@href='/logout']");
-    private By homeTitle = By.xpath("//a[@href='/home']");
-    private By getStartedButton = By.xpath(".//a[normalize-space()='Get Started']");
-    private By errorMsg = By.xpath("//div[contains(text(),'You are not logged in')]");
-    private By dropdownMenu = By.xpath("//a[contains(text(),'Data Structures')]");
-    private By dropdownItems = By.xpath("//div[contains(@class,'dropdown-menu')]//a");
-    private By dataStructureCard = By.xpath("//div[contains(@class,'card')]");
-    private By cardTitle = By.xpath(".//h5[contains(@class,'card-title')]");
-    private By signinlink = By.xpath("//a[normalize-space()='Sign in']");
+    @FindBy(xpath = "//a[@href='/register']")
+     WebElement registerLink;
+
+    @FindBy(xpath = "//a[@href='/login']")
+     WebElement loginLink;
+
+    @FindBy(xpath = "//a[@href='/logout']")
+     WebElement logoutLink;
+
+    @FindBy(xpath = "//a[@href='/home']")
+     WebElement homeTitle;
+
+    @FindBy(xpath = ".//a[normalize-space()='Get Started']")
+    private List<WebElement> getStartedButton;
+
+    @FindBy(xpath = "//div[contains(text(),'You are not logged in')]")
+     WebElement errorMsg;
+
+    @FindBy(xpath = "//a[contains(text(),'Data Structures')]")
+     WebElement dropdownMenu;
+
+    @FindBy(xpath = "//div[contains(@class,'dropdown-menu')]//a")
+     List<WebElement> dropdownItems;
+
+    @FindBy(xpath = "//div[contains(@class,'card')]")
+     private List<WebElement> dataStructureCard;
+
+    @FindBy(xpath = ".//h5[contains(@class,'card-title')]")
+    private List<WebElement> cardTitle;
+
+    @FindBy(xpath = "//a[normalize-space()='Sign in']")
+     WebElement signinlink;
+
     
 
     public void openDropdownOnly() {
-        WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(dropdownMenu));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", dropdown);
-        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(dropdownItems));
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownMenu));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", dropdownMenu);
+        wait.until(ExpectedConditions.visibilityOfAllElements(dropdownItems));
     }
     
     public List<String> getAllDropdownModules() {
-    	return driver.findElements(dropdownItems)
+    	return dropdownItems
                 .stream()
                 .map(e -> e.getText().trim())
                 .filter(text -> !text.isEmpty())
@@ -51,7 +74,7 @@ public class homePage {
     public void clickModuleFromDropdown(String moduleName) {
        
         List<WebElement> items = wait.until(
-                ExpectedConditions.visibilityOfAllElementsLocatedBy(dropdownItems));
+                ExpectedConditions.visibilityOfAllElements(dropdownItems));
         for (WebElement item : items) {
             if (item.getText().trim().equalsIgnoreCase(moduleName.trim())) {
                 item.click();
@@ -68,42 +91,52 @@ public class homePage {
     }
     
     public void waitForHomePageToLoad() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(homeTitle));
+        wait.until(ExpectedConditions.visibilityOf(homeTitle));
     }
    
     public boolean isHomePageDisplayed() {
     	try {
-            return driver.findElement(homeTitle).isDisplayed();
+            return  homeTitle.isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
         }
     }
 
     public boolean isRegisterLinkDisplayed() {
-        return driver.findElement(registerLink).isDisplayed();
+        return registerLink.isDisplayed();
     }
 
     public boolean isSignInLinkDisplayed() {
-        return driver.findElement(loginLink).isDisplayed();
+        return loginLink.isDisplayed();
     }
 
     public boolean isUserLoggedIn() {
-        return driver.findElements(logoutLink).size() > 0;
+        try {
+            return logoutLink.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 
+
     public registerPage clickRegisterLink() {
-        scrollAndClick(driver.findElement(registerLink));
+        scrollAndClick(registerLink);
         return new registerPage(driver);
     }
 
     public LoginPage clickSignInLink() {
-        scrollAndClick(driver.findElement(loginLink));
+        scrollAndClick(loginLink);
         return new LoginPage(driver);
     }
 
     public LoginPage clickSignOut() {
-        List<WebElement> links = driver.findElements(logoutLink);
-        if (!links.isEmpty()) scrollAndClick(links.get(0));
+        try {
+            if (logoutLink.isDisplayed()) {
+                scrollAndClick(logoutLink);
+            }
+        } catch (NoSuchElementException e) {
+            
+        }
         return new LoginPage(driver);
     }
 
@@ -118,21 +151,22 @@ public class homePage {
     
     public void clickGetStartedForModule(String moduleName) {
 
-        List<WebElement> cards = wait.until(
-                ExpectedConditions.visibilityOfAllElementsLocatedBy(dataStructureCard));
-        for (WebElement card : cards) {
-            WebElement title = card.findElement(cardTitle);
-            String actualTitle = normalize(title.getText());
-            String expectedTitle = normalize(moduleName);
-            if (actualTitle.contains(expectedTitle)
-                    || expectedTitle.contains(actualTitle)) {
-                WebElement getStartedBtn = card.findElement(getStartedButton);
-                scrollAndClick(getStartedBtn);
-                return;
-            }
-        }
-        throw new RuntimeException("Module '" + moduleName + "' not found in Data Structures cards.");
-    }
+    	 wait.until(ExpectedConditions.visibilityOfAllElements(dataStructureCard));
+    	 for (int i = 0; i < dataStructureCard.size(); i++) {
+
+    		  String actualTitle = normalize(cardTitle.get(i).getText());
+    	        String expectedTitle = normalize(moduleName);
+    	        if (actualTitle.contains(expectedTitle)
+    	                || expectedTitle.contains(actualTitle)) {
+
+    	            scrollAndClick(getStartedButton.get(i));
+    	            return;
+    	        }
+    	    }
+
+    	    throw new RuntimeException(
+    	            "Module '" + moduleName + "' not found in Data Structures cards.");
+    	}
 
     private String normalize(String text) {
         return text
@@ -146,15 +180,15 @@ public class homePage {
     public String getWarningMessageText() {
     	try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-            WebElement alert = wait.until(ExpectedConditions.visibilityOfElementLocated(errorMsg));
+            WebElement alert = wait.until(ExpectedConditions.visibilityOf(errorMsg));
             String text = alert.getText();
             System.out.println("Alert displayed: " + text);
             return text;
         } catch (TimeoutException e) {
            
             try {
-                WebElement alertFallback = driver.findElement(errorMsg);
-                String text = alertFallback.getText();
+                           
+            	String text = errorMsg.getText();
                 System.out.println("Alert found without waiting: " + text);
                 return text;  
             } catch (NoSuchElementException ex) {
@@ -165,10 +199,15 @@ public class homePage {
     }
     
     public void clickSignInLinkIfPresent() {
-        List<WebElement> signInLinks =
-                driver.findElements(loginLink);        
-        if (!signInLinks.isEmpty()) {
-            signInLinks.get(0).click();
+        try {
+            if (loginLink.isDisplayed()) {
+                loginLink.click();
+            }
+        } catch (NoSuchElementException e) {
+            
+        } catch (ElementClickInterceptedException e) {
+           
+            System.out.println("Sign in link could not be clicked: " + e.getMessage());
         }
     }
 
@@ -176,37 +215,38 @@ public class homePage {
         driver.get("https://dsportalapp.herokuapp.com/home");
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(getStartedButton));
+        wait.until(ExpectedConditions.visibilityOfAllElements(getStartedButton));
     }
     public boolean areImportantOptionsVisible() {
-    	try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-            WebElement getStarted = wait.until(ExpectedConditions.visibilityOfElementLocated(getStartedButton));
-            WebElement signIn = wait.until(ExpectedConditions.visibilityOfElementLocated(signinlink));
-            return getStarted.isDisplayed() && signIn.isDisplayed();
+        try {
+            wait.until(ExpectedConditions.visibilityOfAllElements(getStartedButton));
+            wait.until(ExpectedConditions.visibilityOf(signinlink));
+
+            return getStartedButton.get(0).isDisplayed()
+                    && signinlink.isDisplayed();
         } catch (Exception e) {
-        	System.out.println("Important home page options not visible: " + e.getMessage());
+            System.out.println("Important home page options not visible: " + e.getMessage());
             return false;
         }
     }
     public void signOutIfLoggedIn() {
         try {
-            List<WebElement> logoutLinks = driver.findElements(logoutLink);
-            if (!logoutLinks.isEmpty()) {
+            if (logoutLink.isDisplayed()) {
                 System.out.println("User is logged in. Signing out...");
-                logoutLinks.get(0).click();
+                logoutLink.click();
 
                 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-                wait.until(ExpectedConditions.visibilityOfElementLocated(signinlink));
+                wait.until(ExpectedConditions.visibilityOf(signinlink));
 
                 System.out.println("Sign out completed.");
             } else {
                 System.out.println("User is not logged in. No sign out needed.");
             }
+        } catch (NoSuchElementException e) {
+            System.out.println("User is not logged in. No sign out needed.");
         } catch (Exception e) {
             System.out.println("Exception while trying to sign out: " + e.getMessage());
         }
     }
-
 
 }

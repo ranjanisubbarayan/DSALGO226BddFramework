@@ -5,18 +5,23 @@ import org.testng.annotations.DataProvider;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-import utilities.ExtentTestNGListener;
 
-@Listeners(ExtentTestNGListener.class)
+import driver.DriverFactory;
+import utilities.ConfigReader;
 
-@CucumberOptions(features = "src/test/resources/features", 
-                        tags = "(@home or @register or @Login or @Graph or @Stack or @ArrayList) and @nonfunctional",
+
+
+
+@CucumberOptions(features = "src/test/resources/features",
+                       // tags = "(@home or @register or @Login or @Graph or @Stack or @ArrayList) and @nonfunctional",
+                        tags ="@home",
                         glue= {"stepDefinitions","base"}, 
 				        monochrome=true, dryRun=false,
-						plugin= {"pretty", "html:target/ranjani.html", "json:target/cucumber.json"})
+						plugin= {"pretty", "html:target/ranjani.html", "json:target/cucumber.json" , "rerun:target/rerun.txt" ,
+								 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" })
 			
 public class MainRunner extends AbstractTestNGCucumberTests {
 
@@ -24,9 +29,8 @@ public class MainRunner extends AbstractTestNGCucumberTests {
     @BeforeClass(alwaysRun = true)
     public void setBrowser(@Optional String browser) {
     
-        if (browser != null && !browser.isBlank()) {
-            System.setProperty("browser", browser);
-        }       
+    	String browserName = browser == null ? ConfigReader.getProperty("browser") :browser;
+    	DriverFactory.setBrowser(browserName);  
     }
     
 	@Override

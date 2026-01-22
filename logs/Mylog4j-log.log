@@ -2189,3 +2189,141 @@
 [INFO ] 2026-01-20 16:36:27.069 [main] LoggerLoad - Starting test: runScenario
 [ERROR] 2026-01-20 16:36:28.071 [main] LoggerLoad - Test Failed: runScenario
 [INFO ] 2026-01-20 16:36:30.102 [main] LoggerLoad - ===== Test Execution Finished =====
+[INFO ] 2026-01-22 15:32:40.659 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:32:48.767 [main] homeSteps - User successfully opened the browser and landed on Home page
+[INFO ] 2026-01-22 15:32:49.788 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:32:49.792 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:32:52.929 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:32:52.930 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:32:56.066 [main] homeSteps - User clicked Data Structure dropdown
+[INFO ] 2026-01-22 15:32:56.510 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:32:56.514 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:32:59.865 [main] homeSteps - User clicked module: Arrays
+[INFO ] 2026-01-22 15:33:00.261 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:00.262 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:03.805 [main] homeSteps - User clicked module: Linked List
+[INFO ] 2026-01-22 15:33:04.196 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:04.197 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:08.164 [main] homeSteps - User clicked module: Stack
+[INFO ] 2026-01-22 15:33:08.501 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:08.502 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:12.929 [main] homeSteps - User clicked module: Queue
+[INFO ] 2026-01-22 15:33:13.284 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:13.285 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:16.855 [main] homeSteps - User clicked module: Tree
+[INFO ] 2026-01-22 15:33:17.374 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:17.375 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:21.144 [main] homeSteps - User clicked module: Graph
+[INFO ] 2026-01-22 15:33:21.595 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:21.596 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:25.166 [main] homeSteps - User clicked Get Started for module: Data Structures
+[INFO ] 2026-01-22 15:33:25.504 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:25.504 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:29.396 [main] homeSteps - User clicked Get Started for module: Array
+[INFO ] 2026-01-22 15:33:29.771 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:29.772 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:33.093 [main] homeSteps - User clicked Get Started for module: Linked List
+[INFO ] 2026-01-22 15:33:33.421 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:33.422 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:37.099 [main] homeSteps - User clicked Get Started for module: Stack
+[INFO ] 2026-01-22 15:33:37.445 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:37.445 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:41.505 [main] homeSteps - User clicked Get Started for module: Queue
+[INFO ] 2026-01-22 15:33:41.897 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:41.897 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:46.007 [main] homeSteps - User clicked Get Started for module: Tree
+[INFO ] 2026-01-22 15:33:46.386 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:46.388 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:50.323 [main] homeSteps - User clicked Get Started for module: Graph
+[INFO ] 2026-01-22 15:33:50.651 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:50.652 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:52.816 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:52.818 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:56.230 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 15:33:56.977 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:33:56.977 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:33:59.993 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 15:34:00.312 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:34:00.312 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:34:02.793 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 15:34:03.214 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:34:03.214 [main] LoggerLoad - Starting test: runScenario
+[INFO ] 2026-01-22 15:34:05.772 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 15:34:06.222 [main] LoggerLoad - Test Passed: runScenario
+[INFO ] 2026-01-22 15:34:06.385 [main] LoggerLoad - ===== Test Execution Finished =====
+[INFO ] 2026-01-22 16:40:10.311 [main] homeSteps - User successfully opened the browser and landed on Home page
+[INFO ] 2026-01-22 16:40:16.815 [main] homeSteps - User clicked Data Structure dropdown
+[INFO ] 2026-01-22 16:40:20.742 [main] homeSteps - User clicked module: Arrays
+[INFO ] 2026-01-22 16:40:24.545 [main] homeSteps - User clicked module: Linked List
+[INFO ] 2026-01-22 16:40:28.313 [main] homeSteps - User clicked module: Stack
+[INFO ] 2026-01-22 16:40:32.071 [main] homeSteps - User clicked module: Queue
+[INFO ] 2026-01-22 16:40:35.956 [main] homeSteps - User clicked module: Tree
+[INFO ] 2026-01-22 16:40:40.070 [main] homeSteps - User clicked module: Graph
+[INFO ] 2026-01-22 16:40:43.903 [main] homeSteps - User clicked Get Started for module: Data Structures
+[INFO ] 2026-01-22 16:40:47.545 [main] homeSteps - User clicked Get Started for module: Array
+[INFO ] 2026-01-22 16:40:51.271 [main] homeSteps - User clicked Get Started for module: Linked List
+[INFO ] 2026-01-22 16:40:55.463 [main] homeSteps - User clicked Get Started for module: Stack
+[INFO ] 2026-01-22 16:40:59.380 [main] homeSteps - User clicked Get Started for module: Queue
+[INFO ] 2026-01-22 16:41:03.513 [main] homeSteps - User clicked Get Started for module: Tree
+[INFO ] 2026-01-22 16:41:07.502 [main] homeSteps - User clicked Get Started for module: Graph
+[INFO ] 2026-01-22 16:41:12.750 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 16:41:16.049 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 16:41:18.799 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 16:41:21.664 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 17:33:13.904 [main] homeSteps - User successfully opened the browser and landed on Home page
+[INFO ] 2026-01-22 17:33:19.799 [main] homeSteps - User clicked Data Structure dropdown
+[INFO ] 2026-01-22 17:33:23.107 [main] homeSteps - User clicked module: Arrays
+[INFO ] 2026-01-22 17:33:26.155 [main] homeSteps - User clicked module: Linked List
+[INFO ] 2026-01-22 17:33:29.203 [main] homeSteps - User clicked module: Stack
+[INFO ] 2026-01-22 17:33:32.129 [main] homeSteps - User clicked module: Queue
+[INFO ] 2026-01-22 17:33:35.138 [main] homeSteps - User clicked module: Tree
+[INFO ] 2026-01-22 17:33:38.194 [main] homeSteps - User clicked module: Graph
+[INFO ] 2026-01-22 17:33:41.040 [main] homeSteps - User clicked Get Started for module: Data Structures
+[INFO ] 2026-01-22 17:33:44.461 [main] homeSteps - User clicked Get Started for module: Array
+[INFO ] 2026-01-22 17:33:47.856 [main] homeSteps - User clicked Get Started for module: Linked List
+[INFO ] 2026-01-22 17:33:51.137 [main] homeSteps - User clicked Get Started for module: Stack
+[INFO ] 2026-01-22 17:33:54.796 [main] homeSteps - User clicked Get Started for module: Queue
+[INFO ] 2026-01-22 17:33:58.068 [main] homeSteps - User clicked Get Started for module: Tree
+[INFO ] 2026-01-22 17:34:01.398 [main] homeSteps - User clicked Get Started for module: Graph
+[INFO ] 2026-01-22 17:34:05.969 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 17:34:08.807 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 17:34:11.346 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 17:34:14.089 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 18:02:21.247 [main] homeSteps - User successfully opened the browser and landed on Home page
+[INFO ] 2026-01-22 18:02:26.787 [main] homeSteps - User clicked Data Structure dropdown
+[INFO ] 2026-01-22 18:02:30.055 [main] homeSteps - User clicked module: Arrays
+[INFO ] 2026-01-22 18:02:33.238 [main] homeSteps - User clicked module: Linked List
+[INFO ] 2026-01-22 18:02:37.031 [main] homeSteps - User clicked module: Stack
+[INFO ] 2026-01-22 18:02:40.314 [main] homeSteps - User clicked module: Queue
+[INFO ] 2026-01-22 18:02:45.329 [main] homeSteps - User clicked module: Tree
+[INFO ] 2026-01-22 18:02:50.066 [main] homeSteps - User clicked module: Graph
+[INFO ] 2026-01-22 18:02:54.571 [main] homeSteps - User clicked Get Started for module: Data Structures
+[INFO ] 2026-01-22 18:02:58.722 [main] homeSteps - User clicked Get Started for module: Array
+[INFO ] 2026-01-22 18:03:03.006 [main] homeSteps - User clicked Get Started for module: Linked List
+[INFO ] 2026-01-22 18:03:07.007 [main] homeSteps - User clicked Get Started for module: Stack
+[INFO ] 2026-01-22 18:03:11.096 [main] homeSteps - User clicked Get Started for module: Queue
+[INFO ] 2026-01-22 18:03:15.675 [main] homeSteps - User clicked Get Started for module: Tree
+[INFO ] 2026-01-22 18:03:20.303 [main] homeSteps - User clicked Get Started for module: Graph
+[INFO ] 2026-01-22 18:03:25.888 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 18:03:29.347 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 18:03:32.280 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 18:03:35.534 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 18:06:00.647 [main] homeSteps - User successfully opened the browser and landed on Home page
+[INFO ] 2026-01-22 18:06:08.152 [main] homeSteps - User clicked Data Structure dropdown
+[INFO ] 2026-01-22 18:06:13.140 [main] homeSteps - User clicked module: Arrays
+[INFO ] 2026-01-22 18:06:17.225 [main] homeSteps - User clicked module: Linked List
+[INFO ] 2026-01-22 18:06:21.633 [main] homeSteps - User clicked module: Stack
+[INFO ] 2026-01-22 18:06:25.614 [main] homeSteps - User clicked module: Queue
+[INFO ] 2026-01-22 18:06:30.161 [main] homeSteps - User clicked module: Tree
+[INFO ] 2026-01-22 18:06:36.167 [main] homeSteps - User clicked module: Graph
+[INFO ] 2026-01-22 18:06:41.007 [main] homeSteps - User clicked Get Started for module: Data Structures
+[INFO ] 2026-01-22 18:06:46.828 [main] homeSteps - User clicked Get Started for module: Array
+[INFO ] 2026-01-22 18:06:51.975 [main] homeSteps - User clicked Get Started for module: Linked List
+[INFO ] 2026-01-22 18:06:57.680 [main] homeSteps - User clicked Get Started for module: Stack
+[INFO ] 2026-01-22 18:07:03.286 [main] homeSteps - User clicked Get Started for module: Queue
+[INFO ] 2026-01-22 18:07:11.002 [main] homeSteps - User clicked Get Started for module: Tree
+[INFO ] 2026-01-22 18:07:15.959 [main] homeSteps - User clicked Get Started for module: Graph
+[INFO ] 2026-01-22 18:07:21.586 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 18:07:25.760 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 18:07:29.281 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-22 18:07:32.555 [main] homeSteps - Home page loaded successfully
