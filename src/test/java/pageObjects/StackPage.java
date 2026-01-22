@@ -69,6 +69,8 @@ public class StackPage {
 
     @FindBy(xpath = "//a[text()='Practice Questions']")
     WebElement practiceQuestionsLink;
+    
+    
 
 	public void clickStackGetStarted() {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -84,7 +86,9 @@ public class StackPage {
 	        "arguments[0].click();", stackBtn
 	    );
 	}	
-	 public boolean isHomePageDisplayed() { return verifyHomepage.isDisplayed(); }
+	 public boolean isHomePageDisplayed() { 
+		 return verifyHomepage.isDisplayed(); 
+		 }
 	
    	public boolean isStackPageDisplayed() {
         return verifyStackPageHeader.isDisplayed();

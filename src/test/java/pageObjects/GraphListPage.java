@@ -103,6 +103,16 @@ public class GraphListPage {
 	    public boolean isGraphRepresentationsTextDisplayed() {
 	        return verifyGraphRepresentationsText.isDisplayed();
 	    }
+	    
+	    public void clickTryHereIfVisible() {
+	        try {
+	        	clickGraphTopic();
+	            wait.until(ExpectedConditions.elementToBeClickable(btnTryEditor)).click();
+	            wait.until(ExpectedConditions.visibilityOf(btnRun));
+	        } catch (Exception e) {
+	            throw new RuntimeException("Try Here button not visible: " + e.getMessage());
+	        }
+	    }
 	
 	public void writeCodeAndRun(String code) {
 		Actions actions = new Actions(driver);

@@ -90,6 +90,21 @@ public class ArrayListPage {
 		action.sendKeys(code).perform();
 		btnRun.click();
 	}
+	public void waitForArrayPage() {
+        wait.until(ExpectedConditions.visibilityOf(verifyArrayspage));
+    }
+
+	
+	public void clickTryHereIfVisible() {
+        try {
+        	clickArraysInPython();
+            wait.until(ExpectedConditions.elementToBeClickable(btnTryEditor)).click();
+            wait.until(ExpectedConditions.visibilityOf(btnRun));
+        } catch (Exception e) {
+            throw new RuntimeException("Try Here button not visible: " + e.getMessage());
+        }
+    }
+
 	public String waitForAlertIfPresent() {
 	    try {
 	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
