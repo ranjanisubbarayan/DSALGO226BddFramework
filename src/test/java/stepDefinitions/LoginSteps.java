@@ -30,7 +30,7 @@ public class LoginSteps {
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
     	homepage = launchPage.clickGetStarted(); 
-    	loginpage = homepage.ClickSignOut();       
+    	loginpage = homepage.clickSignOut();       
     	loginpage = homepage.clickSignInLink();
     }
 

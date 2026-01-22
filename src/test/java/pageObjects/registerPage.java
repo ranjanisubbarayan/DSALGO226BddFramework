@@ -27,16 +27,16 @@ public class registerPage {
     WebElement register_link;
 
     @FindBy(id = "id_username")
-    WebElement register_username;
+   public WebElement register_username;
 
     @FindBy(id = "id_password1")
-    WebElement register_password;
+   public WebElement register_password;
 
     @FindBy(id = "id_password2")
-    WebElement register_confirm_password;
+   public WebElement register_confirm_password;
 
     @FindBy(xpath = "//input[@value='Register']")
-    WebElement register_button;
+   public WebElement register_button;
 
     @FindBy(xpath = "//input[@value='Register']")
     WebElement registerpage_displayed;
@@ -154,5 +154,21 @@ public class registerPage {
     public LoginPage clickSigninLink() {
         signin.click();
         return new LoginPage(driver); 
+    }
+    
+    public boolean isUsernameFieldVisible() {
+        return register_username.isDisplayed();
+    }
+
+    public boolean isPasswordFieldVisible() {
+        return register_password.isDisplayed();
+    }
+
+    public boolean isConfirmPasswordFieldVisible() {
+        return register_confirm_password.isDisplayed();
+    }
+
+    public boolean isRegisterButtonVisible() {
+        return register_button.isDisplayed();
     }
 }

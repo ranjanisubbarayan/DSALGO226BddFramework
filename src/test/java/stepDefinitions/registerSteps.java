@@ -36,7 +36,7 @@ public class registerSteps {
 	@Given("The user is on the user Registration page")
 	public void the_user_is_on_the_user_registration_page() {
 		 homepage = launchPage.clickGetStarted(); 
-		 loginpage = homepage.ClickSignOut();  
+		 loginpage = homepage.clickSignOut();  
 		 registerpage = homepage.clickRegisterLink(); 
         Assert.assertTrue(registerpage.isRegisterPageDisplayed(), "Register page is not displayed");    
 	}

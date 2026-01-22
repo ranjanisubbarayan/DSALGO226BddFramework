@@ -26,13 +26,13 @@ public class LoginPage {
     }
 
     @FindBy(id = "id_username")
-     WebElement loginUsername;
+    public WebElement loginUsername;
 
     @FindBy(id = "id_password")
-     WebElement loginPassword;
+    public WebElement loginPassword;
 
     @FindBy(xpath = "//input[@value='Login']")
-     WebElement loginBtn;
+     public WebElement loginBtn;
 
     @FindBy(xpath = "//div[@role='alert']")
      WebElement alertMsg;
@@ -94,6 +94,19 @@ public class LoginPage {
         return (String)((JavascriptExecutor)driver).executeScript(
                 "return arguments[0].validationMessage;", loginPassword);
     }   
+    
+    public boolean isPageLoadedCompletely() {
+        return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+    }
+
+    public boolean isKeyboardNavigationWorking() {
+        try {
+            loginUsername.sendKeys(org.openqa.selenium.Keys.TAB);
+            return driver.switchTo().activeElement().equals(loginPassword);
+        } catch (Exception e) {
+            return false;
+        }
+    }
     
     public void login(String user, String pass) {
         enterUsername(user);
