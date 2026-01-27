@@ -16,7 +16,7 @@ public class LaunchPage {
 	 WebDriver driver;
 	 WebDriverWait wait;
 	
-	@FindBy(xpath = "//button[text()='Get Started']")
+	@FindBy(xpath = "//button")
     WebElement getStartedButton;
 
     public LaunchPage(WebDriver driver) {

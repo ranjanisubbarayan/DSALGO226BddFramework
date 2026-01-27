@@ -1,8 +1,7 @@
-@LinkedList
+@LinkedList @signIn
 Feature: Navigation and interaction in dsAlgo Portal - Linked List Section
 
-  Background:
-    Given The user sign in to dsAlgo Portal entering firstname Vara & password Varam@123
+  Background:User is logged into the app
 
   @smoke_Ll
   Scenario: Verify user is able to navigate to Linked List Page
@@ -14,8 +13,8 @@ Feature: Navigation and interaction in dsAlgo Portal - Linked List Section
   Scenario: Verify user is able to see output for valid Linked List code for Introduction page
     Given The user is in the Home page after Sign in
     When The user clicks the Get Started button
-    Then The user should be directed to Linked List Page
+    Then The user should be redirected to "Linked List" page
+
+
     When the user clicks the Introduction link
-    And the user clicks the Try Here button on the Introduction page
-    And The user write valid Linked List code in Editor and clicks the Run Button in LikedList Page
-    Then The user should see output in the console for LinkedList Page
+

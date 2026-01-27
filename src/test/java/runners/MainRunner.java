@@ -18,9 +18,10 @@ import utilities.ConfigReader;
 @CucumberOptions(features = "src/test/resources/features",
                        // tags = "(@home or @register or @Login or @Graph or @Stack or @ArrayList) and @nonfunctional",
                         tags ="@home",
-                        glue= {"stepDefinitions","base"}, 
+                        glue= {"stepDefinitions"},
 				        monochrome=true, dryRun=false,
-						plugin= {"pretty", "html:target/ranjani.html", "json:target/cucumber.json" , "rerun:target/rerun.txt" ,
+						plugin= {"pretty", "html:target/ranjani.html", "json:target/cucumber.json" ,
+								  "rerun:target/rerun.txt" ,
 								 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" })
 			
 public class MainRunner extends AbstractTestNGCucumberTests {

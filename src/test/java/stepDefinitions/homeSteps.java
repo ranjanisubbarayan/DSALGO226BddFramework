@@ -47,7 +47,7 @@ public class homeSteps {
     	//Assert.assertTrue(homepage.isHomePageDisplayed(), "Home page title is not displayed");
     }
 
-    @Then("The user should be navigated to the Home page, which displays the Register and Sign in links")
+    @Then("The user should to navigated to the Home page, which displays the Register and Sign in links")
     public void the_user_should_be_navigated_to_the_home_page_which_displays_the_register_and_sign_in_links() {
         Assert.assertTrue(homepage.isRegisterLinkDisplayed(), "Register link not displayed");
         Assert.assertTrue(homepage.isSignInLinkDisplayed(), "Sign In link not displayed");
@@ -57,11 +57,6 @@ public class homeSteps {
     	launchPage = new LaunchPage(driver);
  		homepage = launchPage.clickGetStarted();
          Assert.assertTrue(homepage.isHomePageDisplayed(), "Home page not displayed");
-    }
-    @Then("The user shouble able to navigated to the Home page, which displays the Register and Sign in links")
-    public void the_user_shouble_able_to_navigated_to_the_home_page_which_displays_the_register_and_sign_in_links() {
-    	 Assert.assertTrue(homepage.isRegisterLinkDisplayed(), "Register link not displayed");
-         Assert.assertTrue(homepage.isSignInLinkDisplayed(), "Sign In link not displayed");
     }
 
     @Given("The user is on Home page")
@@ -112,6 +107,8 @@ public class homeSteps {
     @When("User clicks on Register link")
     public void user_clicks_on_register_link() {
         //registerpage = homepage.clickRegisterLink();
+
+
     }
 
     @When("User clicks on Sign In link")

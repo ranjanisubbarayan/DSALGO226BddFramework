@@ -118,7 +118,6 @@ public class homePage {
         }
     }
 
-
     public registerPage clickRegisterLink() {
         scrollAndClick(registerLink);
         return new registerPage(driver);

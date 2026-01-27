@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -26,7 +27,8 @@ public class ArrayListPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	
+	@FindBy(xpath="//pre[@id='output']")
+	WebElement console;
 	@FindBy (xpath="//div[contains(text(),'You are logged in')]")
 	WebElement VerifyHomepage;
 	
@@ -115,5 +117,9 @@ public class ArrayListPage {
 	    } catch (Exception e) {
 	        return null; 
 	    }
+	}
+
+	public String getOutput(){
+		return console.getText();
 	}
 }

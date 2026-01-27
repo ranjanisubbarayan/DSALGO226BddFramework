@@ -12,7 +12,7 @@ As a user
    Scenario: User Accesses the Home page   
    Given The user is on the DS Algo Portal	
    When Landing on the page		
-   Then  The user shouble able to navigated to the Home page, which displays the Register and Sign in links
+   Then  The user should to navigated to the Home page, which displays the Register and Sign in links
 
 
     Scenario: User views the Data Structures dropdown options
