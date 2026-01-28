@@ -1,6 +1,6 @@
     @register
     Feature: DS_ALGO_APP Register Page Verification  
-
+        
     @SC1register
     Scenario: User navigates to the Register page	 
     Given The user is on the user Registration page	

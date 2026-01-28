@@ -81,7 +81,7 @@ public void the_user_clicks_the_get_started_button_in_stack_panel() {
             if (alertMsg != null) {
                 logger.info("Alert detected: " + alertMsg);
             } else {
-                logger.warn("⚠ No alert detected after clicking Run");
+                logger.warn("No alert detected after clicking Run");
             }
 
         } else {

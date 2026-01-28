@@ -108,7 +108,7 @@ public class GraphList{
 		    System.out.println("Alert detected: " + alertMsg);
 		}
 		else {
-            System.out.println("⚠ No alert detected after clicking Run");
+            System.out.println("No alert detected after clicking Run");
         }
 
 

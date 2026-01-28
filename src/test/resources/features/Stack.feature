@@ -34,7 +34,7 @@ Feature: Navigation and interaction in dsAlgo Portal - Stack Section
 
   Scenario Outline: Verify the presence of Run button in try editor for Stack pages
     When The user clicks "<StackLinks>" in Stack link page
-    And The user clicks Try Here button after reaching Stack page
+    When The user clicks Try Here button after reaching Stack page
     Then The user should see a Run button in try editor
 
     Examples:
@@ -45,8 +45,8 @@ Feature: Navigation and interaction in dsAlgo Portal - Stack Section
 
   Scenario Outline: Verify error message for empty & invalid python code in Stack try editor
     When The user clicks "<StackLinks>" in Stack link page
-    And The user clicks Try Here button after reaching Stack page
-    And The user writes "<Code>" for "<scenarioType>" in Editor and clicks the Run button in stack page
+    When The user clicks Try Here button after reaching Stack page
+    When The user writes "<Code>" for "<scenarioType>" in Editor and clicks the Run button in stack page
     Then The user should see an error message in alert window
 
     Examples:
@@ -60,8 +60,8 @@ Feature: Navigation and interaction in dsAlgo Portal - Stack Section
 
   Scenario Outline: Verify user is able to see output for valid python code in Stack pages
     When The user clicks "<StackLinks>" in Stack link page
-    And The user clicks Try Here button after reaching Stack page
-    And The user writes "<dataDrivenColumnHeader>" for "<scenarioType>" in Editor and clicks the Run button in stack page
+    When The user clicks Try Here button after reaching Stack page
+    When  The user writes "<dataDrivenColumnHeader>" for "<scenarioType>" in Editor and clicks the Run button in stack page
     Then The user should see output in the console for Stack Page
 
     Examples:

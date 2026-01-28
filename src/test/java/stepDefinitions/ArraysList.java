@@ -113,7 +113,7 @@ public class ArraysList {
             if (alertMsg != null) {
                 System.out.println("Alert detected: " + alertMsg);
             } else {
-                System.out.println("⚠ No alert detected after clicking Run");
+                System.out.println("No alert detected after clicking Run");
             }
         }
 		else{
@@ -140,7 +140,7 @@ public class ArraysList {
 		long maxTime = Long.parseLong(seconds);
 
         long startTime = System.currentTimeMillis();
-        driver.get("https://dsportalapp.herokuapp.com/array/");
+       // driver.get("https://dsportalapp.herokuapp.com/array/");
         arraylistpage.waitForArrayPage();
         long loadTime = (System.currentTimeMillis() - startTime) / 1000;
 
