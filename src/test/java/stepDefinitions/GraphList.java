@@ -1,24 +1,17 @@
 package stepDefinitions;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 import org.testng.Assert;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import driver.DriverFactory;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-
-import pageObjects.LoginPage;
-import pageObjects.homePage;
-import utilities.DataDriven;
+import utilities.ExcelSheetHandling;
 import pageObjects.GraphListPage;
 import pageObjects.LaunchPage;
 
@@ -121,9 +114,16 @@ public class GraphList{
 	
 	@When("The user write valid code in Editor and clicks the Run Button in Graph Page")
 	public void the_user_write_valid_linked_list_code_in_editor_and_clicks_the_run_button() throws IOException {
-		DataDriven d=new utilities.DataDriven();
-		ArrayList<String> data=d.getData("Graph");
-		graphPage.writeAndRunGraphListCode((String) data.get(1));
+		
+		ExcelSheetHandling excel =
+		        new ExcelSheetHandling("src/test/resources/ExcelSheet/DsAlgoTestData.xlsx");
+
+		List<String> data = excel.getCodeByColumn("Graph");
+		for (int i = 0; i < data.size(); i++) {
+		    String line = data.get(i);
+		    graphPage.writeAndRunGraphListCode(line);
+		}
+		
 	}
 	
 	@Then("The user should see output in the console for Graph Page")

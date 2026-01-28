@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="24" passed="14" failed="10" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-28T11:06:52 EST" name="Default suite" finished-at="2026-01-28T11:09:32 EST" duration-ms="160092">
+  <suite started-at="2026-01-28T17:41:53 EST" name="Default suite" finished-at="2026-01-28T17:42:27 EST" duration-ms="33767">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-28T11:06:52 EST" name="Default test" finished-at="2026-01-28T11:09:32 EST" duration-ms="160092">
+    <test started-at="2026-01-28T17:41:53 EST" name="Default test" finished-at="2026-01-28T17:42:27 EST" duration-ms="33767">
       <class name="runners.MainRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:06:52 EST" name="setUpClass" finished-at="2026-01-28T11:06:54 EST" duration-ms="2265" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T17:41:53 EST" name="setUpClass" finished-at="2026-01-28T17:41:55 EST" duration-ms="1671" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@53d87c9]]>
+                <![CDATA[org.testng.TestRunner@2119b989]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:06:54 EST" name="setBrowser" finished-at="2026-01-28T11:06:54 EST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T17:41:55 EST" name="setBrowser" finished-at="2026-01-28T17:41:55 EST" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -30,561 +30,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:06:54 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:05 EST" duration-ms="10392" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T17:41:55 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T17:42:08 EST" duration-ms="12509" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user is able to navigate to Stack page"]]>
+                <![CDATA["Verify user is able to see output for valid python code for Arrays in Python page"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
+                <![CDATA["Navigation and interaction in dsAlgo Portal - Array Section"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:05 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:10 EST" duration-ms="5545" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T17:42:08 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T17:42:14 EST" duration-ms="6809" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user is able to navigate to Stack pages"]]>
+                <![CDATA["Verify user is able to see output for valid python code for Arrays in Python page"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
+                <![CDATA["Navigation and interaction in dsAlgo Portal - Array Section"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:10 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:16 EST" duration-ms="5464" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T17:42:14 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T17:42:21 EST" duration-ms="6745" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user is able to navigate to Stack pages"]]>
+                <![CDATA["Verify user is able to see output for valid python code for Arrays in Python page"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
+                <![CDATA["Navigation and interaction in dsAlgo Portal - Array Section"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:16 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:21 EST" duration-ms="4882" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user is able to navigate to Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:21 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:25 EST" duration-ms="4576" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user is able to navigate to Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[normalize-space()='Practice Questions']"}
-  (Session info: chrome=143.0.7499.193)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d0e7e2602a7be8752d3a8934ee5a5ec, findElement {value=//a[normalize-space()='Practice Questions'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54703}, goog:processID: 35296, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54703/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d0e7e2602a7be8752d3a8934ee5a5ec]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[normalize-space()='Practice Questions']"}
-  (Session info: chrome=143.0.7499.193)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d0e7e2602a7be8752d3a8934ee5a5ec, findElement {value=//a[normalize-space()='Practice Questions'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.193, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54703}, goog:processID: 35296, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54703/devtoo..., se:cdpVersion: 143.0.7499.193, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d0e7e2602a7be8752d3a8934ee5a5ec
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy46.click(Unknown Source)
-at pageObjects.StackPage.clickPracticeQuestions(StackPage.java:72)
-at stepDefinitions.StackSteps.the_user_clicks_in_stack_link_page(StackSteps.java:58)
-at ✽.The user clicks "Practice Questions" in Stack link page(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:14)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:25 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:32 EST" duration-ms="6182" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user is able to navigate to try Editor page for Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at stepDefinitions.ArraysList.the_user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test(ArraysList.java:90)
-at ✽.The user should be redirected to a page having a "tryEditor"(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:27)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:32 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:37 EST" duration-ms="5795" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user is able to navigate to try Editor page for Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at stepDefinitions.ArraysList.the_user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test(ArraysList.java:90)
-at ✽.The user should be redirected to a page having a "tryEditor"(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:27)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:37 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:43 EST" duration-ms="5647" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user is able to navigate to try Editor page for Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at stepDefinitions.ArraysList.the_user_should_be_redirected_to_a_page_having_a_try_editor_with_a_run_button_to_test(ArraysList.java:90)
-at ✽.The user should be redirected to a page having a "tryEditor"(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:27)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:43 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:48 EST" duration-ms="5415" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify the presence of Run button in try editor for Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:48 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:07:54 EST" duration-ms="5293" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify the presence of Run button in try editor for Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:07:54 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:08:00 EST" duration-ms="6012" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify the presence of Run button in try editor for Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:08:00 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:08:09 EST" duration-ms="9662" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify error message for empty & invalid python code in Stack try editor"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected an alert message for invalid execution, but no alert was shown expected object to not be null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected an alert message for invalid execution, but no alert was shown expected object to not be null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.assertNotNull(Assert.java:1496)
-at stepDefinitions.ArraysList.the_user_should_see_an_error_message_in_alert_window(ArraysList.java:103)
-at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:50)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:08:09 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:08:16 EST" duration-ms="6452" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify error message for empty & invalid python code in Stack try editor"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected an alert message for invalid execution, but no alert was shown expected object to not be null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected an alert message for invalid execution, but no alert was shown expected object to not be null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.assertNotNull(Assert.java:1496)
-at stepDefinitions.ArraysList.the_user_should_see_an_error_message_in_alert_window(ArraysList.java:103)
-at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:50)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:08:16 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:08:25 EST" duration-ms="8860" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify error message for empty & invalid python code in Stack try editor"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected an alert message for invalid execution, but no alert was shown expected object to not be null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected an alert message for invalid execution, but no alert was shown expected object to not be null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.assertNotNull(Assert.java:1496)
-at stepDefinitions.ArraysList.the_user_should_see_an_error_message_in_alert_window(ArraysList.java:103)
-at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:50)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:08:25 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:08:32 EST" duration-ms="6894" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify error message for empty & invalid python code in Stack try editor"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected an alert message for invalid execution, but no alert was shown expected object to not be null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected an alert message for invalid execution, but no alert was shown expected object to not be null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.assertNotNull(Assert.java:1496)
-at stepDefinitions.ArraysList.the_user_should_see_an_error_message_in_alert_window(ArraysList.java:103)
-at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:50)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:08:32 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:08:42 EST" duration-ms="10174" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify error message for empty & invalid python code in Stack try editor"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected an alert message for invalid execution, but no alert was shown expected object to not be null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected an alert message for invalid execution, but no alert was shown expected object to not be null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.assertNotNull(Assert.java:1496)
-at stepDefinitions.ArraysList.the_user_should_see_an_error_message_in_alert_window(ArraysList.java:103)
-at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:50)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:08:42 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:08:48 EST" duration-ms="6267" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify error message for empty & invalid python code in Stack try editor"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected an alert message for invalid execution, but no alert was shown expected object to not be null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected an alert message for invalid execution, but no alert was shown expected object to not be null
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.assertNotNull(Assert.java:1496)
-at stepDefinitions.ArraysList.the_user_should_see_an_error_message_in_alert_window(ArraysList.java:103)
-at ✽.The user should see an error message in alert window(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:50)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:08:48 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:08:55 EST" duration-ms="7000" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user is able to see output for valid python code in Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:08:55 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:09:01 EST" duration-ms="6110" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user is able to see output for valid python code in Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:09:01 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:09:07 EST" duration-ms="5551" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user is able to see output for valid python code in Stack pages"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:09:07 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:09:11 EST" duration-ms="4381" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify Stack page loads within acceptable time"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:09:11 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:09:16 EST" duration-ms="5007" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify key stack elements are visible"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:09:16 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:09:21 EST" duration-ms="4356" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify Stack page uses HTTPS"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:09:21 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-28T11:09:25 EST" duration-ms="4538" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Refresh Stack page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Navigation and interaction in dsAlgo Portal - Stack Section"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T11:09:25 EST" name="tearDownClass" finished-at="2026-01-28T11:09:32 EST" duration-ms="7070" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-01-28T17:42:21 EST" name="tearDownClass" finished-at="2026-01-28T17:42:27 EST" duration-ms="5813" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

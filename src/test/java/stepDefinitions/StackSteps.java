@@ -2,17 +2,18 @@ package stepDefinitions;
 
 import static driver.DriverFactory.getDriver;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
+import utilities.ExcelSheetHandling;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-
 import driver.DriverFactory;
 import io.cucumber.java.en.*;
 import pageObjects.StackPage;
-import utilities.DataDriven;
+
+
 
 public class StackSteps {
 
@@ -85,12 +86,14 @@ public void the_user_clicks_the_get_started_button_in_stack_panel() {
             }
 
         } else {
-            DataDriven d = new DataDriven();
-            ArrayList<String> data = d.getData(Code);
-            for (int i = 1; i < data.size(); i++) 
-            {
-                stackPage.writeAndRunStackCode(data.get(i));
-            }
+        	ExcelSheetHandling excel =
+			        new ExcelSheetHandling("src/test/resources/ExcelSheet/DsAlgoTestData.xlsx");
+
+			List<String> data = excel.getCodeByColumn(Code);
+			for (int i = 0; i < data.size(); i++) {
+			    String line = data.get(i);
+			    stackPage.writeAndRunStackCode(line);
+			}
         }
     }
 

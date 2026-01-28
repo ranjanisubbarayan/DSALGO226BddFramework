@@ -60,7 +60,7 @@ Feature: Navigation and interaction in dsAlgo Portal - Array Section
      |Basic Operations in Lists| hi   | invalidCode  |
       |Applications of Array|      | invalidCode  |
      |Applications of Array| hi   | invalidCode  |
-
+     
     Scenario Outline: Verify user is able to see output for valid python code for Arrays in Python page
      When  The user clicks "<ArrayLinks>" in link page
      When The user clicks Try Here button after reaching to arrays in python

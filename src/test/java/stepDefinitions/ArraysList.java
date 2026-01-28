@@ -3,7 +3,7 @@ package stepDefinitions;
 import static driver.DriverFactory.getDriver;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import io.cucumber.java.en.Given;
@@ -12,9 +12,10 @@ import io.cucumber.java.en.When;
 import pageObjects.ArrayListPage;
 import pageObjects.LaunchPage;
 import utilities.ElementUtils;
-import utilities.DataDriven;
+import utilities.ExcelSheetHandling;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 
 public class ArraysList {
 
@@ -117,11 +118,16 @@ public class ArraysList {
             }
         }
 		else{
-			DataDriven d = new utilities.DataDriven();
-			ArrayList<String> data = d.getData(code);
-			for (int i = 1; i < data.size(); i++) {
-			arraylistpage.writeAndRunArrayListCode(data.get(i).toString());
+			
+			ExcelSheetHandling excel =
+			        new ExcelSheetHandling("src/test/resources/ExcelSheet/DsAlgoTestData.xlsx");
+
+			List<String> data = excel.getCodeByColumn(code);
+			for (int i = 0; i < data.size(); i++) {
+			    String line = data.get(i);
+			    arraylistpage.writeAndRunArrayListCode(line);
 			}
+
 		}
     }
 
@@ -140,7 +146,6 @@ public class ArraysList {
 		long maxTime = Long.parseLong(seconds);
 
         long startTime = System.currentTimeMillis();
-       // driver.get("https://dsportalapp.herokuapp.com/array/");
         arraylistpage.waitForArrayPage();
         long loadTime = (System.currentTimeMillis() - startTime) / 1000;
 

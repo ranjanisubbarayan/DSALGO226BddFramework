@@ -3,16 +3,15 @@ package stepDefinitions;
 import static driver.DriverFactory.getDriver;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 import org.testng.Assert;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.LinkedListPage;
-import utilities.DataDriven;
+import utilities.ExcelSheetHandling;
 
 public class LinkedList {
 	
@@ -86,13 +85,17 @@ public class LinkedList {
 	             System.out.println("No alert detected after clicking Run");
 	         }
 
-	     } else {
-	    	 DataDriven d = new utilities.DataDriven();
-	         ArrayList<String> data = d.getData(code);
-	         for (int i = 1; i < data.size(); i++) 
-	         {
-	             linkedlistPage.writeAndRunLinkedListCode(data.get(i));
-	         }
+	     }  {
+	        	ExcelSheetHandling excel =
+				        new ExcelSheetHandling("src/test/resources/ExcelSheet/DsAlgoTestData.xlsx");
+
+				List<String> data = excel.getCodeByColumn(code);
+				for (int i = 0; i < data.size(); i++) {
+				    String line = data.get(i);
+				    linkedlistPage.writeAndRunLinkedListCode(line);
+				}
+	    
+	    
 	     }
 	    }
 

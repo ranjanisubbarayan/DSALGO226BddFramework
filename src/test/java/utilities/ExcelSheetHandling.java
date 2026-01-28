@@ -2,7 +2,6 @@ package utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -85,4 +84,66 @@ public class ExcelSheetHandling {
         }
         return value;
     }
+    
+    public List<String> getCodeLines(String sheetName, String testCaseName) {
+    	 List<String> codeLines = new ArrayList<>();
+    	 List<Map<String, String>> allRows = getSheetData(sheetName);
+    	 for (Map<String, String> row : allRows) {
+    		 String testcaseValue = row.get("testcase");
+    		 if (testCaseName.equalsIgnoreCase(testcaseValue)) {
+    			 for (Map.Entry<String, String> cell : row.entrySet()) {
+
+    	                String columnName = cell.getKey(); 
+    	                String cellValue  = cell.getValue();
+    	                if (!columnName.equalsIgnoreCase("testcase") && !cellValue.isBlank()) {
+    	                    codeLines.add(cellValue);
+    	                }
+    	            }
+    	        }
+    	    }
+    	 return codeLines;
+    }
+    
+    @SuppressWarnings("resource")
+	public List<String> getCodeByColumn(String columnName) throws IOException {
+
+        List<String> codeLines = new ArrayList<>();
+
+        FileInputStream fis = new FileInputStream(
+            "src/test/resources/ExcelSheet/DsAlgoTestData.xlsx"
+        );
+
+        Workbook workbook = new XSSFWorkbook(fis);
+        Sheet sheet = workbook.getSheet("testdata");
+
+ 
+        Row headerRow = sheet.getRow(0);
+        int columnIndex = -1;
+
+        for (Cell cell : headerRow) {
+            if (cell.getStringCellValue().equalsIgnoreCase(columnName)) {
+                columnIndex = cell.getColumnIndex();
+                break;
+            }
+        }
+
+        if (columnIndex == -1) {
+            throw new RuntimeException("Column not found: " + columnName);
+        }
+
+        for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+            Row row = sheet.getRow(i);
+            Cell cell = row.getCell(columnIndex);
+
+            if (cell != null && cell.getCellType() == CellType.STRING) {
+                codeLines.add(cell.getStringCellValue());
+            }
+        }
+
+      workbook.close();
+      fis.close();
+
+        return codeLines;
+    }
+
 }
