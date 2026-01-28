@@ -1,221 +1,163 @@
-package stepDefinitions; 
+package stepDefinitions;
+
 import static driver.DriverFactory.getDriver;
-
-import java.util.List;
-import java.util.Map;
-
+import java.io.IOException;
+import java.util.ArrayList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver; 
-import io.cucumber.java.en.*;
-import pageObjects.LaunchPage;
-import pageObjects.LoginPage;
-import pageObjects.StackPage;
-import pageObjects.homePage;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class StackSteps { 
-	
-	private static final Logger logger = LogManager.getLogger(StackSteps.class);
+import driver.DriverFactory;
+import io.cucumber.java.en.*;
+import pageObjects.StackPage;
+import utilities.DataDriven;
+
+public class StackSteps {
+
+    private static final Logger logger = LogManager.getLogger(StackSteps.class);
+
     private WebDriver driver;
-    LaunchPage launchPage;
-    private StackPage stackpage;
-     LoginPage loginpage;
-     homePage homepage;
-   
+    private StackPage stackPage;
 
     public StackSteps() {
-    	this.driver = getDriver();
-        this.launchPage = new LaunchPage(driver);
-        this.stackpage = new StackPage(driver);  
-    }	
+        this.driver = getDriver();
+        this.stackPage = new StackPage(driver);
+    }
 
-    @Given("The user logged into Portal with username {string} and password {string}")
-	public void the_user_logged_into_Portal_with_username_and_password(String username, String password) {
-
-	    homePage homepage = launchPage.clickGetStarted();
-
-	    if (!homepage.isUserLoggedIn()) {
-	        homepage.clickSignInLinkIfPresent();
-	        LoginPage loginPage = new LoginPage(driver);
-            loginPage.enterUsername(username);
-            loginPage.enterPassword(password);
-            loginPage.clickLoginButton();
-
-	   	    }
-		logger.info("successfully logged into the dsalgo application");
-	}
-	
-	@Given("The user is in Home page after Sign in")
-	public void the_user_is_in_home_page_after_sign_in() {
-		 launchPage.clickGetStarted();
-		 logger.info("Successfully logged into the HomePage");
-	    }
-
-@When("The user clicks the Getting Started button in Stack Panel")
-public void the_user_clicks_the_getting_started_button_in_stack_panel() {
-	stackpage.clickStackGetStarted();
+@When("The user clicks the Get Started button in Stack Panel")
+public void the_user_clicks_the_get_started_button_in_stack_panel() {
+	stackPage.clickStackGetStarted();
+    logger.info("Clicked Stack Get Started in the stack page");
 }
-	@When("The user clicks the Getting Started button in Stack Panel OR The user select Stack item from the drop down menu") 
-	public void the_user_clicks_getting_started_button_or_stack_dropdown() {
-	
-		stackpage.clickStackGetStarted();
-		} 
+    
 
-	@Given("The user is in the Stack page after Sign in")
-	public void the_user_is_in_the_stack_page_after_sign_in() {
-		stackpage.clickStackGetStarted(); 
-		Assert.assertTrue(stackpage.isStackPageDisplayed(), "Stack page is displayed!");
-			   }
-	@Then("The user be directed to Stack Data Structure Page") 
-	public void the_user_be_directed_to_stack_data_structure_page() { 	
-		Assert.assertTrue(stackpage.isStackPageDisplayed(), "Stack page is displayed!");		
-		} 
-	
-	@When("The user clicks Operations in Stack button") 
-	public void the_user_clicks_operations_in_stack_button() { 
-		Assert.assertTrue(stackpage.isStackPageDisplayed(), "Stack page is displayed!");
-		stackpage.clickOperationsInStack();
-		} 
-	
-	@Given("user navigates to Operations in Stack page")
-	public void user_navigates_to_operations_in_stack_page() {
-		stackpage.clickStackGetStarted();
-	    stackpage.clickOperationsInStack();
-	    Assert.assertTrue(stackpage.isOperationInStackDisplayed(), "Operations in Stack section  displayed!");
-	}
+    @Then("The user should be directed to Stack Page")
+    public void the_user_should_be_directed_to_stack_page() {
+        Assert.assertTrue(stackPage.isStackPageDisplayed(), "User is not on Stack Page");
+    }
 
-	@Then("The user should be redirected to a page having an try Editor with a Run button to test")
-	public void the_user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test() throws InterruptedException {	  
-		Assert.assertTrue(stackpage.isTryEditorDisplayed(), "Try Editor is displayed!");
-	}
-	
-	@Then("The user should be redirected to Operations in Stack page") 
-	public void the_user_should_be_redirected_to_operations_in_stack_page() { 
-		
-		}
-	
-	@When("The user clicks Implementation button") 
-		public void the_user_clicks_implementation_button() { 
-			stackpage.clickImplementStackLink(); 
-			}
-	
-	@Given("The user is on the Implementation page")
-	public void the_user_is_on_the_implementation_page() {
-	    stackpage.clickStackGetStarted();
-	    stackpage.clickImplementStackLink();
-	    Assert.assertTrue(stackpage.isImplementInStackDisplayed(), "Implementation page is  displayed!");
-	}
+    @When("The user clicks {string} in Stack link page")
+    public void the_user_clicks_in_stack_link_page(String StackLinks) {
 
-	@Given("The user is on the Applications page")
-	public void the_user_is_on_the_applications_page() {
-	    stackpage.clickStackGetStarted();       
-	    stackpage.clickApplicationStackLink();
-	    Assert.assertTrue(stackpage.isApplicationInStackDisplayed(), "Applications page is  displayed!");
-	}		
-		@Then("The user should be redirected to Implementation page") 
-		public void the_user_should_be_redirected_to_implementation_page() { 			
-			Assert.assertTrue(stackpage.isImplementInStackDisplayed(), "Implementation page is displayed!");
-			} 
-		
-		@When("The user clicks Applications button") 
-		public void the_user_clicks_applications_button() { 
-			stackpage.clickApplicationStackLink(); 			
-			} 
-		
-		@When("The user clicks Practice Questions button")
-		public void the_user_clicks_practice_questions_button() {
-			stackpage.clickOperationsInStack();
-		     stackpage.clickPracticeQuestions();
-		}		
-		@Then("The user should be redirected to Applications page") 
-		public void the_user_should_be_redirected_to_applications_page() { 						
-			}
-			
-			@Then("The user should be redirected to Practice page") 
-			public void the_user_should_be_redirected_to_practice_page() { 
-				 logger.info("Successfully redirected to Practice page");
-				}			
-			@When("The user clicks Try Here button")
-			public void the_user_clicks_try_here_button() throws InterruptedException {
-				stackpage.clickTryhereofoperation(); 
-				} 
-			
-			@Given("The user is in the tryEditor page")
-			public void the_user_is_in_the_try_editor_page() throws InterruptedException { 
-				stackpage.clickStackGetStarted();
-			    stackpage.clickOperationsInStack();
-			    stackpage.clickTryhereofoperation();
-			    Assert.assertTrue(stackpage.isTryEditorDisplayed(), "Try Editor page not displayed!");
-		    }
+        switch (StackLinks) {
+            case "Operations in Stack":
+                stackPage.clickOperationsInStack();
+                break;
+
+            case "Implementation":
+                stackPage.clickImplementStackLink();
+                break;
+
+            case "Applications":
+                stackPage.clickApplicationStackLink();
+                break;
+                
+            case "Practice Questions":
+                stackPage.clickPracticeQuestions();
+                break;
+
+            default:
+                throw new IllegalArgumentException("Invalid Stack link: " + StackLinks);
+        }
+        logger.info("User Clicked Stack link in the stack page: " + StackLinks);
+    }
 
 
-			
-			@When("The user clicks Try Here button in Operations in Stack page") 
-			public void the_user_clicks_try_here_button_in_operations_in_stack_page() throws InterruptedException { 
-				stackpage.clickTryhereofoperation(); 
-				}
-			
-			@When("The user clicks Try Here button in Implementation page") 
-			public void the_user_clicks_try_here_button_in_implementation_page() throws InterruptedException { 
-				  Assert.assertTrue(stackpage.isApplicationInStackDisplayed(), "Applications page is not displayed!");
-				stackpage.clickTryHere(); 
-				}			
-			
-			@When("The user clicks Try Here button in Applications page")
-			public void the_user_clicks_try_here_button_in_applications_page() throws InterruptedException { 
-				  Assert.assertTrue(stackpage.isApplicationInStackDisplayed(), "Applications page is not displayed!");
-				stackpage.clickTryHere(); 
-				}
+    @When("The user clicks Try Here button after reaching Stack page")
+    public void the_user_clicks_try_here_button_after_reaching_stack_page() {
+        stackPage.clickTryHere();
+    }
 
-			@When("The user write the valid {string} in Editor and click the Run Button")
-			public void the_user_write_the_valid_in_editor_and_click_the_run_button(String code, io.cucumber.datatable.DataTable dataTable) {
-				
-				List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
-				stackpage.enterCodeInEditor(data.get(0).get(code));
-				stackpage.enterCodeInEditor(data.get(1).get(code));				
-			}	
-					
-			@When("The user write the invalid {string} in Editor and click the Run Button")
-			public void the_user_write_the_invalid_print_hello_in_editor_and_click_the_run_button(String code, io.cucumber.datatable.DataTable dataTable) {
-				List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
-				stackpage.enterCodeInEditor(data.get(0).get(code));
-			    stackpage.enterCodeInEditor(data.get(1).get(code));			    
-			}
-			
-			@When("The user clicks the Run Button without entering the code in the Editor")
-			public void the_user_clicks_the_run_button_without_entering_the_code_in_the_editor() {
-				stackpage.clickRunButton();
-			}
-			
-			@Then("The user should able to see output in the console") 
-			public void the_user_should_able_to_see_output_in_the_console() {
-				stackpage.seeOutput();
-			}
-			
-			@Then("The user should able to see an error message in alert window")
-			public void the_user_should_able_to_see_an_error_message_in_alert_window() { 				
-				stackpage.errorMessageinAlertWindow();				
-			}
-			
-			@Given("I read stack Tryeditor test data for {string}")
-			public void i_read_stack_tryeditor_test_data_for(String testId) {				
-				 stackpage.readDataFromExcel(testId);
-			}
-			
-			@When("I enter the phythonTryEditor details from excel")
-			public void i_enter_the_try_editor_details_from_excel() throws InterruptedException {
-				stackpage.clickStackGetStarted();
-			    stackpage.clickOperationsInStack();
-			    stackpage.clickTryhereofoperation();
-			    Assert.assertTrue(stackpage.isTryEditorDisplayed(), "Try Editor page not displayed!");
-				stackpage.getDataFromExcel();
-			}
+    @When("The user writes {string} for {string} in Editor and clicks the Run button in stack page")
+    public void the_user_writes_for_in_editor_and_clicks_the_run_button_in_stack_page(String Code, String scenarioType)throws IOException {
 
-			@Then("I should see output")
-			public void i_should_see_output() {				
-				stackpage.seeOutput();
-			}
+        if ("invalidCode".equalsIgnoreCase(scenarioType)) {
 
+            stackPage.writeAndRunStackCode(Code);
+            String alertMsg = stackPage.waitForAlertIfPresent();
+
+            if (alertMsg != null) {
+                logger.info("Alert detected: " + alertMsg);
+            } else {
+                logger.warn("⚠ No alert detected after clicking Run");
+            }
+
+        } else {
+            DataDriven d = new DataDriven();
+            ArrayList<String> data = d.getData(Code);
+            for (int i = 1; i < data.size(); i++) 
+            {
+                stackPage.writeAndRunStackCode(data.get(i));
+            }
+        }
+    }
+
+    @Then("The user should see output in the console for Stack Page")
+    public void the_user_should_see_output_in_console() {
+        String output = stackPage.getOutput();
+        Assert.assertNotNull(output, "Expected output but got null");
+        logger.info("user should see output in the console for Stackpage Page: " + output);
+    }
+    
+    @Then("Stack page should load within {string} seconds")
+    public void stack_page_should_load_within_seconds(String seconds) {
+        long maxTime = Long.parseLong(seconds) * 1000;
+
+        long loadTime = measureStackPageLoadTime();
+
+        Assert.assertTrue(loadTime <= maxTime,
+                "Stack page load time exceeded limit: " + loadTime + " seconds");
+    }
+
+    private long measureStackPageLoadTime() {
+        long start = System.currentTimeMillis();
+        stackPage.isStackPageDisplayed();
+        long end = System.currentTimeMillis();
+        return end - start;
+    }
+
+    @Then("all main stack operations buttons should be visible")
+    public void all_main_stack_operations_buttons_should_be_visible() {
+    	WebDriver driver = DriverFactory.getDriver();
+
+        Assert.assertTrue(
+            driver.findElement(By.xpath("//a[normalize-space()='Operations in Stack']")).isDisplayed(),
+            "Operations in Stack not visible");
+
+        Assert.assertTrue(
+            driver.findElement(By.xpath("//a[normalize-space()='Implementation']")).isDisplayed(),
+            "Implementation In not visible");
+        Assert.assertTrue(
+                driver.findElement(By.xpath("//a[normalize-space()='Applications']")).isDisplayed(),
+                "Application In not visible");
+        
+    }
+
+   
+    @Then("Stack page should be loaded using HTTPS")
+    public void stack_page_should_be_loaded_using_https() {
+    	String currentUrl = driver.getCurrentUrl();
+	    Assert.assertTrue(
+	            currentUrl.startsWith("https"),
+	            "Stack page is NOT loaded using HTTPS. URL: " + currentUrl
+	    );
+    }
+
+  
+    @When("user refreshes the Stack page")
+    public void user_refreshes_the_stack_page() {
+        driver.navigate().refresh();
+    }
+
+    @Then("Stack page should load without errors")
+    public void stack_page_should_load_without_errors() {
+    	Assert.assertNotNull(
+	            driver.getTitle(),
+	            "Stack page title is NULL after refresh"
+	    );
+
+	    System.out.println("Stack Page Title after refresh: " + driver.getTitle());
+    }
 }

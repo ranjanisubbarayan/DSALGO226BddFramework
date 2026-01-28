@@ -1,136 +1,101 @@
-@Stack @signIN 
-Feature: Stack Module Tests 
+@StackList @signIn
+Feature: Navigation and interaction in dsAlgo Portal - Stack Section
 
-Background:
-     Given The user logged into Portal with username "TestNinja" and password "C5Mha6FkdSAVEN@"
-  
-Scenario: Verify that user is able to navigate to Stack data structure page 
-When The user clicks the Getting Started button in Stack Panel OR The user select Stack item from the drop down menu 
-Then The user be directed to Stack Data Structure Page 
+  Rule: Below scenarios cover Stack module functionality
 
-Scenario: Navigate to Operations in Stack
-When The user clicks the Getting Started button in Stack Panel
-When The user clicks Operations in Stack button
-Then The user should be redirected to Operations in Stack page
+  Background:
+    Given The user is in the Home page after Sign in
+    When The user clicks the Get Started button in Stack Panel
 
-Scenario: Verify that user is able to navigate to "try Editor" page for "Operations in Stack" page 
-Given  user navigates to Operations in Stack page 
-When The user clicks Try Here button in Operations in Stack page 
-Then The user should be redirected to a page having an try Editor with a Run button to test 
+  Scenario: Verify user is able to navigate to Stack page
+    Then The user should be directed to Stack Page
 
-Scenario: Verify that user receives error when click on Run button without entering code for "Operations in Stack" page 
-Given The user is in the tryEditor page 
-When The user clicks the Run Button without entering the code in the Editor 
-Then The user should able to see an error message in alert window
+  Scenario Outline: Verify user is able to navigate to Stack pages
+    When The user clicks "<StackLinks>" in Stack link page
+    Then The user should be redirected to "<StackLinks>" page
 
-Scenario: Verify that user receives error for invalid input for "Operations in Stack" page 
-Given The user is in the tryEditor page 
-When The user write the invalid "code" in Editor and click the Run Button 
-| code            |
-| print hello     |
-| print 5+8'  |
-Then The user should able to see an error message in alert window 
+    Examples:
+      |StackLinks|
+      |Operations in Stack|
+      |Implementation|
+      |Applications|
+      |Practice Questions|
+
+  Scenario Outline: Verify user is able to navigate to try Editor page for Stack pages
+    When The user clicks "<StackLinks>" in Stack link page
+    When  The user clicks Try Here button after reaching Stack page
+    Then The user should be redirected to a page having a "tryEditor"
+
+    Examples:
+      |StackLinks|
+      |Operations in Stack|
+      |Implementation|
+      |Applications|
+
+  Scenario Outline: Verify the presence of Run button in try editor for Stack pages
+    When The user clicks "<StackLinks>" in Stack link page
+    And The user clicks Try Here button after reaching Stack page
+    Then The user should see a Run button in try editor
+
+    Examples:
+      |StackLinks|
+      |Operations in Stack|
+      |Implementation|
+      |Applications|
+
+  Scenario Outline: Verify error message for empty & invalid python code in Stack try editor
+    When The user clicks "<StackLinks>" in Stack link page
+    And The user clicks Try Here button after reaching Stack page
+    And The user writes "<Code>" for "<scenarioType>" in Editor and clicks the Run button in stack page
+    Then The user should see an error message in alert window
+
+    Examples:
+      |StackLinks|Code|scenarioType|
+      |Operations in Stack|      | invalidCode |
+      |Operations in Stack| hi   | invalidCode |
+      |Implementation|      | invalidCode |
+      |Implementation| hi   | invalidCode |
+      |Applications|      | invalidCode |
+      |Applications| hi   | invalidCode |
+
+  Scenario Outline: Verify user is able to see output for valid python code in Stack pages
+    When The user clicks "<StackLinks>" in Stack link page
+    And The user clicks Try Here button after reaching Stack page
+    And The user writes "<dataDrivenColumnHeader>" for "<scenarioType>" in Editor and clicks the Run button in stack page
+    Then The user should see output in the console for Stack Page
+
+    Examples:
+      |StackLinks|dataDrivenColumnHeader|scenarioType|
+      |Operations in Stack|StackList|validCode|
+      |Implementation|StackList|validCode|
+      |Applications|StackList|validCode|
       
-Scenario: Verify that user is able to see output for valid code for "Operations in Stack" page 
-Given The user is in the tryEditor page 
-When The user write the valid "code" in Editor and click the Run Button 
-| code           |
-| print("hello") |
-| print(40+60)   |
-Then The user should able to see output in the console 
-
-Scenario: Verify that user is able to navigate to "Practice Questions" Page for "Implementation" page
-Given The user is logged into DS Algo Portal
-Given The user is on the Implementation page
-When The user clicks Practice Questions button
-Then The user should be redirected to Practice page
-
-
- 
- Scenario: Verify that user is able to navigate to "Implementation" page 
- Given The user is in the Stack page after Sign in 
- When The user clicks Implementation button 
- Then The user should be redirected to Implementation page 
- 
- Scenario: Verify that user is able to navigate to "try Editor" page for "Implementation" page 
- Given The user is on the Implementation page 
- When The user clicks Try Here button in Implementation page  
- Then The user should be redirected to a page having an try Editor with a Run button to test 
- 
- Scenario: Verify that user receives error when click on Run button without entering code for "Implementation" page
- Given The user is in the tryEditor page 
- When The user clicks the Run Button without entering the code in the Editor 
- Then The user should able to see an error message in alert window 
- 
- Scenario: Verify that user receives error for invalid input for "Implementation" page 
- Given The user is in the tryEditor page 
- When The user write the invalid "code" in Editor and click the Run Button 
-| code            |
-| print hello     |
-| print 5+8'  |
- Then The user should able to see an error message in alert window 
- 
-
-  Scenario: Verify that user is able to see output for valid code for "Implementation" page 
-  Given The user is in the tryEditor page 
-  When The user write the valid "code" in Editor and click the Run Button 
-| code           |
-| print("hello") |
-| print(10+20)   |
-Then The user should able to see output in the console 
-
+      
+      
+      
+        #----Array Module Non-Functional Testin---
+  
+   Rule: Below scenario covers Stack module Non functional feature      
    
-  Scenario: Verify that user is able to navigate to "Practice Questions" Page for "Implementation" page 
-  Given The user is in the Stack page after Sign in 
-  When The user clicks Practice Questions button 
-  Then The user should be redirected to Practice page 
-  
-  Scenario: Verify that user is able to navigate to "Applications" page 
-  Given The user is in the Stack page after Sign in 
-  When The user clicks Applications button 
-  Then The user should be redirected to Applications page 
-  
-  Scenario: Verify that user is able to navigate to "try Editor" page for "Applications" page
-  Given The user is on the Applications page 
-  When The user clicks Try Here button in Applications page 
-  Then The user should be redirected to a page having an try Editor with a Run button to test 
-  
-  Scenario: Verify that user receives error when click on Run button without entering code for "Applications" page 
-  Given The user is in the tryEditor page 
-  When The user clicks the Run Button without entering the code in the Editor 
-  Then The user should able to see an error message in alert window 
-  
-  Scenario: Verify that user receives error when click on Run button entering invalid code for "Applications" page 
-  Given The user is in the tryEditor page 
-  When The user write the invalid "code" in Editor and click the Run Button
-  | code            |
-  | print hello     |
-  | print 5+18' |
+   Background:
+    Given The user is in the Home page after Sign in
+    When The user clicks the Get Started button in Stack Panel
+        
+  @performance @nonfunctional
+  Scenario: Verify Stack page loads within acceptable time
+    Then Stack page should load within "5" seconds
 
-  Then The user should able to see an error message in alert window 
-  
-  Scenario: Verify that user is able to see output for valid code for "Applications" page 
-  Given The user is in the tryEditor page 
-  When The user write the valid "code" in Editor and click the Run Button 
-| code           |
-| print("hello") |
-| print(1250+20)   |
-Then The user should able to see output in the console 
+  @usability @nonfunctional
+  Scenario: Verify key stack elements are visible
+    Then all main stack operations buttons should be visible
 
+  @security @nonfunctional
+  Scenario: Verify Stack page uses HTTPS
+    Then Stack page should be loaded using HTTPS
 
-  Scenario: Verify that user is able to navigate to "Practice Questions" Page for "Applications" page 
-  Given The user is in the Stack page after Sign in 
-  When The user clicks Practice Questions button 
-  Then The user should be redirected to Practice page
-  
-  
-  Scenario Outline: Stack module tryEditor test data using Excel data
-    Given I read stack Tryeditor test data for "<testId>"
-    When I enter the phythonTryEditor details from excel
-    Then I should see output
+  @reliability @nonfunctional
+  Scenario: Refresh Stack page
+    When user refreshes the Stack page
+    Then Stack page should load without errors
+	
 
-  Examples:
-    | testId | 
-    | TC001  | 
-    | TC002  |
-  

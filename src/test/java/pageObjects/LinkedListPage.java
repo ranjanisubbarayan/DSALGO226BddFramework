@@ -30,7 +30,6 @@ public class LinkedListPage {
 	@FindBy (xpath="//div/h4[text()='Linked List']")
 	WebElement verifyLinkedListPage;
 	
-	
 	@FindBy (xpath="//a[normalize-space()='Introduction']")
 	WebElement linkIntroduction;
 	
@@ -51,8 +50,7 @@ public class LinkedListPage {
 	
 	@FindBy (xpath="//a[normalize-space()='Deletion']")
     WebElement lnkDeletioninkedlist;
-		
-	
+			
 	@FindBy (xpath="//a[@href='/tryEditor']")
 	WebElement btnTryEditor;
 	

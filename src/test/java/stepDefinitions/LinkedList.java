@@ -17,19 +17,14 @@ import utilities.DataDriven;
 public class LinkedList {
 	
 	private static final Logger logger = LogManager.getLogger(GraphList.class);
-	
 	private WebDriver driver;
-	
 	private LinkedListPage linkedlistPage;
-
+	
 	public LinkedList() {
-	  
 	    this.driver = getDriver();
-	 
 	    this.linkedlistPage = new LinkedListPage(driver);
 	}
 
-	
 	@When("The user clicks the Get Started button in Linkedlist")
 	public void the_user_clicks_the_get_started_button() {
 		linkedlistPage.getstartedLinkedList();
@@ -107,6 +102,6 @@ public class LinkedList {
 		
     	String output = linkedlistPage.getOutput();
 		 Assert.assertNotNull(output, "Expected output in the console, but it was null");
-		logger.info("user should see output in the console for LinkedList Page"+linkedlistPage.getOutput());
+		logger.info("user should see output in the console for LinkedList Page"+output);
 	}
 }
