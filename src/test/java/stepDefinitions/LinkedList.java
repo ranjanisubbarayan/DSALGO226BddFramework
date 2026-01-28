@@ -30,7 +30,7 @@ public class LinkedList {
 	}
 
 	
-	@When("The user clicks the Get Started button")
+	@When("The user clicks the Get Started button in Linkedlist")
 	public void the_user_clicks_the_get_started_button() {
 		linkedlistPage.getstartedLinkedList();
 		
@@ -45,24 +45,68 @@ public class LinkedList {
         );
 	}
 	
-	@When("the user clicks the Introduction link")
-	public void the_user_clicks_the_introduction_link() {
-		linkedlistPage.clickIntroductionLink();
+	@When("The user clicks {string} in LinkedList page")
+	public void the_user_clicks_link_in_linkedlist_page(String LinkedLinks) {
+
+	    if (LinkedLinks.equalsIgnoreCase("Introduction")) {
+	        linkedlistPage.clickIntroductionLink();
+
+	    } else if (LinkedLinks.equalsIgnoreCase("Creating Linked List")) {
+	        linkedlistPage.clickCreatingLink();
+
+	    } else if (LinkedLinks.equalsIgnoreCase("Types of Linked List")) {
+	        linkedlistPage.clicktypesLink();
+
+	    } else if (LinkedLinks.equalsIgnoreCase("Implement Linked List in Python")) {
+	        linkedlistPage.clickImplementingLink();
+
+	    } else if (LinkedLinks.equalsIgnoreCase("Traversal")) {
+	        linkedlistPage.clickTraversalLink();
+
+	    } else if (LinkedLinks.equalsIgnoreCase("Insertion")) {
+	        linkedlistPage.clickInsertionLink();
+
+	    } else if (LinkedLinks.equalsIgnoreCase("Deletion")) {
+	        linkedlistPage.clickDeletionLink();
+
+	    } else {
+	        throw new IllegalArgumentException("Invalid LinkedList link: " + LinkedLinks);
+	    }
 	}
-	@When("the user clicks the Try Here button on the Introduction page")
+	@When("the user clicks the Try Here button on the Linked page")
 	public void the_user_clicks_the_try_here_button_on_the_introduction_page() {
 		linkedlistPage.clickTryHere();
 	}
 
-	@Then("The user write valid Linked List code in Editor and clicks the Run Button in LikedList Page")
-	public void the_user_write_valid_linked_list_code_in_editor_and_clicks_the_run_button() throws IOException {
-		DataDriven d=new utilities.DataDriven();
-		ArrayList<String> data=d.getData("LinkedList");
-	    linkedlistPage.writeAndRunLinkedListCode( data.get(1));
-	}
+	@When("The user writes {string} for {string} in Editor and clicks the Run button in LinkedList Page")
+	public void the_user_writes_code_in_editor_and_clicks_the_run_button_linkedlist(String code, String scenarioType) throws IOException {
+
+	    if ("invalidCode".equalsIgnoreCase(scenarioType)) {
+	    	 linkedlistPage.writeAndRunLinkedListCode(code);
+	         String alertMsg = linkedlistPage.waitForAlertIfPresent();
+
+	         if (alertMsg != null) {
+	             System.out.println("Alert detected: " + alertMsg);
+	         } else {
+	             System.out.println("⚠ No alert detected after clicking Run");
+	         }
+
+	     } else {
+	    	 DataDriven d = new utilities.DataDriven();
+	         ArrayList<String> data = d.getData(code);
+	         for (int i = 1; i < data.size(); i++) 
+	         {
+	             linkedlistPage.writeAndRunLinkedListCode(data.get(i));
+	         }
+	     }
+	    }
+
 	
-	@Then("The user should see output in the console for LinkedList Page")
+	@Then("The user should see output in the console for Linkedlist Page")
 	public void the_user_should_see_output_in_the_console() {
-		logger.info("user should see output in the console for LinkedList Page"+(driver.findElement(By.xpath("//pre[@id='output']")).getText()));
+		
+    	String output = linkedlistPage.getOutput();
+		 Assert.assertNotNull(output, "Expected output in the console, but it was null");
+		logger.info("user should see output in the console for LinkedList Page"+linkedlistPage.getOutput());
 	}
 }

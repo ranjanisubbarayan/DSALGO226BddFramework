@@ -1,4 +1,4 @@
-@Stack 
+@Stack @signIN 
 Feature: Stack Module Tests 
 
 Background:

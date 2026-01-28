@@ -2327,3 +2327,1079 @@
 [INFO ] 2026-01-22 18:07:25.760 [main] homeSteps - Home page loaded successfully
 [INFO ] 2026-01-22 18:07:29.281 [main] homeSteps - Home page loaded successfully
 [INFO ] 2026-01-22 18:07:32.555 [main] homeSteps - Home page loaded successfully
+[INFO ] 2026-01-27 17:29:34.331 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 17:29:34.792 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 17:29:42.057 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 17:29:42.389 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 17:29:47.651 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 17:29:48.019 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 17:29:54.393 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 17:29:54.790 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 17:30:00.928 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 17:30:06.439 [main] ArraysList - An alert message should be shown for Graph Topic invalid execution
+[INFO ] 2026-01-27 17:30:11.210 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 17:30:13.450 [main] ArraysList - An alert message should be shown for Graph Topic invalid execution
+[INFO ] 2026-01-27 17:30:17.665 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 17:30:21.928 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 19:44:56.010 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 19:44:56.030 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 19:45:06.883 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 19:45:06.885 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 19:45:14.791 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 19:45:14.794 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 19:45:26.251 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 19:45:26.254 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 19:45:52.435 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 19:45:52.437 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 19:46:07.264 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 19:46:07.267 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 19:49:49.119 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 19:49:49.122 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 19:49:57.964 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 19:49:57.966 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 19:50:01.236 [main] GraphList - The user should see output in the console for Graph Page7
+[INFO ] 2026-01-27 19:50:05.211 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 19:50:05.213 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 19:50:07.185 [main] GraphList - The user should see output in the console for Graph Page7
+[INFO ] 2026-01-27 20:11:18.784 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:11:18.805 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:11:23.485 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:11:23.486 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:11:28.208 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:11:28.211 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:11:33.357 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:11:33.360 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:11:46.981 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:11:46.983 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:11:51.222 [main] GraphList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 20:11:55.795 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:11:55.796 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:12:07.253 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:12:07.254 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:12:09.461 [main] GraphList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 20:12:14.550 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:12:14.552 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:12:17.799 [main] GraphList - The user should see output in the console for Graph Page7
+[INFO ] 2026-01-27 20:12:23.439 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:12:23.441 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:12:25.961 [main] GraphList - The user should see output in the console for Graph Page7
+[INFO ] 2026-01-27 20:55:07.845 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:07.867 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:55:08.172 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 20:55:12.840 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:12.843 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:55:13.218 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 20:55:17.452 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:17.456 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:55:17.833 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 20:55:22.634 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:22.636 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 20:55:22.990 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 20:55:27.716 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:31.258 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:34.773 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:38.725 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:42.198 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:45.815 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 20:55:50.120 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:08:58.089 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:08:58.109 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:08:58.413 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:09:02.932 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:02.935 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:09:03.263 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:09:07.418 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:07.422 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:09:07.752 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:09:13.043 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:13.046 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:09:13.343 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:09:18.750 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:18.754 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:09:22.420 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:22.423 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:09:27.022 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:27.025 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:09:30.616 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:30.618 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:09:34.353 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:34.355 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:09:37.997 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:37.998 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:09:41.570 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:09:41.572 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:16.758 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:16.779 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:17.136 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:13:21.209 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:21.211 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:21.534 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:13:25.401 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:25.405 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:25.715 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:13:30.394 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:30.397 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:30.726 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:13:35.269 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:35.272 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:38.958 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:38.959 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:42.678 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:42.680 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:47.001 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:47.005 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:50.777 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:50.779 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:55.940 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:55.941 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:13:59.644 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:13:59.646 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:25:18.384 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:25:18.541 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:25:19.048 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:25:24.483 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:25:24.486 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:25:24.931 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:25:30.102 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:25:30.105 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:25:30.840 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:25:37.864 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:25:37.866 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:25:38.424 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:25:44.259 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:25:44.262 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:25:48.458 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:25:48.460 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:25:52.335 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:25:52.337 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:25:56.245 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:25:56.246 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:26:00.293 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:26:00.294 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:26:04.549 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:26:04.551 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:26:08.570 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:26:08.572 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:00.603 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:00.629 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:01.220 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:31:06.244 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:06.246 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:06.760 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:31:11.832 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:11.836 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:12.221 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:31:18.875 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:18.877 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:19.235 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:31:25.192 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:25.194 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:29.080 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:29.082 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:33.094 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:33.097 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:37.076 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:37.078 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:41.081 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:41.083 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:45.070 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:45.071 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:31:49.342 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:31:49.343 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:35:31.202 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:35:31.217 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:35:31.570 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:35:36.146 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:35:36.147 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:35:36.522 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:35:40.420 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:35:40.423 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:35:40.768 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:35:45.777 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:35:45.779 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:35:46.118 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:35:51.062 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:35:51.064 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:35:51.403 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:35:59.844 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:35:59.848 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:36:00.275 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:36:02.100 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 21:36:05.778 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:36:05.780 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:36:06.170 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:36:09.449 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 21:36:13.378 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:36:13.380 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:36:13.710 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:36:27.589 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:36:27.590 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:36:27.885 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:36:42.066 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:36:42.068 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:36:42.421 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:36:56.748 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:36:56.749 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:36:57.130 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:45:59.693 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:45:59.715 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:00.042 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:04.837 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:04.840 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:05.184 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:09.347 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:09.352 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:09.647 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:15.557 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:15.560 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:15.860 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:21.734 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:21.736 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:22.080 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:30.999 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:31.002 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:31.358 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:34.107 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 21:46:37.676 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:37.678 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:38.007 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:40.997 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 21:46:44.178 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:44.179 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:44.880 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:48.660 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:48.661 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:49.023 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:53.539 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:53.542 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:53.884 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:46:57.469 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:46:57.472 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:46:57.773 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 21:49:30.103 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:49:30.374 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:49:35.135 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:49:35.138 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:49:39.530 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:49:39.533 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:49:44.373 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:49:44.375 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:49:55.520 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:49:55.521 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:49:57.378 [main] GraphList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 21:50:01.152 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:50:01.154 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:50:11.747 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:50:11.749 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:50:13.750 [main] GraphList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 21:50:17.380 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:50:17.381 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:50:20.260 [main] GraphList - The user should see output in the console for Graph Page7
+[INFO ] 2026-01-27 21:50:24.562 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:50:24.565 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:50:26.387 [main] GraphList - The user should see output in the console for Graph Page7
+[INFO ] 2026-01-27 21:50:30.418 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:50:30.420 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:50:34.879 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:50:34.880 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:50:39.023 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:50:39.026 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:50:43.060 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:50:43.063 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:52:06.711 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:52:06.741 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:52:11.836 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:52:11.841 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:52:16.500 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:52:16.503 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:52:22.826 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:52:22.828 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:52:33.657 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:52:33.661 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:52:35.299 [main] GraphList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 21:52:39.206 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:52:39.208 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:52:49.972 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:52:49.975 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:52:51.683 [main] GraphList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 21:52:55.488 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:52:55.490 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:52:58.549 [main] GraphList - The user should see output in the console for Graph Page7
+[INFO ] 2026-01-27 21:53:02.534 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:53:02.536 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:53:04.459 [main] GraphList - The user should see output in the console for Graph Page7
+[INFO ] 2026-01-27 21:53:08.452 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:53:08.453 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:53:12.874 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:53:12.875 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:53:18.611 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:53:18.612 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 21:53:22.801 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 21:53:22.802 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:40:22.707 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:40:22.733 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:40:23.047 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:40:28.959 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:40:28.961 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:40:29.326 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:40:34.504 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:40:34.507 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:40:34.906 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:40:39.330 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:40:39.333 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:40:39.760 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:40:44.132 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:40:44.135 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:40:44.917 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:40:49.578 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:40:49.579 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:40:49.994 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:40:54.449 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:40:54.451 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:40:54.790 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:01.518 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:01.522 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:01.868 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:07.369 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:07.370 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:07.710 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:14.405 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:14.408 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:14.778 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:20.694 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:20.695 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:21.042 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:25.292 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:25.294 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:25.605 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:31.609 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:31.611 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:31.943 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:37.187 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:37.187 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:37.490 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:42.981 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:42.983 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:43.361 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:49.333 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:49.336 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:49.689 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:41:54.368 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:41:54.371 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:41:54.701 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:42:03.793 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:42:03.795 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:42:04.189 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:42:06.241 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:42:10.608 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:42:10.609 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:42:10.978 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:42:20.066 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:42:20.067 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:42:20.415 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:42:22.027 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:42:26.322 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:42:26.323 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:42:26.635 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:42:35.168 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:42:35.170 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:42:35.540 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:42:37.048 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:42:40.984 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:42:40.985 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:42:41.331 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:42:49.868 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:42:49.869 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:42:50.325 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:42:52.359 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:42:56.397 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:42:56.398 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:42:56.768 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:43:01.305 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 22:43:05.246 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:43:05.248 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:43:05.555 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:43:07.167 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 22:43:11.897 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:43:11.899 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:43:12.411 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:43:14.168 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 22:43:17.879 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:43:17.880 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:43:18.385 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:43:22.674 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:43:22.678 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:43:23.018 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:43:29.207 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:43:29.208 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:43:29.516 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:43:33.574 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:43:33.575 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:43:33.925 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:44:58.572 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:44:58.590 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:44:58.969 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:04.412 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:04.415 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:04.780 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:10.192 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:10.196 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:10.574 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:15.120 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:15.122 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:15.427 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:21.096 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:21.101 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:21.510 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:27.190 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:27.195 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:27.597 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:32.494 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:32.496 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:32.829 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:38.874 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:38.877 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:39.177 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:45.849 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:45.851 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:46.225 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:52.813 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:52.815 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:53.178 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:45:59.002 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:45:59.003 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:45:59.332 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:46:03.817 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:46:03.819 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:46:04.188 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:46:09.793 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:46:09.795 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:46:10.293 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:46:16.312 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:46:16.314 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:46:16.708 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:46:22.408 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:46:22.409 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:46:22.740 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:46:27.853 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:46:27.857 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:46:28.294 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:46:32.633 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:46:32.636 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:46:32.933 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:46:42.610 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:46:42.611 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:46:43.392 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:46:45.357 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:46:49.599 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:46:49.600 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:46:49.994 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:46:59.253 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:46:59.254 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:46:59.608 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:47:01.814 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:47:05.955 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:47:05.957 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:47:06.316 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:47:15.575 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:47:15.576 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:47:15.949 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:47:17.673 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:47:21.819 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:47:21.820 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:47:22.159 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:47:31.103 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:47:31.105 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:47:31.410 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:47:33.024 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:47:39.191 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:47:39.193 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:47:39.835 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:47:55.387 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 22:48:06.879 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:48:06.880 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:48:07.417 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:48:26.353 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 22:48:35.038 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:48:35.040 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:48:35.388 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:48:37.308 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 22:48:41.605 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:48:41.607 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:48:41.939 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:48:46.262 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:48:46.264 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:48:46.601 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:48:52.269 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:48:52.272 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:48:52.601 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:48:56.434 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:48:56.436 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:48:56.900 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:53:56.797 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:53:56.815 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:53:57.215 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:02.565 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:02.569 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:02.915 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:07.920 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:07.924 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:08.291 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:12.976 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:12.978 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:13.344 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:17.380 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:17.383 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:22.477 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:22.478 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:22.827 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:27.199 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:27.202 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:27.565 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:33.462 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:33.464 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:33.795 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:39.792 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:39.794 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:40.155 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:46.256 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:46.259 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:46.607 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:52.852 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:52.852 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:53.246 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:54:57.644 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:54:57.645 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:54:57.989 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:55:03.855 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:55:03.857 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:55:04.283 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:55:09.480 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:55:09.481 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:55:14.099 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:55:14.102 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:55:14.452 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:55:21.096 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:55:21.098 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:55:21.413 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:55:25.465 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:55:25.466 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:55:30.863 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:55:30.866 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:55:31.325 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:55:33.209 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:55:37.221 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:55:37.222 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:55:37.547 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:55:46.729 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:55:46.731 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:55:47.185 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:55:48.941 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:55:53.305 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:55:53.306 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:55:53.644 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:56:02.337 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:56:02.341 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:56:02.665 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:56:04.177 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:56:08.154 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:56:08.155 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:56:08.512 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:56:18.356 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:56:18.357 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:56:18.635 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:56:20.732 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 22:56:24.757 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:56:24.759 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:56:25.108 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:56:28.431 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 22:56:32.793 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:56:32.795 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:56:33.134 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:56:35.613 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 22:56:39.495 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:56:39.496 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:56:39.881 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:56:41.738 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 22:56:45.939 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:56:45.941 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:56:46.344 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:56:51.512 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:56:51.513 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:56:51.828 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:56:57.978 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:56:57.979 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:56:58.265 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 22:57:02.245 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 22:57:02.246 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 22:57:02.607 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:00:58.425 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:00:58.441 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:00:58.790 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:01:06.947 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:01:06.949 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:01:07.282 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:01:38.247 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:01:38.251 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:01:39.281 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:01:45.828 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:01:45.830 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:01:46.485 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:02:02.546 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:02:02.548 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:02:02.914 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:02:15.429 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:02:15.430 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:02:17.117 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:02:42.571 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:02:42.573 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:02:51.229 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:03:49.663 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:03:49.666 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:03:50.391 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:04:20.239 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:04:20.240 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:04:21.478 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:04:40.310 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:04:40.311 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:04:40.693 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:04:51.176 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:04:51.178 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:04:51.530 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:04:57.216 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:04:57.217 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:04:57.570 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:05:26.099 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:05:26.101 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:05:27.119 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:05:47.084 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:05:47.086 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:05:48.670 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:06:10.699 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:06:10.700 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:06:11.218 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:06:29.391 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:06:29.394 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:06:29.797 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:06:39.945 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:06:39.946 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:06:40.333 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:07:04.352 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:07:04.353 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:07:04.862 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:07:09.512 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 23:07:14.831 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:07:14.832 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:07:15.598 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:07:42.953 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:07:42.954 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:07:43.447 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:08:07.924 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 23:08:43.350 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:08:43.351 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:08:44.545 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:09:14.560 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:09:14.561 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:09:15.646 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:09:31.751 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 23:09:43.670 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:09:43.673 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:09:45.220 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:10:16.811 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:10:16.813 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:10:17.205 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:10:23.614 [main] ArraysList - An alert message should be shown for invalid execution
+[INFO ] 2026-01-27 23:10:27.897 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:10:27.898 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:10:28.445 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:10:35.807 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 23:10:39.847 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:10:39.849 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:10:40.291 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:10:42.077 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 23:10:45.924 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:10:45.926 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:10:46.293 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:10:48.119 [main] ArraysList - The user should see output in the console for ArrayList Page40
+[INFO ] 2026-01-27 23:10:52.608 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:10:52.609 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:10:52.969 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:10:58.135 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:10:58.136 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:10:58.543 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:11:05.390 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:11:05.393 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:11:05.716 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-27 23:11:09.900 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-27 23:11:09.901 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-27 23:11:10.352 [main] ArraysList - successfully logged into the array module
+[INFO ] 2026-01-28 00:42:09.292 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:09.313 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:42:09.856 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:14.849 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:14.853 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:42:15.616 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:21.306 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:21.309 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:42:21.693 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:26.478 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:26.480 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:42:26.952 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:31.839 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:31.842 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:42:32.288 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:36.877 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:36.879 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:42:37.756 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:42.626 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:42.629 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:42:43.058 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:47.620 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:47.623 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:42:48.038 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:52.555 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:42:52.558 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:42:53.463 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:03.206 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:03.209 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:43:03.615 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:10.260 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:10.263 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:43:10.619 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:19.726 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:19.728 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:43:20.163 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:26.407 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:26.409 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:43:26.836 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:35.570 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:35.571 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:43:36.468 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:42.885 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:42.886 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:43:43.308 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:52.734 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:52.737 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:43:53.133 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:59.370 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:43:59.371 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:43:59.732 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:09.610 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:09.611 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:44:10.235 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:17.422 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:17.423 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:44:17.901 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:28.111 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:28.111 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:44:28.447 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:35.724 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:35.725 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:44:36.128 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:42.688 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:42.690 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:44:43.081 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:49.996 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:49.997 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:44:50.473 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:55.154 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:44:55.155 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:44:55.539 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:00.953 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:00.955 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:45:01.301 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:05.663 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:05.665 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:45:06.117 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:10.722 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:10.724 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:45:11.088 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:16.376 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:16.378 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:45:17.633 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:22.455 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:45:22.457 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:45:22.892 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:21.299 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:21.327 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:52:36.707 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:42.299 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:42.303 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:52:42.697 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:47.542 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:47.545 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:52:47.910 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:52.781 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:52.785 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:52:53.229 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:58.152 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:52:58.153 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:52:58.630 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:03.833 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:03.835 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:53:04.222 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:09.261 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:09.264 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:53:09.635 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:14.447 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:14.450 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:53:14.911 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:20.120 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:20.121 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:53:20.517 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:29.983 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:29.986 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:53:30.381 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:36.951 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:36.953 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:53:37.313 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:46.767 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:46.770 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:53:47.201 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:53.448 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:53:53.450 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:53:53.965 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:03.085 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:03.086 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:54:03.468 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:10.083 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:10.086 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:54:10.522 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:19.728 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:19.731 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:54:20.257 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:27.334 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:27.336 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:54:27.747 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:37.216 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:37.218 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:54:37.622 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:44.073 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:44.075 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:54:44.418 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:53.765 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:54:53.766 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:54:54.160 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:00.361 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:00.363 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:55:00.751 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:07.202 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:07.203 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:55:07.596 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:14.608 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:14.610 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:55:14.968 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:19.997 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:19.998 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:55:20.501 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:25.170 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:25.173 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:55:25.542 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:30.308 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:30.310 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:55:30.667 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:35.042 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:35.044 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:55:35.418 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:39.755 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:39.757 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:55:40.128 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:44.421 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 00:55:44.424 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 00:55:44.811 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:00:56.620 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:00:56.715 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:00:57.344 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:02.428 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:02.431 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:02.850 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:07.574 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:07.577 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:07.951 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:13.419 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:13.422 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:14.085 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:19.309 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:19.312 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:19.727 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:24.921 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:24.924 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:25.267 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:30.140 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:30.142 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:30.501 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:35.024 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:35.026 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:35.643 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:40.819 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:40.821 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:41.195 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:51.357 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:51.360 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:51.803 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:59.014 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:01:59.017 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:01:59.412 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:08.995 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:08.997 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:02:09.460 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:16.259 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:16.261 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:02:16.687 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:25.486 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:25.488 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:02:26.659 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:32.906 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:32.907 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:02:33.303 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:42.529 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:42.533 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:02:43.419 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:49.613 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:49.615 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:02:50.470 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:59.394 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:02:59.396 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:02:59.900 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:06.207 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:06.209 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:03:06.654 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:15.811 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:15.813 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:03:16.199 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:22.338 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:22.340 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:03:22.726 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:28.825 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:28.827 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:03:29.208 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:35.911 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:35.912 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:03:36.326 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:39.226 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:03:43.381 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:43.382 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:03:48.603 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:48.605 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:03:49.194 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:50.878 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:03:55.313 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:55.315 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:03:55.703 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:03:57.202 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:04:01.540 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:04:01.542 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:04:01.967 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:04:03.362 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:04:07.581 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:04:07.583 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:04:08.003 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:04:10.068 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:04:14.121 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:04:14.123 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:04:14.473 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:04:16.179 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:13:33.053 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:13:33.080 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:13:33.502 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:13:38.333 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:13:38.336 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:13:39.220 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:13:44.716 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:13:44.720 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:13:45.241 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:13:50.481 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:13:50.483 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:13:50.821 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:13:54.827 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:13:54.829 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:13:55.632 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:00.524 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:00.526 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:00.901 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:05.441 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:05.443 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:05.899 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:10.398 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:10.399 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:10.743 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:14.712 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:14.714 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:19.326 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:19.327 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:19.853 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:22.022 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:14:26.594 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:26.596 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:26.994 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:31.665 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:14:35.770 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:35.771 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:36.145 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:37.877 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:14:42.435 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:42.436 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:42.812 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:47.498 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:14:51.293 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:51.295 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:52.153 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:53.924 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:14:58.220 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:14:58.221 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:14:58.640 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:03.910 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:15:08.273 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:08.275 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:15:08.650 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:10.952 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:15:15.270 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:15.271 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:15:15.605 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:20.531 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:15:24.511 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:24.512 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:15:24.931 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:26.646 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:15:30.660 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:30.661 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:15:31.025 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:35.803 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:15:39.772 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:39.773 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:15:40.237 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:41.926 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:15:45.809 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:45.811 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:15:46.324 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:48.334 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:15:52.365 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:52.366 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:15:52.777 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:54.467 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:15:58.536 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:15:58.538 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:15:59.087 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:02.583 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:16:07.358 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:07.360 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:16:07.796 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:09.682 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:16:14.328 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:14.330 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:16:14.724 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:16.390 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:16:21.492 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:21.493 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:16:21.930 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:23.489 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:16:26.946 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:26.947 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:16:31.666 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:31.667 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:16:32.089 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:33.494 [main] GraphList - user should see output in the console for LinkedList Page
+[INFO ] 2026-01-28 01:16:37.420 [main] Hooks - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:37.423 [main] ArraysList - successfully logged into the Homepage of the application
+[INFO ] 2026-01-28 01:16:37.785 [main] GraphList - successfully logged into the dsalgo application
+[INFO ] 2026-01-28 01:16:39.393 [main] GraphList - user should see output in the console for LinkedList Page

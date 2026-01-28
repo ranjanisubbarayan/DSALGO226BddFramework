@@ -7,7 +7,6 @@ import io.cucumber.java.Scenario;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import pageObjects.ArrayListPage;
 import pageObjects.LaunchPage;
 import pageObjects.LoginPage;
 import pageObjects.homePage;
@@ -23,12 +22,12 @@ public class Hooks {
     private static final Logger logger = LogManager.getLogger(Hooks.class);
     private WebDriver driver;
     LaunchPage launchPage;
-    private ArrayListPage arraylistpage;
+  
 
     public Hooks(){
         this.driver = getDriver();
         this.launchPage = new LaunchPage(driver);
-        this.arraylistpage = new ArrayListPage(driver);
+      
     }
 
     @Before(order =0)
@@ -46,8 +45,8 @@ public class Hooks {
           if (!homepage.isUserLoggedIn()) {
               homepage.clickSignInLinkIfPresent();
               LoginPage loginPage = new LoginPage(driver);
-              loginPage.enterUsername("Vara");
-              loginPage.enterPassword("Varam@123");
+              loginPage.enterUsername(ConfigReader.getProperty("username"));
+              loginPage.enterPassword(ConfigReader.getProperty("password"));
               loginPage.clickLoginButton();
           }
           logger.info("successfully logged into the dsalgo application");

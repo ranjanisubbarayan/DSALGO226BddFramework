@@ -35,11 +35,23 @@ public class ArrayListPage {
 	@FindBy (xpath="//a[@href='array']")
 	WebElement btnArrayGetstarted;
 	
-	@FindBy (xpath="//div/h4[text()='Array']")
+	@FindBy (xpath="//div/h4[normalize-space()='Array']")
 	WebElement verifyArrayspage;
 	
-	@FindBy (xpath="//a[contains(text(),'Arrays in Python')]")
+	@FindBy (xpath="//a[normalize-space()='Arrays in Python']")
 	WebElement lnkArraysInPython;
+	
+	@FindBy (xpath="//a[normalize-space()='Basic Operations in Lists']")
+	WebElement lnkBasicOperationofArray;
+	
+	@FindBy (xpath="//a[normalize-space()='Applications of Array']")
+	WebElement lnkApplicationofArray;
+	
+	@FindBy (xpath="//a[normalize-space()='Arrays Using List']")
+	WebElement lnkArraysusinglist;
+	
+	@FindBy (xpath="//a[normalize-space()='Practice Questions']")
+	WebElement lnkPracticeQue;
 	
 	@FindBy (xpath="//a[@href='/tryEditor']")
 	WebElement btnTryEditor;
@@ -74,6 +86,19 @@ public class ArrayListPage {
 	public void clickArraysInPython() {
 		lnkArraysInPython.click();
 	}
+	public void clickArraysUsingList() {
+		lnkArraysusinglist.click();
+	}
+	public void clickBasicOperationArray() {
+		lnkBasicOperationofArray.click();
+	}
+	public void clickApplicationofArray() {
+		lnkApplicationofArray.click();
+	}
+	public void clickPracticeQue() {
+		lnkPracticeQue.click();
+	}
+	
 	public void clickTryHere() {
 		btnTryEditor.click();
 	}
@@ -86,7 +111,7 @@ public class ArrayListPage {
 	   public String getArraysInPythonText() {
 	        return verifyArraysInPython.getText();
 	    }
-	public void writeAndRunLinkedListCode(String code) throws IOException {
+	public void writeAndRunArrayListCode(String code) throws IOException {
 		Actions action=new Actions(driver);
 		action.click(codeEditor).perform();
 		action.sendKeys(code).perform();

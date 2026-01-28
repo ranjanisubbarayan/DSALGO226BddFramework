@@ -4,18 +4,13 @@ import static driver.DriverFactory.getDriver;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.ArrayListPage;
 import pageObjects.LaunchPage;
-import pageObjects.LoginPage;
-import pageObjects.homePage;
 import utilities.ElementUtils;
 import utilities.DataDriven;
 import org.apache.logging.log4j.LogManager;
@@ -36,15 +31,9 @@ public class ArraysList {
         this.arraylistpage = new ArrayListPage(driver);
     }
 
-
-    @Given("The user is in the Array page after Sign in")
-    public void theUserIsInTheArrayPageAfterSignIn() {
-        arraylistpage.getstartedArray();
-
-    }
-
     @Given("The user is in the Home page after Sign in")
     public void the_user_is_in_the_home_page_after_sign_in() {
+    	// Login handled by Hook page in @Before 
         logger.info("successfully logged into the Homepage of the application");
     }
 
@@ -64,9 +53,26 @@ public class ArraysList {
         arraylistpage.clickArraysInPython();
     }
 
-    @When("The user clicks Arrays in Python link")
-    public void the_user_clicks_arrays_in_python_link() {
-        arraylistpage.clickArraysInPython();
+    @When("The user clicks {string} in link page")
+    public void the_user_clicks_arrays_in_python_link(String ArrayLinks) {
+    	  if (ArrayLinks.equalsIgnoreCase("Arrays in Python")) {
+    	        arraylistpage.clickArraysInPython();
+
+    	    } else if (ArrayLinks.equalsIgnoreCase("Arrays Using List")) {
+    	        arraylistpage.clickArraysUsingList();
+
+    	    } else if (ArrayLinks.equalsIgnoreCase("Basic Operations in Lists")) {
+    	        arraylistpage.clickBasicOperationArray();
+
+    	    } else if (ArrayLinks.equalsIgnoreCase("Applications of Array")) {
+    	        arraylistpage.clickApplicationofArray();
+
+    	    } else if (ArrayLinks.equalsIgnoreCase("Practice Questions")) {
+    	        arraylistpage.clickPracticeQue();
+
+    	    } else {
+    	        throw new IllegalArgumentException("Invalid Array link: " + ArrayLinks);
+    	    }
     }
 
     @Then("The user should be redirected to {string} page")
@@ -76,7 +82,6 @@ public class ArraysList {
 
     @When("The user clicks Try Here button after reaching to arrays in python")
     public void the_user_clicks_try_here_button_in_arrays_in_python_page() {
-        arraylistpage.clickArraysInPython();
         arraylistpage.clickTryHere();
     }
 
@@ -95,8 +100,8 @@ public class ArraysList {
 
     @Then("The user should see an error message in alert window")
     public void the_user_should_see_an_error_message_in_alert_window() {
-        // validation missing
-        logger.info("An alert message should be shown for Graph Topic invalid execution");
+    	Assert.assertNotNull( alertMsg,"Expected an alert message for invalid execution, but no alert was shown" );
+        logger.info("An alert message should be shown for invalid execution");
     }
 
     @When("The user writes {string} for {string} in Editor and clicks the Run button")
@@ -114,16 +119,68 @@ public class ArraysList {
 		else{
 			DataDriven d = new utilities.DataDriven();
 			ArrayList<String> data = d.getData(code);
-			arraylistpage.writeAndRunLinkedListCode(data.get(1).toString());
+			for (int i = 1; i < data.size(); i++) {
+			arraylistpage.writeAndRunArrayListCode(data.get(i).toString());
+			}
 		}
     }
 
     @Then("The user should see output in the console for ArrayList Page")
     public void the_user_should_see_output_in_the_console() {
 
-      // add assertion
+    	String output = arraylistpage.getOutput();
+		 Assert.assertNotNull(output, "Expected output in the console, but it was null");
 
         logger.info("The user should see output in the console for ArrayList Page" + arraylistpage.getOutput());
     }
+    
+
+	@Then("Array page should load within {string} seconds")
+	public void array_page_should_load_within_seconds(String seconds) {
+		long maxTime = Long.parseLong(seconds);
+
+        long startTime = System.currentTimeMillis();
+        driver.get("https://dsportalapp.herokuapp.com/array/");
+        arraylistpage.waitForArrayPage();
+        long loadTime = (System.currentTimeMillis() - startTime) / 1000;
+
+        Assert.assertTrue(loadTime <= maxTime,
+                "Array page load time exceeded limit: " + loadTime + " seconds");
+	}
+
+	@Then("all main array operations buttons should be visible")
+	public void all_main_array_operations_buttons_should_be_visible() {
+		arraylistpage.clickTryHereIfVisible();
+		Assert.assertTrue(
+	            arraylistpage.isRunButtonDisplayed(),
+	            "Run button is not visible in Array module"
+	    );
+	}
+
+	@Then("Array page should be loaded using HTTPS")
+	public void array_page_should_be_loaded_using_https() {
+		String currentUrl = driver.getCurrentUrl();
+	    Assert.assertTrue(
+	            currentUrl.startsWith("https"),
+	            "Array page is NOT loaded using HTTPS. URL: " + currentUrl
+	    );
+	}
+
+	@When("user refreshes the Array page")
+	public void user_refreshes_the_array_page() {
+		driver.navigate().refresh();
+	}
+
+	@Then("Array page should load without errors")
+	public void array_page_should_load_without_errors() {
+		Assert.assertNotNull(
+	            driver.getTitle(),
+	            "Array page title is NULL after refresh"
+	    );
+
+	    System.out.println("Array Page Title after refresh: " + driver.getTitle());
+	}
+
+
 
 }

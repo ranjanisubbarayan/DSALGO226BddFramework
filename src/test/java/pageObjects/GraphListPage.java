@@ -29,7 +29,6 @@ public class GraphListPage {
 	
 	@FindBy(xpath = "//div[contains(text(),'You are logged in')]")
 	WebElement verifyHomepage;
-
 	
 	@FindBy(xpath = "//a[@href='graph']")
 	WebElement btnGraphGetstarted;
@@ -37,11 +36,7 @@ public class GraphListPage {
 	@FindBy(xpath = "//div/h4[text()='Graph']")
 	WebElement verifyGraphPage;
 
-
-
 	@FindBy(xpath = "//div//a[@href='graph']")
-	
-
 	WebElement lnkGraphTopic;
 
 	@FindBy(xpath = "//a[normalize-space()='Graph Representations']")
@@ -52,7 +47,6 @@ public class GraphListPage {
 
 	@FindBy(xpath = "//button[contains(text(),'Run')]")
 	WebElement btnRun;
-
 	
 	@FindBy(xpath = "//p[contains(text(),'Graph') and not(contains(text(),'Representations'))]")
 	WebElement verifyGraphTopicText;
@@ -60,9 +54,11 @@ public class GraphListPage {
 	@FindBy(xpath = "//p[contains(text(),'Graph Representations')]")
 	WebElement verifyGraphRepresentationsText;
 
-	
 	@FindBy(xpath = "//pre[@role='presentation']")
 	WebElement writeCode;
+	
+	@FindBy(xpath="//pre[@id='output']")
+	WebElement console;
 
 
 	public String getHomePageText() {
@@ -147,11 +143,15 @@ public class GraphListPage {
 		return output.getText().trim();
 	}
 	
-	public void writeAndRunLinkedListCode(String code) throws IOException {
+	public void writeAndRunGraphListCode(String code) throws IOException {
 		Actions action=new Actions(driver);
 		action.click(writeCode).perform();
 		action.sendKeys(code).perform();
 		btnRun.click();
+	}
+	
+	public String getOutput(){
+		return console.getText();
 	}
 	
 }
