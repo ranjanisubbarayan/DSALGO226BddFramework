@@ -3,8 +3,8 @@ package pageObjects;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.Map;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,16 +35,11 @@ public class LoginPage {
      public WebElement loginBtn;
 
     @FindBy(xpath = "//div[@role='alert']")
-     WebElement alertMsg;
-    By loggedIn = By.xpath("//div[@role='alert']");
+     WebElement alertMsg;   
 
     @FindBy(xpath = "//a[text()='NumpyNinja']")
-     WebElement homePageLink;
-
-	
- 
-
-   
+    WebElement homePageLink;	
+  
     public void clickLoginButton() {
     	  wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
           	loginBtn.click();
@@ -53,12 +48,10 @@ public class LoginPage {
     public void enterUsername(String username) {
     	 wait.until(ExpectedConditions.visibilityOf(loginUsername));
          loginUsername.clear();
-         loginUsername.sendKeys(username);
-       
+         loginUsername.sendKeys(username);       
     }
 
-    public void enterPassword(String password) {
-    	
+    public void enterPassword(String password) {    	
       wait.until(ExpectedConditions.visibilityOf(loginPassword));
       loginPassword.clear();
         loginPassword.sendKeys(password);
@@ -80,8 +73,7 @@ public class LoginPage {
         } catch (Exception e) {
             return false;
         }       
-    }
-    
+    }    
     
     public String getUsernameValidationMessage() {
         
@@ -101,7 +93,7 @@ public class LoginPage {
 
     public boolean isKeyboardNavigationWorking() {
         try {
-            loginUsername.sendKeys(org.openqa.selenium.Keys.TAB);
+            loginUsername.sendKeys(Keys.TAB);
             return driver.switchTo().activeElement().equals(loginPassword);
         } catch (Exception e) {
             return false;
@@ -119,11 +111,20 @@ public class LoginPage {
         ExcelSheetHandling excel = new ExcelSheetHandling(path);
         loginData = excel.getRowData("Login", testId);
     }
+    
+    public String getExpectedResult() {
+        if (loginData == null) {
+            throw new RuntimeException("Excel data not loaded for this test!");
+        }
+        return loginData.get("ExpectedResult");
+    }
 
     public void getDataFromExcel() {
-    	enterUsername(loginData.get("username"));
-    	enterPassword(loginData.get("password"));
+    	if (loginData == null) {
+            throw new RuntimeException("Login data is NULL. Call loginUsingTestData() first.");
+        }
+        enterUsername(loginData.get("username"));
+        enterPassword(loginData.get("password"));
         clickLoginButton();
-    }
-    
+    }    
 }

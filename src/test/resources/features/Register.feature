@@ -1,7 +1,10 @@
     @register
-    Feature: DS_ALGO_APP Register Page Verification  
-        
-    @SC1register
+    Feature: DS_ALGO_APP Register Page Verification          
+    
+    Rule: Below scenario covers with Registration module
+    
+    Background: Given The user is on the user Registration page
+    
     Scenario: User navigates to the Register page	 
     Given The user is on the user Registration page	
     When The user clicks the Register link on the Home page	
@@ -32,7 +35,7 @@
 			
 	Scenario: Error messages are displayed when the Password Confirmation field is empty 
 	Given The user is on the user Registration page	
-	When The user clicks the Register button after entAbcering a Username and Password with Password confirmation field is empty	
+	When The user clicks the Register button after entering a Username and Password with Password confirmation field is empty	
 	|  Username | Password |
 	| Abcuser   | Test@123 |	
 	Then The error message "Please fill out this field", Shows under the Password confirmation box
@@ -57,13 +60,61 @@
 	Then The user sees the warning message "password_mismatch:The two password fields didn’t match."
 		
 	Scenario: User navigates to the Home page after successful registration with valid inputs 
-	Given The user is on the user Registeration page	
+	Given The user is on the user Registration page	
 	When The user clicks the Register button after entering valid Username ,Password and Password confirmation in their respective fields	
 	 | Password     | Password confirmation |
      | Password@123 | Password@123          |  
 	Then The user goes to DS Algo Home page with the message "New Account Created. You are logged in as <ID>"
+	
+  Scenario: Register test using Excel data
+  Given The user is on the user Registration page
+  When  the user generates a new username and writes it into Excel for "<testId>"
+  When  the user reads register test data for "<testId>" from Excel
+  When the user submits the Register form using Excel data
+  Then the user should see the ExpectedResult
+    
+  Examples:
+    | testId |ExpectedResult                                          |
+    | TC001  |Please fill out this field                              |
+    | TC002  |Please fill out this field                              | 
+    | TC003  |Please fill out this field                              | 
+    | TC004  |Please fill out this field                              | 
+    | TC005  |password_mismatch:The two password fields didn’t match. |
+    | TC006  |password_mismatch:The two password fields didn’t match. |
+    | TC007  |New Account Created.                                    |
 			
-			
+			  #----Registration Module Non-Functional Testing---
+
+  Rule: Below scenario covers Registration module Non functional feature
+  
+  Background: Given The user is on the user Registration page
+  
+   @NonFunctional @performance
+  Scenario: Verify Register page loads within acceptable time
+    Given The user is on the user Registration page
+    Then Register page should load within "5" seconds
+
+  @NonFunctional @usability
+  Scenario: Verify all input fields and submit button are visible
+    Given The user is on the user Registration page
+    Then all input fields and submit button should be visible
+
+  @NonFunctional @security
+  Scenario: Verify Register page uses HTTPS
+    Given The user is on the user Registration page
+    Then Register page should be loaded using HTTPS
+
+  @NonFunctional @accessibility
+  Scenario: Verify keyboard navigation works
+    Given The user is on the user Registration page
+    Then user should be able to navigate Register page using keyboard
+
+  @NonFunctional @reliability
+  Scenario: Refresh Register page
+    When The user is on the user Registration page
+    Then Register page should load without errors
+
+
 
 			
 

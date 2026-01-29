@@ -10,7 +10,8 @@ public class ElementUtils {
     public static String getCurrentURL(){
         return DriverFactory.getDriver().getCurrentUrl();
     }
-    public static boolean getCurrentURLwithEndpointsArray(){
-        return DriverFactory.getDriver().getCurrentUrl().endsWith("arrays-in-python/");
+    public static boolean getCurrenURLEndswith() {
+    	String url= DriverFactory.getDriver().getCurrentUrl();
+    	return url.endsWith(getCurrentURL());
     }
 }

@@ -5,7 +5,9 @@ import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
@@ -15,6 +17,7 @@ import pageObjects.LaunchPage;
 import pageObjects.LoginPage;
 import pageObjects.homePage;
 import pageObjects.registerPage;
+import utilities.ElementUtils;
 import driver.DriverFactory;
 
 public class registerSteps {
@@ -32,7 +35,7 @@ public class registerSteps {
 	        this.registerpage = new registerPage(driver);
 	    }
 
-	@Given("The user is on the user Registeration page")
+	//@Given("The user is on the user Registeration page")
 	@Given("The user is on the user Registration page")
 	public void the_user_is_on_the_user_registration_page() {
 		 homepage = launchPage.clickGetStarted(); 
@@ -49,6 +52,12 @@ public class registerSteps {
 
 	@Then("The user navigates to the Register page")
 	public void the_user_navigates_to_the_register_page() {
+		String actualpageTitle = ElementUtils.getCurrentTitle();
+    	String expectedTitle = "Registration";
+    	System.out.println("Page Title:"+ actualpageTitle);
+    	Assert.assertEquals(actualpageTitle, expectedTitle, 
+    		    "Page title mismatch!");
+        logger.info("User successfully landed on Registration page");
 		registerpage.isRegisterPageDisplayed();
 	}
 
@@ -63,7 +72,7 @@ public class registerSteps {
 	}
 	
 	@When("The user clicks the Register button after entAbcering a {string} and {string} with Password confirmation field is empty")
-	public void the_user_clicks_the_register_button_after_ent_abcering_a_and_with_password_confirmation_field_is_empty(String username, String password, io.cucumber.datatable.DataTable dataTable) {
+	public void the_user_clicks_the_register_button_after_entering_a_and_with_password_confirmation_field_is_empty(String username, String password, io.cucumber.datatable.DataTable dataTable) {
 	    
 		List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
 	    registerpage.enter_registerUsername(data.get(0).get(username));
@@ -101,8 +110,8 @@ public class registerSteps {
 		registerpage.show_ErrorMsg_EmptyPassword();
 	}
 	
-	@When("The user clicks the Register button after entAbcering a Username and Password with Password confirmation field is empty")
-	public void the_user_clicks_the_register_button_after_ent_abcering_a_username_and_password_with_password_confirmation_field_is_empty(io.cucumber.datatable.DataTable dataTable) {
+	@When("The user clicks the Register button after entering a Username and Password with Password confirmation field is empty")
+	public void the_user_clicks_the_register_button_after_ent_ering_a_username_and_password_with_password_confirmation_field_is_empty(io.cucumber.datatable.DataTable dataTable) {
 		List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
 
 	    String username = data.get(0).get("Username");
@@ -197,4 +206,107 @@ public class registerSteps {
 	public void the_user_goes_to_ds_algo_home_page_with_the_message(String string) {
 	    registerpage.print_successfullyRegistered();
 	}
+	@When("the user generates a new username and writes it into Excel for {string}")
+	public void the_user_generates_a_new_username_and_writes_it_into_excel_for(String string) {
+	    registerpage.addNewUsernameToRegisterDataSheet();
+	}
+
+	@When("the user reads register test data for {string} from Excel")
+	public void the_user_reads_register_test_data_for_from_excel(String testId) {
+		 registerpage.registerUsingTestData(testId);
+	}
+
+	@When("the user submits the Register form using Excel data")
+	public void the_user_submits_the_register_form_using_excel_data() {
+	    registerpage.getregisterDataFromExcel();
+	}
+
+	 @Then("the user should see the ExpectedResult")
+	    public void the_user_should_see_the_Expected_Result() {
+		String expectedResult = registerpage.getregisterExpectedResult().trim();
+
+        switch (expectedResult) {
+            case "You are logged in":
+                Assert.assertTrue(registerpage.isRegisterPageDisplayed(),
+                    "Expected register page to be displayed, but it was NOT!");
+                break;
+
+            case "Please fill out this field":
+                String usernameMsg = registerpage.getValidationMessage();
+                String passwordMsg = registerpage.getPasswordValidationMessage();
+                String confirmpasswordMsg = registerpage.getConfirmPasswordValidationMessage();
+                Assert.assertTrue(!usernameMsg.isEmpty() || !passwordMsg.isEmpty() || !confirmpasswordMsg.isEmpty(),
+                    "Expected browser validation message but found none.");
+                break;
+
+            default: 
+            	String alertMessage = registerpage.getAlertMessage();
+                Assert.assertTrue(
+                    alertMessage.contains(expectedResult),
+                    "Expected alert message: [" + expectedResult + "] but got: [" + alertMessage + "]");
+                break;
+        }        
+	}
+	 @Then("Register page should load within {string} seconds")
+		public void register_page_should_load_within_seconds(String seconds) {
+			long maxTime = Long.parseLong(seconds);
+	        long start = System.currentTimeMillis();
+
+	        driver.navigate().refresh();
+
+	        long end = System.currentTimeMillis();
+	        long loadTime = (end - start) / 1000;
+	        Assert.assertTrue(loadTime <= maxTime, "Register page load exceeded " + maxTime + "s. Actual: " + loadTime + "s");
+		}
+
+		@Then("all input fields and submit button should be visible")
+		public void all_input_fields_and_submit_button_should_be_visible() {
+			Assert.assertTrue(registerpage.isUsernameFieldVisible(), "Username field is not visible");
+			Assert.assertTrue(registerpage.isPasswordFieldVisible(), "Password field is not visible");
+			Assert.assertTrue(registerpage.isConfirmPasswordFieldVisible(), "Confirm Password field is not visible");
+			Assert.assertTrue(registerpage.isRegisterButtonVisible(), "Register button is not visible");
+
+		}
+
+		@Then("Register page should be loaded using HTTPS")
+		public void register_page_should_be_loaded_using_https() {
+			String url = driver.getCurrentUrl();
+	        Assert.assertTrue(url.startsWith("https://"), "Register page is not loaded over HTTPS");
+			
+		}
+
+		@Then("user should be able to navigate Register page using keyboard")
+		public void user_should_be_able_to_navigate_register_page_using_keyboard() throws InterruptedException {
+			registerpage.register_username.sendKeys(Keys.TAB);
+	        Thread.sleep(200);
+	        String activeElementId = driver.switchTo().activeElement().getAttribute("id");
+	        Assert.assertEquals(activeElementId, "id_password1", "Keyboard navigation failed to move to password field");
+
+	      
+	        driver.switchTo().activeElement().sendKeys(Keys.TAB);
+	        Thread.sleep(200);
+	        activeElementId = driver.switchTo().activeElement().getAttribute("id");
+	        Assert.assertEquals(activeElementId, "id_password2", "Keyboard navigation failed to move to confirm password field");
+
+	  
+	        driver.switchTo().activeElement().sendKeys(Keys.TAB);
+	        Thread.sleep(200);
+	        WebElement active = driver.switchTo().activeElement();
+	        String activeValue = active.getAttribute("value"); 
+	        Assert.assertEquals(activeValue, "Register", "Keyboard navigation failed to move to register button");
+		}
+
+		@When("user refreshes the Register page")
+		public void user_refreshes_the_register_page() {
+			driver.navigate().refresh();
+		}
+
+		@Then("Register page should load without errors")
+		public void register_page_should_load_without_errors() {
+			String pageSource = driver.getPageSource();
+	        Assert.assertFalse(pageSource.contains("error"), "Page contains 'error'");
+	        Assert.assertFalse(pageSource.contains("404"), "Page contains '404'");
+	        Assert.assertFalse(pageSource.contains("500"), "Page contains '500'");
+		}
+
 }

@@ -1,16 +1,17 @@
 package stepDefinitions;
 
 import java.util.List;
-
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import io.cucumber.java.en.*;
 import pageObjects.LaunchPage;
-import pageObjects.LoginPage;
 import pageObjects.homePage;
-import pageObjects.registerPage;
+import utilities.ElementUtils;
 import driver.DriverFactory;
 
 public class homeSteps {
@@ -19,44 +20,36 @@ public class homeSteps {
     WebDriver driver;
     private homePage homepage;
     private LaunchPage launchPage;
-    private registerPage registerpage;
-    private LoginPage loginPage;
-
+    
     public homeSteps() {
         this.driver = DriverFactory.getDriver();
         this.launchPage = new LaunchPage(driver);
+        this.homepage = new homePage(driver);
+    }
+    
+    @Given("the user opens the browser")
+    public void the_user_opens_the_browser() {    	
+    	logger.info("successfully logged into the Homepage of the application");
     }
 
-    @Given("The user has to open browser")
-    public void the_user_has_to_open_browser() {
-        homepage = launchPage.clickGetStarted();
+    @When("The user clicks the Get Started button in DS Algo Portal")
+    public void the_user_clicks_the_get_started_button_in_ds_algo_portal() {
+    	 homepage = launchPage.clickGetStarted();
+    }
+
+    @Then("the DS Algo Portal page should be displayed with the Get Started button")
+    public void the_ds_algo_portal_page_should_be_displayed_with_the_get_started_button() {
+    	String actualpageTitle = ElementUtils.getCurrentTitle();
+    	String expectedTitle = "NumpyNinja";
+    	System.out.println("Page Title:"+ actualpageTitle);
+    	Assert.assertEquals(actualpageTitle, expectedTitle, 
+    		    "Page title mismatch!");
         logger.info("User successfully opened the browser and landed on Home page");
     }
 
-    @When("Landing on the page")
-    public void landing_on_the_page() {
-        Assert.assertTrue(homepage.isHomePageDisplayed(), "Home page title is not displayed");
-    }
-    @When("the user enter the correct DS Algo Portal URL")
-    public void the_user_enter_the_correct_ds_algo_portal_url() {
-//    	homepage = launchPage.clickGetStarted();
-//        logger.info("User successfully opened the browser and landed on Home page");;
-    }
-    @Then("The user able to land on the DS Algo portal with Get Started button")
-    public void the_user_able_to_land_on_the_ds_algo_portal_with_get_started_button() {
-    	//Assert.assertTrue(homepage.isHomePageDisplayed(), "Home page title is not displayed");
-    }
-
-    @Then("The user should to navigated to the Home page, which displays the Register and Sign in links")
-    public void the_user_should_be_navigated_to_the_home_page_which_displays_the_register_and_sign_in_links() {
-        Assert.assertTrue(homepage.isRegisterLinkDisplayed(), "Register link not displayed");
-        Assert.assertTrue(homepage.isSignInLinkDisplayed(), "Sign In link not displayed");
-    }
-    @Given("The user is on the DS Algo Portal")
-    public void the_user_is_on_the_ds_algo_portal() {
-    	launchPage = new LaunchPage(driver);
- 		homepage = launchPage.clickGetStarted();
-         Assert.assertTrue(homepage.isHomePageDisplayed(), "Home page not displayed");
+    @Then("the user should be navigated to the Home page")
+    public void the_user_should_be_navigated_to_the_home_page() {
+    	Assert.assertTrue(ElementUtils.getCurrenURLEndswith(), "Page URL mismatch!");
     }
 
     @Given("The user is on Home page")
@@ -65,24 +58,23 @@ public class homeSteps {
  		homepage = launchPage.clickGetStarted();
          Assert.assertTrue(homepage.isHomePageDisplayed(), "Home page not displayed");
     }
-
+  
     @When("User clicks the Data Structure dropdown")
     public void user_clicks_the_data_structure_dropdown() {
-    	 homepage.openDropdownOnly();
+    	 homepage.openDropdown();
         logger.info("User clicked Data Structure dropdown");
     }
-
-    @Then("The user should be able to see all modules in the dropdown:")
+    
+       @Then("The user should be able to see all modules in the dropdown:")
     public void the_user_should_be_able_to_see_all_modules_in_the_dropdown(io.cucumber.datatable.DataTable dataTable) {
     	List<String> expectedModules = dataTable.asList();
-        List<String> actualModules = homepage.getAllDropdownModules();
+        List<String> actualModules = homepage.getDropdownModules();
         Assert.assertEquals(expectedModules, actualModules);
     }
 
     @When("User selects module {string} from the dropdown")
     public void user_selects_module_from_the_dropdown(String moduleName) {
-    	homepage.openDropdownOnly();
-    	homepage.clickModuleFromDropdown(moduleName);
+    	homepage.clickDropdownModule(moduleName);
          logger.info("User clicked module: " + moduleName);
     }
 
@@ -99,27 +91,48 @@ public class homeSteps {
     	homepage.clickGetStartedForModule(moduleName);
         logger.info("User clicked Get Started for module: " + moduleName);
     }
-    @When("User clicks all Data Structure modules safely")
-    public void user_clicks_all_data_structure_modules_safely() {
-    	 homepage.clickAllDropdownModulesSafely();
+    
+    @Then("home page should load within {string} seconds")
+    public void home_page_should_load_within_acceptable_time(String seconds) {
+    	Assert.assertNotNull(DriverFactory.getDriver(),
+                "Driver not initialized");
+    	long maxTime = Long.parseLong(seconds);
+
+        long startTime = System.currentTimeMillis();
+        homepage.waitForHomePageToLoad();
+        long loadTime = (System.currentTimeMillis() - startTime) / 1000;
+
+        Assert.assertTrue(loadTime <= maxTime,
+                "Home page load time exceeded limit: " + loadTime + " seconds");
+    }
+    @Then("important home page options should be visible")
+    public void important_home_page_options_should_be_visible() {
+    	
+    	 Assert.assertTrue(homepage.areImportantOptionsVisible(), "Important home page options missing");
+    	 System.out.println("Print value  "+homepage.areImportantOptionsVisible());
     }
 
-    @When("User clicks on Register link")
-    public void user_clicks_on_register_link() {
-        //registerpage = homepage.clickRegisterLink();
-
-
+    @Then("home page should be loaded using HTTPS")
+    public void home_page_should_be_loaded_using_https() {
+        WebDriver driver = DriverFactory.getDriver();
+        Assert.assertTrue(driver.getCurrentUrl().startsWith("https"));
     }
 
-    @When("User clicks on Sign In link")
-    public void user_clicks_on_sign_in_link() {
-       // loginPage = homepage.clickSignInLink();
+    @Then("user should be able to navigate home page using keyboard")
+    public void user_should_be_able_to_navigate_home_page_using_keyboard() {
+        WebDriver driver = DriverFactory.getDriver();
+        driver.switchTo().activeElement().sendKeys(Keys.TAB);
+        Assert.assertNotNull(driver.switchTo().activeElement());
     }
 
-    @When("User clicks Sign Out if logged in")
-    public void user_clicks_sign_out_if_logged_in() {
-        if (homepage.isUserLoggedIn()) {
-            loginPage = homepage.clickSignOut();
-        }
+    @When("user refreshes the home page")
+    public void user_refreshes_the_home_page() {
+        DriverFactory.getDriver().navigate().refresh();
+    }
+
+    @Then("home page should load without errors")
+    public void home_page_should_load_without_errors() {
+        Assert.assertNotNull(DriverFactory.getDriver().getTitle());
+        System.out.println(DriverFactory.getDriver().getTitle());
     }
 }

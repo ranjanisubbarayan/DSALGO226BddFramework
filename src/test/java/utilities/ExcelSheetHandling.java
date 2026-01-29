@@ -1,6 +1,8 @@
+
 package utilities;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -144,6 +146,41 @@ public class ExcelSheetHandling {
       fis.close();
 
         return codeLines;
+    }
+
+    public void writeCellData(String sheetName, int rowNum, int colNum, String value) {
+        Workbook workbook = null;
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
+
+        try {
+            fis = new FileInputStream(path);
+            workbook = new XSSFWorkbook(fis); 
+            fis.close(); 
+
+            Sheet sheet = workbook.getSheet(sheetName);
+            if (sheet == null) sheet = workbook.createSheet(sheetName);
+
+            Row row = sheet.getRow(rowNum);
+            if (row == null) row = sheet.createRow(rowNum);
+
+            Cell cell = row.getCell(colNum, Row.MissingCellPolicy.CREATE_NULL_AS_BLANK);
+            cell.setCellValue(value);
+
+            fos = new FileOutputStream(path); 
+            workbook.write(fos); 
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (workbook != null) workbook.close();
+                if (fis != null) fis.close();
+                if (fos != null) fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }
