@@ -8,7 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utilities.ExcelSheetHandling;
+
+import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.Map;
 import java.util.UUID;
 
 public class registerPage {
@@ -16,16 +20,13 @@ public class registerPage {
     private WebDriver driver;
     private WebDriverWait wait;
     private String generatedUsername;
-  
+    private Map<String, String> registerData;
     public registerPage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
-  
-    @FindBy(xpath = "//a[@href='/register']")
-    WebElement register_link;
-
+ 
     @FindBy(id = "id_username")
    public WebElement register_username;
 
@@ -38,24 +39,11 @@ public class registerPage {
     @FindBy(xpath = "//input[@value='Register']")
    public WebElement register_button;
 
-    @FindBy(xpath = "//input[@value='Register']")
-    WebElement registerpage_displayed;
-
     @FindBy(xpath = "//div[@role='alert']")
     WebElement printErrormsg;
 
     @FindBy(xpath = "//div[@role='alert']")
     WebElement registeredsuccess;
-
-   @FindBy(xpath = "//a[@href='/logout']")
-   WebElement signout;
-   
-   @FindBy(xpath = "//a[@href='/login']")
-   WebElement signin;
-
-    public void click_register_link() {
-        wait.until(ExpectedConditions.elementToBeClickable(register_link)).click();
-    }
 
     public boolean isRegisterPageDisplayed() {
         return register_button.isDisplayed();
@@ -98,9 +86,12 @@ public class registerPage {
         System.out.println("Validation message: " + message);
     }
 
-    public void print_ErrorMessage() {
-        WebElement alert = wait.until(ExpectedConditions.visibilityOf(printErrormsg));
-        System.out.println("Error Message: " + alert.getText());
+    public String getAlertMessage() {
+        try {
+        	   return printErrormsg.getText();         
+        } catch (Exception e) {
+            return "";
+        }
     }
 
     public void enter_registerUsername(String username) {
@@ -125,6 +116,9 @@ public class registerPage {
     public String getPasswordValidationMessage() {
         return getFieldValidation(register_password);
     }
+    public String getConfirmPasswordValidationMessage() {
+        return getFieldValidation(register_confirm_password);
+    }
 
     private String getFieldValidation(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -139,7 +133,7 @@ public class registerPage {
         System.out.println("Generated Username: " + generatedUsername);
     }
 
-    public static String return_generateNewUsername() {    	
+    public  String return_generateNewUsername() {    	
         return "user_name" + UUID.randomUUID().toString().substring(0, 8);
     }
 
@@ -149,11 +143,6 @@ public class registerPage {
 
     public void print_successfullyRegistered() {
         System.out.println("Registered Successfully: " + registeredsuccess.getText());
-    }
-    
-    public LoginPage clickSigninLink() {
-        signin.click();
-        return new LoginPage(driver); 
     }
     
     public boolean isUsernameFieldVisible() {
@@ -171,4 +160,47 @@ public class registerPage {
     public boolean isRegisterButtonVisible() {
         return register_button.isDisplayed();
     }
+    public String addNewUsernameToRegisterDataSheet() {
+        String username = "";
+
+        try {
+            registerPage registerpage = new registerPage(driver);
+          
+            username = registerpage.return_generateNewUsername();
+            System.out.println("Generated Username: " + username);
+            
+            String path = "src/test/resources/ExcelSheet/DsAlgoTestData.xlsx";
+            ExcelSheetHandling excel = new ExcelSheetHandling(path);
+            excel.writeCellData("Register", 7, 1, username);
+
+            System.out.println("Username written to Excel successfully.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return username;
+    }
+
+    public void registerUsingTestData(String testId) {
+    	String path = Paths.get("src/test/resources/ExcelSheet/DsAlgoTestData.xlsx").toString();
+        ExcelSheetHandling excel = new ExcelSheetHandling(path);
+        registerData = excel.getRowData("Register", testId);
+    }
+    
+    public String getregisterExpectedResult() {
+        if (registerData == null) {
+            throw new RuntimeException("Excel data not loaded for this test!");
+        }
+        return registerData.get("ExpectedResult");
+    }
+
+    public void getregisterDataFromExcel() {
+    	if (registerData == null) {
+            throw new RuntimeException("Login data is NULL. Call loginUsingTestData() first.");
+        }
+    	enter_registerUsername(registerData.get("username"));
+    	enter_regPassword(registerData.get("password"));
+    	enter_regPwdConfirm(registerData.get("confirmpassword"));
+    	clickRegisterButton();
+    }    
 }
