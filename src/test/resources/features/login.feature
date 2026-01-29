@@ -1,20 +1,24 @@
 @Login
 Feature: Login to DS Algo Portal
 
+Rule: Below scenario covers with Login module
+
+Background: Given user is on the Login page
+
   Scenario: Navigate to Login page
     Given user is on the Login page
     When the user clicks the "Sign in" link on the Home page
-    And the user clicks the login button
+    When the user clicks the login button
     Then the Sign in form should be displayed
 
   Scenario Outline: Login attempts with various credentials
-    Given user is on the login page
+    Given user is on the Login page
     When the user enters "<username>" and "<password>"
-    And the user clicks the login button
+    When the user clicks the login button
     Then "<expectedMessage>" should be displayed
 
     Examples:
-      | username    | password           | expectedMessage                      |
+      | username   | password          | expectedMessage                        |
       |            |                   | Please fill out this field             |
       |            | C5Mha6FkdSAVEN@   | Please fill out this field             |
       | TestNinja  |                   | Please fill out this field             |
@@ -28,7 +32,43 @@ Feature: Login to DS Algo Portal
     Then I should see the ExpectedResult
     
   Examples:
-    | testId |
-    | L1     |
-    | L2     | 
+    | testId |ExpectedResult                |
+    | TC001  |Invalid Username and Password |
+    | TC002  |Please fill out this field    | 
+    | TC003  |Please fill out this field    | 
+    | TC004  |Please fill out this field    | 
+    | TC005  |Invalid Username and Password |
+    | TC006  |You are logged in             |
+    
+     #----Login Module Non-Functional Testing---
+
+  Rule: Below scenario covers Login module Non functional feature
+  
+  Background: Given user is on the Login page
+  
+   @NonFunctional @performance
+   Scenario: Verify Login page loads within acceptable time
+    Given user is on the Login page
+    Then Login page should load within "5" seconds
+
+  @NonFunctional @usability
+  Scenario: Verify all login fields and button are visible
+    Given user is on the Login page
+    Then all login fields and buttons should be visible
+
+  @NonFunctional @security
+  Scenario: Verify Login page uses HTTPS
+    Given user is on the Login page
+    Then Login page should be loaded using HTTPS
+
+  @NonFunctional @accessibility
+  Scenario: Verify keyboard navigation works
+    Given user is on the Login page
+    Then user should be able to navigate Login page using keyboard
+
+  @NonFunctional @reliability
+  Scenario: Refresh Login page
+    Given user is on the Login page
+    Then Login page should load without errors
+  
     

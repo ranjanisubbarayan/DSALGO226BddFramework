@@ -1,22 +1,19 @@
 @home
-Feature: DS_AGLO_APP Home Page Verification   
-As a user
-  I want to verify the home page elements and content
-  So that I can ensure the application home page is displayed correctly
+Feature: DS_ALGO_APP Home Page Verification
+
+Rule: Below scenario covers with Home module  
+  Background:
+  Given the user opens the browser
+  When The user clicks the Get Started button in DS Algo Portal
+
+Scenario: Verify DS Algo Portal landing page
+  Then the DS Algo Portal page should be displayed with the Get Started button
+
+Scenario: Navigate to Home page
+ 
+  Then the user should be navigated to the Home page
   
-  Scenario: User opens the DS Algo Portal	
-   Given  The user has to open browser	
-   When  the user enter the correct DS Algo Portal URL		
-   Then  The user able to land on the DS Algo portal with Get Started button
-   
-   Scenario: User Accesses the Home page   
-   Given The user is on the DS Algo Portal	
-   When Landing on the page		
-   Then  The user should to navigated to the Home page, which displays the Register and Sign in links
-
-
-    Scenario: User views the Data Structures dropdown options
-    Given The user is on Home page
+  Scenario: User views the Data Structures dropdown options
     When User clicks the Data Structure dropdown
     Then The user should be able to see all modules in the dropdown:
       | Arrays       |
@@ -28,12 +25,11 @@ As a user
 
  
   Scenario Outline: Selecting a module from the dropdown displays warning message
-    Given The user is on Home page
     When User selects module "<Module>" from the dropdown
     Then The user should be able to see a warning message "You are not logged in"
 
     Examples:
-      | Module      |
+      | Module       |
       | Arrays       |
       | Linked List  |
       | Stack        |
@@ -43,7 +39,6 @@ As a user
 
   
   Scenario Outline: Clicking the Get Started button for a module displays warning
-    Given The user is on Home page
     When User clicks the Get Started button for module "<Module>"
     Then The user should be able to see a warning message "You are not logged in"
     
@@ -58,7 +53,31 @@ As a user
   | Graph                       |
 
 
-   
+     #----Home Module Non-Functional Testing---
 
+  Rule: Below scenario covers Home module Non functional feature
+  Background:
+  Given the user opens the browser
+  When The user clicks the Get Started button in DS Algo Portal
 
+  @NonFunctional @performance 
+  Scenario: Verify home page load performance    
+    Then home page should load within "5" seconds
+
+  @NonFunctional @usability
+  Scenario: Verify home page usability   
+    Then important home page options should be visible
+
+  @NonFunctional @security
+  Scenario: Verify home page security    
+    Then home page should be loaded using HTTPS
+
+  @NonFunctional @accessibility
+  Scenario: Verify keyboard accessibility   
+    Then user should be able to navigate home page using keyboard
+
+  @NonFunctional @reliability
+  Scenario: Verify home page reliability on refresh
+    When user refreshes the home page
+    Then home page should load without errors
 

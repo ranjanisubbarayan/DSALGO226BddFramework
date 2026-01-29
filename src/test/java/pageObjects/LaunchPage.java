@@ -1,8 +1,6 @@
 package pageObjects;
 
 import java.time.Duration;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
