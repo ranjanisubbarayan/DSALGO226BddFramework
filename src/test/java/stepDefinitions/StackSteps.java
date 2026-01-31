@@ -106,35 +106,31 @@ public void the_user_clicks_the_get_started_button_in_stack_panel() {
     
     @Then("Stack page should load within {string} seconds")
     public void stack_page_should_load_within_seconds(String seconds) {
-        long maxTime = Long.parseLong(seconds) * 1000;
-
-        long loadTime = measureStackPageLoadTime();
-
+    	long maxTime = Long.parseLong(seconds);
+        long startTime = System.currentTimeMillis();
+        stackPage.waitForStackPage();
+        long loadTime = (System.currentTimeMillis() - startTime) / 1000;
         Assert.assertTrue(loadTime <= maxTime,
                 "Stack page load time exceeded limit: " + loadTime + " seconds");
     }
 
-    private long measureStackPageLoadTime() {
-        long start = System.currentTimeMillis();
-        stackPage.isStackPageDisplayed();
-        long end = System.currentTimeMillis();
-        return end - start;
-    }
-
     @Then("all main stack operations buttons should be visible")
     public void all_main_stack_operations_buttons_should_be_visible() {
-    	WebDriver driver = DriverFactory.getDriver();
+    	
+       Assert.assertTrue(
+        		stackPage.isOperationsInStackLinkDisplayed(),
+            "Operations is Stack not visible");
 
         Assert.assertTrue(
-            driver.findElement(By.xpath("//a[normalize-space()='Operations in Stack']")).isDisplayed(),
-            "Operations in Stack not visible");
-
+        		stackPage.isImplementationLinkDisplayed(),
+            "Implementation is not visible");
         Assert.assertTrue(
-            driver.findElement(By.xpath("//a[normalize-space()='Implementation']")).isDisplayed(),
-            "Implementation In not visible");
+        		stackPage.isApplicationsLinkDisplayed(),
+                "Application is not visible");
+        
         Assert.assertTrue(
-                driver.findElement(By.xpath("//a[normalize-space()='Applications']")).isDisplayed(),
-                "Application In not visible");
+        		stackPage.isTryEditorDisplayed(),
+                "Try here is not visible");
         
     }
 
@@ -156,11 +152,15 @@ public void the_user_clicks_the_get_started_button_in_stack_panel() {
 
     @Then("Stack page should load without errors")
     public void stack_page_should_load_without_errors() {
-    	Assert.assertNotNull(
+    	String pageSource = driver.getPageSource();
+
+	    Assert.assertFalse(pageSource.contains("error"), "Stack page contains 'error'");
+	    Assert.assertFalse(pageSource.contains("404"), "Stack page contains '404'");
+	    Assert.assertFalse(pageSource.contains("500"), "Stack page contains '500'");
+		
+		Assert.assertNotNull(
 	            driver.getTitle(),
 	            "Stack page title is NULL after refresh"
 	    );
-
-	    System.out.println("Stack Page Title after refresh: " + driver.getTitle());
-    }
+}
 }

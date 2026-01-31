@@ -153,13 +153,22 @@ public class ArraysList {
                 "Array page load time exceeded limit: " + loadTime + " seconds");
 	}
 
-	@Then("all main array operations buttons should be visible")
+	@Then("all main array operations elements should be visible and clickable")
 	public void all_main_array_operations_buttons_should_be_visible() {
-		arraylistpage.clickTryHereIfVisible();
-		Assert.assertTrue(
-	            arraylistpage.isRunButtonDisplayed(),
-	            "Run button is not visible in Array module"
-	    );
+		  Assert.assertTrue(
+			        arraylistpage.areAllArrayelementsVisible(),
+			        "One or more array elements are not visible"
+			    );
+		  Assert.assertTrue(
+			        arraylistpage.areAllArrayelementsClickable(),
+			        "One or more array operation links are not clickable"
+			    );
+		  Assert.assertTrue(
+				  arraylistpage.isTryHereButtonVisible(),
+				  "Try Here button is not Visible");
+		    Assert.assertTrue(
+		    		arraylistpage.isTryHereButtonClickable(),  
+		    		"Try Here button is not clickable");
 	}
 
 	@Then("Array page should be loaded using HTTPS")
@@ -178,12 +187,18 @@ public class ArraysList {
 
 	@Then("Array page should load without errors")
 	public void array_page_should_load_without_errors() {
+		
+		String pageSource = driver.getPageSource();
+
+	    Assert.assertFalse(pageSource.contains("error"), "Array page contains 'error'");
+	    Assert.assertFalse(pageSource.contains("404"), "Array page contains '404'");
+	    Assert.assertFalse(pageSource.contains("500"), "Array page contains '500'");
+		
 		Assert.assertNotNull(
 	            driver.getTitle(),
 	            "Array page title is NULL after refresh"
 	    );
 
-	    System.out.println("Array Page Title after refresh: " + driver.getTitle());
 	}
 
 

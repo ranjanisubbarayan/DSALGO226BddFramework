@@ -137,14 +137,13 @@ public class LoginSteps {
     	loginpage = homepage.clickSignInLink();
     	 long maxTime = Long.parseLong(seconds);
          long start = System.currentTimeMillis();
-
          driver.navigate().refresh(); 
          long end = System.currentTimeMillis();
          long loadTime = (end - start) / 1000;
 
          Assert.assertTrue(loadTime <= maxTime,
                  "Page load exceeded " + maxTime + " seconds. Actual: " + loadTime + " seconds");
-         Assert.assertTrue(loginpage.isPageLoadedCompletely(), "Page did not fully load (readyState != complete)"); }
+         Assert.assertTrue(loginpage.isPageLoadedCompletely(), "Page did not fully load "); }
 
     @Then("all login fields and buttons should be visible")
     public void all_login_fields_and_buttons_should_be_visible() {

@@ -30,4 +30,5 @@ public class ConfigReader {
     public static String getBrowser() {
         return getProperty("browser").toLowerCase().trim();
     }
+    
 }

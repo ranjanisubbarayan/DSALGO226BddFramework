@@ -79,19 +79,19 @@ Feature: Navigation and interaction in dsAlgo Portal - Array Section
       Given The user is in the Home page after Sign in
       When The user clicks the Get Started button in Array Panel
     
-  @NonFunctional  @performance
+  @nonfunctional  @performance
   Scenario: Verify Array page loads within acceptable time
     Then Array page should load within "5" seconds
 
- @NonFunctional   @usability
-  Scenario: Verify key array elements are visible
-    Then all main array operations buttons should be visible
+ @nonfunctional   @usability
+  Scenario: Verify key array elements are visible and clickable
+    Then all main array operations elements should be visible and clickable
 
-  @NonFunctional  @security
+  @nonfunctional  @security
   Scenario: Verify Array page uses HTTPS
     Then Array page should be loaded using HTTPS
 
- @NonFunctional  @reliability
+ @nonfunctional  @reliability
   Scenario: Refresh Array page
     When user refreshes the Array page
     Then Array page should load without errors

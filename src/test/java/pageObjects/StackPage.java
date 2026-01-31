@@ -24,7 +24,7 @@ public class StackPage {
 
     @FindBy(xpath = "//h4[text()='Stack']")
     WebElement stackHeader;
-
+   
     @FindBy(xpath = "//a[normalize-space()='Operations in Stack']")
     WebElement linkOperations;
 
@@ -94,9 +94,24 @@ public class StackPage {
     public boolean isRunButtonDisplayed() {
         return btnRun.isDisplayed();
     }
+    public boolean isOperationsInStackLinkDisplayed() {
+        return linkOperations.isDisplayed();
+    }
+
+    public boolean isImplementationLinkDisplayed() {
+        return linkImplementation.isDisplayed();
+    }
+
+    public boolean isApplicationsLinkDisplayed() {
+        return linkApplications.isDisplayed();
+    }
 
     public String getOutput() {
         return console.getText();
+    }
+    
+    public void waitForStackPage() {
+        wait.until(ExpectedConditions.visibilityOf(stackHeader));
     }
 
     public String waitForAlertIfPresent() {

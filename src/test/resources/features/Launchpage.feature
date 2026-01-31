@@ -2,7 +2,7 @@
   Feature: DS Algo Portal functional testing
 
   Background: User launches the browser and navigates to DS Algo portal
-    Given user has a browser open
+    Given user is on the launch page
     When  user enters the correct DS Algo portal URL
 
   Scenario: Endpoint of the launch page URL

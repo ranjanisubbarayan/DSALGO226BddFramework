@@ -71,6 +71,10 @@ public class GraphListPage {
     public String getGraphLandingPageText() {
         return verifyGraphPage.getText();
     }
+    
+    public void waitForGraphPage() {
+        wait.until(ExpectedConditions.visibilityOf(verifyGraphPage));
+    }
 
 	public void clickGraphTopic() {
 		lnkGraphTopic.click();

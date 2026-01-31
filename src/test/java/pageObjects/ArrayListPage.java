@@ -10,6 +10,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.TimeoutException;
+import java.util.List;
+
 
 
 public class ArrayListPage {
@@ -50,6 +53,10 @@ public class ArrayListPage {
 	
 	@FindBy (xpath="//a[normalize-space()='Practice Questions']")
 	WebElement lnkPracticeQue;
+	
+	@FindBy(xpath = "//a[contains(@href,'array')]")
+	private List<WebElement> arraypagelements;
+
 	
 	@FindBy (xpath="//a[@href='/tryEditor']")
 	WebElement btnTryEditor;
@@ -100,11 +107,44 @@ public class ArrayListPage {
 	public void clickTryHere() {
 		btnTryEditor.click();
 	}
-
+	public boolean isTryHereButtonVisible() {
+	    return btnTryEditor.isDisplayed();
+	}
+	public boolean isTryHereButtonClickable() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+	    try {
+	        wait.until(ExpectedConditions.elementToBeClickable(btnTryEditor));
+	        return true;
+	    } catch (TimeoutException e) {
+	        return false;
+	    }
+	}
 	public boolean isRunButtonDisplayed() {
         return btnRun.isDisplayed();
     }
 
+	public boolean areAllArrayelementsVisible() {
+	    for (WebElement link : arraypagelements) {
+	        if (!link.isDisplayed()) {
+	            return false;
+	        }
+	    }
+	    return true;
+	}
+
+	public boolean areAllArrayelementsClickable() {
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+	    for (WebElement link : arraypagelements) {
+	        try {
+	        	wait.until(ExpectedConditions.elementToBeClickable(link));
+	        } catch (TimeoutException e) {
+	        	   return false;
+	        }
+	    }
+	    return true;
+	}
    
 	   public String getArraysInPythonText() {
 	        return verifyArraysInPython.getText();
@@ -119,16 +159,6 @@ public class ArrayListPage {
         wait.until(ExpectedConditions.visibilityOf(verifyArrayspage));
     }
 
-	
-	public void clickTryHereIfVisible() {
-        try {
-        	clickArraysInPython();
-            wait.until(ExpectedConditions.elementToBeClickable(btnTryEditor)).click();
-            wait.until(ExpectedConditions.visibilityOf(btnRun));
-        } catch (Exception e) {
-            throw new RuntimeException("Try Here button not visible: " + e.getMessage());
-        }
-    }
 
 	public String waitForAlertIfPresent() {
 	    try {

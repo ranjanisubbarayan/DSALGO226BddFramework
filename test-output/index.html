@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 8 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Happy Family\AppData\Local\Temp\testng-eclipse-1565762123\testng-customsuite.xml</span>
+                    <span>C:\Users\Happy Family\AppData\Local\Temp\testng-eclipse--459110762\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,56 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">26 methods, 8 failed,   18 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify key array elements are visible and clickable&quot;, &quot;Navigation and interaction in dsAlgo Portal ...)">runScenario("Verify key array elements are visible and clickable", "Navigation and interaction in dsAlgo Portal ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Refresh Array page&quot;, &quot;Navigation and interaction in dsAlgo Portal - Array Section&quot;)">runScenario("Refresh Array page", "Navigation and interaction in dsAlgo Portal - Array Section")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify key graph visualizer elements are visible&quot;, &quot;Navigation and interaction in dsAlgo Portal - G...)">runScenario("Verify key graph visualizer elements are visible", "Navigation and interaction in dsAlgo Portal - G...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Login page loads within acceptable time&quot;, &quot;Login to DS Algo Portal&quot;)">runScenario("Verify Login page loads within acceptable time", "Login to DS Algo Portal")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify all login fields and button are visible&quot;, &quot;Login to DS Algo Portal&quot;)">runScenario("Verify all login fields and button are visible", "Login to DS Algo Portal")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify key stack elements are visible&quot;, &quot;Navigation and interaction in dsAlgo Portal - Stack Sectio...)">runScenario("Verify key stack elements are visible", "Navigation and interaction in dsAlgo Portal - Stack Sectio...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Login page uses HTTPS&quot;, &quot;Login to DS Algo Portal&quot;)">runScenario("Verify Login page uses HTTPS", "Login to DS Algo Portal")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify keyboard navigation works&quot;, &quot;Login to DS Algo Portal&quot;)">runScenario("Verify keyboard navigation works", "Login to DS Algo Portal")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +152,92 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify user is able to see output for valid python code for Arrays in Python page&quot;, &quot;Navigation and...)">runScenario("Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify all input fields and submit button are visible&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">runScenario("Verify all input fields and submit button are visible", "DS_ALGO_APP Register Page Verification")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify user is able to see output for valid python code for Arrays in Python page&quot;, &quot;Navigation and...)">runScenario("Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Refresh Register page&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">runScenario("Refresh Register page", "DS_ALGO_APP Register Page Verification")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify user is able to see output for valid python code for Arrays in Python page&quot;, &quot;Navigation and...)">runScenario("Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Stack page uses HTTPS&quot;, &quot;Navigation and interaction in dsAlgo Portal - Stack Section&quot;)">runScenario("Verify Stack page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Stack Section")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify home page usability&quot;, &quot;DS_ALGO_APP Home Page Verification&quot;)">runScenario("Verify home page usability", "DS_ALGO_APP Home Page Verification")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Refresh Login page&quot;, &quot;Login to DS Algo Portal&quot;)">runScenario("Refresh Login page", "Login to DS Algo Portal")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Register page loads within acceptable time&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">runScenario("Verify Register page loads within acceptable time", "DS_ALGO_APP Register Page Verification")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify home page load performance&quot;, &quot;DS_ALGO_APP Home Page Verification&quot;)">runScenario("Verify home page load performance", "DS_ALGO_APP Home Page Verification")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify home page security&quot;, &quot;DS_ALGO_APP Home Page Verification&quot;)">runScenario("Verify home page security", "DS_ALGO_APP Home Page Verification")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Graph page uses HTTPS&quot;, &quot;Navigation and interaction in dsAlgo Portal - Graph Section&quot;)">runScenario("Verify Graph page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Graph Section")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify keyboard navigation works&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">runScenario("Verify keyboard navigation works", "DS_ALGO_APP Register Page Verification")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Graph page loads within acceptable time&quot;, &quot;Navigation and interaction in dsAlgo Portal - Gra...)">runScenario("Verify Graph page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Gra...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Array page loads within acceptable time&quot;, &quot;Navigation and interaction in dsAlgo Portal - Arr...)">runScenario("Verify Array page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Arr...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify home page reliability on refresh&quot;, &quot;DS_ALGO_APP Home Page Verification&quot;)">runScenario("Verify home page reliability on refresh", "DS_ALGO_APP Home Page Verification")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Array page uses HTTPS&quot;, &quot;Navigation and interaction in dsAlgo Portal - Array Section&quot;)">runScenario("Verify Array page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Array Section")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Refresh Graph page&quot;, &quot;Navigation and interaction in dsAlgo Portal - Graph Section&quot;)">runScenario("Refresh Graph page", "Navigation and interaction in dsAlgo Portal - Graph Section")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Register page uses HTTPS&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">runScenario("Verify Register page uses HTTPS", "DS_ALGO_APP Register Page Verification")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Refresh Stack page&quot;, &quot;Navigation and interaction in dsAlgo Portal - Stack Section&quot;)">runScenario("Refresh Stack page", "Navigation and interaction in dsAlgo Portal - Stack Section")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="runners.MainRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify Stack page loads within acceptable time&quot;, &quot;Navigation and interaction in dsAlgo Portal - Sta...)">runScenario("Verify Stack page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Sta...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -128,6 +252,196 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">runners.MainRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify key array elements are visible and clickable&quot;, &quot;Navigation and interaction in dsAlgo Portal ...)">
+                  </a> <!-- runScenario("Verify key array elements are visible and clickable", "Navigation and interaction in dsAlgo Portal ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify key array elements are visible and clickable","Navigation and interaction in dsAlgo Portal - Array Section")</span>
+                  <div class="stack-trace">java.lang.AssertionError: One or more array elements are not visible expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at stepDefinitions.ArraysList.all_main_array_operations_buttons_should_be_visible(ArraysList.java:158)
+	at ✽.all main array operations elements should be visible and clickable(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:88)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Refresh Array page&quot;, &quot;Navigation and interaction in dsAlgo Portal - Array Section&quot;)">
+                  </a> <!-- runScenario("Refresh Array page", "Navigation and interaction in dsAlgo Portal - Array Section") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Refresh Array page","Navigation and interaction in dsAlgo Portal - Array Section")</span>
+                  <div class="stack-trace">java.lang.AssertionError: Array page contains &apos;error&apos; expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertFalse(Assert.java:79)
+	at stepDefinitions.ArraysList.array_page_should_load_without_errors(ArraysList.java:193)
+	at ✽.Array page should load without errors(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:97)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify key graph visualizer elements are visible&quot;, &quot;Navigation and interaction in dsAlgo Portal - G...)">
+                  </a> <!-- runScenario("Verify key graph visualizer elements are visible", "Navigation and interaction in dsAlgo Portal - G...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify key graph visualizer elements are visible","Navigation and interaction in dsAlgo Portal - Graph Section")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Run&apos;)]&quot;}
+  (Session info: chrome=144.0.7559.98)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4a25e74a5076c3be9905db972cb63c4, findElement {using=xpath, value=//button[contains(text(),&apos;Run&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.98, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61575}, goog:processID: 20048, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61575/devtoo..., se:cdpVersion: 144.0.7559.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a4a25e74a5076c3be9905db972cb63c4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy43.isDisplayed(Unknown Source)
+	at pageObjects.GraphListPage.isRunButtonDisplayed(GraphListPage.java:96)
+	at stepDefinitions.GraphList.all_graph_page_elements_should_be_visible(GraphList.java:148)
+	at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:72)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Login page loads within acceptable time&quot;, &quot;Login to DS Algo Portal&quot;)">
+                  </a> <!-- runScenario("Verify Login page loads within acceptable time", "Login to DS Algo Portal") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Login page loads within acceptable time","Login to DS Algo Portal")</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+	at stepDefinitions.LoginSteps.login_page_should_load_within_seconds(LoginSteps.java:137)
+	at ✽.Login page should load within &quot;5&quot; seconds(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:51)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify all login fields and button are visible&quot;, &quot;Login to DS Algo Portal&quot;)">
+                  </a> <!-- runScenario("Verify all login fields and button are visible", "Login to DS Algo Portal") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify all login fields and button are visible","Login to DS Algo Portal")</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+	at stepDefinitions.LoginSteps.all_login_fields_and_buttons_should_be_visible(LoginSteps.java:150)
+	at ✽.all login fields and buttons should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:55)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify key stack elements are visible&quot;, &quot;Navigation and interaction in dsAlgo Portal - Stack Sectio...)">
+                  </a> <!-- runScenario("Verify key stack elements are visible", "Navigation and interaction in dsAlgo Portal - Stack Sectio...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify key stack elements are visible","Navigation and interaction in dsAlgo Portal - Stack Section")</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&apos;/tryEditor&apos;]&quot;}
+  (Session info: chrome=144.0.7559.98)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [58a0ede465f26ed6893053d55599dccf, findElement {using=xpath, value=//a[@href=&apos;/tryEditor&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.98, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58650}, goog:processID: 30124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58650/devtoo..., se:cdpVersion: 144.0.7559.98, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 58a0ede465f26ed6893053d55599dccf
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy43.isDisplayed(Unknown Source)
+	at pageObjects.StackPage.isTryEditorDisplayed(StackPage.java:91)
+	at stepDefinitions.StackSteps.all_main_stack_operations_buttons_should_be_visible(StackSteps.java:132)
+	at ✽.all main stack operations buttons should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/Stack.feature:90)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Login page uses HTTPS&quot;, &quot;Login to DS Algo Portal&quot;)">
+                  </a> <!-- runScenario("Verify Login page uses HTTPS", "Login to DS Algo Portal") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Login page uses HTTPS","Login to DS Algo Portal")</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+	at stepDefinitions.LoginSteps.login_page_should_be_loaded_using_https(LoginSteps.java:158)
+	at ✽.Login page should be loaded using HTTPS(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:59)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify keyboard navigation works&quot;, &quot;Login to DS Algo Portal&quot;)">
+                  </a> <!-- runScenario("Verify keyboard navigation works", "Login to DS Algo Portal") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify keyboard navigation works","Login to DS Algo Portal")</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+	at stepDefinitions.LoginSteps.user_should_be_able_to_navigate_login_page_using_keyboard(LoginSteps.java:165)
+	at ✽.user should be able to navigate Login page using keyboard(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:63)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -136,30 +450,180 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify user is able to see output for valid python code for Arrays in Python page&quot;, &quot;Navigation and...)">
-                  </a> <!-- runScenario("Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and...) -->
+                  <a name="runScenario(&quot;Verify all input fields and submit button are visible&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">
+                  </a> <!-- runScenario("Verify all input fields and submit button are visible", "DS_ALGO_APP Register Page Verification") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify user is able to see output for valid python code for Arrays in Python page","Navigation and interaction in dsAlgo Portal - Array Section")</span>
+                  <span class="parameters">("Verify all input fields and submit button are visible","DS_ALGO_APP Register Page Verification")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify user is able to see output for valid python code for Arrays in Python page&quot;, &quot;Navigation and...)">
-                  </a> <!-- runScenario("Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and...) -->
+                  <a name="runScenario(&quot;Refresh Register page&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">
+                  </a> <!-- runScenario("Refresh Register page", "DS_ALGO_APP Register Page Verification") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify user is able to see output for valid python code for Arrays in Python page","Navigation and interaction in dsAlgo Portal - Array Section")</span>
+                  <span class="parameters">("Refresh Register page","DS_ALGO_APP Register Page Verification")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify user is able to see output for valid python code for Arrays in Python page&quot;, &quot;Navigation and...)">
-                  </a> <!-- runScenario("Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and...) -->
+                  <a name="runScenario(&quot;Verify Stack page uses HTTPS&quot;, &quot;Navigation and interaction in dsAlgo Portal - Stack Section&quot;)">
+                  </a> <!-- runScenario("Verify Stack page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Stack Section") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify user is able to see output for valid python code for Arrays in Python page","Navigation and interaction in dsAlgo Portal - Array Section")</span>
+                  <span class="parameters">("Verify Stack page uses HTTPS","Navigation and interaction in dsAlgo Portal - Stack Section")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify home page usability&quot;, &quot;DS_ALGO_APP Home Page Verification&quot;)">
+                  </a> <!-- runScenario("Verify home page usability", "DS_ALGO_APP Home Page Verification") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify home page usability","DS_ALGO_APP Home Page Verification")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Refresh Login page&quot;, &quot;Login to DS Algo Portal&quot;)">
+                  </a> <!-- runScenario("Refresh Login page", "Login to DS Algo Portal") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Refresh Login page","Login to DS Algo Portal")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Register page loads within acceptable time&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">
+                  </a> <!-- runScenario("Verify Register page loads within acceptable time", "DS_ALGO_APP Register Page Verification") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Register page loads within acceptable time","DS_ALGO_APP Register Page Verification")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify home page load performance&quot;, &quot;DS_ALGO_APP Home Page Verification&quot;)">
+                  </a> <!-- runScenario("Verify home page load performance", "DS_ALGO_APP Home Page Verification") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify home page load performance","DS_ALGO_APP Home Page Verification")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify home page security&quot;, &quot;DS_ALGO_APP Home Page Verification&quot;)">
+                  </a> <!-- runScenario("Verify home page security", "DS_ALGO_APP Home Page Verification") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify home page security","DS_ALGO_APP Home Page Verification")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Graph page uses HTTPS&quot;, &quot;Navigation and interaction in dsAlgo Portal - Graph Section&quot;)">
+                  </a> <!-- runScenario("Verify Graph page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Graph Section") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Graph page uses HTTPS","Navigation and interaction in dsAlgo Portal - Graph Section")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify keyboard navigation works&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">
+                  </a> <!-- runScenario("Verify keyboard navigation works", "DS_ALGO_APP Register Page Verification") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify keyboard navigation works","DS_ALGO_APP Register Page Verification")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Graph page loads within acceptable time&quot;, &quot;Navigation and interaction in dsAlgo Portal - Gra...)">
+                  </a> <!-- runScenario("Verify Graph page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Gra...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Graph page loads within acceptable time","Navigation and interaction in dsAlgo Portal - Graph Section")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Array page loads within acceptable time&quot;, &quot;Navigation and interaction in dsAlgo Portal - Arr...)">
+                  </a> <!-- runScenario("Verify Array page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Arr...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Array page loads within acceptable time","Navigation and interaction in dsAlgo Portal - Array Section")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify home page reliability on refresh&quot;, &quot;DS_ALGO_APP Home Page Verification&quot;)">
+                  </a> <!-- runScenario("Verify home page reliability on refresh", "DS_ALGO_APP Home Page Verification") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify home page reliability on refresh","DS_ALGO_APP Home Page Verification")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Array page uses HTTPS&quot;, &quot;Navigation and interaction in dsAlgo Portal - Array Section&quot;)">
+                  </a> <!-- runScenario("Verify Array page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Array Section") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Array page uses HTTPS","Navigation and interaction in dsAlgo Portal - Array Section")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Refresh Graph page&quot;, &quot;Navigation and interaction in dsAlgo Portal - Graph Section&quot;)">
+                  </a> <!-- runScenario("Refresh Graph page", "Navigation and interaction in dsAlgo Portal - Graph Section") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Refresh Graph page","Navigation and interaction in dsAlgo Portal - Graph Section")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Register page uses HTTPS&quot;, &quot;DS_ALGO_APP Register Page Verification&quot;)">
+                  </a> <!-- runScenario("Verify Register page uses HTTPS", "DS_ALGO_APP Register Page Verification") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Register page uses HTTPS","DS_ALGO_APP Register Page Verification")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Refresh Stack page&quot;, &quot;Navigation and interaction in dsAlgo Portal - Stack Section&quot;)">
+                  </a> <!-- runScenario("Refresh Stack page", "Navigation and interaction in dsAlgo Portal - Stack Section") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Refresh Stack page","Navigation and interaction in dsAlgo Portal - Stack Section")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify Stack page loads within acceptable time&quot;, &quot;Navigation and interaction in dsAlgo Portal - Sta...)">
+                  </a> <!-- runScenario("Verify Stack page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Sta...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify Stack page loads within acceptable time","Navigation and interaction in dsAlgo Portal - Stack Section")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -169,7 +633,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Happy Family\AppData\Local\Temp\testng-eclipse-1565762123\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Happy Family\AppData\Local\Temp\testng-eclipse--459110762\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -226,24 +690,116 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(26);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runners.MainRunner')
-data.setCell(0, 3, 12509);
+data.setCell(0, 3, 5801);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runners.MainRunner')
-data.setCell(1, 3, 6809);
+data.setCell(1, 3, 5748);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'runners.MainRunner')
-data.setCell(2, 3, 6745);
+data.setCell(2, 3, 5741);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'runScenario')
+data.setCell(3, 2, 'runners.MainRunner')
+data.setCell(3, 3, 5714);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'runners.MainRunner')
+data.setCell(4, 3, 5683);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'runners.MainRunner')
+data.setCell(5, 3, 5401);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'runners.MainRunner')
+data.setCell(6, 3, 5384);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'runners.MainRunner')
+data.setCell(7, 3, 5155);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'runScenario')
+data.setCell(8, 2, 'runners.MainRunner')
+data.setCell(8, 3, 5122);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'runScenario')
+data.setCell(9, 2, 'runners.MainRunner')
+data.setCell(9, 3, 5073);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'runScenario')
+data.setCell(10, 2, 'runners.MainRunner')
+data.setCell(10, 3, 5006);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'runScenario')
+data.setCell(11, 2, 'runners.MainRunner')
+data.setCell(11, 3, 4976);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'runScenario')
+data.setCell(12, 2, 'runners.MainRunner')
+data.setCell(12, 3, 4862);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'runScenario')
+data.setCell(13, 2, 'runners.MainRunner')
+data.setCell(13, 3, 4724);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'runScenario')
+data.setCell(14, 2, 'runners.MainRunner')
+data.setCell(14, 3, 3664);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'runScenario')
+data.setCell(15, 2, 'runners.MainRunner')
+data.setCell(15, 3, 3642);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'runScenario')
+data.setCell(16, 2, 'runners.MainRunner')
+data.setCell(16, 3, 3451);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'runScenario')
+data.setCell(17, 2, 'runners.MainRunner')
+data.setCell(17, 3, 3219);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'runScenario')
+data.setCell(18, 2, 'runners.MainRunner')
+data.setCell(18, 3, 3165);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'runScenario')
+data.setCell(19, 2, 'runners.MainRunner')
+data.setCell(19, 3, 3070);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'runScenario')
+data.setCell(20, 2, 'runners.MainRunner')
+data.setCell(20, 3, 3027);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'runScenario')
+data.setCell(21, 2, 'runners.MainRunner')
+data.setCell(21, 3, 2654);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'runScenario')
+data.setCell(22, 2, 'runners.MainRunner')
+data.setCell(22, 3, 2633);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'runScenario')
+data.setCell(23, 2, 'runners.MainRunner')
+data.setCell(23, 3, 2543);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'runScenario')
+data.setCell(24, 2, 'runners.MainRunner')
+data.setCell(24, 3, 2474);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'runScenario')
+data.setCell(25, 2, 'runners.MainRunner')
+data.setCell(25, 3, 2457);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -271,28 +827,136 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runners.MainRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@2119b989)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@6ce7d6ab)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setBrowser(null)</span>
-                <span class="method-start">1676 ms</span>
+                <span class="method-start">1739 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and...)</span>
-                <span class="method-start">1713 ms</span>
+                <span class="method-name">runScenario("Verify home page load performance", "DS_ALGO_APP Home Page Verification")</span>
+                <span class="method-start">1781 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and...)</span>
-                <span class="method-start">14327 ms</span>
+                <span class="method-name">runScenario("Verify home page usability", "DS_ALGO_APP Home Page Verification")</span>
+                <span class="method-start">7045 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Verify user is able to see output for valid python code for Arrays in Python page", "Navigation and...)</span>
-                <span class="method-start">21140 ms</span>
+                <span class="method-name">runScenario("Verify home page security", "DS_ALGO_APP Home Page Verification")</span>
+                <span class="method-start">10078 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify home page reliability on refresh", "DS_ALGO_APP Home Page Verification")</span>
+                <span class="method-start">13152 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Array page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Arr...)</span>
+                <span class="method-start">16322 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify key array elements are visible and clickable", "Navigation and interaction in dsAlgo Portal ...)</span>
+                <span class="method-start">21447 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Array page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Array Section")</span>
+                <span class="method-start">27201 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Refresh Array page", "Navigation and interaction in dsAlgo Portal - Array Section")</span>
+                <span class="method-start">32066 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Graph page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Gra...)</span>
+                <span class="method-start">37472 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify key graph visualizer elements are visible", "Navigation and interaction in dsAlgo Portal - G...)</span>
+                <span class="method-start">42453 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Graph page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Graph Section")</span>
+                <span class="method-start">47464 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Refresh Graph page", "Navigation and interaction in dsAlgo Portal - Graph Section")</span>
+                <span class="method-start">52540 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Register page loads within acceptable time", "DS_ALGO_APP Register Page Verification")</span>
+                <span class="method-start">58227 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify all input fields and submit button are visible", "DS_ALGO_APP Register Page Verification")</span>
+                <span class="method-start">61894 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Register page uses HTTPS", "DS_ALGO_APP Register Page Verification")</span>
+                <span class="method-start">65538 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify keyboard navigation works", "DS_ALGO_APP Register Page Verification")</span>
+                <span class="method-start">68760 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Refresh Register page", "DS_ALGO_APP Register Page Verification")</span>
+                <span class="method-start">73491 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Stack page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Sta...)</span>
+                <span class="method-start">76947 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify key stack elements are visible", "Navigation and interaction in dsAlgo Portal - Stack Sectio...)</span>
+                <span class="method-start">82335 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Verify Stack page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Stack Section")</span>
+                <span class="method-start">88054 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Refresh Stack page", "Navigation and interaction in dsAlgo Portal - Stack Section")</span>
+                <span class="method-start">93797 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify Login page loads within acceptable time", "Login to DS Algo Portal")</span>
+                <span class="method-start">99602 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify all login fields and button are visible", "Login to DS Algo Portal")</span>
+                <span class="method-start">102259 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify Login page uses HTTPS", "Login to DS Algo Portal")</span>
+                <span class="method-start">104805 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Verify keyboard navigation works", "Login to DS Algo Portal")</span>
+                <span class="method-start">107283 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Refresh Login page", "Login to DS Algo Portal")</span>
+                <span class="method-start">109920 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">27890 ms</span>
+                <span class="method-start">112384 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

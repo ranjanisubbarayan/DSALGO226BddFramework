@@ -1,6 +1,7 @@
 @Graph @signIn
 Feature: Navigation and interaction in dsAlgo Portal - Graph Section
 
+ Rule: Below scenario covers with Graph module
   Background: 
     Given The user is in the Home page after Sign in
      When The user selects the Get Started option under the Graph section
@@ -55,20 +56,28 @@ Feature: Navigation and interaction in dsAlgo Portal - Graph Section
             |Graph|
             |Graph Representations|
             
- # ---- Graph Module Non-Functional Testin ----           
+ # ---- Graph Module Non-Functional Testin ---- 
+ 
+ Rule: Below scenario covers Non function sceanrio for the Graph module
+  Background: 
+    Given The user is in the Home page after Sign in
+     When The user selects the Get Started option under the Graph section          
             
-  @NonFunctional @performance
+  @nonfunctional @performance
   Scenario: Verify Graph page loads within acceptable time
     Then Graph page should load within "5" seconds
 
- @NonFunctional  @usability
+ @nonfunctional  @usability
   Scenario: Verify key graph visualizer elements are visible  
-    Then all main graph operations buttons should be visible
+    Then all Graph page elements should be visible
+       
+  Scenario: Verify user can navigate Graph page using keyboard
+    Then user should be able to navigate Graph page using keyboard
 
-  @NonFunctional @security
+  @nonfunctional @security
   Scenario: Verify Graph page uses HTTPS
     Then Graph page should be loaded using HTTPS
 
-  @NonFunctional @reliability
+  @nonfunctional @reliability
   Scenario: Refresh Graph page
     Then Graph page should load without errors

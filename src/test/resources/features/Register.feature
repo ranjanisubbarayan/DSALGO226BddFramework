@@ -89,27 +89,27 @@
   
   Background: Given The user is on the user Registration page
   
-   @NonFunctional @performance
+   @nonfunctional @performance
   Scenario: Verify Register page loads within acceptable time
     Given The user is on the user Registration page
     Then Register page should load within "5" seconds
 
-  @NonFunctional @usability
+  @nonfunctional @usability
   Scenario: Verify all input fields and submit button are visible
     Given The user is on the user Registration page
     Then all input fields and submit button should be visible
 
-  @NonFunctional @security
+  @nonfunctional @security
   Scenario: Verify Register page uses HTTPS
     Given The user is on the user Registration page
     Then Register page should be loaded using HTTPS
 
-  @NonFunctional @accessibility
+  @nonfunctional @accessibility
   Scenario: Verify keyboard navigation works
     Given The user is on the user Registration page
     Then user should be able to navigate Register page using keyboard
 
-  @NonFunctional @reliability
+  @nonfunctional @reliability
   Scenario: Refresh Register page
     When The user is on the user Registration page
     Then Register page should load without errors

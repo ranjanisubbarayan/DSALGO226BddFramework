@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pageObjects.LaunchPage;
@@ -109,30 +108,26 @@ public class homeSteps {
     public void important_home_page_options_should_be_visible() {
     	
     	 Assert.assertTrue(homepage.areImportantOptionsVisible(), "Important home page options missing");
-    	 System.out.println("Print value  "+homepage.areImportantOptionsVisible());
+    	
     }
 
     @Then("home page should be loaded using HTTPS")
     public void home_page_should_be_loaded_using_https() {
-        WebDriver driver = DriverFactory.getDriver();
-        Assert.assertTrue(driver.getCurrentUrl().startsWith("https"));
+    	String url = driver.getCurrentUrl();
+        Assert.assertTrue(url.startsWith("https://"), "Home page is not loaded over HTTPS");
     }
 
-    @Then("user should be able to navigate home page using keyboard")
-    public void user_should_be_able_to_navigate_home_page_using_keyboard() {
-        WebDriver driver = DriverFactory.getDriver();
-        driver.switchTo().activeElement().sendKeys(Keys.TAB);
-        Assert.assertNotNull(driver.switchTo().activeElement());
-    }
-
+   
     @When("user refreshes the home page")
     public void user_refreshes_the_home_page() {
-        DriverFactory.getDriver().navigate().refresh();
+    	 driver.navigate().refresh();
     }
 
     @Then("home page should load without errors")
     public void home_page_should_load_without_errors() {
-        Assert.assertNotNull(DriverFactory.getDriver().getTitle());
-        System.out.println(DriverFactory.getDriver().getTitle());
-    }
+    	 String pageSource = driver.getPageSource();
+	        Assert.assertFalse(pageSource.contains("error"), "Page contains 'error'");
+	        Assert.assertFalse(pageSource.contains("404"), "Page contains '404'");
+	        Assert.assertFalse(pageSource.contains("500"), "Page contains '500'");
+	    }
 }

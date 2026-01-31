@@ -46,29 +46,25 @@ Background: Given user is on the Login page
   
   Background: Given user is on the Login page
   
-   @NonFunctional @performance
+   @nonfunctional @performance
    Scenario: Verify Login page loads within acceptable time
-    Given user is on the Login page
-    Then Login page should load within "5" seconds
+       Then Login page should load within "5" seconds
 
-  @NonFunctional @usability
+  @nonfunctional @usability
   Scenario: Verify all login fields and button are visible
-    Given user is on the Login page
-    Then all login fields and buttons should be visible
+        Then all login fields and buttons should be visible
 
-  @NonFunctional @security
+  @nonfunctional @security
   Scenario: Verify Login page uses HTTPS
-    Given user is on the Login page
     Then Login page should be loaded using HTTPS
 
-  @NonFunctional @accessibility
+  @nonfunctional @accessibility
   Scenario: Verify keyboard navigation works
-    Given user is on the Login page
     Then user should be able to navigate Login page using keyboard
 
-  @NonFunctional @reliability
+  @nonfunctional @reliability
   Scenario: Refresh Login page
-    Given user is on the Login page
+    When  user refreshes the Login page
     Then Login page should load without errors
   
     

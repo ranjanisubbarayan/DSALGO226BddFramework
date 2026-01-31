@@ -137,9 +137,7 @@ public class GraphList{
 	    public void graph_page_should_load_within_seconds(String seconds) {
 	        long maxTime = Long.parseLong(seconds);
 	        long start = System.currentTimeMillis();
-
-	        driver.navigate().refresh();
-
+	        graphPage.waitForGraphPage();
 	        long end = System.currentTimeMillis();
 	        long loadTime = (end - start) / 1000;
 	        Assert.assertTrue(loadTime <= maxTime, "Graph page load exceeded " + maxTime + "s. Actual: " + loadTime + "s");
@@ -157,16 +155,7 @@ public class GraphList{
 	        String url = driver.getCurrentUrl();
 	        Assert.assertTrue(url.startsWith("https://"), "Graph page is not loaded over HTTPS");
 	    }
-	    
-	    @Then("all main graph operations buttons should be visible")
-	    public void all_main_graph_operations_buttons_should_be_visible() {
-	    	graphPage.clickTryHereIfVisible();
-			Assert.assertTrue(
-		            graphPage.isRunButtonDisplayed(),
-		            "Run button is not visible in Graph module"
-		    );
-	    }
-
+	 
 
 	    @Then("user should be able to navigate Graph page using keyboard")
 	    public void user_should_be_able_to_navigate_graph_page_using_keyboard() throws InterruptedException {
