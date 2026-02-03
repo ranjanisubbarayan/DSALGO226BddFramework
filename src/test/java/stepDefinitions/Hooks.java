@@ -23,17 +23,8 @@ public class Hooks {
     private WebDriver driver;
     LaunchPage launchPage;
   
-
-    public Hooks(){
-//        this.driver = getDriver();
-//        this.launchPage = new LaunchPage(driver);     
-    }
-
     @Before(order =0)
-    public void setUp() {
-//        WebDriver driver = DriverFactory.getDriver();
-//        driver.get(ConfigReader.getProperty("baseUrl"));
-        
+    public void setUp() {        
         DriverFactory.setBrowser(ConfigReader.getProperty("browser"));
         driver = DriverFactory.getDriver();
         driver.get(ConfigReader.getProperty("baseUrl"));
