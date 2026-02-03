@@ -20,7 +20,12 @@ public class homeSteps {
     private homePage homepage;
     private LaunchPage launchPage;
     
-  
+    public homeSteps() {
+        this.driver = DriverFactory.getDriver();
+        this.launchPage = new LaunchPage(driver);
+        this.homepage = new homePage(driver);
+    }
+    
     @Given("the user opens the browser")
     public void the_user_opens_the_browser() {    	
     	logger.info("successfully logged into the Homepage of the application");
