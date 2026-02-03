@@ -81,19 +81,19 @@ Feature: Navigation and interaction in dsAlgo Portal - Stack Section
     Given The user is in the Home page after Sign in
     When The user clicks the Get Started button in Stack Panel
         
-  @performance @nonfunctional
+  @performance @nonsfunctional
   Scenario: Verify Stack page loads within acceptable time
     Then Stack page should load within "5" seconds
 
-  @usability @nonfunctional
+  @usability @nonsfunctional
   Scenario: Verify key stack elements are visible
     Then all main stack operations buttons should be visible
 
-  @security @nonfunctional
+  @security @nonsfunctional
   Scenario: Verify Stack page uses HTTPS
     Then Stack page should be loaded using HTTPS
 
-  @reliability @nonfunctional
+  @reliability @nonsfunctional
   Scenario: Refresh Stack page
     When user refreshes the Stack page
     Then Stack page should load without errors

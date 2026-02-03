@@ -15,9 +15,6 @@ import driver.DriverFactory;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.OutputType;
 
-import static driver.DriverFactory.getDriver;
-
-
 public class Hooks {
     private static final Logger logger = LogManager.getLogger(Hooks.class);
     private WebDriver driver;
@@ -25,7 +22,6 @@ public class Hooks {
   
     @Before(order =0)
     public void setUp() {        
-        DriverFactory.setBrowser(ConfigReader.getProperty("browser"));
         driver = DriverFactory.getDriver();
         driver.get(ConfigReader.getProperty("baseUrl"));
         launchPage = new LaunchPage(driver);
