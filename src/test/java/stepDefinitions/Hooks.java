@@ -21,19 +21,12 @@ public class Hooks {
     LaunchPage launchPage;
   
     @Before(order =0)
-    public void setUp(Scenario scenario) {        
-    	String browser = System.getProperty("browser");
-
-        if (browser == null || browser.isEmpty()) {
-            browser = ConfigReader.getProperty("browser");
-        }
-
-        DriverFactory.setBrowser(browser);
+    public void setUp() {        
         driver = DriverFactory.getDriver();
-
         driver.get(ConfigReader.getProperty("baseUrl"));
         launchPage = new LaunchPage(driver);
-    }
+      }
+
       @Before(value = "@signIn",order = 1)
       public void init_signIn(){
 
