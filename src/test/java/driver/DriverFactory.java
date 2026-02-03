@@ -15,12 +15,22 @@ public class DriverFactory {
     private static ThreadLocal<String> browserName = new ThreadLocal<>();
 
     public static void setBrowser(String browser) {
-        browserName.set(browser);
+    	 if (browser == null || browser.trim().isEmpty()) {
+             throw new IllegalArgumentException("Browser name is null or empty. Check config.");
+         }
+         browserName.set(browser);
     }
     public static WebDriver getDriver() {
-        if (webDriver.get() == null) {
+    	if (webDriver.get() == null) {
+
+            if (browserName.get() == null) {
+                throw new IllegalStateException(
+                        "Browser is not set. Call DriverFactory.setBrowser() before getDriver().");
+            }
+
             webDriver.set(createDriver(browserName.get()));
         }
+
         return webDriver.get();
     }
 

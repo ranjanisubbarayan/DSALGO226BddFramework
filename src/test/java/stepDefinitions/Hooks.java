@@ -25,16 +25,19 @@ public class Hooks {
   
 
     public Hooks(){
-        this.driver = getDriver();
-        this.launchPage = new LaunchPage(driver);
-      
+//        this.driver = getDriver();
+//        this.launchPage = new LaunchPage(driver);     
     }
 
     @Before(order =0)
     public void setUp() {
-        WebDriver driver = DriverFactory.getDriver();
-        driver.get(ConfigReader.getProperty("baseUrl"));
+//        WebDriver driver = DriverFactory.getDriver();
+//        driver.get(ConfigReader.getProperty("baseUrl"));
         
+        DriverFactory.setBrowser(ConfigReader.getProperty("browser"));
+        driver = DriverFactory.getDriver();
+        driver.get(ConfigReader.getProperty("baseUrl"));
+        launchPage = new LaunchPage(driver);
       }
 
       @Before(value = "@signIn",order = 1)
