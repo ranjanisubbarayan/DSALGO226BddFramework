@@ -60,19 +60,19 @@ Scenario: Navigate to Home page
   Given the user opens the browser
   When The user clicks the Get Started button in DS Algo Portal
 
-  @nonhfunctional @performance 
+  @nonfunctional @performance 
   Scenario: Verify home page load performance    
     Then home page should load within "5" seconds
 
-  @nonhfunctional @usability
+  @nonfunctional @usability
   Scenario: Verify home page usability   
     Then important home page options should be visible
 
-  @nonhfunctional @security
+  @nonfunctional @security
   Scenario: Verify home page security    
     Then home page should be loaded using HTTPS
 
-  @nonhfunctional @reliability
+  @nonfunctional @reliability
   Scenario: Verify home page reliability on refresh
     When user refreshes the home page
     Then home page should load without errors

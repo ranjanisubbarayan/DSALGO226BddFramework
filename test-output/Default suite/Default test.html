@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/7/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>15/7/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 03 15:13:22 EST 2026</td>
+<td>Started on:</td><td>Tue Feb 03 15:20:19 EST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>123 seconds (123061 ms)</td>
+<tr><td>Total time:</td><td>89 seconds (89224 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,86 +76,6 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify key graph visualizer elements are visible", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Run&apos;)]&quot;}
-  (Session info: chrome=144.0.7559.110)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0fed826c24e272cf4b2aac99a29e4f5c, findElement {value=//button[contains(text(),&apos;Run&apos;)], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61987}, goog:processID: 28008, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61987/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0fed826c24e272cf4b2aac99a29e4f5c
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy43.isDisplayed(Unknown Source)
-	at pageObjects.GraphListPage.isRunButtonDisplayed(GraphListPage.java:96)
-	at stepDefinitions.GraphList.all_graph_page_elements_should_be_visible(GraphList.java:148)
-	at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:72)
-</pre></div><a href='#' onClick='toggleBox("stack-trace334403503", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace334403503'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Run&apos;)]&quot;}
-  (Session info: chrome=144.0.7559.110)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0fed826c24e272cf4b2aac99a29e4f5c, findElement {value=//button[contains(text(),&apos;Run&apos;)], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61987}, goog:processID: 28008, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61987/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0fed826c24e272cf4b2aac99a29e4f5c
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy43.isDisplayed(Unknown Source)
-	at pageObjects.GraphListPage.isRunButtonDisplayed(GraphListPage.java:96)
-	at stepDefinitions.GraphList.all_graph_page_elements_should_be_visible(GraphList.java:148)
-	at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:72)
-</pre></div></td>
-<td>7</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Login page loads within acceptable time", "Login to DS Algo Portal"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
-	at stepDefinitions.LoginSteps.login_page_should_load_within_seconds(LoginSteps.java:137)
-	at ✽.Login page should load within &quot;5&quot; seconds(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:51)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2037929227", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2037929227'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
-	at stepDefinitions.LoginSteps.login_page_should_load_within_seconds(LoginSteps.java:137)
-	at ✽.Login page should load within &quot;5&quot; seconds(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:51)
-</pre></div></td>
-<td>3</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
 <td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify key array elements are visible and clickable", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
 <td><div><pre>java.lang.AssertionError: One or more array elements are not visible expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
@@ -163,28 +83,120 @@ Session ID: 0fed826c24e272cf4b2aac99a29e4f5c
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at stepDefinitions.ArraysList.all_main_array_operations_buttons_should_be_visible(ArraysList.java:158)
 	at ✽.all main array operations elements should be visible and clickable(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:88)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1231370129", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1231370129'><pre>java.lang.AssertionError: One or more array elements are not visible expected [true] but found [false]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1226347512", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1226347512'><pre>java.lang.AssertionError: One or more array elements are not visible expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at stepDefinitions.ArraysList.all_main_array_operations_buttons_should_be_visible(ArraysList.java:158)
 	at ✽.all main array operations elements should be visible and clickable(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:88)
 </pre></div></td>
-<td>7</td>
-<td>runners.MainRunner@6950ed69</td></tr>
+<td>5</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify all login fields and button are visible", "Login to DS Algo Portal"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+	at stepDefinitions.LoginSteps.all_login_fields_and_buttons_should_be_visible(LoginSteps.java:150)
+	at ✽.all login fields and buttons should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:55)
+</pre></div><a href='#' onClick='toggleBox("stack-trace641618222", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace641618222'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+	at stepDefinitions.LoginSteps.all_login_fields_and_buttons_should_be_visible(LoginSteps.java:150)
+	at ✽.all login fields and buttons should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:55)
+</pre></div></td>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify key graph visualizer elements are visible", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Run&apos;)]&quot;}
+  (Session info: chrome=144.0.7559.110)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [874e09aea073903e6bc72d56638e3b27, findElement {value=//button[contains(text(),&apos;Run&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51088}, goog:processID: 25772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51088/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 874e09aea073903e6bc72d56638e3b27
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy43.isDisplayed(Unknown Source)
+	at pageObjects.GraphListPage.isRunButtonDisplayed(GraphListPage.java:96)
+	at stepDefinitions.GraphList.all_graph_page_elements_should_be_visible(GraphList.java:148)
+	at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:72)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2022055326", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2022055326'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Run&apos;)]&quot;}
+  (Session info: chrome=144.0.7559.110)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.19.1&apos;, revision: &apos;abe0ee07dc&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.16&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [874e09aea073903e6bc72d56638e3b27, findElement {value=//button[contains(text(),&apos;Run&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51088}, goog:processID: 25772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51088/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 874e09aea073903e6bc72d56638e3b27
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy43.isDisplayed(Unknown Source)
+	at pageObjects.GraphListPage.isRunButtonDisplayed(GraphListPage.java:96)
+	at stepDefinitions.GraphList.all_graph_page_elements_should_be_visible(GraphList.java:148)
+	at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/GraphLists.feature:72)
+</pre></div></td>
+<td>5</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Login page loads within acceptable time", "Login to DS Algo Portal"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+	at stepDefinitions.LoginSteps.login_page_should_load_within_seconds(LoginSteps.java:137)
+	at ✽.Login page should load within &quot;5&quot; seconds(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:51)
+</pre></div><a href='#' onClick='toggleBox("stack-trace777813205", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace777813205'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+	at stepDefinitions.LoginSteps.login_page_should_load_within_seconds(LoginSteps.java:137)
+	at ✽.Login page should load within &quot;5&quot; seconds(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:51)
+</pre></div></td>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
 <tr>
 <td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify keyboard navigation works", "Login to DS Algo Portal"</td>
 <td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
 	at stepDefinitions.LoginSteps.user_should_be_able_to_navigate_login_page_using_keyboard(LoginSteps.java:165)
 	at ✽.user should be able to navigate Login page using keyboard(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:63)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1466006133", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1466006133'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+</pre></div><a href='#' onClick='toggleBox("stack-trace1758170706", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1758170706'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
 	at stepDefinitions.LoginSteps.user_should_be_able_to_navigate_login_page_using_keyboard(LoginSteps.java:165)
 	at ✽.user should be able to navigate Login page using keyboard(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:63)
 </pre></div></td>
-<td>3</td>
-<td>runners.MainRunner@6950ed69</td></tr>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
 <tr>
 <td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Refresh Array page", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
 <td><div><pre>java.lang.AssertionError: Array page contains &apos;error&apos; expected [false] but found [true]
@@ -193,40 +205,28 @@ Session ID: 0fed826c24e272cf4b2aac99a29e4f5c
 	at org.testng.Assert.assertFalse(Assert.java:79)
 	at stepDefinitions.ArraysList.array_page_should_load_without_errors(ArraysList.java:193)
 	at ✽.Array page should load without errors(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:97)
-</pre></div><a href='#' onClick='toggleBox("stack-trace367575104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace367575104'><pre>java.lang.AssertionError: Array page contains &apos;error&apos; expected [false] but found [true]
+</pre></div><a href='#' onClick='toggleBox("stack-trace2084322663", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2084322663'><pre>java.lang.AssertionError: Array page contains &apos;error&apos; expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertFalse(Assert.java:79)
 	at stepDefinitions.ArraysList.array_page_should_load_without_errors(ArraysList.java:193)
 	at ✽.Array page should load without errors(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/ArrayLists.feature:97)
 </pre></div></td>
-<td>7</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify all login fields and button are visible", "Login to DS Algo Portal"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
-	at stepDefinitions.LoginSteps.all_login_fields_and_buttons_should_be_visible(LoginSteps.java:150)
-	at ✽.all login fields and buttons should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:55)
-</pre></div><a href='#' onClick='toggleBox("stack-trace521114357", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace521114357'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
-	at stepDefinitions.LoginSteps.all_login_fields_and_buttons_should_be_visible(LoginSteps.java:150)
-	at ✽.all login fields and buttons should be visible(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:55)
-</pre></div></td>
-<td>4</td>
-<td>runners.MainRunner@6950ed69</td></tr>
+<td>5</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
 <tr>
 <td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Login page uses HTTPS", "Login to DS Algo Portal"</td>
 <td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
 	at stepDefinitions.LoginSteps.login_page_should_be_loaded_using_https(LoginSteps.java:158)
 	at ✽.Login page should be loaded using HTTPS(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:59)
-</pre></div><a href='#' onClick='toggleBox("stack-trace230488003", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace230488003'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
+</pre></div><a href='#' onClick='toggleBox("stack-trace1353890348", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1353890348'><pre>java.lang.NullPointerException: Cannot invoke &quot;pageObjects.homePage.clickSignInLink()&quot; because &quot;this.homepage&quot; is null
 	at stepDefinitions.LoginSteps.login_page_should_be_loaded_using_https(LoginSteps.java:158)
 	at ✽.Login page should be loaded using HTTPS(file:///C:/Users/Happy%20Family/eclipse-workspace/DSALGO226BddFramework/src/test/resources/features/login.feature:59)
 </pre></div></td>
-<td>5</td>
-<td>runners.MainRunner@6950ed69</td></tr>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -239,58 +239,78 @@ Session ID: 0fed826c24e272cf4b2aac99a29e4f5c
 <tr>
 <td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Register page loads within acceptable time", "DS_ALGO_APP Register Page Verification"</td>
 <td></td>
-<td>4</td>
-<td>runners.MainRunner@6950ed69</td></tr>
+<td>3</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
 <tr>
 <td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify all input fields and submit button are visible", "DS_ALGO_APP Register Page Verification"</td>
 <td></td>
-<td>5</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Register page uses HTTPS", "DS_ALGO_APP Register Page Verification"</td>
-<td></td>
-<td>5</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Refresh Login page", "Login to DS Algo Portal"</td>
-<td></td>
-<td>3</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Array page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td></td>
-<td>6</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Graph page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td></td>
-<td>6</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Graph page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td></td>
-<td>6</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Refresh Register page", "DS_ALGO_APP Register Page Verification"</td>
-<td></td>
-<td>4</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Refresh Graph page", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
-<td></td>
-<td>6</td>
-<td>runners.MainRunner@6950ed69</td></tr>
-<tr>
-<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Array page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
-<td></td>
-<td>13</td>
-<td>runners.MainRunner@6950ed69</td></tr>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
 <tr>
 <td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify keyboard navigation works", "DS_ALGO_APP Register Page Verification"</td>
 <td></td>
-<td>6</td>
-<td>runners.MainRunner@6950ed69</td></tr>
+<td>4</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Array page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
+<td></td>
+<td>4</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Refresh Login page", "Login to DS Algo Portal"</td>
+<td></td>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify home page reliability on refresh", "DS_ALGO_APP Home Page Verification"</td>
+<td></td>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Refresh Register page", "DS_ALGO_APP Register Page Verification"</td>
+<td></td>
+<td>3</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify home page security", "DS_ALGO_APP Home Page Verification"</td>
+<td></td>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify home page load performance", "DS_ALGO_APP Home Page Verification"</td>
+<td></td>
+<td>5</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Refresh Graph page", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
+<td></td>
+<td>4</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify home page usability", "DS_ALGO_APP Home Page Verification"</td>
+<td></td>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Array page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Array Section"</td>
+<td></td>
+<td>4</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Graph page uses HTTPS", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
+<td></td>
+<td>4</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Register page uses HTTPS", "DS_ALGO_APP Register Page Verification"</td>
+<td></td>
+<td>2</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
+<tr>
+<td title='runners.MainRunner.runScenario()'><b>runScenario</b><br>Test class: runners.MainRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Graph page loads within acceptable time", "Navigation and interaction in dsAlgo Portal - Graph Section"</td>
+<td></td>
+<td>4</td>
+<td>runners.MainRunner@6dd7b5a3</td></tr>
 </table><p>
 </body>
 </html>

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="18" passed="11" failed="7" skipped="0">
+<testng-results ignored="0" total="22" passed="15" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-03T15:13:22 EST" name="Default suite" finished-at="2026-02-03T15:15:25 EST" duration-ms="123061">
+  <suite started-at="2026-02-03T15:20:19 EST" name="Default suite" finished-at="2026-02-03T15:21:49 EST" duration-ms="89224">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-02-03T15:13:22 EST" name="Default test" finished-at="2026-02-03T15:15:25 EST" duration-ms="123061">
+    <test started-at="2026-02-03T15:20:19 EST" name="Default test" finished-at="2026-02-03T15:21:49 EST" duration-ms="89224">
       <class name="runners.MainRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:13:22 EST" name="setUpClass" finished-at="2026-02-03T15:13:25 EST" duration-ms="3698" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:20 EST" name="setUpClass" finished-at="2026-02-03T15:20:22 EST" duration-ms="2298" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@7021bb55]]>
+                <![CDATA[org.testng.TestRunner@67263db7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:13:25 EST" name="setBrowser" finished-at="2026-02-03T15:13:25 EST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:22 EST" name="setBrowser" finished-at="2026-02-03T15:20:22 EST" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -30,7 +30,71 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:13:25 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:13:39 EST" duration-ms="13891" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:22 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:20:28 EST" duration-ms="5710" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify home page load performance"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DS_ALGO_APP Home Page Verification"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:28 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:20:31 EST" duration-ms="2881" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify home page usability"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DS_ALGO_APP Home Page Verification"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:31 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:20:33 EST" duration-ms="2622" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify home page security"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DS_ALGO_APP Home Page Verification"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:33 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:20:36 EST" duration-ms="2780" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify home page reliability on refresh"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["DS_ALGO_APP Home Page Verification"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:36 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:20:40 EST" duration-ms="4301" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,7 +110,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:13:40 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:13:47 EST" duration-ms="7453" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:40 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:20:46 EST" duration-ms="5337" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -76,7 +140,7 @@ at ✽.all main array operations elements should be visible and clickable(file:/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:13:47 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:13:54 EST" duration-ms="6966" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:46 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:20:50 EST" duration-ms="4419" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -92,7 +156,7 @@ at ✽.all main array operations elements should be visible and clickable(file:/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:13:54 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:02 EST" duration-ms="7536" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:50 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:20:56 EST" duration-ms="5402" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -122,7 +186,7 @@ at ✽.Array page should load without errors(file:///C:/Users/Happy%20Family/ecl
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:02 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:08 EST" duration-ms="6293" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:20:56 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:00 EST" duration-ms="4740" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -138,7 +202,7 @@ at ✽.Array page should load without errors(file:///C:/Users/Happy%20Family/ecl
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:08 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:15 EST" duration-ms="7333" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:00 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:06 EST" duration-ms="5423" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -159,9 +223,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0fed826c24e272cf4b2aac99a29e4f5c, findElement {value=//button[contains(text(),'Run')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61987}, goog:processID: 28008, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61987/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0fed826c24e272cf4b2aac99a29e4f5c]]>
+Command: [874e09aea073903e6bc72d56638e3b27, findElement {value=//button[contains(text(),'Run')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51088}, goog:processID: 25772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51088/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 874e09aea073903e6bc72d56638e3b27]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Run')]"}
@@ -170,9 +234,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.16'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0fed826c24e272cf4b2aac99a29e4f5c, findElement {value=//button[contains(text(),'Run')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61987}, goog:processID: 28008, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61987/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0fed826c24e272cf4b2aac99a29e4f5c
+Command: [874e09aea073903e6bc72d56638e3b27, findElement {value=//button[contains(text(),'Run')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.110, chrome: {chromedriverVersion: 144.0.7559.109 (6a8d5e49388..., userDataDir: C:\Users\HAPPYF~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51088}, goog:processID: 25772, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51088/devtoo..., se:cdpVersion: 144.0.7559.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 874e09aea073903e6bc72d56638e3b27
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -201,7 +265,7 @@ at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:15 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:22 EST" duration-ms="6535" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:06 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:10 EST" duration-ms="4606" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -217,7 +281,7 @@ at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:22 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:28 EST" duration-ms="6415" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:10 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:15 EST" duration-ms="4244" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -233,7 +297,7 @@ at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:28 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:33 EST" duration-ms="4659" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:15 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:18 EST" duration-ms="3111" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -249,7 +313,7 @@ at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:33 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:38 EST" duration-ms="5474" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:18 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:21 EST" duration-ms="2869" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -265,7 +329,7 @@ at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:38 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:44 EST" duration-ms="5152" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:21 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:24 EST" duration-ms="2968" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -281,7 +345,7 @@ at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:44 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:50 EST" duration-ms="6697" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:24 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:28 EST" duration-ms="4090" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -297,7 +361,7 @@ at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:50 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:55 EST" duration-ms="4357" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:28 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:31 EST" duration-ms="3253" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -313,7 +377,7 @@ at ✽.all Graph page elements should be visible(file:///C:/Users/Happy%20Family
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:55 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:14:58 EST" duration-ms="3809" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:31 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:33 EST" duration-ms="2392" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -340,7 +404,7 @@ at ✽.Login page should load within "5" seconds(file:///C:/Users/Happy%20Family
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:14:58 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:15:03 EST" duration-ms="4110" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:33 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:36 EST" duration-ms="2708" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -367,7 +431,7 @@ at ✽.all login fields and buttons should be visible(file:///C:/Users/Happy%20F
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:15:03 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:15:08 EST" duration-ms="5094" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:36 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:38 EST" duration-ms="2367" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -394,7 +458,7 @@ at ✽.Login page should be loaded using HTTPS(file:///C:/Users/Happy%20Family/e
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:15:08 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:15:11 EST" duration-ms="3872" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:38 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:41 EST" duration-ms="2197" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -421,7 +485,7 @@ at ✽.user should be able to navigate Login page using keyboard(file:///C:/User
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:15:11 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:15:15 EST" duration-ms="3562" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:41 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-02-03T15:21:43 EST" duration-ms="2256" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -437,7 +501,7 @@ at ✽.user should be able to navigate Login page using keyboard(file:///C:/User
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.MainRunner@6950ed69]" started-at="2026-02-03T15:15:15 EST" name="tearDownClass" finished-at="2026-02-03T15:15:25 EST" duration-ms="9641" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.MainRunner@6dd7b5a3]" started-at="2026-02-03T15:21:43 EST" name="tearDownClass" finished-at="2026-02-03T15:21:49 EST" duration-ms="5746" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
